@@ -1,0 +1,117 @@
+{
+  "exam_id": "listening-100-q01-20-dev",
+  "source_round": "100",
+  "level": "TOPIK I",
+  "section": "listening",
+  "exam_type": "draft-partial",
+  "total_questions": 20,
+  "total_possible_points": 67,
+  "source_answer_key_file": "answer-key-100.json",
+  "answers": [
+    {
+      "question_number": 1,
+      "correct_answer": 3,
+      "points": 4
+    },
+    {
+      "question_number": 2,
+      "correct_answer": 2,
+      "points": 4
+    },
+    {
+      "question_number": 3,
+      "correct_answer": 3,
+      "points": 3
+    },
+    {
+      "question_number": 4,
+      "correct_answer": 2,
+      "points": 3
+    },
+    {
+      "question_number": 5,
+      "correct_answer": 4,
+      "points": 4
+    },
+    {
+      "question_number": 6,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 7,
+      "correct_answer": 1,
+      "points": 3
+    },
+    {
+      "question_number": 8,
+      "correct_answer": 3,
+      "points": 3
+    },
+    {
+      "question_number": 9,
+      "correct_answer": 2,
+      "points": 3
+    },
+    {
+      "question_number": 10,
+      "correct_answer": 1,
+      "points": 4
+    },
+    {
+      "question_number": 11,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 12,
+      "correct_answer": 1,
+      "points": 3
+    },
+    {
+      "question_number": 13,
+      "correct_answer": 3,
+      "points": 4
+    },
+    {
+      "question_number": 14,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 15,
+      "correct_answer": 4,
+      "points": 4
+    },
+    {
+      "question_number": 16,
+      "correct_answer": 3,
+      "points": 4
+    },
+    {
+      "question_number": 17,
+      "correct_answer": 1,
+      "points": 3
+    },
+    {
+      "question_number": 18,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 19,
+      "correct_answer": 2,
+      "points": 3
+    },
+    {
+      "question_number": 20,
+      "correct_answer": 3,
+      "points": 3
+    }
+  ],
+  "review_status": {
+    "status": "draft_for_screen_test_only",
+    "needs_human_final_review": true,
+    "note": "100회 1~20번 화면 테스트용 정답표입니다. 30문항 통합본 확정 후에는 answer-key-100.json을 사용합니다."
+  }
+}

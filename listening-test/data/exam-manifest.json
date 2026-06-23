@@ -1,0 +1,76 @@
+{
+  "version": "step30-100-leveltest-16",
+  "default_exam_id": "listening-102-full",
+  "exams": [
+    {
+      "id": "listening-102-full",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "exam_type": "full",
+      "exam_mode": "fixed",
+      "short_label": "102회",
+      "label": "102회 TOPIK I 듣기 30문항",
+      "file": "./data/exams/listening-102.json",
+      "answer_key_file": "./data/answer-keys/answer-key-102.json",
+      "enabled": true,
+      "student_visible": true
+    },
+    {
+      "id": "listening-100-full",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "exam_type": "full",
+      "exam_mode": "fixed",
+      "short_label": "100회",
+      "label": "100회 TOPIK I 듣기 30문항",
+      "file": "./data/exams/listening-100.json",
+      "answer_key_file": "./data/answer-keys/answer-key-100.json",
+      "enabled": true,
+      "student_visible": true
+    },
+    {
+      "id": "level-test-102",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "exam_type": "level-test",
+      "exam_mode": "fixed",
+      "short_label": "102회",
+      "label": "102회 레벨테스트 16문항",
+      "file": "./data/exams/level-test-102.json",
+      "answer_key_file": "./data/answer-keys/answer-key-102-level-test.json",
+      "enabled": true,
+      "student_visible": true
+    },
+    {
+      "id": "level-test-100",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "exam_type": "level-test",
+      "exam_mode": "fixed",
+      "short_label": "100회",
+      "label": "100회 레벨테스트 16문항",
+      "file": "./data/exams/level-test-100.json",
+      "answer_key_file": "./data/answer-keys/answer-key-100-level-test.json",
+      "enabled": true,
+      "student_visible": true
+    },
+    {
+      "id": "listening-sample",
+      "source_round": "sample",
+      "level": "TOPIK I",
+      "section": "listening",
+      "exam_type": "full",
+      "exam_mode": "fixed",
+      "short_label": "샘플",
+      "label": "TOPIK I 듣기 샘플",
+      "file": "./data/exams/listening-sample.json",
+      "answer_key_file": "./data/answer-keys/answer-key-sample.json",
+      "enabled": true,
+      "student_visible": true
+    }
+  ]
+}

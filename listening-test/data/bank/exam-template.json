@@ -1,0 +1,1184 @@
+{
+  "schema_version": "topik1-listening-exam-template-v1",
+  "template_id": "topik1-listening-full-30-slot-template",
+  "title": "TOPIK I 듣기 30문항 랜덤 출제 슬롯 템플릿",
+  "level": "TOPIK I",
+  "section": "listening",
+  "exam_type": "full",
+  "generated_exam_mode": "random",
+  "total_questions": 30,
+  "total_possible_points": 100,
+  "selection_principle": {
+    "not_free_shuffle": true,
+    "fixed_slot_structure": true,
+    "description": "랜덤 출제는 아무 문제나 섞는 것이 아니라 TOPIK I 듣기 1~30번 슬롯 구조를 고정하고 각 슬롯에 맞는 유형 풀에서 선택한다.",
+    "long_listening_set_required": true,
+    "duplicate_prevention_required": true
+  },
+  "group_templates": [
+    {
+      "range": [
+        1,
+        4
+      ],
+      "slot_type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 물음에 맞는 대답을 고르십시오."
+    },
+    {
+      "range": [
+        5,
+        6
+      ],
+      "slot_type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 이어지는 말을 고르십시오."
+    },
+    {
+      "range": [
+        7,
+        10
+      ],
+      "slot_type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까?"
+    },
+    {
+      "range": [
+        11,
+        14
+      ],
+      "slot_type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까?"
+    },
+    {
+      "range": [
+        15,
+        16
+      ],
+      "slot_type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 가장 알맞은 그림을 고르십시오."
+    },
+    {
+      "range": [
+        17,
+        21
+      ],
+      "slot_type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 대화 내용과 같은 것을 고르십시오."
+    },
+    {
+      "range": [
+        22,
+        24
+      ],
+      "slot_type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 여자의 중심 생각을 고르십시오."
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "slot_type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오."
+    }
+  ],
+  "slot_templates": [
+    {
+      "slot_no": 1,
+      "output_question_number": 1,
+      "slot_type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 4,
+      "instruction": "[1~4] 다음을 듣고 물음에 맞는 대답을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "answer_response",
+        "diagnostic_area": "basic_response",
+        "points": 4
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 2,
+      "output_question_number": 2,
+      "slot_type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 4,
+      "instruction": "[1~4] 다음을 듣고 물음에 맞는 대답을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "answer_response",
+        "diagnostic_area": "basic_response",
+        "points": 4
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 3,
+      "output_question_number": 3,
+      "slot_type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[1~4] 다음을 듣고 물음에 맞는 대답을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "answer_response",
+        "diagnostic_area": "basic_response",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 4,
+      "output_question_number": 4,
+      "slot_type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[1~4] 다음을 듣고 물음에 맞는 대답을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "answer_response",
+        "diagnostic_area": "basic_response",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 5,
+      "output_question_number": 5,
+      "slot_type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 4,
+      "instruction": "[5~6] 이어지는 말을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "following_response",
+        "diagnostic_area": "following_response",
+        "points": 4
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 6,
+      "output_question_number": 6,
+      "slot_type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[5~6] 이어지는 말을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "following_response",
+        "diagnostic_area": "following_response",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 7,
+      "output_question_number": 7,
+      "slot_type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[7~10] 여기는 어디입니까?",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "place_identification",
+        "diagnostic_area": "place_identification",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 8,
+      "output_question_number": 8,
+      "slot_type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[7~10] 여기는 어디입니까?",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "place_identification",
+        "diagnostic_area": "place_identification",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 9,
+      "output_question_number": 9,
+      "slot_type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[7~10] 여기는 어디입니까?",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "place_identification",
+        "diagnostic_area": "place_identification",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 10,
+      "output_question_number": 10,
+      "slot_type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 4,
+      "instruction": "[7~10] 여기는 어디입니까?",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "place_identification",
+        "diagnostic_area": "place_identification",
+        "points": 4
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 11,
+      "output_question_number": 11,
+      "slot_type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까?",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "topic_identification",
+        "diagnostic_area": "topic_identification",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 12,
+      "output_question_number": 12,
+      "slot_type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까?",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "topic_identification",
+        "diagnostic_area": "topic_identification",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 13,
+      "output_question_number": 13,
+      "slot_type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 4,
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까?",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "topic_identification",
+        "diagnostic_area": "topic_identification",
+        "points": 4
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 14,
+      "output_question_number": 14,
+      "slot_type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까?",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "topic_identification",
+        "diagnostic_area": "topic_identification",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 15,
+      "output_question_number": 15,
+      "slot_type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "selection_unit": "single_question",
+      "layout": "image_grid_2x2",
+      "points": 4,
+      "instruction": "[15~16] 가장 알맞은 그림을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "picture_choice",
+        "diagnostic_area": "picture_choice",
+        "points": 4
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 16,
+      "output_question_number": 16,
+      "slot_type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "selection_unit": "single_question",
+      "layout": "image_grid_2x2",
+      "points": 4,
+      "instruction": "[15~16] 가장 알맞은 그림을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "picture_choice",
+        "diagnostic_area": "picture_choice",
+        "points": 4
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 17,
+      "output_question_number": 17,
+      "slot_type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[17~21] 대화 내용과 같은 것을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "same_content",
+        "diagnostic_area": "same_content",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 18,
+      "output_question_number": 18,
+      "slot_type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[17~21] 대화 내용과 같은 것을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "same_content",
+        "diagnostic_area": "same_content",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 19,
+      "output_question_number": 19,
+      "slot_type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[17~21] 대화 내용과 같은 것을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "same_content",
+        "diagnostic_area": "same_content",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 20,
+      "output_question_number": 20,
+      "slot_type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[17~21] 대화 내용과 같은 것을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "same_content",
+        "diagnostic_area": "same_content",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 21,
+      "output_question_number": 21,
+      "slot_type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[17~21] 대화 내용과 같은 것을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "same_content",
+        "diagnostic_area": "same_content",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 22,
+      "output_question_number": 22,
+      "slot_type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[22~24] 여자의 중심 생각을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "main_thought",
+        "diagnostic_area": "main_thought",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 23,
+      "output_question_number": 23,
+      "slot_type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[22~24] 여자의 중심 생각을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "main_thought",
+        "diagnostic_area": "main_thought",
+        "points": 3
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_no": 24,
+      "output_question_number": 24,
+      "slot_type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "selection_unit": "single_question",
+      "layout": "single",
+      "points": 3,
+      "instruction": "[22~24] 여자의 중심 생각을 고르십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "single_question",
+        "type": "main_thought",
+        "diagnostic_area": "main_thought",
+        "points": 3
+      },
+      "renumber_output": true
+    }
+  ],
+  "set_slot_templates": [
+    {
+      "slot_group_id": "SLOT_SET_25_26",
+      "output_question_numbers": [
+        25,
+        26
+      ],
+      "slot_type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "selection_unit": "long_listening_set",
+      "layout": "side_by_side",
+      "set_size": 2,
+      "points": [
+        3,
+        4
+      ],
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "long_listening_set",
+        "type": "long_listening_set",
+        "set_size": 2,
+        "points_pattern": [
+          3,
+          4
+        ]
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_group_id": "SLOT_SET_27_28",
+      "output_question_numbers": [
+        27,
+        28
+      ],
+      "slot_type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "selection_unit": "long_listening_set",
+      "layout": "side_by_side",
+      "set_size": 2,
+      "points": [
+        3,
+        4
+      ],
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "long_listening_set",
+        "type": "long_listening_set",
+        "set_size": 2,
+        "points_pattern": [
+          3,
+          4
+        ]
+      },
+      "renumber_output": true
+    },
+    {
+      "slot_group_id": "SLOT_SET_29_30",
+      "output_question_numbers": [
+        29,
+        30
+      ],
+      "slot_type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "selection_unit": "long_listening_set",
+      "layout": "side_by_side",
+      "set_size": 2,
+      "points": [
+        3,
+        4
+      ],
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "candidate_filter": {
+        "bank_entry_type": "long_listening_set",
+        "type": "long_listening_set",
+        "set_size": 2,
+        "points_pattern": [
+          3,
+          4
+        ]
+      },
+      "renumber_output": true
+    }
+  ],
+  "random_rules": {
+    "question_pool_file": "./question-bank.json",
+    "single_question_selection": "slot_templates의 candidate_filter에 맞는 single_questions 중에서 선택",
+    "long_set_selection": "set_slot_templates마다 long_listening_sets 중에서 세트 단위 선택",
+    "no_duplicate_bank_id": true,
+    "no_duplicate_set_id": true,
+    "no_duplicate_source_question_in_one_exam": true,
+    "renumber_selected_questions_to_output_slots": true,
+    "preserve_audio_url_and_image_url": true,
+    "preserve_source_round_and_original_question_number": true,
+    "create_answer_key_from_selected_items": true,
+    "minimum_bank_recommendation": "랜덤 다양성을 확보하려면 3개 이상 회차 병합 후 사용하는 것을 권장",
+    "example_pairing_rule": "출력 슬롯 번호가 아니라 선택된 source 문항의 example_audio_included/random_example_pairing_required 값에 따라 <보기>를 표시한다. <보기> 듣기가 포함된 source 문항은 랜덤 출제 위치가 바뀌어도 원래 <보기> 블록과 함께 이동해야 한다.",
+    "output_slot_does_not_force_example": true
+  },
+  "notes": [
+    "이 파일은 랜덤 출제를 위한 템플릿이며, 고정시험 실행에는 직접 사용하지 않는다.",
+    "현재 question-bank.json은 100회와 102회 두 회차를 포함한다.",
+    "랜덤 출제는 TOPIK I 듣기 1~30번 슬롯 구조를 고정하고, 각 슬롯에 맞는 유형 풀에서 선택한다.",
+    "긴 대화는 반드시 세트 단위로 선택하고 표시 번호만 25~30에 맞게 다시 매긴다.",
+    "default_example_blocks는 랜덤 시험지의 유형 시작 문항에 표시할 <보기> 데이터이다.",
+    "Step33: 랜덤 시험지에서 보기 듣기 파일이 있는 source 문항은 원문항의 보기 블록과 함께 이동하도록 수정함."
+  ],
+  "version": "step36-random-level-test",
+  "default_example_blocks": [
+    {
+      "id": "EX_RANDOM_ANSWER_RESPONSE",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 학생이에요?",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 학생이에요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 학생이 없어요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 학생이 와요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 학생이 좋아요."
+        }
+      ],
+      "example_correct_answer": 1,
+      "slot_type": "answer_response",
+      "source_note": "랜덤 시험지 유형 시작 문항용 공통 보기 예시"
+    },
+    {
+      "id": "EX_RANDOM_FOLLOWING_RESPONSE",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 안녕히 계세요.",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "들어오세요."
+        },
+        {
+          "choice": 2,
+          "text": "안녕하세요."
+        },
+        {
+          "choice": 3,
+          "text": "안녕히 가세요."
+        },
+        {
+          "choice": 4,
+          "text": "맛있게 드세요."
+        }
+      ],
+      "example_correct_answer": 3,
+      "slot_type": "following_response",
+      "source_note": "랜덤 시험지 유형 시작 문항용 공통 보기 예시"
+    },
+    {
+      "id": "EX_RANDOM_PLACE_IDENTIFICATION",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 내일까지 숙제를 꼭 내세요.",
+        "나: 네, 선생님."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "공항"
+        },
+        {
+          "choice": 2,
+          "text": "공원"
+        },
+        {
+          "choice": 3,
+          "text": "교실"
+        },
+        {
+          "choice": 4,
+          "text": "호텔"
+        }
+      ],
+      "example_correct_answer": 3,
+      "slot_type": "place_identification",
+      "source_note": "랜덤 시험지 유형 시작 문항용 공통 보기 예시"
+    },
+    {
+      "id": "EX_RANDOM_TOPIC_IDENTIFICATION",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 몇 살이에요?",
+        "나: 스무 살이에요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "주소"
+        },
+        {
+          "choice": 2,
+          "text": "나이"
+        },
+        {
+          "choice": 3,
+          "text": "달력"
+        },
+        {
+          "choice": 4,
+          "text": "번호"
+        }
+      ],
+      "example_correct_answer": 2,
+      "slot_type": "topic_identification",
+      "source_note": "랜덤 시험지 유형 시작 문항용 공통 보기 예시"
+    },
+    {
+      "id": "EX_RANDOM_SAME_CONTENT",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "남자: 수미 씨는 취미가 뭐예요?",
+        "여자: 저는 여행하는 것을 좋아해요. 그리고 컴퓨터 게임도 자주 해요.",
+        "남자: 저도 게임을 좋아해요. 그런데 요즘은 바빠서 못 했어요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 여행을 좋아합니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 게임을 안 좋아합니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 게임을 하지 않습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 요즘 게임을 자주 합니다."
+        }
+      ],
+      "example_correct_answer": 1,
+      "slot_type": "same_content",
+      "source_note": "랜덤 시험지 유형 시작 문항용 공통 보기 예시"
+    }
+  ],
+  "level_test_random_template": {
+    "template_id": "topik1-listening-random-level-test-16-template",
+    "title": "TOPIK I 듣기 레벨테스트 랜덤 출제 16문항 슬롯 템플릿",
+    "exam_type": "level-test",
+    "generated_exam_mode": "random-level-test",
+    "total_questions": 16,
+    "time_limit_minutes": 20,
+    "selection_principle": {
+      "not_fixed_cut": true,
+      "balanced_by_type": true,
+      "types_included": 8,
+      "two_questions_per_type": true,
+      "long_listening_set_required": true,
+      "level_test_file_not_used_as_pool": true,
+      "description": "레벨테스트 랜덤 출제는 level-test-XX.json을 섞지 않고 question-bank.json의 30문항 원본 문제은행에서 8개 대표 유형을 고르게 선별한다."
+    },
+    "group_templates": [
+      {
+        "range": [
+          1,
+          2
+        ],
+        "slot_type": "answer_response",
+        "category": "알맞은 대답 고르기",
+        "diagnostic_area": "basic_response",
+        "instruction": "[1~2] 다음을 듣고 물음에 맞는 대답을 고르십시오."
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "slot_type": "following_response",
+        "category": "이어지는 말 고르기",
+        "diagnostic_area": "following_response",
+        "instruction": "[3~4] 이어지는 말을 고르십시오."
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "slot_type": "place_identification",
+        "category": "장소 파악하기",
+        "diagnostic_area": "place_identification",
+        "instruction": "[5~6] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오."
+      },
+      {
+        "range": [
+          7,
+          8
+        ],
+        "slot_type": "topic_identification",
+        "category": "화제 파악하기",
+        "diagnostic_area": "topic_identification",
+        "instruction": "[7~8] 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오."
+      },
+      {
+        "range": [
+          9,
+          10
+        ],
+        "slot_type": "picture_choice",
+        "category": "알맞은 그림 고르기",
+        "diagnostic_area": "picture_choice",
+        "instruction": "[9~10] 가장 알맞은 그림을 고르십시오."
+      },
+      {
+        "range": [
+          11,
+          12
+        ],
+        "slot_type": "same_content",
+        "category": "내용 일치 고르기",
+        "diagnostic_area": "same_content",
+        "instruction": "[11~12] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오."
+      },
+      {
+        "range": [
+          13,
+          14
+        ],
+        "slot_type": "main_thought",
+        "category": "중심 생각 고르기",
+        "diagnostic_area": "main_thought",
+        "instruction": "[13~14] 다음을 듣고 여자의 중심 생각을 고르십시오."
+      },
+      {
+        "range": [
+          15,
+          16
+        ],
+        "slot_type": "long_listening_set",
+        "category": "긴 대화 듣고 두 문제 풀기",
+        "diagnostic_area": "long_listening_set",
+        "instruction": "[15~16] 다음을 듣고 두 문제에 답하십시오."
+      }
+    ],
+    "slot_templates": [
+      {
+        "slot_no": 1,
+        "output_question_number": 1,
+        "slot_type": "answer_response",
+        "category": "알맞은 대답 고르기",
+        "diagnostic_area": "basic_response",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[1~2] 다음을 듣고 물음에 맞는 대답을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "answer_response",
+          "diagnostic_area": "basic_response"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 2,
+        "output_question_number": 2,
+        "slot_type": "answer_response",
+        "category": "알맞은 대답 고르기",
+        "diagnostic_area": "basic_response",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[1~2] 다음을 듣고 물음에 맞는 대답을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "answer_response",
+          "diagnostic_area": "basic_response"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 3,
+        "output_question_number": 3,
+        "slot_type": "following_response",
+        "category": "이어지는 말 고르기",
+        "diagnostic_area": "following_response",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[3~4] 이어지는 말을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "following_response",
+          "diagnostic_area": "following_response"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 4,
+        "output_question_number": 4,
+        "slot_type": "following_response",
+        "category": "이어지는 말 고르기",
+        "diagnostic_area": "following_response",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[3~4] 이어지는 말을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "following_response",
+          "diagnostic_area": "following_response"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 5,
+        "output_question_number": 5,
+        "slot_type": "place_identification",
+        "category": "장소 파악하기",
+        "diagnostic_area": "place_identification",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[5~6] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "place_identification",
+          "diagnostic_area": "place_identification"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 6,
+        "output_question_number": 6,
+        "slot_type": "place_identification",
+        "category": "장소 파악하기",
+        "diagnostic_area": "place_identification",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[5~6] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "place_identification",
+          "diagnostic_area": "place_identification"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 7,
+        "output_question_number": 7,
+        "slot_type": "topic_identification",
+        "category": "화제 파악하기",
+        "diagnostic_area": "topic_identification",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[7~8] 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "topic_identification",
+          "diagnostic_area": "topic_identification"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 8,
+        "output_question_number": 8,
+        "slot_type": "topic_identification",
+        "category": "화제 파악하기",
+        "diagnostic_area": "topic_identification",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[7~8] 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "topic_identification",
+          "diagnostic_area": "topic_identification"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 9,
+        "output_question_number": 9,
+        "slot_type": "picture_choice",
+        "category": "알맞은 그림 고르기",
+        "diagnostic_area": "picture_choice",
+        "selection_unit": "single_question",
+        "layout": "image_grid_2x2",
+        "instruction": "[9~10] 가장 알맞은 그림을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "picture_choice",
+          "diagnostic_area": "picture_choice"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 10,
+        "output_question_number": 10,
+        "slot_type": "picture_choice",
+        "category": "알맞은 그림 고르기",
+        "diagnostic_area": "picture_choice",
+        "selection_unit": "single_question",
+        "layout": "image_grid_2x2",
+        "instruction": "[9~10] 가장 알맞은 그림을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "picture_choice",
+          "diagnostic_area": "picture_choice"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 11,
+        "output_question_number": 11,
+        "slot_type": "same_content",
+        "category": "내용 일치 고르기",
+        "diagnostic_area": "same_content",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[11~12] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "same_content",
+          "diagnostic_area": "same_content"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 12,
+        "output_question_number": 12,
+        "slot_type": "same_content",
+        "category": "내용 일치 고르기",
+        "diagnostic_area": "same_content",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[11~12] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "same_content",
+          "diagnostic_area": "same_content"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 13,
+        "output_question_number": 13,
+        "slot_type": "main_thought",
+        "category": "중심 생각 고르기",
+        "diagnostic_area": "main_thought",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[13~14] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "main_thought",
+          "diagnostic_area": "main_thought"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      },
+      {
+        "slot_no": 14,
+        "output_question_number": 14,
+        "slot_type": "main_thought",
+        "category": "중심 생각 고르기",
+        "diagnostic_area": "main_thought",
+        "selection_unit": "single_question",
+        "layout": "single",
+        "instruction": "[13~14] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "single_question",
+          "type": "main_thought",
+          "diagnostic_area": "main_thought"
+        },
+        "points_source": "source_question",
+        "renumber_output": true
+      }
+    ],
+    "set_slot_templates": [
+      {
+        "slot_group_id": "LEVEL_RANDOM_SET_15_16",
+        "output_question_numbers": [
+          15,
+          16
+        ],
+        "slot_type": "long_listening_set",
+        "category": "긴 대화 듣고 두 문제 풀기",
+        "diagnostic_area": "long_listening_set",
+        "selection_unit": "long_listening_set",
+        "layout": "side_by_side",
+        "set_size": 2,
+        "instruction": "[15~16] 다음을 듣고 두 문제에 답하십시오.",
+        "candidate_filter": {
+          "bank_entry_type": "long_listening_set",
+          "type": "long_listening_set",
+          "set_size": 2
+        },
+        "points_source": "source_set_items",
+        "renumber_output": true
+      }
+    ],
+    "random_rules": {
+      "source_pool": "./question-bank.json",
+      "use_level_test_json_as_pool": false,
+      "duplicate_bank_id_forbidden": true,
+      "long_set_selected_as_unit": true,
+      "renumber_output_questions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "score_to_100": true
+    }
+  }
+}

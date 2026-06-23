@@ -1,0 +1,1470 @@
+{
+  "id": "level-test-100",
+  "title": "100회 TOPIK I 듣기 레벨테스트 16문항",
+  "source_round": "100",
+  "level": "TOPIK I",
+  "section": "listening",
+  "exam_type": "level-test",
+  "exam_mode": "fixed",
+  "test_scope": "TOPIK I 듣기 8개 대표 유형 16문항 레벨테스트",
+  "total_questions": 16,
+  "total_possible_points": 54,
+  "time_limit_minutes": 20,
+  "guide_audio_url": "./audio/100/100_GUIDE.mp3",
+  "source_guide_audio_file": "01 트랙 1.m4a",
+  "audio_base_dir": "./audio/100",
+  "image_base_dir": "./images/100",
+  "audio_policy": {
+    "guide_audio": "100_GUIDE.mp3",
+    "question_audio_start": "100_L001.mp3",
+    "question_audio_end": "100_L030.mp3",
+    "note": "01 트랙 1.m4a는 시험 안내 방송으로 보고, 02 트랙 2.m4a부터 1번 문제로 매핑한 초안입니다. 반드시 사람이 들어 보고 확정해야 합니다."
+  },
+  "selection_policy": {
+    "status": "fixed_data",
+    "source_exam_id": "listening-100",
+    "principle": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 고르게 선별한다.",
+    "balanced_distribution": true,
+    "allow_example_questions": true,
+    "difficulty_balance": "각 유형의 시작 또는 기본 문항과 후반·복합 문항을 함께 배치해 쉬운 문항과 어려운 문항이 섞이도록 구성한다.",
+    "mapping": [
+      {
+        "display": 1,
+        "original": 1,
+        "slot_type": "answer_response",
+        "reason": "알맞은 대답 / 유형 시작·기초 응답"
+      },
+      {
+        "display": 2,
+        "original": 4,
+        "slot_type": "answer_response",
+        "reason": "알맞은 대답 / 유형 후반·이동 수단 질문"
+      },
+      {
+        "display": 3,
+        "original": 5,
+        "slot_type": "following_response",
+        "reason": "이어지는 말 / 유형 시작·상황 기능 표현"
+      },
+      {
+        "display": 4,
+        "original": 6,
+        "slot_type": "following_response",
+        "reason": "이어지는 말 / 유형 후반·인사 표현"
+      },
+      {
+        "display": 5,
+        "original": 7,
+        "slot_type": "place_identification",
+        "reason": "장소 파악 / 유형 시작·병원 단서"
+      },
+      {
+        "display": 6,
+        "original": 10,
+        "slot_type": "place_identification",
+        "reason": "장소 파악 / 유형 후반·미용실 단서"
+      },
+      {
+        "display": 7,
+        "original": 11,
+        "slot_type": "topic_identification",
+        "reason": "화제 파악 / 유형 시작·시간 화제"
+      },
+      {
+        "display": 8,
+        "original": 14,
+        "slot_type": "topic_identification",
+        "reason": "화제 파악 / 유형 후반·주소 화제"
+      },
+      {
+        "display": 9,
+        "original": 15,
+        "slot_type": "picture_choice",
+        "reason": "그림 고르기 / 그림 유형 1"
+      },
+      {
+        "display": 10,
+        "original": 16,
+        "slot_type": "picture_choice",
+        "reason": "그림 고르기 / 그림 유형 2"
+      },
+      {
+        "display": 11,
+        "original": 17,
+        "slot_type": "same_content",
+        "reason": "내용 일치 / 유형 시작·기본 세부 정보"
+      },
+      {
+        "display": 12,
+        "original": 21,
+        "slot_type": "same_content",
+        "reason": "내용 일치 / 유형 후반·예약 상황"
+      },
+      {
+        "display": 13,
+        "original": 22,
+        "slot_type": "main_thought",
+        "reason": "중심 생각 / 기초 의견 표현"
+      },
+      {
+        "display": 14,
+        "original": 24,
+        "slot_type": "main_thought",
+        "reason": "중심 생각 / 유형 후반·정리/처분 의견"
+      },
+      {
+        "display": 15,
+        "original": 29,
+        "slot_type": "long_listening_set",
+        "reason": "긴 대화 세트 / 후반 난이도·이유 파악"
+      },
+      {
+        "display": 16,
+        "original": 30,
+        "slot_type": "long_listening_set",
+        "reason": "긴 대화 세트 / 같은 음성 세트·내용 일치"
+      }
+    ],
+    "not_used_for_random_generation": true
+  },
+  "groups": [
+    {
+      "range": [
+        1,
+        2
+      ],
+      "type": "answer_response",
+      "label": "알맞은 대답",
+      "instruction": "[1~2] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오."
+    },
+    {
+      "range": [
+        3,
+        4
+      ],
+      "type": "following_response",
+      "label": "이어지는 말",
+      "instruction": "[3~4] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오."
+    },
+    {
+      "range": [
+        5,
+        6
+      ],
+      "type": "place_identification",
+      "label": "장소 파악",
+      "instruction": "[5~6] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오."
+    },
+    {
+      "range": [
+        7,
+        8
+      ],
+      "type": "topic_identification",
+      "label": "화제 파악",
+      "instruction": "[7~8] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오."
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "type": "picture_choice",
+      "label": "그림 고르기",
+      "instruction": "[9~10] 다음을 듣고 가장 알맞은 그림을 고르십시오."
+    },
+    {
+      "range": [
+        11,
+        12
+      ],
+      "type": "same_content",
+      "label": "내용 일치",
+      "instruction": "[11~12] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오."
+    },
+    {
+      "range": [
+        13,
+        14
+      ],
+      "type": "main_thought",
+      "label": "중심 생각",
+      "instruction": "[13~14] 다음을 듣고 여자의 중심 생각을 고르십시오."
+    },
+    {
+      "range": [
+        15,
+        16
+      ],
+      "type": "long_listening_set",
+      "label": "긴 대화 세트",
+      "instruction": "[15~16] 다음을 듣고 물음에 답하십시오."
+    }
+  ],
+  "example_blocks": [
+    {
+      "id": "EX_100_G01",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 공책이에요?",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 공책이에요."
+        },
+        {
+          "choice": 2,
+          "text": "아니요, 공책을 사요."
+        },
+        {
+          "choice": 3,
+          "text": "네, 공책이 작아요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 공책에 써요."
+        }
+      ],
+      "example_correct_answer": 1
+    },
+    {
+      "id": "EX_100_G02",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 맛있게 드세요.",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "좋겠습니다."
+        },
+        {
+          "choice": 2,
+          "text": "다녀왔습니다."
+        },
+        {
+          "choice": 3,
+          "text": "잘 먹겠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "잘 모르겠습니다."
+        }
+      ],
+      "example_correct_answer": 3
+    },
+    {
+      "id": "EX_100_G03",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 이 옷 입어 봐도 돼요?",
+        "나: 네, 손님. 저쪽에서 입어 보세요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "지하철"
+        },
+        {
+          "choice": 2,
+          "text": "백화점"
+        },
+        {
+          "choice": 3,
+          "text": "미술관"
+        },
+        {
+          "choice": 4,
+          "text": "사진관"
+        }
+      ],
+      "example_correct_answer": 2
+    },
+    {
+      "id": "EX_100_G04",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 누구예요?",
+        "나: 이 사람은 형이고, 이 사람은 동생이에요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "가족"
+        },
+        {
+          "choice": 2,
+          "text": "친구"
+        },
+        {
+          "choice": 3,
+          "text": "선생님"
+        },
+        {
+          "choice": 4,
+          "text": "부모님"
+        }
+      ],
+      "example_correct_answer": 1
+    },
+    {
+      "id": "EX_100_G06",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "남자: 수미 씨는 취미가 뭐예요?",
+        "여자: 저는 여행하는 것을 좋아해요. 그리고 컴퓨터 게임도 자주 해요.",
+        "남자: 저도 게임을 좋아해요. 그런데 요즘은 바빠서 못 했어요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 여행을 좋아합니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 게임을 안 좋아합니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 게임을 하지 않습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 요즘 게임을 자주 합니다."
+        }
+      ],
+      "example_correct_answer": 1
+    }
+  ],
+  "audio_sets": [
+    {
+      "set_id": "LT100_SET_015_016",
+      "source_round": "100",
+      "set_type": "long_listening_set",
+      "target_questions": [
+        15,
+        16
+      ],
+      "target_slots": [
+        15,
+        16
+      ],
+      "source_question_numbers": [
+        29,
+        30
+      ],
+      "layout": "side_by_side",
+      "primary_audio_url": "./audio/100/100_L029.mp3",
+      "audio_url": "./audio/100/100_L029.mp3",
+      "source_audio_file": "30 트랙 30.m4a",
+      "audio_group_id": "LT100_AUDIO_SET_015_016",
+      "audio_group_numbers": [
+        15,
+        16
+      ],
+      "needs_audio_review": true,
+      "note": "100회 원문항 29~30번 긴 대화 세트를 레벨테스트 15~16번으로 재배치했습니다."
+    }
+  ],
+  "render_sequence": [
+    {
+      "unit_id": "LT100_Q001",
+      "unit_type": "single_question",
+      "question_numbers": [
+        1
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L001.mp3"
+    },
+    {
+      "unit_id": "LT100_Q002",
+      "unit_type": "single_question",
+      "question_numbers": [
+        2
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L004.mp3"
+    },
+    {
+      "unit_id": "LT100_Q003",
+      "unit_type": "single_question",
+      "question_numbers": [
+        3
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L005.mp3"
+    },
+    {
+      "unit_id": "LT100_Q004",
+      "unit_type": "single_question",
+      "question_numbers": [
+        4
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L006.mp3"
+    },
+    {
+      "unit_id": "LT100_Q005",
+      "unit_type": "single_question",
+      "question_numbers": [
+        5
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L007.mp3"
+    },
+    {
+      "unit_id": "LT100_Q006",
+      "unit_type": "single_question",
+      "question_numbers": [
+        6
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L010.mp3"
+    },
+    {
+      "unit_id": "LT100_Q007",
+      "unit_type": "single_question",
+      "question_numbers": [
+        7
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L011.mp3"
+    },
+    {
+      "unit_id": "LT100_Q008",
+      "unit_type": "single_question",
+      "question_numbers": [
+        8
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L014.mp3"
+    },
+    {
+      "unit_id": "LT100_Q009",
+      "unit_type": "single_question",
+      "question_numbers": [
+        9
+      ],
+      "layout": "image_grid_2x2",
+      "audio_url": "./audio/100/100_L015.mp3"
+    },
+    {
+      "unit_id": "LT100_Q010",
+      "unit_type": "single_question",
+      "question_numbers": [
+        10
+      ],
+      "layout": "image_grid_2x2",
+      "audio_url": "./audio/100/100_L016.mp3"
+    },
+    {
+      "unit_id": "LT100_Q011",
+      "unit_type": "single_question",
+      "question_numbers": [
+        11
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L017.mp3"
+    },
+    {
+      "unit_id": "LT100_Q012",
+      "unit_type": "single_question",
+      "question_numbers": [
+        12
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L021.mp3"
+    },
+    {
+      "unit_id": "LT100_Q013",
+      "unit_type": "single_question",
+      "question_numbers": [
+        13
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L022.mp3"
+    },
+    {
+      "unit_id": "LT100_Q014",
+      "unit_type": "single_question",
+      "question_numbers": [
+        14
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L024.mp3"
+    },
+    {
+      "unit_id": "LT100_SET_015_016",
+      "unit_type": "question_set",
+      "question_numbers": [
+        15,
+        16
+      ],
+      "layout": "side_by_side",
+      "audio_url": "./audio/100/100_L029.mp3",
+      "audio_group_id": "LT100_AUDIO_SET_015_016",
+      "source_question_numbers": [
+        29,
+        30
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "level-test-100-L001",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 1,
+      "original_question_number": 1,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~2] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/100/100_L001.mp3",
+      "source_audio_file": "02 트랙 2.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 모자예요."
+        },
+        {
+          "choice": 2,
+          "text": "아니요, 모자가 작아요."
+        },
+        {
+          "choice": 3,
+          "text": "네, 모자가 많아요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 모자가 예뻐요."
+        }
+      ],
+      "points": 4,
+      "description": "100회 레벨테스트 1번 / 원문항 1번 / 알맞은 대답 / 유형 시작·기초 응답",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G01",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "level_test_source_question_number": 1,
+      "level_test_selection_reason": "알맞은 대답 / 유형 시작·기초 응답",
+      "correct_answer": 3,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 1,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L002",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 2,
+      "original_question_number": 4,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~2] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/100/100_L004.mp3",
+      "source_audio_file": "05 트랙 5.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "내일 가요."
+        },
+        {
+          "choice": 2,
+          "text": "버스로 가요."
+        },
+        {
+          "choice": 3,
+          "text": "선생님이 가요."
+        },
+        {
+          "choice": 4,
+          "text": "학교까지 가요."
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 2번 / 원문항 4번 / 알맞은 대답 / 유형 후반·이동 수단 질문",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "level_test_source_question_number": 4,
+      "level_test_selection_reason": "알맞은 대답 / 유형 후반·이동 수단 질문",
+      "correct_answer": 2,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 4,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L003",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 3,
+      "original_question_number": 5,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[3~4] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/100/100_L005.mp3",
+      "source_audio_file": "06 트랙 6.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "실례합니다."
+        },
+        {
+          "choice": 2,
+          "text": "미안합니다."
+        },
+        {
+          "choice": 3,
+          "text": "부탁합니다."
+        },
+        {
+          "choice": 4,
+          "text": "감사합니다."
+        }
+      ],
+      "points": 4,
+      "description": "100회 레벨테스트 3번 / 원문항 5번 / 이어지는 말 / 유형 시작·상황 기능 표현",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G02",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "level_test_source_question_number": 5,
+      "level_test_selection_reason": "이어지는 말 / 유형 시작·상황 기능 표현",
+      "correct_answer": 4,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 5,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L004",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 4,
+      "original_question_number": 6,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[3~4] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/100/100_L006.mp3",
+      "source_audio_file": "07 트랙 7.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 잘 지냈어요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 여기 있어요."
+        },
+        {
+          "choice": 3,
+          "text": "네, 오랜만이에요."
+        },
+        {
+          "choice": 4,
+          "text": "네, 만나서 반가워요."
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 4번 / 원문항 6번 / 이어지는 말 / 유형 후반·인사 표현",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G02",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "level_test_source_question_number": 6,
+      "level_test_selection_reason": "이어지는 말 / 유형 후반·인사 표현",
+      "correct_answer": 4,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 6,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L005",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 5,
+      "original_question_number": 7,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[5~6] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/100/100_L007.mp3",
+      "source_audio_file": "08 트랙 8.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "병원"
+        },
+        {
+          "choice": 2,
+          "text": "서점"
+        },
+        {
+          "choice": 3,
+          "text": "은행"
+        },
+        {
+          "choice": 4,
+          "text": "회사"
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 5번 / 원문항 7번 / 장소 파악 / 유형 시작·병원 단서",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G03",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "level_test_source_question_number": 7,
+      "level_test_selection_reason": "장소 파악 / 유형 시작·병원 단서",
+      "correct_answer": 1,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 7,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L006",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 6,
+      "original_question_number": 10,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[5~6] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/100/100_L010.mp3",
+      "source_audio_file": "11 트랙 11.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "미용실"
+        },
+        {
+          "choice": 2,
+          "text": "문구점"
+        },
+        {
+          "choice": 3,
+          "text": "박물관"
+        },
+        {
+          "choice": 4,
+          "text": "여행사"
+        }
+      ],
+      "points": 4,
+      "description": "100회 레벨테스트 6번 / 원문항 10번 / 장소 파악 / 유형 후반·미용실 단서",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "level_test_source_question_number": 10,
+      "level_test_selection_reason": "장소 파악 / 유형 후반·미용실 단서",
+      "correct_answer": 1,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 10,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L007",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 7,
+      "original_question_number": 11,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[7~8] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/100/100_L011.mp3",
+      "source_audio_file": "12 트랙 12.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "나라"
+        },
+        {
+          "choice": 2,
+          "text": "날짜"
+        },
+        {
+          "choice": 3,
+          "text": "이름"
+        },
+        {
+          "choice": 4,
+          "text": "시간"
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 7번 / 원문항 11번 / 화제 파악 / 유형 시작·시간 화제",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_based_draft_ocr_and_visual_review_needed"
+      },
+      "show_example": true,
+      "layout": "single",
+      "example_id": "EX_100_G04",
+      "example_audio_included": true,
+      "level_test_source_question_number": 11,
+      "level_test_selection_reason": "화제 파악 / 유형 시작·시간 화제",
+      "correct_answer": 4,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 11,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L008",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 8,
+      "original_question_number": 14,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[7~8] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/100/100_L014.mp3",
+      "source_audio_file": "15 트랙 15.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "선물"
+        },
+        {
+          "choice": 2,
+          "text": "나이"
+        },
+        {
+          "choice": 3,
+          "text": "달력"
+        },
+        {
+          "choice": 4,
+          "text": "주소"
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 8번 / 원문항 14번 / 화제 파악 / 유형 후반·주소 화제",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_based_draft_ocr_and_visual_review_needed"
+      },
+      "show_example": false,
+      "layout": "single",
+      "example_id": "EX_100_G04",
+      "example_audio_included": false,
+      "level_test_source_question_number": 14,
+      "level_test_selection_reason": "화제 파악 / 유형 후반·주소 화제",
+      "correct_answer": 4,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 14,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L009",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 9,
+      "original_question_number": 15,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[9~10] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/100/100_L015.mp3",
+      "source_audio_file": "16 트랙 16.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/100/100_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/100/100_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/100/100_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/100/100_L015_04.png"
+        }
+      ],
+      "points": 4,
+      "description": "100회 레벨테스트 9번 / 원문항 15번 / 그림 고르기 / 그림 유형 1",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 4,
+        "review_status": "student_booklet_based_draft_ocr_and_visual_review_needed"
+      },
+      "show_example": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/100/100_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/100/100_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/100/100_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/100/100_L015_04.png"
+        }
+      ],
+      "level_test_source_question_number": 15,
+      "level_test_selection_reason": "그림 고르기 / 그림 유형 1",
+      "correct_answer": 4,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 15,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L010",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 10,
+      "original_question_number": 16,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[9~10] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/100/100_L016.mp3",
+      "source_audio_file": "17 트랙 17.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/100/100_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/100/100_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/100/100_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/100/100_L016_04.png"
+        }
+      ],
+      "points": 4,
+      "description": "100회 레벨테스트 10번 / 원문항 16번 / 그림 고르기 / 그림 유형 2",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 4,
+        "review_status": "student_booklet_based_draft_ocr_and_visual_review_needed"
+      },
+      "show_example": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/100/100_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/100/100_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/100/100_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/100/100_L016_04.png"
+        }
+      ],
+      "level_test_source_question_number": 16,
+      "level_test_selection_reason": "그림 고르기 / 그림 유형 2",
+      "correct_answer": 3,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 16,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L011",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 11,
+      "original_question_number": 17,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[11~12] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/100/100_L017.mp3",
+      "source_audio_file": "18 트랙 18.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 주말에 집에 있었습니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 한강에 가 본 적이 없습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 집에서 드라마를 못 봤습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 주말에 혼자 자전거를 탔습니다."
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 11번 / 원문항 17번 / 내용 일치 / 유형 시작·기본 세부 정보",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 5,
+        "review_status": "student_booklet_based_draft_ocr_and_visual_review_needed"
+      },
+      "show_example": true,
+      "layout": "single",
+      "example_id": "EX_100_G06",
+      "example_audio_included": true,
+      "level_test_source_question_number": 17,
+      "level_test_selection_reason": "내용 일치 / 유형 시작·기본 세부 정보",
+      "correct_answer": 1,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 17,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L012",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 12,
+      "original_question_number": 21,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[11~12] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/100/100_L021.mp3",
+      "source_audio_file": "22 트랙 22.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 케이크를 사러 왔습니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 카드를 안 가지고 왔습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 여자에게 케이크를 줬습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 딸기 케이크를 예약했습니다."
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 12번 / 원문항 21번 / 내용 일치 / 유형 후반·예약 상황",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "level_test_source_question_number": 21,
+      "level_test_selection_reason": "내용 일치 / 유형 후반·예약 상황",
+      "correct_answer": 4,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 21,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L013",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 13,
+      "original_question_number": 22,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[13~14] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/100/100_L022.mp3",
+      "source_audio_file": "23 트랙 23.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "여행을 더 자주 다니고 싶습니다."
+        },
+        {
+          "choice": 2,
+          "text": "공항에 일찍 가는 것이 좋습니다."
+        },
+        {
+          "choice": 3,
+          "text": "공항이 집에서 가까우면 좋겠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "비행기 출발 시간을 확인해야 합니다."
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 13번 / 원문항 22번 / 중심 생각 / 기초 의견 표현",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "level_test_source_question_number": 22,
+      "level_test_selection_reason": "중심 생각 / 기초 의견 표현",
+      "correct_answer": 2,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 22,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L014",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 14,
+      "original_question_number": 24,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[13~14] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/100/100_L024.mp3",
+      "source_audio_file": "25 트랙 25.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "새로 옷장을 사는 것이 좋겠습니다."
+        },
+        {
+          "choice": 2,
+          "text": "안 입는 옷은 버리는 것이 낫습니다."
+        },
+        {
+          "choice": 3,
+          "text": "오래 입을 수 있는 옷을 사야 합니다."
+        },
+        {
+          "choice": 4,
+          "text": "옷장을 정리하는 습관을 기르고 싶습니다."
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 14번 / 원문항 24번 / 중심 생각 / 유형 후반·정리/처분 의견",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "level_test_source_question_number": 24,
+      "level_test_selection_reason": "중심 생각 / 유형 후반·정리/처분 의견",
+      "correct_answer": 2,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 24,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L015",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 15,
+      "original_question_number": 29,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[15~16] 다음을 듣고 물음에 답하십시오.",
+      "question": "남자가 이 만화를 그리게 된 이유를 고르십시오.",
+      "audio_url": "./audio/100/100_L029.mp3",
+      "source_audio_file": "30 트랙 30.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "새로운 직업을 찾고 싶어서"
+        },
+        {
+          "choice": 2,
+          "text": "주변 사람들을 도와주고 싶어서"
+        },
+        {
+          "choice": 3,
+          "text": "직접 경험한 이야기를 소개하고 싶어서"
+        },
+        {
+          "choice": 4,
+          "text": "만화 그리는 것의 즐거움을 알리고 싶어서"
+        }
+      ],
+      "points": 3,
+      "description": "100회 레벨테스트 15번 / 원문항 29번 / 긴 대화 세트 / 후반 난이도·이유 파악",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 8,
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "side_by_side_set",
+      "set_id": "LT100_SET_015_016",
+      "audio_group_id": "LT100_AUDIO_SET_015_016",
+      "audio_group_numbers": [
+        15,
+        16
+      ],
+      "shared_audio_total": 2,
+      "shared_audio_index": 1,
+      "level_test_source_question_number": 29,
+      "level_test_selection_reason": "긴 대화 세트 / 후반 난이도·이유 파악",
+      "correct_answer": 3,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 29,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    },
+    {
+      "id": "level-test-100-L016",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 16,
+      "original_question_number": 30,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[15~16] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/100/100_L029.mp3",
+      "source_audio_file": "30 트랙 30.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 어릴 때 만화를 그리지 않았습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 병원에서 짧은 기간 일을 했습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자의 만화로 만든 영화가 나올 예정입니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 병원을 그만둔 후에 만화를 그렸습니다."
+        }
+      ],
+      "points": 4,
+      "description": "100회 레벨테스트 16번 / 원문항 30번 / 긴 대화 세트 / 같은 음성 세트·내용 일치",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 8,
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "side_by_side_set",
+      "set_id": "LT100_SET_015_016",
+      "audio_group_id": "LT100_AUDIO_SET_015_016",
+      "audio_group_numbers": [
+        15,
+        16
+      ],
+      "shared_audio_total": 2,
+      "shared_audio_index": 2,
+      "level_test_source_question_number": 30,
+      "level_test_selection_reason": "긴 대화 세트 / 같은 음성 세트·내용 일치",
+      "correct_answer": 3,
+      "generated_from": {
+        "exam_id": "listening-100",
+        "source_question_number": 30,
+        "selection_rule": "TOPIK I 듣기 8개 대표 유형에서 2문항씩 선별하고, 쉬운 유형 시작 문항과 후반 난이도 문항을 함께 배치"
+      }
+    }
+  ],
+  "data_status": {
+    "status": "level_test_fixed_from_100",
+    "screen_review": "pending",
+    "needs_audio_review": true,
+    "needs_human_final_review": true,
+    "note": "100회 30문항 실전시험에서 유형별 2문항씩 선별한 레벨테스트 고정 데이터입니다."
+  },
+  "notes": [
+    "이 파일은 100회 레벨테스트 고정 출제 데이터입니다.",
+    "랜덤 출제는 이 파일을 사용하지 않고 question-bank.json과 exam-template.json을 기준으로 생성해야 합니다.",
+    "오디오, 이미지, 정답은 사람이 최종 검수해야 합니다."
+  ]
+}

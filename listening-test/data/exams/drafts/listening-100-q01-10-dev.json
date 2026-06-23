@@ -1,0 +1,713 @@
+{
+  "id": "listening-100-q01-10-dev",
+  "title": "100회 TOPIK I 듣기 1~10번 화면 테스트",
+  "source_round": "100",
+  "level": "TOPIK I",
+  "section": "listening",
+  "exam_type": "draft-partial",
+  "test_scope": "TOPIK I 듣기 1~10번 화면 테스트",
+  "total_questions": 10,
+  "total_possible_points": 34,
+  "guide_audio_url": "./audio/100/100_GUIDE.mp3",
+  "source_guide_audio_file": "01 트랙 1.m4a",
+  "audio_base_dir": "./audio/100",
+  "image_base_dir": "./images/100",
+  "audio_policy": {
+    "guide_audio": "100_GUIDE.mp3",
+    "question_audio_start": "100_L001.mp3",
+    "question_audio_end": "100_L030.mp3",
+    "note": "01 트랙 1.m4a는 시험 안내 방송으로 보고, 02 트랙 2.m4a부터 1번 문제로 매핑한 초안입니다. 반드시 사람이 들어 보고 확정해야 합니다."
+  },
+  "groups": [
+    {
+      "range": [
+        1,
+        4
+      ],
+      "type": "answer_response",
+      "label": "알맞은 대답 고르기",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오."
+    },
+    {
+      "range": [
+        5,
+        6
+      ],
+      "type": "following_response",
+      "label": "이어지는 말 고르기",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오."
+    },
+    {
+      "range": [
+        7,
+        10
+      ],
+      "type": "place_identification",
+      "label": "장소 파악하기",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오."
+    }
+  ],
+  "example_blocks": [
+    {
+      "id": "EX_100_G01",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 공책이에요?",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 공책이에요."
+        },
+        {
+          "choice": 2,
+          "text": "아니요, 공책을 사요."
+        },
+        {
+          "choice": 3,
+          "text": "네, 공책이 작아요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 공책에 써요."
+        }
+      ],
+      "example_correct_answer": 1
+    },
+    {
+      "id": "EX_100_G02",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 맛있게 드세요.",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "좋겠습니다."
+        },
+        {
+          "choice": 2,
+          "text": "다녀왔습니다."
+        },
+        {
+          "choice": 3,
+          "text": "잘 먹겠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "잘 모르겠습니다."
+        }
+      ],
+      "example_correct_answer": 3
+    },
+    {
+      "id": "EX_100_G03",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 이 옷 입어 봐도 돼요?",
+        "나: 네, 손님. 저쪽에서 입어 보세요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "지하철"
+        },
+        {
+          "choice": 2,
+          "text": "백화점"
+        },
+        {
+          "choice": 3,
+          "text": "미술관"
+        },
+        {
+          "choice": 4,
+          "text": "사진관"
+        }
+      ],
+      "example_correct_answer": 2
+    }
+  ],
+  "audio_sets": [],
+  "render_sequence": [
+    {
+      "unit_id": "Q001",
+      "unit_type": "single_question",
+      "question_numbers": [
+        1
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L001.mp3"
+    },
+    {
+      "unit_id": "Q002",
+      "unit_type": "single_question",
+      "question_numbers": [
+        2
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L002.mp3"
+    },
+    {
+      "unit_id": "Q003",
+      "unit_type": "single_question",
+      "question_numbers": [
+        3
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L003.mp3"
+    },
+    {
+      "unit_id": "Q004",
+      "unit_type": "single_question",
+      "question_numbers": [
+        4
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L004.mp3"
+    },
+    {
+      "unit_id": "Q005",
+      "unit_type": "single_question",
+      "question_numbers": [
+        5
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L005.mp3"
+    },
+    {
+      "unit_id": "Q006",
+      "unit_type": "single_question",
+      "question_numbers": [
+        6
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L006.mp3"
+    },
+    {
+      "unit_id": "Q007",
+      "unit_type": "single_question",
+      "question_numbers": [
+        7
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L007.mp3"
+    },
+    {
+      "unit_id": "Q008",
+      "unit_type": "single_question",
+      "question_numbers": [
+        8
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L008.mp3"
+    },
+    {
+      "unit_id": "Q009",
+      "unit_type": "single_question",
+      "question_numbers": [
+        9
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L009.mp3"
+    },
+    {
+      "unit_id": "Q010",
+      "unit_type": "single_question",
+      "question_numbers": [
+        10
+      ],
+      "layout": "single",
+      "audio_url": "./audio/100/100_L010.mp3"
+    }
+  ],
+  "items": [
+    {
+      "id": "100-L001",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 1,
+      "original_question_number": 1,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/100/100_L001.mp3",
+      "source_audio_file": "02 트랙 2.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 모자예요."
+        },
+        {
+          "choice": 2,
+          "text": "아니요, 모자가 작아요."
+        },
+        {
+          "choice": 3,
+          "text": "네, 모자가 많아요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 모자가 예뻐요."
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G01",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single"
+    },
+    {
+      "id": "100-L002",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 2,
+      "original_question_number": 2,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/100/100_L002.mp3",
+      "source_audio_file": "03 트랙 3.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 영화가 없어요."
+        },
+        {
+          "choice": 2,
+          "text": "아니요, 영화를 안 봐요."
+        },
+        {
+          "choice": 3,
+          "text": "네, 영화가 아니에요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 영화를 좋아해요."
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    },
+    {
+      "id": "100-L003",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 3,
+      "original_question_number": 3,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/100/100_L003.mp3",
+      "source_audio_file": "04 트랙 4.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "아침에 해요."
+        },
+        {
+          "choice": 2,
+          "text": "축구를 해요."
+        },
+        {
+          "choice": 3,
+          "text": "친구하고 해요."
+        },
+        {
+          "choice": 4,
+          "text": "공원에서 해요."
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    },
+    {
+      "id": "100-L004",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 4,
+      "original_question_number": 4,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/100/100_L004.mp3",
+      "source_audio_file": "05 트랙 5.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "내일 가요."
+        },
+        {
+          "choice": 2,
+          "text": "버스로 가요."
+        },
+        {
+          "choice": 3,
+          "text": "선생님이 가요."
+        },
+        {
+          "choice": 4,
+          "text": "학교까지 가요."
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    },
+    {
+      "id": "100-L005",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 5,
+      "original_question_number": 5,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/100/100_L005.mp3",
+      "source_audio_file": "06 트랙 6.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "실례합니다."
+        },
+        {
+          "choice": 2,
+          "text": "미안합니다."
+        },
+        {
+          "choice": 3,
+          "text": "부탁합니다."
+        },
+        {
+          "choice": 4,
+          "text": "감사합니다."
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G02",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single"
+    },
+    {
+      "id": "100-L006",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 6,
+      "original_question_number": 6,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/100/100_L006.mp3",
+      "source_audio_file": "07 트랙 7.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 잘 지냈어요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 여기 있어요."
+        },
+        {
+          "choice": 3,
+          "text": "네, 오랜만이에요."
+        },
+        {
+          "choice": 4,
+          "text": "네, 만나서 반가워요."
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G02",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    },
+    {
+      "id": "100-L007",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 7,
+      "original_question_number": 7,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/100/100_L007.mp3",
+      "source_audio_file": "08 트랙 8.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "병원"
+        },
+        {
+          "choice": 2,
+          "text": "서점"
+        },
+        {
+          "choice": 3,
+          "text": "은행"
+        },
+        {
+          "choice": 4,
+          "text": "회사"
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G03",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single"
+    },
+    {
+      "id": "100-L008",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 8,
+      "original_question_number": 8,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/100/100_L008.mp3",
+      "source_audio_file": "09 트랙 9.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "꽃집"
+        },
+        {
+          "choice": 2,
+          "text": "교실"
+        },
+        {
+          "choice": 3,
+          "text": "카페"
+        },
+        {
+          "choice": 4,
+          "text": "약국"
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    },
+    {
+      "id": "100-L009",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 9,
+      "original_question_number": 9,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/100/100_L009.mp3",
+      "source_audio_file": "10 트랙 10.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "우체국"
+        },
+        {
+          "choice": 2,
+          "text": "도서관"
+        },
+        {
+          "choice": 3,
+          "text": "운동장"
+        },
+        {
+          "choice": 4,
+          "text": "영화관"
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    },
+    {
+      "id": "100-L010",
+      "source_round": "100",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 10,
+      "original_question_number": 10,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/100/100_L010.mp3",
+      "source_audio_file": "11 트랙 11.m4a",
+      "options": [
+        {
+          "choice": 1,
+          "text": "미용실"
+        },
+        {
+          "choice": 2,
+          "text": "문구점"
+        },
+        {
+          "choice": 3,
+          "text": "박물관"
+        },
+        {
+          "choice": 4,
+          "text": "여행사"
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": true,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "100회 토픽1-1 문제지.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_based_draft"
+      },
+      "example_id": "EX_100_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    }
+  ],
+  "data_status": {
+    "status": "dev_screen_test_q01_10_only",
+    "needs_audio_review": true,
+    "needs_human_final_review": true,
+    "note": "100회 1~10번 학생용 시험지 기준 초안입니다. 실제 문항의 대화문은 화면에 표시하지 않습니다."
+  },
+  "notes": [
+    "100회 1~10번 화면 테스트용 임시 파일입니다.",
+    "30문항 통합본이 아니므로 최종 manifest에는 이 항목을 제거해야 합니다.",
+    "오디오 매핑과 보기 문항은 사람이 최종 검수해야 합니다."
+  ],
+  "time_limit_minutes": 15
+}

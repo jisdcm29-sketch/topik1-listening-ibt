@@ -1,0 +1,3595 @@
+{
+  "schema_version": "topik1-listening-question-bank-addon-v1",
+  "addon_id": "question-bank-102-addon-normalized",
+  "source_round": "102",
+  "source_exam_id": "listening-102",
+  "source_exam_title": "102회 TOPIK I 듣기 30문항",
+  "level": "TOPIK I",
+  "section": "listening",
+  "status": "normalized_from_reviewed_full_exam",
+  "created_from": {
+    "exam_file": "listening-test/data/exams/listening-102.json",
+    "answer_key_file": "listening-test/data/answer-keys/answer-key-102.json"
+  },
+  "normalization_policy": {
+    "use_level_test_data": false,
+    "source_for_bank": "30문항 실전시험 원본 데이터",
+    "single_questions": "1~24번은 단일 문항으로 저장",
+    "picture_choice": "15~16번은 단일 그림 선택 문항으로 저장",
+    "long_listening_set": "25~26, 27~28, 29~30은 세트 단위로 저장",
+    "random_use": "랜덤 출제는 이 addon을 question-bank.json에 병합한 뒤 exam-template.json 슬롯 구조에 맞춰 사용"
+  },
+  "statistics": {
+    "source_round_count": 1,
+    "source_rounds": [
+      "102"
+    ],
+    "flat_question_count": 30,
+    "single_question_count": 24,
+    "long_set_count": 3,
+    "long_set_member_question_count": 6,
+    "total_possible_points": 100,
+    "by_type": {
+      "answer_response": 4,
+      "following_response": 2,
+      "place_identification": 4,
+      "topic_identification": 4,
+      "picture_choice": 2,
+      "same_content": 5,
+      "main_thought": 3,
+      "long_listening_set": 3
+    },
+    "by_diagnostic_area": {
+      "basic_response": 4,
+      "following_response": 2,
+      "place_identification": 4,
+      "topic_identification": 4,
+      "picture_choice": 2,
+      "same_content": 5,
+      "main_thought": 3,
+      "long_listening_set": 3
+    }
+  },
+  "single_questions": [
+    {
+      "id": "102-L001",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 1,
+      "original_question_number": 1,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "남자의 물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/102/102_L001.mp3",
+      "source_audio_file": "1-01.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 우산이 있어요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 우산이 아니에요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 우산이에요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 우산이 작아요."
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G01",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "bank_id": "L102_Q001",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 1,
+      "preferred_slots": [
+        1
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L002",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 2,
+      "original_question_number": 2,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "여자의 물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/102/102_L002.mp3",
+      "source_audio_file": "1-02.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 신문이 없어요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 신문을 싫어해요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 신문을 안 봐요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 신문이 재미있어요."
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "bank_id": "L102_Q002",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 2,
+      "preferred_slots": [
+        2
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L003",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 3,
+      "original_question_number": 3,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "남자의 물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/102/102_L003.mp3",
+      "source_audio_file": "1-03.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "혼자 먹었어요."
+        },
+        {
+          "choice": 2,
+          "text": "불고기를 먹었어요."
+        },
+        {
+          "choice": 3,
+          "text": "저녁에 먹었어요."
+        },
+        {
+          "choice": 4,
+          "text": "학교에서 먹었어요."
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "bank_id": "L102_Q003",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 3,
+      "preferred_slots": [
+        3
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L004",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 4,
+      "original_question_number": 4,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "여자의 물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/102/102_L004.mp3",
+      "source_audio_file": "1-04.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "두 개예요."
+        },
+        {
+          "choice": 2,
+          "text": "네 시예요."
+        },
+        {
+          "choice": 3,
+          "text": "팔 일이에요."
+        },
+        {
+          "choice": 4,
+          "text": "수요일이에요."
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "bank_id": "L102_Q004",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 4,
+      "preferred_slots": [
+        4
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L005",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 5,
+      "original_question_number": 5,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/102/102_L005.mp3",
+      "source_audio_file": "1-05.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "미안해요."
+        },
+        {
+          "choice": 2,
+          "text": "반가워요."
+        },
+        {
+          "choice": 3,
+          "text": "실례해요."
+        },
+        {
+          "choice": 4,
+          "text": "아니에요."
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G02",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "bank_id": "L102_Q005",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 5,
+      "preferred_slots": [
+        5
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L006",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 6,
+      "original_question_number": 6,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/102/102_L006.mp3",
+      "source_audio_file": "1-06.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "그렇습니다."
+        },
+        {
+          "choice": 2,
+          "text": "알겠습니다."
+        },
+        {
+          "choice": 3,
+          "text": "환영합니다."
+        },
+        {
+          "choice": 4,
+          "text": "오랜만입니다."
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G02",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "bank_id": "L102_Q006",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 6,
+      "preferred_slots": [
+        6
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L007",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 7,
+      "original_question_number": 7,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/102/102_L007.mp3",
+      "source_audio_file": "1-07.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "빵집"
+        },
+        {
+          "choice": 2,
+          "text": "서점"
+        },
+        {
+          "choice": 3,
+          "text": "옷 가게"
+        },
+        {
+          "choice": 4,
+          "text": "신발 가게"
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G03",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "bank_id": "L102_Q007",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 7,
+      "preferred_slots": [
+        7
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L008",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 8,
+      "original_question_number": 8,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/102/102_L008.mp3",
+      "source_audio_file": "1-08.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "꽃집"
+        },
+        {
+          "choice": 2,
+          "text": "은행"
+        },
+        {
+          "choice": 3,
+          "text": "정류장"
+        },
+        {
+          "choice": 4,
+          "text": "지하철역"
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "bank_id": "L102_Q008",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 8,
+      "preferred_slots": [
+        8
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L009",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 9,
+      "original_question_number": 9,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/102/102_L009.mp3",
+      "source_audio_file": "1-09.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "식당"
+        },
+        {
+          "choice": 2,
+          "text": "약국"
+        },
+        {
+          "choice": 3,
+          "text": "미용실"
+        },
+        {
+          "choice": 4,
+          "text": "도서관"
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "bank_id": "L102_Q009",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 9,
+      "preferred_slots": [
+        9
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L010",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 10,
+      "original_question_number": 10,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/102/102_L010.mp3",
+      "source_audio_file": "1-10.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "극장"
+        },
+        {
+          "choice": 2,
+          "text": "시장"
+        },
+        {
+          "choice": 3,
+          "text": "우체국"
+        },
+        {
+          "choice": 4,
+          "text": "사진관"
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "bank_id": "L102_Q010",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 10,
+      "preferred_slots": [
+        10
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L011",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 11,
+      "original_question_number": 11,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/102/102_L011.mp3",
+      "source_audio_file": "1-11.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "가족"
+        },
+        {
+          "choice": 2,
+          "text": "나라"
+        },
+        {
+          "choice": 3,
+          "text": "시간"
+        },
+        {
+          "choice": 4,
+          "text": "약속"
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 11번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G04",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q011",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 11,
+      "preferred_slots": [
+        11
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L012",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 12,
+      "original_question_number": 12,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/102/102_L012.mp3",
+      "source_audio_file": "1-12.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "직업"
+        },
+        {
+          "choice": 2,
+          "text": "이름"
+        },
+        {
+          "choice": 3,
+          "text": "날씨"
+        },
+        {
+          "choice": 4,
+          "text": "휴일"
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 12번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G04",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q012",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 12,
+      "preferred_slots": [
+        12
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L013",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 13,
+      "original_question_number": 13,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/102/102_L013.mp3",
+      "source_audio_file": "1-13.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "건강"
+        },
+        {
+          "choice": 2,
+          "text": "계획"
+        },
+        {
+          "choice": 3,
+          "text": "방학"
+        },
+        {
+          "choice": 4,
+          "text": "운동"
+        }
+      ],
+      "points": 4,
+      "description": "102회 듣기 13번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G04",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q013",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 13,
+      "preferred_slots": [
+        13
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L014",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 14,
+      "original_question_number": 14,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/102/102_L014.mp3",
+      "source_audio_file": "1-14.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "값"
+        },
+        {
+          "choice": 2,
+          "text": "집"
+        },
+        {
+          "choice": 3,
+          "text": "가구"
+        },
+        {
+          "choice": 4,
+          "text": "고향"
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 14번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G04",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q014",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 14,
+      "preferred_slots": [
+        14
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L015",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 15,
+      "original_question_number": 15,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/102/102_L015.mp3",
+      "source_audio_file": "1-15.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/102/102_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/102/102_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/102/102_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/102/102_L015_04.png"
+        }
+      ],
+      "points": 4,
+      "description": "102회 듣기 15번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/102/102_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/102/102_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/102/102_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/102/102_L015_04.png"
+        }
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 4,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q015",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 15,
+      "preferred_slots": [
+        15
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L016",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 16,
+      "original_question_number": 16,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/102/102_L016.mp3",
+      "source_audio_file": "1-16.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/102/102_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/102/102_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/102/102_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/102/102_L016_04.png"
+        }
+      ],
+      "points": 4,
+      "description": "102회 듣기 16번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/102/102_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/102/102_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/102/102_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/102/102_L016_04.png"
+        }
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 4,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q016",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 16,
+      "preferred_slots": [
+        16
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L017",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 17,
+      "original_question_number": 17,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L017.mp3",
+      "source_audio_file": "1-17.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 고향에 자주 갑니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 방학에 가족을 못 만났습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 방학에 영어 공부를 했습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 이번 방학에 여행을 가지 못했습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 17번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 5,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q017",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 17,
+      "preferred_slots": [
+        17
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L018",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 18,
+      "original_question_number": 18,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L018.mp3",
+      "source_audio_file": "1-18.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "인주식당은 메뉴가 많습니다."
+        },
+        {
+          "choice": 2,
+          "text": "인주식당은 예약을 받지 않습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 인주식당의 위치를 모릅니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 지난주에 인주식당에 갔습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 18번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 5,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q018",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 18,
+      "preferred_slots": [
+        18
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L019",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 19,
+      "original_question_number": 19,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L019.mp3",
+      "source_audio_file": "1-19.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 운전에 익숙해졌습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 운전을 할 줄 모릅니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 내일부터 회사에 운전해서 갈 겁니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 여자가 운전하는 것을 본 적이 없습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 19번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 5,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q019",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 19,
+      "preferred_slots": [
+        19
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L020",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 20,
+      "original_question_number": 20,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L020.mp3",
+      "source_audio_file": "1-20.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "이 가수는 아주 유명합니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 이 가수를 좋아하지 않습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 이 가수를 직접 본 적이 있습니다."
+        },
+        {
+          "choice": 4,
+          "text": "이 가수는 한강공원에서 공연을 했습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 20번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 5,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q020",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 20,
+      "preferred_slots": [
+        20
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L021",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 21,
+      "original_question_number": 21,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L021.mp3",
+      "source_audio_file": "1-21.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 지금 505호에 있습니다."
+        },
+        {
+          "choice": 2,
+          "text": "호텔에는 수영장에 못 들어갑니다."
+        },
+        {
+          "choice": 3,
+          "text": "호텔에서 수영복을 살 수 없습니다."
+        },
+        {
+          "choice": 4,
+          "text": "수영복을 빌리려면 돈을 내야 합니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 21번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q021",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 21,
+      "preferred_slots": [
+        21
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L022",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 22,
+      "original_question_number": 22,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/102/102_L022.mp3",
+      "source_audio_file": "1-22.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "연필을 사용하는 것을 좋아합니다."
+        },
+        {
+          "choice": 2,
+          "text": "오래 기억하려면 메모를 해야 합니다."
+        },
+        {
+          "choice": 3,
+          "text": "여러 종류의 연필이 있으면 좋겠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "일기를 자주 쓰는 습관을 가지고 싶습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 22번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q022",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 22,
+      "preferred_slots": [
+        22
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L023",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 23,
+      "original_question_number": 23,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/102/102_L023.mp3",
+      "source_audio_file": "1-23.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "꽃다발을 빨리 찾으러 가고 싶습니다."
+        },
+        {
+          "choice": 2,
+          "text": "다양한 꽃으로 만든 꽃다발이 좋습니다."
+        },
+        {
+          "choice": 3,
+          "text": "꽃다발을 똑같이 만드는 것이 어렵습니다."
+        },
+        {
+          "choice": 4,
+          "text": "같은 꽃다발을 하나 더 주문하고 싶습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 23번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q023",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 23,
+      "preferred_slots": [
+        23
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    },
+    {
+      "id": "102-L024",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 24,
+      "original_question_number": 24,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/102/102_L024.mp3",
+      "source_audio_file": "1-24.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "침대는 직접 보고 사야 합니다."
+        },
+        {
+          "choice": 2,
+          "text": "침대는 자주 바꿀 필요가 있습니다."
+        },
+        {
+          "choice": 3,
+          "text": "가구는 디자인이 예쁜 것이 좋습니다."
+        },
+        {
+          "choice": 4,
+          "text": "가구는 인터넷으로 사는 게 편합니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 24번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review"
+      },
+      "bank_id": "L102_Q024",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 24,
+      "preferred_slots": [
+        24
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
+    }
+  ],
+  "long_listening_sets": [
+    {
+      "bank_set_id": "L102_SET_025_026",
+      "source_round": "102",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "bank_entry_type": "long_listening_set",
+      "set_type": "long_listening_set",
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "target_original_question_numbers": [
+        25,
+        26
+      ],
+      "target_slots": [
+        25,
+        26
+      ],
+      "set_size": 2,
+      "layout": "side_by_side",
+      "audio_url": "./audio/102/102_L025.mp3",
+      "primary_audio_url": "./audio/102/102_L025.mp3",
+      "source_audio_file": "1-25.mp3",
+      "audio_group_id": "AUDIO_102_SET_25_26",
+      "audio_group_numbers": [
+        25,
+        26
+      ],
+      "points_total": 7,
+      "correct_answers": [
+        {
+          "question_number": 25,
+          "correct_answer": 1,
+          "points": 3
+        },
+        {
+          "question_number": 26,
+          "correct_answer": 3,
+          "points": 4
+        }
+      ],
+      "items": [
+        {
+          "id": "102-L025",
+          "source_round": "102",
+          "level": "TOPIK I",
+          "section": "listening",
+          "question_number": 25,
+          "original_question_number": 25,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "여자가 왜 이 이야기를 하고 있는지 고르십시오.",
+          "audio_url": "./audio/102/102_L025.mp3",
+          "source_audio_file": "1-25.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "청소 일정을 안내하려고"
+            },
+            {
+              "choice": 2,
+              "text": "청소 신청 방법을 알리려고"
+            },
+            {
+              "choice": 3,
+              "text": "청소가 필요한 이유를 설명하려고"
+            },
+            {
+              "choice": 4,
+              "text": "청소 날짜가 바뀐 것을 이야기하려고"
+            }
+          ],
+          "points": 3,
+          "description": "102회 듣기 25번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "show_example": false,
+          "layout": "side_by_side_set",
+          "set_id": "SET_25_26",
+          "audio_group_id": "AUDIO_102_SET_25_26",
+          "audio_group_numbers": [
+            25,
+            26
+          ],
+          "text_source": {
+            "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+            "source_page": 7,
+            "review_status": "student_booklet_visual_review"
+          },
+          "shared_audio_total": 2,
+          "shared_audio_index": 1,
+          "bank_id": "L102_Q025",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-102",
+          "source_exam_title": "102회 TOPIK I 듣기 30문항",
+          "source_question_number": 25,
+          "correct_answer": 1,
+          "random_eligible": true,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
+        },
+        {
+          "id": "102-L026",
+          "source_round": "102",
+          "level": "TOPIK I",
+          "section": "listening",
+          "question_number": 26,
+          "original_question_number": 26,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "들은 내용과 같은 것을 고르십시오.",
+          "audio_url": "./audio/102/102_L025.mp3",
+          "source_audio_file": "1-25.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "주차장 청소는 오전에 끝납니다."
+            },
+            {
+              "choice": 2,
+              "text": "주차장 청소는 이번 주에 합니다."
+            },
+            {
+              "choice": 3,
+              "text": "회사 근처에 야외 주차장이 있습니다."
+            },
+            {
+              "choice": 4,
+              "text": "청소할 때 지하 주차장에 들어갈 수 있습니다."
+            }
+          ],
+          "points": 4,
+          "description": "102회 듣기 26번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "show_example": false,
+          "layout": "side_by_side_set",
+          "set_id": "SET_25_26",
+          "audio_group_id": "AUDIO_102_SET_25_26",
+          "audio_group_numbers": [
+            25,
+            26
+          ],
+          "text_source": {
+            "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+            "source_page": 7,
+            "review_status": "student_booklet_visual_review"
+          },
+          "shared_audio_total": 2,
+          "shared_audio_index": 2,
+          "bank_id": "L102_Q026",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-102",
+          "source_exam_title": "102회 TOPIK I 듣기 30문항",
+          "source_question_number": 26,
+          "correct_answer": 3,
+          "random_eligible": true,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
+        }
+      ],
+      "random_eligible": true,
+      "random_selection_unit": "set",
+      "random_notes": "긴 대화는 반드시 이 세트 전체를 함께 선택해야 함. 구성 문항 단독 선택 금지.",
+      "needs_audio_review": true
+    },
+    {
+      "bank_set_id": "L102_SET_027_028",
+      "source_round": "102",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "bank_entry_type": "long_listening_set",
+      "set_type": "long_listening_set",
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "target_original_question_numbers": [
+        27,
+        28
+      ],
+      "target_slots": [
+        27,
+        28
+      ],
+      "set_size": 2,
+      "layout": "side_by_side",
+      "audio_url": "./audio/102/102_L027.mp3",
+      "primary_audio_url": "./audio/102/102_L027.mp3",
+      "source_audio_file": "1-27.mp3",
+      "audio_group_id": "AUDIO_102_SET_27_28",
+      "audio_group_numbers": [
+        27,
+        28
+      ],
+      "points_total": 7,
+      "correct_answers": [
+        {
+          "question_number": 27,
+          "correct_answer": 3,
+          "points": 3
+        },
+        {
+          "question_number": 28,
+          "correct_answer": 4,
+          "points": 4
+        }
+      ],
+      "items": [
+        {
+          "id": "102-L027",
+          "source_round": "102",
+          "level": "TOPIK I",
+          "section": "listening",
+          "question_number": 27,
+          "original_question_number": 27,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "두 사람이 무엇에 대해 이야기를 하고 있는지 고르십시오.",
+          "audio_url": "./audio/102/102_L027.mp3",
+          "source_audio_file": "1-27.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "인주 해변에 가는 방법"
+            },
+            {
+              "choice": 2,
+              "text": "인주 해변에서 찍은 영화"
+            },
+            {
+              "choice": 3,
+              "text": "해변에서 하는 영화 축제"
+            },
+            {
+              "choice": 4,
+              "text": "축제에 같이 가고 싶은 사람"
+            }
+          ],
+          "points": 3,
+          "description": "102회 듣기 27번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "show_example": false,
+          "layout": "side_by_side_set",
+          "set_id": "SET_27_28",
+          "audio_group_id": "AUDIO_102_SET_27_28",
+          "audio_group_numbers": [
+            27,
+            28
+          ],
+          "text_source": {
+            "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+            "source_page": 7,
+            "review_status": "student_booklet_visual_review"
+          },
+          "shared_audio_total": 2,
+          "shared_audio_index": 1,
+          "bank_id": "L102_Q027",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-102",
+          "source_exam_title": "102회 TOPIK I 듣기 30문항",
+          "source_question_number": 27,
+          "correct_answer": 3,
+          "random_eligible": true,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
+        },
+        {
+          "id": "102-L028",
+          "source_round": "102",
+          "level": "TOPIK I",
+          "section": "listening",
+          "question_number": 28,
+          "original_question_number": 28,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "들은 내용과 같은 것을 고르십시오.",
+          "audio_url": "./audio/102/102_L027.mp3",
+          "source_audio_file": "1-27.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "축제는 다음 주까지 합니다."
+            },
+            {
+              "choice": 2,
+              "text": "여자는 어제 이 축제에 갔다 왔습니다."
+            },
+            {
+              "choice": 3,
+              "text": "영화를 볼 때 의자를 빌릴 수 없습니다."
+            },
+            {
+              "choice": 4,
+              "text": "일정은 홈페이지에서 확인할 수 있습니다."
+            }
+          ],
+          "points": 4,
+          "description": "102회 듣기 28번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "show_example": false,
+          "layout": "side_by_side_set",
+          "set_id": "SET_27_28",
+          "audio_group_id": "AUDIO_102_SET_27_28",
+          "audio_group_numbers": [
+            27,
+            28
+          ],
+          "text_source": {
+            "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+            "source_page": 7,
+            "review_status": "student_booklet_visual_review"
+          },
+          "shared_audio_total": 2,
+          "shared_audio_index": 2,
+          "bank_id": "L102_Q028",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-102",
+          "source_exam_title": "102회 TOPIK I 듣기 30문항",
+          "source_question_number": 28,
+          "correct_answer": 4,
+          "random_eligible": true,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
+        }
+      ],
+      "random_eligible": true,
+      "random_selection_unit": "set",
+      "random_notes": "긴 대화는 반드시 이 세트 전체를 함께 선택해야 함. 구성 문항 단독 선택 금지.",
+      "needs_audio_review": true
+    },
+    {
+      "bank_set_id": "L102_SET_029_030",
+      "source_round": "102",
+      "source_exam_id": "listening-102",
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "bank_entry_type": "long_listening_set",
+      "set_type": "long_listening_set",
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "target_original_question_numbers": [
+        29,
+        30
+      ],
+      "target_slots": [
+        29,
+        30
+      ],
+      "set_size": 2,
+      "layout": "side_by_side",
+      "audio_url": "./audio/102/102_L029.mp3",
+      "primary_audio_url": "./audio/102/102_L029.mp3",
+      "source_audio_file": "1-29.mp3",
+      "audio_group_id": "AUDIO_102_SET_29_30",
+      "audio_group_numbers": [
+        29,
+        30
+      ],
+      "points_total": 7,
+      "correct_answers": [
+        {
+          "question_number": 29,
+          "correct_answer": 2,
+          "points": 3
+        },
+        {
+          "question_number": 30,
+          "correct_answer": 1,
+          "points": 4
+        }
+      ],
+      "items": [
+        {
+          "id": "102-L029",
+          "source_round": "102",
+          "level": "TOPIK I",
+          "section": "listening",
+          "question_number": 29,
+          "original_question_number": 29,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "여자가 탁구 선수가 된 이유를 고르십시오.",
+          "audio_url": "./audio/102/102_L029.mp3",
+          "source_audio_file": "1-29.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "어렸을 때부터 운동을 잘해서"
+            },
+            {
+              "choice": 2,
+              "text": "직접 본 탁구 경기가 멋있어서"
+            },
+            {
+              "choice": 3,
+              "text": "친구들과 같이 운동하고 싶어서"
+            },
+            {
+              "choice": 4,
+              "text": "아버지를 기쁘게 해 드리고 싶어서"
+            }
+          ],
+          "points": 3,
+          "description": "102회 듣기 29번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "show_example": false,
+          "layout": "side_by_side_set",
+          "set_id": "SET_29_30",
+          "audio_group_id": "AUDIO_102_SET_29_30",
+          "audio_group_numbers": [
+            29,
+            30
+          ],
+          "text_source": {
+            "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+            "source_page": 8,
+            "review_status": "student_booklet_visual_review"
+          },
+          "shared_audio_total": 2,
+          "shared_audio_index": 1,
+          "bank_id": "L102_Q029",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-102",
+          "source_exam_title": "102회 TOPIK I 듣기 30문항",
+          "source_question_number": 29,
+          "correct_answer": 2,
+          "random_eligible": true,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
+        },
+        {
+          "id": "102-L030",
+          "source_round": "102",
+          "level": "TOPIK I",
+          "section": "listening",
+          "question_number": 30,
+          "original_question_number": 30,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "들은 내용과 같은 것을 고르십시오.",
+          "audio_url": "./audio/102/102_L029.mp3",
+          "source_audio_file": "1-29.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "여자는 아버지께 탁구를 배웠습니다."
+            },
+            {
+              "choice": 2,
+              "text": "여자는 다음 달에 세계 대회에 나갈 겁니다."
+            },
+            {
+              "choice": 3,
+              "text": "여자는 중학생 때 탁구를 치기 시작했습니다."
+            },
+            {
+              "choice": 4,
+              "text": "여자는 올해 여러 대회에서 일등을 했습니다."
+            }
+          ],
+          "points": 4,
+          "description": "102회 듣기 30번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "show_example": false,
+          "layout": "side_by_side_set",
+          "set_id": "SET_29_30",
+          "audio_group_id": "AUDIO_102_SET_29_30",
+          "audio_group_numbers": [
+            29,
+            30
+          ],
+          "text_source": {
+            "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+            "source_page": 8,
+            "review_status": "student_booklet_visual_review"
+          },
+          "shared_audio_total": 2,
+          "shared_audio_index": 2,
+          "bank_id": "L102_Q030",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-102",
+          "source_exam_title": "102회 TOPIK I 듣기 30문항",
+          "source_question_number": 30,
+          "correct_answer": 1,
+          "random_eligible": true,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
+        }
+      ],
+      "random_eligible": true,
+      "random_selection_unit": "set",
+      "random_notes": "긴 대화는 반드시 이 세트 전체를 함께 선택해야 함. 구성 문항 단독 선택 금지.",
+      "needs_audio_review": true
+    }
+  ],
+  "flat_items_for_validation": [
+    {
+      "id": "102-L001",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 1,
+      "original_question_number": 1,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "남자의 물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/102/102_L001.mp3",
+      "source_audio_file": "1-01.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 우산이 있어요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 우산이 아니에요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 우산이에요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 우산이 작아요."
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G01",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "correct_answer": 1,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q001"
+    },
+    {
+      "id": "102-L002",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 2,
+      "original_question_number": 2,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "여자의 물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/102/102_L002.mp3",
+      "source_audio_file": "1-02.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 신문이 없어요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 신문을 싫어해요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 신문을 안 봐요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 신문이 재미있어요."
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "correct_answer": 3,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q002"
+    },
+    {
+      "id": "102-L003",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 3,
+      "original_question_number": 3,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "남자의 물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/102/102_L003.mp3",
+      "source_audio_file": "1-03.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "혼자 먹었어요."
+        },
+        {
+          "choice": 2,
+          "text": "불고기를 먹었어요."
+        },
+        {
+          "choice": 3,
+          "text": "저녁에 먹었어요."
+        },
+        {
+          "choice": 4,
+          "text": "학교에서 먹었어요."
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "correct_answer": 2,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q003"
+    },
+    {
+      "id": "102-L004",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 4,
+      "original_question_number": 4,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "여자의 물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/102/102_L004.mp3",
+      "source_audio_file": "1-04.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "두 개예요."
+        },
+        {
+          "choice": 2,
+          "text": "네 시예요."
+        },
+        {
+          "choice": 3,
+          "text": "팔 일이에요."
+        },
+        {
+          "choice": 4,
+          "text": "수요일이에요."
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 1,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "correct_answer": 3,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q004"
+    },
+    {
+      "id": "102-L005",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 5,
+      "original_question_number": 5,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/102/102_L005.mp3",
+      "source_audio_file": "1-05.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "미안해요."
+        },
+        {
+          "choice": 2,
+          "text": "반가워요."
+        },
+        {
+          "choice": 3,
+          "text": "실례해요."
+        },
+        {
+          "choice": 4,
+          "text": "아니에요."
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G02",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "correct_answer": 4,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q005"
+    },
+    {
+      "id": "102-L006",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 6,
+      "original_question_number": 6,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/102/102_L006.mp3",
+      "source_audio_file": "1-06.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "그렇습니다."
+        },
+        {
+          "choice": 2,
+          "text": "알겠습니다."
+        },
+        {
+          "choice": 3,
+          "text": "환영합니다."
+        },
+        {
+          "choice": 4,
+          "text": "오랜만입니다."
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G02",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "correct_answer": 2,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q006"
+    },
+    {
+      "id": "102-L007",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 7,
+      "original_question_number": 7,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/102/102_L007.mp3",
+      "source_audio_file": "1-07.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "빵집"
+        },
+        {
+          "choice": 2,
+          "text": "서점"
+        },
+        {
+          "choice": 3,
+          "text": "옷 가게"
+        },
+        {
+          "choice": 4,
+          "text": "신발 가게"
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G03",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "correct_answer": 3,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q007"
+    },
+    {
+      "id": "102-L008",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 8,
+      "original_question_number": 8,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/102/102_L008.mp3",
+      "source_audio_file": "1-08.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "꽃집"
+        },
+        {
+          "choice": 2,
+          "text": "은행"
+        },
+        {
+          "choice": 3,
+          "text": "정류장"
+        },
+        {
+          "choice": 4,
+          "text": "지하철역"
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 2,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "correct_answer": 3,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q008"
+    },
+    {
+      "id": "102-L009",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 9,
+      "original_question_number": 9,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/102/102_L009.mp3",
+      "source_audio_file": "1-09.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "식당"
+        },
+        {
+          "choice": 2,
+          "text": "약국"
+        },
+        {
+          "choice": 3,
+          "text": "미용실"
+        },
+        {
+          "choice": 4,
+          "text": "도서관"
+        }
+      ],
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "correct_answer": 2,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q009"
+    },
+    {
+      "id": "102-L010",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 10,
+      "original_question_number": 10,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/102/102_L010.mp3",
+      "source_audio_file": "1-10.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "극장"
+        },
+        {
+          "choice": 2,
+          "text": "시장"
+        },
+        {
+          "choice": 3,
+          "text": "우체국"
+        },
+        {
+          "choice": 4,
+          "text": "사진관"
+        }
+      ],
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_based"
+      },
+      "example_id": "EX_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "correct_answer": 4,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q010"
+    },
+    {
+      "id": "102-L011",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 11,
+      "original_question_number": 11,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/102/102_L011.mp3",
+      "source_audio_file": "1-11.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "가족"
+        },
+        {
+          "choice": 2,
+          "text": "나라"
+        },
+        {
+          "choice": 3,
+          "text": "시간"
+        },
+        {
+          "choice": 4,
+          "text": "약속"
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 11번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G04",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 2,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q011"
+    },
+    {
+      "id": "102-L012",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 12,
+      "original_question_number": 12,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/102/102_L012.mp3",
+      "source_audio_file": "1-12.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "직업"
+        },
+        {
+          "choice": 2,
+          "text": "이름"
+        },
+        {
+          "choice": 3,
+          "text": "날씨"
+        },
+        {
+          "choice": 4,
+          "text": "휴일"
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 12번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G04",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 1,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q012"
+    },
+    {
+      "id": "102-L013",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 13,
+      "original_question_number": 13,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/102/102_L013.mp3",
+      "source_audio_file": "1-13.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "건강"
+        },
+        {
+          "choice": 2,
+          "text": "계획"
+        },
+        {
+          "choice": 3,
+          "text": "방학"
+        },
+        {
+          "choice": 4,
+          "text": "운동"
+        }
+      ],
+      "points": 4,
+      "description": "102회 듣기 13번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G04",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 4,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q013"
+    },
+    {
+      "id": "102-L014",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 14,
+      "original_question_number": 14,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "다음은 무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/102/102_L014.mp3",
+      "source_audio_file": "1-14.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "값"
+        },
+        {
+          "choice": 2,
+          "text": "집"
+        },
+        {
+          "choice": 3,
+          "text": "가구"
+        },
+        {
+          "choice": 4,
+          "text": "고향"
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 14번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G04",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 3,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 2,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q014"
+    },
+    {
+      "id": "102-L015",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 15,
+      "original_question_number": 15,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/102/102_L015.mp3",
+      "source_audio_file": "1-15.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/102/102_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/102/102_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/102/102_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/102/102_L015_04.png"
+        }
+      ],
+      "points": 4,
+      "description": "102회 듣기 15번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/102/102_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/102/102_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/102/102_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/102/102_L015_04.png"
+        }
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 4,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 2,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q015"
+    },
+    {
+      "id": "102-L016",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 16,
+      "original_question_number": 16,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/102/102_L016.mp3",
+      "source_audio_file": "1-16.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/102/102_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/102/102_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/102/102_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/102/102_L016_04.png"
+        }
+      ],
+      "points": 4,
+      "description": "102회 듣기 16번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/102/102_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/102/102_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/102/102_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/102/102_L016_04.png"
+        }
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 4,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 1,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q016"
+    },
+    {
+      "id": "102-L017",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 17,
+      "original_question_number": 17,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L017.mp3",
+      "source_audio_file": "1-17.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 고향에 자주 갑니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 방학에 가족을 못 만났습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 방학에 영어 공부를 했습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 이번 방학에 여행을 가지 못했습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 17번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 5,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 3,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q017"
+    },
+    {
+      "id": "102-L018",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 18,
+      "original_question_number": 18,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L018.mp3",
+      "source_audio_file": "1-18.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "인주식당은 메뉴가 많습니다."
+        },
+        {
+          "choice": 2,
+          "text": "인주식당은 예약을 받지 않습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 인주식당의 위치를 모릅니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 지난주에 인주식당에 갔습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 18번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 5,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 4,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q018"
+    },
+    {
+      "id": "102-L019",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 19,
+      "original_question_number": 19,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L019.mp3",
+      "source_audio_file": "1-19.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 운전에 익숙해졌습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 운전을 할 줄 모릅니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 내일부터 회사에 운전해서 갈 겁니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 여자가 운전하는 것을 본 적이 없습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 19번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 5,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 3,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q019"
+    },
+    {
+      "id": "102-L020",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 20,
+      "original_question_number": 20,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L020.mp3",
+      "source_audio_file": "1-20.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "이 가수는 아주 유명합니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 이 가수를 좋아하지 않습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 이 가수를 직접 본 적이 있습니다."
+        },
+        {
+          "choice": 4,
+          "text": "이 가수는 한강공원에서 공연을 했습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 20번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 5,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 4,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q020"
+    },
+    {
+      "id": "102-L021",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 21,
+      "original_question_number": 21,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L021.mp3",
+      "source_audio_file": "1-21.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 지금 505호에 있습니다."
+        },
+        {
+          "choice": 2,
+          "text": "호텔에는 수영장에 못 들어갑니다."
+        },
+        {
+          "choice": 3,
+          "text": "호텔에서 수영복을 살 수 없습니다."
+        },
+        {
+          "choice": 4,
+          "text": "수영복을 빌리려면 돈을 내야 합니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 21번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "example_id": "EX_G06",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 4,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q021"
+    },
+    {
+      "id": "102-L022",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 22,
+      "original_question_number": 22,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/102/102_L022.mp3",
+      "source_audio_file": "1-22.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "연필을 사용하는 것을 좋아합니다."
+        },
+        {
+          "choice": 2,
+          "text": "오래 기억하려면 메모를 해야 합니다."
+        },
+        {
+          "choice": 3,
+          "text": "여러 종류의 연필이 있으면 좋겠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "일기를 자주 쓰는 습관을 가지고 싶습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 22번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 1,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q022"
+    },
+    {
+      "id": "102-L023",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 23,
+      "original_question_number": 23,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/102/102_L023.mp3",
+      "source_audio_file": "1-23.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "꽃다발을 빨리 찾으러 가고 싶습니다."
+        },
+        {
+          "choice": 2,
+          "text": "다양한 꽃으로 만든 꽃다발이 좋습니다."
+        },
+        {
+          "choice": 3,
+          "text": "꽃다발을 똑같이 만드는 것이 어렵습니다."
+        },
+        {
+          "choice": 4,
+          "text": "같은 꽃다발을 하나 더 주문하고 싶습니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 23번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 4,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q023"
+    },
+    {
+      "id": "102-L024",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 24,
+      "original_question_number": 24,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/102/102_L024.mp3",
+      "source_audio_file": "1-24.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "침대는 직접 보고 사야 합니다."
+        },
+        {
+          "choice": 2,
+          "text": "침대는 자주 바꿀 필요가 있습니다."
+        },
+        {
+          "choice": 3,
+          "text": "가구는 디자인이 예쁜 것이 좋습니다."
+        },
+        {
+          "choice": 4,
+          "text": "가구는 인터넷으로 사는 게 편합니다."
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 24번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "single",
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 6,
+        "review_status": "student_booklet_visual_review"
+      },
+      "correct_answer": 1,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q024"
+    },
+    {
+      "id": "102-L025",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 25,
+      "original_question_number": 25,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "여자가 왜 이 이야기를 하고 있는지 고르십시오.",
+      "audio_url": "./audio/102/102_L025.mp3",
+      "source_audio_file": "1-25.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "청소 일정을 안내하려고"
+        },
+        {
+          "choice": 2,
+          "text": "청소 신청 방법을 알리려고"
+        },
+        {
+          "choice": 3,
+          "text": "청소가 필요한 이유를 설명하려고"
+        },
+        {
+          "choice": 4,
+          "text": "청소 날짜가 바뀐 것을 이야기하려고"
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 25번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_25_26",
+      "audio_group_id": "AUDIO_102_SET_25_26",
+      "audio_group_numbers": [
+        25,
+        26
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 7,
+        "review_status": "student_booklet_visual_review"
+      },
+      "shared_audio_total": 2,
+      "shared_audio_index": 1,
+      "correct_answer": 1,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q025"
+    },
+    {
+      "id": "102-L026",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 26,
+      "original_question_number": 26,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L025.mp3",
+      "source_audio_file": "1-25.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "주차장 청소는 오전에 끝납니다."
+        },
+        {
+          "choice": 2,
+          "text": "주차장 청소는 이번 주에 합니다."
+        },
+        {
+          "choice": 3,
+          "text": "회사 근처에 야외 주차장이 있습니다."
+        },
+        {
+          "choice": 4,
+          "text": "청소할 때 지하 주차장에 들어갈 수 있습니다."
+        }
+      ],
+      "points": 4,
+      "description": "102회 듣기 26번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_25_26",
+      "audio_group_id": "AUDIO_102_SET_25_26",
+      "audio_group_numbers": [
+        25,
+        26
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 7,
+        "review_status": "student_booklet_visual_review"
+      },
+      "shared_audio_total": 2,
+      "shared_audio_index": 2,
+      "correct_answer": 3,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q026"
+    },
+    {
+      "id": "102-L027",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 27,
+      "original_question_number": 27,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "두 사람이 무엇에 대해 이야기를 하고 있는지 고르십시오.",
+      "audio_url": "./audio/102/102_L027.mp3",
+      "source_audio_file": "1-27.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "인주 해변에 가는 방법"
+        },
+        {
+          "choice": 2,
+          "text": "인주 해변에서 찍은 영화"
+        },
+        {
+          "choice": 3,
+          "text": "해변에서 하는 영화 축제"
+        },
+        {
+          "choice": 4,
+          "text": "축제에 같이 가고 싶은 사람"
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 27번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_27_28",
+      "audio_group_id": "AUDIO_102_SET_27_28",
+      "audio_group_numbers": [
+        27,
+        28
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 7,
+        "review_status": "student_booklet_visual_review"
+      },
+      "shared_audio_total": 2,
+      "shared_audio_index": 1,
+      "correct_answer": 3,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q027"
+    },
+    {
+      "id": "102-L028",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 28,
+      "original_question_number": 28,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L027.mp3",
+      "source_audio_file": "1-27.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "축제는 다음 주까지 합니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 어제 이 축제에 갔다 왔습니다."
+        },
+        {
+          "choice": 3,
+          "text": "영화를 볼 때 의자를 빌릴 수 없습니다."
+        },
+        {
+          "choice": 4,
+          "text": "일정은 홈페이지에서 확인할 수 있습니다."
+        }
+      ],
+      "points": 4,
+      "description": "102회 듣기 28번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_27_28",
+      "audio_group_id": "AUDIO_102_SET_27_28",
+      "audio_group_numbers": [
+        27,
+        28
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 7,
+        "review_status": "student_booklet_visual_review"
+      },
+      "shared_audio_total": 2,
+      "shared_audio_index": 2,
+      "correct_answer": 4,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q028"
+    },
+    {
+      "id": "102-L029",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 29,
+      "original_question_number": 29,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "여자가 탁구 선수가 된 이유를 고르십시오.",
+      "audio_url": "./audio/102/102_L029.mp3",
+      "source_audio_file": "1-29.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "어렸을 때부터 운동을 잘해서"
+        },
+        {
+          "choice": 2,
+          "text": "직접 본 탁구 경기가 멋있어서"
+        },
+        {
+          "choice": 3,
+          "text": "친구들과 같이 운동하고 싶어서"
+        },
+        {
+          "choice": 4,
+          "text": "아버지를 기쁘게 해 드리고 싶어서"
+        }
+      ],
+      "points": 3,
+      "description": "102회 듣기 29번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_29_30",
+      "audio_group_id": "AUDIO_102_SET_29_30",
+      "audio_group_numbers": [
+        29,
+        30
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 8,
+        "review_status": "student_booklet_visual_review"
+      },
+      "shared_audio_total": 2,
+      "shared_audio_index": 1,
+      "correct_answer": 2,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q029"
+    },
+    {
+      "id": "102-L030",
+      "source_round": "102",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 30,
+      "original_question_number": 30,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/102/102_L029.mp3",
+      "source_audio_file": "1-29.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 아버지께 탁구를 배웠습니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 다음 달에 세계 대회에 나갈 겁니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 중학생 때 탁구를 치기 시작했습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 올해 여러 대회에서 일등을 했습니다."
+        }
+      ],
+      "points": 4,
+      "description": "102회 듣기 30번 학생용 문항. 실제 듣기 대본은 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "show_example": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_29_30",
+      "audio_group_id": "AUDIO_102_SET_29_30",
+      "audio_group_numbers": [
+        29,
+        30
+      ],
+      "text_source": {
+        "source_file": "제102회_문제지_TOPIK1_듣기, 읽기_탑재용.pdf",
+        "source_page": 8,
+        "review_status": "student_booklet_visual_review"
+      },
+      "shared_audio_total": 2,
+      "shared_audio_index": 2,
+      "correct_answer": 1,
+      "source_exam_id": "listening-102",
+      "bank_id": "L102_Q030"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "exam_id": "level-test-100",
+  "source_round": "100",
+  "level": "TOPIK I",
+  "section": "listening",
+  "exam_type": "level-test",
+  "total_questions": 16,
+  "total_possible_points": 54,
+  "scoring_policy": {
+    "raw_total_points": 54,
+    "section_score_100": "earned_points / total_possible_points * 100",
+    "grade_reference": {
+      "0-39": "TOPIK I 1급 미도달 가능성",
+      "40-69": "TOPIK I 1급 가능권",
+      "70-100": "TOPIK I 2급 가능권"
+    },
+    "official_grade_note": "공식 TOPIK 급수는 듣기·읽기 총점 기준이므로 이 판정은 참고용입니다."
+  },
+  "selection_mapping": [
+    {
+      "display": 1,
+      "original": 1,
+      "slot_type": "answer_response",
+      "reason": "알맞은 대답 / 유형 시작·기초 응답"
+    },
+    {
+      "display": 2,
+      "original": 4,
+      "slot_type": "answer_response",
+      "reason": "알맞은 대답 / 유형 후반·이동 수단 질문"
+    },
+    {
+      "display": 3,
+      "original": 5,
+      "slot_type": "following_response",
+      "reason": "이어지는 말 / 유형 시작·상황 기능 표현"
+    },
+    {
+      "display": 4,
+      "original": 6,
+      "slot_type": "following_response",
+      "reason": "이어지는 말 / 유형 후반·인사 표현"
+    },
+    {
+      "display": 5,
+      "original": 7,
+      "slot_type": "place_identification",
+      "reason": "장소 파악 / 유형 시작·병원 단서"
+    },
+    {
+      "display": 6,
+      "original": 10,
+      "slot_type": "place_identification",
+      "reason": "장소 파악 / 유형 후반·미용실 단서"
+    },
+    {
+      "display": 7,
+      "original": 11,
+      "slot_type": "topic_identification",
+      "reason": "화제 파악 / 유형 시작·시간 화제"
+    },
+    {
+      "display": 8,
+      "original": 14,
+      "slot_type": "topic_identification",
+      "reason": "화제 파악 / 유형 후반·주소 화제"
+    },
+    {
+      "display": 9,
+      "original": 15,
+      "slot_type": "picture_choice",
+      "reason": "그림 고르기 / 그림 유형 1"
+    },
+    {
+      "display": 10,
+      "original": 16,
+      "slot_type": "picture_choice",
+      "reason": "그림 고르기 / 그림 유형 2"
+    },
+    {
+      "display": 11,
+      "original": 17,
+      "slot_type": "same_content",
+      "reason": "내용 일치 / 유형 시작·기본 세부 정보"
+    },
+    {
+      "display": 12,
+      "original": 21,
+      "slot_type": "same_content",
+      "reason": "내용 일치 / 유형 후반·예약 상황"
+    },
+    {
+      "display": 13,
+      "original": 22,
+      "slot_type": "main_thought",
+      "reason": "중심 생각 / 기초 의견 표현"
+    },
+    {
+      "display": 14,
+      "original": 24,
+      "slot_type": "main_thought",
+      "reason": "중심 생각 / 유형 후반·정리/처분 의견"
+    },
+    {
+      "display": 15,
+      "original": 29,
+      "slot_type": "long_listening_set",
+      "reason": "긴 대화 세트 / 후반 난이도·이유 파악"
+    },
+    {
+      "display": 16,
+      "original": 30,
+      "slot_type": "long_listening_set",
+      "reason": "긴 대화 세트 / 같은 음성 세트·내용 일치"
+    }
+  ],
+  "answers": [
+    {
+      "question_number": 1,
+      "original_question_number": 1,
+      "source_question_number": 1,
+      "correct_answer": 3,
+      "points": 4
+    },
+    {
+      "question_number": 2,
+      "original_question_number": 4,
+      "source_question_number": 4,
+      "correct_answer": 2,
+      "points": 3
+    },
+    {
+      "question_number": 3,
+      "original_question_number": 5,
+      "source_question_number": 5,
+      "correct_answer": 4,
+      "points": 4
+    },
+    {
+      "question_number": 4,
+      "original_question_number": 6,
+      "source_question_number": 6,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 5,
+      "original_question_number": 7,
+      "source_question_number": 7,
+      "correct_answer": 1,
+      "points": 3
+    },
+    {
+      "question_number": 6,
+      "original_question_number": 10,
+      "source_question_number": 10,
+      "correct_answer": 1,
+      "points": 4
+    },
+    {
+      "question_number": 7,
+      "original_question_number": 11,
+      "source_question_number": 11,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 8,
+      "original_question_number": 14,
+      "source_question_number": 14,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 9,
+      "original_question_number": 15,
+      "source_question_number": 15,
+      "correct_answer": 4,
+      "points": 4
+    },
+    {
+      "question_number": 10,
+      "original_question_number": 16,
+      "source_question_number": 16,
+      "correct_answer": 3,
+      "points": 4
+    },
+    {
+      "question_number": 11,
+      "original_question_number": 17,
+      "source_question_number": 17,
+      "correct_answer": 1,
+      "points": 3
+    },
+    {
+      "question_number": 12,
+      "original_question_number": 21,
+      "source_question_number": 21,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 13,
+      "original_question_number": 22,
+      "source_question_number": 22,
+      "correct_answer": 2,
+      "points": 3
+    },
+    {
+      "question_number": 14,
+      "original_question_number": 24,
+      "source_question_number": 24,
+      "correct_answer": 2,
+      "points": 3
+    },
+    {
+      "question_number": 15,
+      "original_question_number": 29,
+      "source_question_number": 29,
+      "correct_answer": 3,
+      "points": 3
+    },
+    {
+      "question_number": 16,
+      "original_question_number": 30,
+      "source_question_number": 30,
+      "correct_answer": 3,
+      "points": 4
+    }
+  ]
+}
