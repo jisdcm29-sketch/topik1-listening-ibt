@@ -1,0 +1,759 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", Arial, sans-serif;
+  background: #eef4fb;
+  color: #0b2447;
+}
+
+.tool-header {
+  background: #1a73e8;
+  color: #fff;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tool-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.tool-header p {
+  margin: 8px 0 0;
+  font-weight: 700;
+}
+
+.back-link {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,.75);
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 900;
+}
+
+.tool-layout {
+  max-width: 1280px;
+  margin: 24px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 24px;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel-card,
+.preview-panel,
+.audio-download-panel {
+  background: #fff;
+  border: 1px solid #cfe0f5;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(20, 60, 100, 0.08);
+}
+
+.panel-card {
+  padding: 18px;
+}
+
+.panel-card h2 {
+  margin: 0 0 14px;
+  color: #00428c;
+  font-size: 18px;
+}
+
+.field-label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 900;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  width: 100%;
+  border: 1px solid #b9cce7;
+  border-radius: 9px;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+.help-text {
+  margin: 8px 0 0;
+  color: #63758d;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.round-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  max-height: 190px;
+  overflow: auto;
+  border: 1px solid #d8e5f5;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f7fbff;
+}
+
+.check-row,
+.round-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button {
+  width: 100%;
+  border: 1px solid #0b6fe8;
+  border-radius: 10px;
+  background: #fff;
+  color: #0b6fe8;
+  padding: 11px 12px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button.primary,
+button:hover {
+  background: #1a73e8;
+  color: #fff;
+}
+
+button.secondary {
+  border-color: #b6c8e2;
+  color: #30455f;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-message {
+  color: #00428c;
+  line-height: 1.6;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+
+.preview-panel {
+  padding: 22px;
+  min-height: 720px;
+}
+
+.preview-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  color: #00428c;
+}
+
+.print-root {
+  background: #fff;
+}
+
+.empty-preview {
+  min-height: 360px;
+  border: 2px dashed #cfe0f5;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #66768a;
+}
+
+.print-sheet {
+  color: #111827;
+}
+
+.sheet-header {
+  border-bottom: 4px solid #1a73e8;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+}
+
+.sheet-header h1 {
+  margin: 0;
+  color: #003b7a;
+  font-size: 28px;
+}
+
+.sheet-meta {
+  margin-top: 8px;
+  color: #4b5d73;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.question-card {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  border: 1px solid #d7e3f4;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 12px 0;
+}
+
+.question-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.question-title h2 {
+  margin: 0;
+  color: #001b3d;
+  font-size: 19px;
+}
+
+.source-label,
+.audio-label,
+.category-label {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  background: #eef6ff;
+  color: #174e93;
+}
+
+.answer-chip {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #e8f7ec;
+  color: #087928;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.instruction {
+  color: #18395f;
+  font-weight: 800;
+  margin: 4px 0 8px;
+}
+
+.question-text {
+  margin: 8px 0 10px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.options {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.option {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 8px 0;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.choice-no {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #bdd2ef;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b6fe8;
+  font-weight: 900;
+}
+
+.image-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.image-option {
+  border: 1px solid #cddcf0;
+  border-radius: 10px;
+  padding: 8px;
+  position: relative;
+}
+
+.image-option img {
+  width: 100%;
+  max-height: 190px;
+  object-fit: contain;
+  display: block;
+}
+
+.image-option .choice-no {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(255,255,255,.92);
+}
+
+.answer-key-section,
+.audio-map-section {
+  margin-top: 24px;
+  break-before: page;
+  page-break-before: always;
+}
+
+.answer-key-table,
+.audio-map-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.answer-key-table th,
+.answer-key-table td,
+.audio-map-table th,
+.audio-map-table td {
+  border: 1px solid #cfdff2;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.answer-key-table th,
+.audio-map-table th {
+  background: #eaf3ff;
+  color: #003b7a;
+}
+
+.audio-download-panel {
+  margin-top: 18px;
+  padding: 20px;
+}
+
+.audio-item {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #e4edf8;
+}
+
+.audio-item:first-child {
+  border-top: none;
+}
+
+.audio-item a {
+  color: #0b6fe8;
+  font-weight: 900;
+}
+
+.print-only {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  .tool-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .no-print,
+  .tool-header,
+  .control-panel,
+  .preview-actions,
+  .audio-download-panel {
+    display: none !important;
+  }
+
+  .tool-layout {
+    display: block;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .preview-panel {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    min-height: 0;
+  }
+
+  .print-root {
+    display: block;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  .question-card {
+    margin: 9px 0;
+    padding: 10px 12px;
+  }
+
+  .sheet-header h1 {
+    font-size: 23px;
+  }
+
+  .question-title h2 {
+    font-size: 16px;
+  }
+
+  .question-text {
+    font-size: 14px;
+  }
+
+  .option {
+    margin: 5px 0;
+  }
+
+  .image-option img {
+    max-height: 160px;
+  }
+}
+
+
+
+/* Step37b: 교사용 정답표 단독 출력 시 빈 첫 페이지 방지 */
+.key-only-sheet .answer-key-section,
+.key-only-sheet .audio-map-section {
+  break-before: auto;
+  page-break-before: auto;
+  margin-top: 18px;
+}
+
+.key-only-sheet .sheet-header {
+  margin-bottom: 12px;
+}
+
+@media print {
+  .key-only-sheet .answer-key-section,
+  .key-only-sheet .audio-map-section {
+    break-before: auto !important;
+    page-break-before: auto !important;
+    margin-top: 12px !important;
+  }
+
+  .key-only-sheet .sheet-header {
+    margin-bottom: 10px !important;
+  }
+}
+
+
+
+/* Step37c: 선택 오디오 ZIP 일괄 다운로드 */
+.zip-button {
+  border-color: #188038;
+  color: #188038;
+}
+
+.zip-button:hover {
+  background: #188038;
+  color: #fff;
+}
+
+
+
+/* Step37d: 보기 음성 포함 문항의 <보기> 시험지 내용 표시 */
+.example-block {
+  margin: 10px 0 12px;
+  padding: 10px 12px;
+  border: 1px solid #b9d7ff;
+  border-left: 5px solid #1a73e8;
+  border-radius: 10px;
+  background: #f7fbff;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.example-title {
+  font-weight: 900;
+  color: #003b7a;
+  margin-bottom: 6px;
+}
+
+.example-instruction,
+.example-question,
+.example-text,
+.example-dialogue {
+  margin: 5px 0;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.example-options {
+  margin-top: 6px;
+}
+
+.example-image-options {
+  margin-top: 8px;
+}
+
+.missing-example-block {
+  border-color: #f4c36f;
+  border-left-color: #b45309;
+  background: #fff8eb;
+}
+
+.missing-example-block p {
+  margin: 4px 0;
+  color: #7a3e00;
+  font-weight: 700;
+}
+
+.example-meta {
+  font-size: 12px;
+  color: #855900;
+}
+
+@media print {
+  .example-block {
+    margin: 7px 0 8px;
+    padding: 7px 9px;
+  }
+
+  .example-title,
+  .example-instruction,
+  .example-question,
+  .example-text,
+  .example-dialogue {
+    line-height: 1.35;
+  }
+}
+
+
+
+/* Step37e: question-bank의 example_blocks_by_source_round 및 item.example_block 연결 */
+.example-block .answer-chip {
+  margin-left: 8px;
+}
+
+
+
+/* Step37f: <보기> 문항에는 항상 정답 표시 */
+.example-answer-chip {
+  background: #e8f7ec;
+  color: #087928;
+}
+
+.example-correct-option {
+  background: #eaf8ee;
+  border-radius: 8px;
+  padding: 3px 5px;
+}
+
+.image-option.example-correct-option {
+  border: 2px solid #188038;
+  background: #f2fbf4;
+}
+
+.example-correct-mark {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #188038;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.image-option .example-correct-mark {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin-left: 0;
+  z-index: 2;
+}
+
+@media print {
+  .example-correct-mark,
+  .example-answer-chip {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+
+
+/* Step37g: <보기> 정답은 문구 없이 선택지 번호 색상으로만 표시 */
+.example-answer-chip,
+.example-correct-mark {
+  display: none !important;
+}
+
+.example-correct-option {
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.image-option.example-correct-option {
+  border: 1px solid #cddcf0 !important;
+  background: transparent !important;
+}
+
+.choice-no.example-correct-choice-no {
+  border-color: #188038 !important;
+  background: #188038 !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 2px rgba(24, 128, 56, 0.18);
+}
+
+@media print {
+  .choice-no.example-correct-choice-no {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+
+
+/* Step37h: PDF 출력 품질 보정 - 긴 제목 줄바꿈 및 그림 문제 압축 */
+.question-title h2,
+.question-text,
+.instruction,
+.option span:last-child {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+@media print {
+  .question-title {
+    display: block !important;
+  }
+
+  .question-title h2 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    line-height: 1.32 !important;
+  }
+
+  .question-title > div {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    margin-top: 4px !important;
+  }
+
+  .source-label,
+  .audio-label,
+  .category-label {
+    margin-left: 0 !important;
+    padding: 2px 6px !important;
+    font-size: 9.5px !important;
+  }
+
+  .long-listening-card .question-title h2 {
+    font-size: 15px !important;
+    line-height: 1.34 !important;
+  }
+
+  .long-listening-card {
+    padding: 9px 11px !important;
+  }
+
+  .long-listening-card .option {
+    margin: 4px 0 !important;
+    line-height: 1.32 !important;
+  }
+
+  .picture-question-card {
+    padding: 8px 10px !important;
+    margin: 7px 0 !important;
+  }
+
+  .picture-question-card .question-title h2 {
+    font-size: 15px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .picture-question-card .instruction,
+  .picture-question-card .question-text {
+    margin: 3px 0 5px !important;
+    line-height: 1.25 !important;
+  }
+
+  .picture-question-card .image-options {
+    gap: 5px !important;
+  }
+
+  .picture-question-card .image-option {
+    padding: 4px !important;
+    border-radius: 8px !important;
+  }
+
+  .picture-question-card .image-option img {
+    max-height: 132px !important;
+  }
+
+  .picture-question-card .choice-no {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 11px !important;
+  }
+
+  .sheet-header {
+    margin-bottom: 12px !important;
+    padding-bottom: 8px !important;
+  }
+
+  .sheet-header h1 {
+    font-size: 22px !important;
+    word-break: keep-all !important;
+  }
+
+  .sheet-meta {
+    gap: 8px !important;
+    font-size: 11px !important;
+  }
+}
