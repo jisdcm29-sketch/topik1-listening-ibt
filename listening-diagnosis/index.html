@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOPIK I 듣기 진단 보고서</title>
+  <link rel="stylesheet" href="./style.css?v=step36b" />
+</head>
+<body>
+  <header class="diagnosis-header">
+    <h1>TOPIK I 듣기 진단 보고서</h1>
+    <p>Listening Diagnosis · 예상 수준 · 약점 분석 · 학습 처방</p>
+  </header>
+
+  <div class="diagnosis-actions no-print">
+    <button id="print-report-btn" type="button">PDF로 인쇄 / 저장</button>
+    <button id="wrong-review-btn" type="button" class="danger">오답 다시 풀기</button>
+  </div>
+
+  <main id="diagnosis-root" class="report-page">
+    <section class="report-loading">결과를 불러오는 중입니다.</section>
+  </main>
+
+  <script src="./listening-diagnosis.js?v=step36b"></script>
+</body>
+</html>
