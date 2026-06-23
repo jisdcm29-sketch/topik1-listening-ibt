@@ -1,0 +1,45 @@
+.practice-print-link-panel {
+  margin: 8px 0 10px;
+  padding: 10px 12px;
+  border: 1px solid #cfe0f5;
+  border-radius: 10px;
+  background: #f7fbff;
+  text-align: center;
+}
+
+.practice-print-link-panel h3 {
+  margin: 0 0 8px;
+  color: #00428c;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.practice-print-link-panel p {
+  display: none !important;
+}
+
+.practice-print-link-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #1a73e8;
+  border-radius: 9px;
+  background: #fff;
+  color: #0b6fe8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.practice-print-link-btn:hover,
+.practice-print-link-btn:focus {
+  background: #1a73e8;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .practice-print-link-panel {
+    padding: 9px;
+  }
+}

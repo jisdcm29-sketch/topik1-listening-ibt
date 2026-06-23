@@ -1,0 +1,256 @@
+/* Step21 결과 요약 + 진단 보고서 연결 + 오답 다시 풀기 패치 */
+
+/* <보기> 정답 문구 삭제 유지 */
+.example-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.example-title-row h3 { margin: 0; }
+.example-answer-badge { display: none !important; }
+
+/* <보기> 정답 선택지 강조 유지 */
+.example-option.correct-example .option-number {
+  border-color: #1d7b2a;
+  background: #1d7b2a;
+  color: #ffffff;
+}
+.example-option.correct-example span:last-child {
+  color: #12601d;
+  font-weight: 900;
+}
+
+/* 실제 문항 카드 안 대화문은 숨김, <보기>는 표시 */
+.question-card .dialogue-box,
+.student-question-card .dialogue-box { display: none !important; }
+.example-card .dialogue-box { display: block !important; }
+
+/* 그림 선택지 크기/번호 */
+.image-choice-grid {
+  width: min(720px, 100%);
+  max-width: 720px;
+  margin: 12px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 14px;
+  align-items: stretch;
+}
+.image-choice-btn {
+  position: relative;
+  min-height: 0;
+  padding: 6px;
+  border: 2px solid #d7e2ef;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: visible;
+}
+.image-choice-btn img {
+  width: 100%;
+  max-width: 331px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.image-choice-btn::before {
+  content: attr(data-choice);
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #d7e2ef;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #155dd4;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.image-choice-btn.selected {
+  border-color: #1476e8;
+  box-shadow: 0 0 0 3px rgba(20, 118, 232, 0.14);
+}
+.image-choice-btn.selected::before {
+  border-color: #1476e8;
+  background: #1476e8;
+  color: #ffffff;
+}
+.question-one-column:has(.image-choice-grid) { max-width: 820px; }
+.question-card:has(.image-choice-grid) { min-height: auto; padding: 18px 22px; }
+.question-card:has(.image-choice-grid) h3 { margin-bottom: 10px; }
+
+.submit-floating {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  min-width: 92px;
+  height: 46px;
+  border: 0;
+  border-radius: 14px;
+  background: #f06f7f;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+.submit-floating:disabled {
+  background: #9aa8b8;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.wrong-review-hint {
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border: 1px solid #ffd5dc;
+  border-radius: 10px;
+  background: #fff5f6;
+  color: #bb1e35;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* 읽기 결과 요약과 유사한 제출 완료 화면 */
+.result-screen {
+  min-height: 100vh;
+  background: #f1f3f7;
+  padding: 42px 16px;
+}
+.summary-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.summary-card {
+  padding: 34px 32px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+.summary-card h1 {
+  margin: 0 0 18px;
+  color: #073b78;
+  font-size: 30px;
+  font-weight: 900;
+}
+.summary-intro {
+  margin: 0 0 22px;
+  color: #111827;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.summary-box {
+  min-height: 82px;
+  padding: 16px;
+  border: 1px solid #d8e3f0;
+  border-radius: 12px;
+  background: #fbfdff;
+}
+.summary-box span {
+  display: block;
+  margin-bottom: 8px;
+  color: #687789;
+  font-size: 13px;
+  font-weight: 800;
+}
+.summary-box strong {
+  color: #003e83;
+  font-size: 24px;
+  font-weight: 900;
+}
+.summary-info-box {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border: 1px solid #a9cdf7;
+  border-radius: 12px;
+  background: #e9f4ff;
+  color: #0a2343;
+  line-height: 1.65;
+}
+.summary-info-box strong {
+  color: #003e83;
+}
+.summary-info-box dl {
+  margin: 18px 0 0;
+}
+.summary-info-box dt {
+  margin-top: 12px;
+  color: #003e83;
+  font-weight: 900;
+}
+.summary-info-box dd {
+  margin: 4px 0 0;
+}
+.summary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.summary-actions button {
+  min-height: 48px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #1476e8;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+}
+.summary-actions button.secondary {
+  background: #2f8f46;
+}
+.summary-actions button.danger {
+  background: #e22c3a;
+}
+.summary-actions button:disabled {
+  background: #aab6c4;
+  cursor: not-allowed;
+}
+
+@media (max-height: 850px) {
+  .image-choice-grid {
+    width: min(640px, 100%);
+    max-width: 640px;
+    gap: 10px 12px;
+  }
+  .image-choice-btn img { max-width: 300px; }
+  .question-card:has(.image-choice-grid) { padding: 14px 18px; }
+}
+@media (max-width: 900px) {
+  .image-choice-grid { width: min(620px, 100%); }
+  .image-choice-btn::before {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+  .submit-floating {
+    right: 16px;
+    bottom: 16px;
+  }
+  .summary-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .summary-grid { grid-template-columns: 1fr; }
+  .summary-actions { flex-direction: column; }
+}
+
+
+/* Step21b 오답풀이 수정
+   - 이전 답 / 정답 힌트 박스 숨김
+   - <보기> 문항은 일반 시험과 동일하게 표시
+*/
+.wrong-review-hint {
+  display: none !important;
+}

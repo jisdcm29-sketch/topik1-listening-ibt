@@ -1,0 +1,179 @@
+/* TOPIK I 듣기 PBT형 IBT - Step 17c 넓은 화면 레이아웃
+   수정 내용:
+   1. 중앙 문제 영역 좌우 여백 축소
+   2. 문제 박스 전체 폭 확대
+   3. 하단 고정 오디오 바 폭 확대
+   4. 문제 카드 내부 여백 일부 축소
+*/
+
+:root{
+  --topik-blue:#1476e8;
+  --topik-blue-dark:#0752a7;
+  --topik-bg:#dfeefa;
+  --topik-yellow:#f4c400;
+  --border:#d6e2f2;
+  --text:#0b2443;
+  --muted:#5f6f83;
+  --white:#fff;
+  --audio-bar-height:86px;
+  --header-height:72px;
+}
+*{box-sizing:border-box}
+html,body{width:100%;min-height:100%;margin:0;font-family:Arial,"맑은 고딕","Malgun Gothic",sans-serif;color:var(--text);background:#f5f8fc}
+button,input{font-family:inherit}
+button{cursor:pointer}
+button:disabled{cursor:not-allowed;opacity:.55}
+.app,.screen{width:100%;min-height:100vh}
+
+/* 첫 화면 */
+.login-screen{background:#fff}
+.login-header{width:100%;background:var(--topik-blue);color:#fff;padding:24px 16px;text-align:center}
+.login-header h1{margin:0;font-size:32px;font-weight:900;letter-spacing:-.5px}
+.login-main{width:min(580px,calc(100% - 32px));margin:0 auto;padding:20px 0 48px}
+.login-main h2{margin:0 0 6px;text-align:center;color:var(--topik-blue-dark);font-size:28px;font-weight:900}
+.login-guide{margin:0 0 18px;text-align:center;color:var(--muted);font-size:14px}
+.auth-row,.student-panel{margin-top:18px}
+.auth-row label,.student-panel label{display:block;margin:12px 0 6px;font-size:14px;font-weight:800}
+.auth-input-row{display:grid;grid-template-columns:1fr 132px;gap:8px}
+.auth-input-row input,.student-panel input{width:100%;height:42px;padding:0 14px;border:1px solid #cdd8e6;border-radius:8px;font-size:15px;outline:none}
+.auth-input-row input:focus,.student-panel input:focus{border-color:var(--topik-blue);box-shadow:0 0 0 3px rgba(20,118,232,.12)}
+#auth-check-btn{height:42px;border:0;border-radius:8px;background:var(--topik-blue);color:#fff;font-size:15px;font-weight:900}
+.select-panel{margin-top:28px;padding:18px;border:1px solid #cfe0f5;border-radius:12px;background:#f8fbff}
+.select-group{padding:0 0 12px;margin-bottom:12px;border-bottom:1px solid #d9e7f8}
+.select-group:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
+.select-group h3{margin:0 0 8px;font-size:15px;font-weight:900}
+.button-grid.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.choice-btn,.exam-select-btn{min-height:42px;border:2px solid #b8d4f6;border-radius:9px;background:#fff;color:#043b7a;font-size:15px;font-weight:900}
+.choice-btn.active,.exam-select-btn.active{border-color:var(--topik-blue);background:#e9f4ff;color:#002f67}
+.exam-list{display:grid;gap:8px}
+.exam-select-btn{width:100%;padding:9px 12px}
+.selected-exam-label{margin:10px 0 0;text-align:center;color:#047a25;font-size:13px;font-weight:900}
+.start-btn{width:100%;height:52px;margin-top:26px;border:0;border-radius:10px;background:var(--topik-blue);color:#fff;font-size:18px;font-weight:900}
+
+/* 시험 화면 */
+.test-screen{min-height:100vh;padding-bottom:var(--audio-bar-height);background:var(--topik-bg)}
+.test-header{position:sticky;top:0;z-index:20;height:var(--header-height);display:grid;grid-template-columns:210px 1fr 210px;align-items:center;gap:12px;padding:0 22px;background:var(--topik-blue);color:#fff}
+.test-header h1{margin:0;text-align:center;font-size:24px;font-weight:900;letter-spacing:-.3px}
+.candidate-info{display:flex;flex-direction:column;gap:2px;line-height:1.15}
+.candidate-info .small-label{font-size:12px;opacity:.9}
+.candidate-info strong{font-size:20px}
+.remain-time-box{justify-self:end;min-width:168px;padding:10px 14px;border-radius:12px;background:#fff;color:var(--topik-blue);text-align:center;font-weight:900}
+.remain-time-box span{margin-right:4px;font-size:14px}
+.remain-time-box strong{font-size:18px}
+
+/* 중앙 문제 영역: 좌우 여백 축소, 전체 폭 확대 */
+.test-main{
+  width:100%;
+  min-height:calc(100vh - var(--header-height) - var(--audio-bar-height));
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:16px 18px 20px;
+}
+.question-stage{
+  position:relative;
+  width:min(1360px,calc(100vw - 56px));
+  min-height:610px;
+  padding:24px 34px 16px;
+  border:3px solid var(--topik-yellow);
+  border-radius:8px;
+  background:#fff;
+}
+.stage-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.section-title h2{margin:0;color:#083d79;font-size:40px;line-height:1;font-weight:900}
+.section-title p{margin:10px 0 0;color:#2b4563;font-size:18px;font-weight:900}
+.language-buttons{display:flex;gap:8px;margin-top:2px}
+.lang-btn{min-width:84px;height:42px;border:2px solid var(--topik-blue);border-radius:12px;background:#fff;color:var(--topik-blue);font-size:15px;font-weight:900}
+.lang-btn.active{background:var(--topik-blue);color:#fff}
+
+.phase-timer-row{display:flex;justify-content:center;align-items:center;gap:14px;margin:24px auto 16px}
+.phase-box{min-width:82px;padding:7px 10px;border:2px solid #cfd8e5;border-radius:10px;background:#fff;text-align:center;line-height:1.25}
+.phase-box span{display:block;color:#3f4f64;font-size:12px;font-weight:900}
+.phase-box strong{display:block;margin-top:2px;font-size:14px;font-weight:900}
+.phase-box.active{border-color:#49a942;color:#138a1d}
+.question-progress-badge{position:absolute;top:142px;right:34px;min-width:88px;height:44px;display:flex;justify-content:center;align-items:center;gap:6px;border:3px solid #196fff;border-radius:12px;background:#fff;color:#155dd4;font-size:20px;font-weight:900}
+
+/* 문제 표시 영역: 내부 좌우 여백 축소 */
+.question-content{
+  width:calc(100% - 12px);
+  min-height:380px;
+  margin:20px auto 0;
+  padding:18px;
+  border:1px solid #d6dfeb;
+  background:#fff;
+}
+.empty-question{height:260px;display:grid;place-items:center;color:#6c7b8d;font-size:18px;font-weight:800}
+
+/* 문제 렌더링용 기본 클래스 */
+.question-one-column{max-width:940px;margin:0 auto}
+.question-two-column{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.question-card,.example-card{min-height:330px;padding:22px 24px;border:1px solid #dfe7f1;background:#fff}
+.example-card{background:#f7fbff}
+.question-card h3,.example-card h3{margin:0 0 14px;font-size:21px;line-height:1.45;font-weight:900}
+.dialogue-box{margin:0 0 16px;padding:14px 16px;border:2px solid #1d1d1d;background:#fff;font-size:18px;line-height:1.65}
+.option-list{display:grid;gap:10px;margin-top:16px}
+.option-btn{display:grid;grid-template-columns:38px 1fr;align-items:center;gap:10px;min-height:42px;border:0;background:transparent;color:var(--text);text-align:left;font-size:18px;line-height:1.45;font-weight:900}
+.option-number{width:34px;height:34px;display:inline-grid;place-items:center;border:2px solid #d7e2ef;border-radius:50%;background:#fff;color:#155dd4;font-weight:900}
+.option-btn.selected .option-number{border-color:var(--topik-blue);background:var(--topik-blue);color:#fff}
+.image-choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;align-items:stretch}
+.image-choice-btn{border:2px solid #d7e2ef;border-radius:8px;background:#fff;padding:8px}
+.image-choice-btn.selected{border-color:var(--topik-blue);box-shadow:0 0 0 3px rgba(20,118,232,.14)}
+.image-choice-btn img{width:100%;height:auto;display:block}
+
+/* 개발/검수 전용 */
+.dev-nav-panel{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.dev-nav-panel button{min-width:110px;height:36px;border:1px solid #aab9ca;border-radius:8px;background:#fff;color:#31465e;font-weight:900}
+
+/* 하단 고정 오디오 바: 화면 폭 기준으로 확대 */
+.fixed-audio-bar{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:30;
+  height:var(--audio-bar-height);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:12px 28px;
+  border-top:1px solid #b9cbe0;
+  background:#d7e8f7;
+}
+.audio-inner{
+  width:min(1280px,calc(100vw - 140px));
+  min-width:720px;
+  height:54px;
+  display:grid;
+  grid-template-columns:128px 100px 1fr 170px;
+  align-items:center;
+  gap:18px;
+  padding:0 20px;
+  border-radius:30px;
+  background:#fff;
+}
+.audio-start-btn{height:40px;border:0;border-radius:20px;background:#6a93ff;color:#fff;font-size:14px;font-weight:900}
+.audio-start-btn.playing{background:#8aa8f7}
+.audio-start-btn.finished{background:#91c483}
+.audio-time{display:flex;justify-content:center;gap:4px;font-size:15px;font-weight:900;color:#0b2543;white-space:nowrap}
+.audio-progress{position:relative;height:8px;border-radius:999px;background:#d8dde6;overflow:hidden}
+.audio-progress-fill{width:0%;height:100%;border-radius:999px;background:#6a93ff}
+.audio-volume{display:grid;grid-template-columns:38px 1fr;align-items:center;gap:8px}
+.volume-label{color:#52657b;font-size:13px;font-weight:900}
+#audio-volume-slider{width:100%;accent-color:var(--topik-blue)}
+
+@media (max-width:1100px){
+  .question-stage{width:calc(100vw - 28px);padding:22px}
+  .question-content{width:100%}
+  .audio-inner{width:calc(100vw - 48px);min-width:0;grid-template-columns:116px 90px 1fr 140px}
+}
+@media (max-width:780px){
+  .login-header h1{font-size:25px}
+  .auth-input-row,.button-grid.two,.question-two-column{grid-template-columns:1fr}
+  .test-header{height:auto;min-height:var(--header-height);grid-template-columns:1fr;padding:12px 16px;text-align:center}
+  .remain-time-box{justify-self:center}
+  .question-stage{min-height:auto}
+  .question-progress-badge{position:static;margin:12px auto}
+  .audio-inner{height:auto;grid-template-columns:1fr;gap:8px;padding:10px 14px;border-radius:18px}
+  .fixed-audio-bar{height:144px}
+  .test-screen{padding-bottom:144px}
+}

@@ -1,0 +1,52 @@
+/* Step17f: <보기> 정답 표시 + 실제 문항 대본 강제 숨김 */
+
+/* <보기> 정답 표시 */
+.example-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.example-title-row h3 {
+  margin: 0;
+}
+
+.example-answer-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  height: 32px;
+  padding: 0 12px;
+  border: 2px solid #1d7b2a;
+  border-radius: 999px;
+  background: #eaf8ed;
+  color: #12601d;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.example-option.correct-example .option-number {
+  border-color: #1d7b2a;
+  background: #1d7b2a;
+  color: #ffffff;
+}
+
+.example-option.correct-example span:last-child {
+  color: #12601d;
+  font-weight: 900;
+}
+
+/* 핵심 수정:
+   실제 문항 카드 안의 대화문 박스는 무조건 숨긴다.
+   <보기> 카드는 예외로 계속 보이게 한다. */
+.question-card .dialogue-box,
+.student-question-card .dialogue-box {
+  display: none !important;
+}
+
+.example-card .dialogue-box {
+  display: block !important;
+}

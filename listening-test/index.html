@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOPIK I 듣기 PBT형 IBT</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style-step17g-patch.css" />
+  <link rel="stylesheet" href="./style-step38c-practice-print-link.css?v=step38c" />
+</head>
+<body>
+  <div id="app" class="app">
+    <section id="login-screen" class="screen login-screen">
+      <header class="login-header"><h1>TOPIK I 듣기 PBT형 IBT</h1></header>
+      <main class="login-main">
+        <h2>응시자 로그인</h2>
+        <p class="login-guide">인증 후 이름과 전화번호를 입력하세요.</p>
+        <div class="auth-row">
+          <label for="auth-code">인증 비밀번호</label>
+          <div class="auth-input-row">
+            <input id="auth-code" type="password" placeholder="인증 비밀번호 입력" />
+            <button id="auth-check-btn" type="button">인증 확인</button>
+          </div>
+        </div>
+        <section class="select-panel" aria-label="시험 선택 영역">
+          <div class="select-group">
+            <h3>시험 유형 선택</h3>
+            <div class="button-grid two">
+              <button type="button" class="choice-btn active" data-test-type="full">30문항 실전시험</button>
+              <button type="button" class="choice-btn" data-test-type="level-test">레벨테스트</button>
+            </div>
+          </div>
+          <div class="select-group">
+            <h3>출제 방식 선택</h3>
+            <div class="button-grid two">
+              <button type="button" class="choice-btn active" data-exam-mode="fixed">회차별 시험지</button>
+              <button type="button" class="choice-btn" data-exam-mode="random">랜덤 시험지</button>
+            </div>
+          </div>
+          <div class="select-group">
+            <h3>세부 시험지 선택</h3>
+            <div id="exam-list" class="exam-list">
+              <button type="button" class="exam-select-btn" disabled>시험 목록을 불러오는 중입니다.</button>
+            </div>
+            <p id="selected-exam-label" class="selected-exam-label">시험지를 선택하세요.</p>
+          </div>
+        </section>
+        <section id="practice-print-link-panel" class="practice-print-link-panel" aria-label="교사용 문제지 출력">
+          <h3>교사용 문제지 출력</h3>
+          <a class="practice-print-link-btn" href="../listening-practice-print/index.html?v=step38c">듣기 교사용 문제지 출력 열기</a>
+        </section>
+<section class="student-panel">
+          <label for="student-name">응시자 이름</label>
+          <input id="student-name" type="text" placeholder="예: 홍길동" />
+          <label for="student-phone">전화번호</label>
+          <input id="student-phone" type="tel" placeholder="예: 01012345678" />
+          <button id="start-test-btn" type="button" class="start-btn" disabled>시험 시작</button>
+        </section>
+      </main>
+    </section>
+
+    <section id="test-screen" class="screen test-screen" hidden>
+      <header class="test-header">
+        <div class="candidate-info"><span class="small-label">수험정보</span><strong id="header-student-name">-</strong></div>
+        <h1 id="test-header-title">TOPIK I 듣기 PBT형 IBT</h1>
+        <div class="remain-time-box"><span>남은 시간</span><strong id="remain-time">00:00:00</strong></div>
+      </header>
+      <main class="test-main">
+        <section class="question-stage">
+          <div class="stage-top">
+            <div class="section-title"><h2>[듣기]</h2><p id="section-instruction">문제를 듣고 알맞은 답을 고르십시오.</p></div>
+            <div class="language-buttons"><button type="button" class="lang-btn active">한국어</button><button type="button" class="lang-btn">English</button></div>
+          </div>
+          <div class="phase-timer-row" aria-label="오디오 진행 단계">
+            <div id="phase-wait" class="phase-box"><span>대기</span><strong>00:00:00</strong></div>
+            <div id="phase-listening" class="phase-box active"><span>듣기</span><strong>00:00:00</strong></div>
+            <div id="phase-solving" class="phase-box"><span>풀이</span><strong>00:00:00</strong></div>
+          </div>
+          <div class="question-progress-badge"><span id="current-question-label">0</span><span>/</span><span id="total-question-label">0</span></div>
+          <section id="question-content" class="question-content" aria-label="문제 표시 영역"><div class="empty-question">시험을 시작하면 이곳에 문제가 표시됩니다.</div></section>
+          <div id="dev-nav-panel" class="dev-nav-panel" hidden>
+            <button id="dev-prev-btn" type="button">이전 문항</button>
+            <button id="dev-next-btn" type="button">다음 문항</button>
+            <button id="dev-rerender-btn" type="button">현재 문항 다시 표시</button>
+          </div>
+        </section>
+      </main>
+      <footer class="fixed-audio-bar" aria-label="오디오 재생 영역">
+        <audio id="exam-audio" preload="metadata"></audio>
+        <div class="audio-inner">
+          <button id="audio-start-btn" type="button" class="audio-start-btn">자동 재생 대기</button>
+          <div class="audio-time"><span id="audio-current-time">0:00</span><span>/</span><span id="audio-duration">0:00</span></div>
+          <div class="audio-progress" aria-hidden="true"><div id="audio-progress-fill" class="audio-progress-fill"></div></div>
+          <div class="audio-volume"><span class="volume-label">볼륨</span><input id="audio-volume-slider" type="range" min="0" max="1" step="0.01" value="1" /></div>
+        </div>
+      </footer>
+      <button id="submit-test-btn" type="button" class="submit-floating">제출</button>
+    </section>
+
+    <section id="result-screen" class="screen result-screen" hidden>
+      <main class="summary-shell">
+        <section class="summary-card">
+          <h1>TOPIK I 듣기 결과 요약</h1>
+          <p class="summary-intro">
+            제출이 완료되었습니다. 이 화면에서는 듣기 점수와 기본 결과를 확인할 수 있습니다.
+            자세한 유형별 분석, 약점 진단, 학습 처방은 진단 보고서에서 확인하세요.
+          </p>
+
+          <div id="result-summary" class="summary-grid"></div>
+
+          <div class="summary-info-box">
+            <strong>제출이 완료되었습니다.</strong>
+            <p>이 화면에서는 듣기 점수, 정답 수, 미응답 수를 간단히 확인할 수 있습니다.</p>
+            <p>자세한 문항별 분석, 예상 수준, 약점 진단, 학습 처방은 아래의 <b>진단 보고서 보기</b>에서 확인하세요.</p>
+
+            <dl>
+              <dt>출제 방식</dt>
+              <dd id="summary-exam-mode">-</dd>
+              <dt>안내</dt>
+              <dd>이 결과는 TOPIK I 듣기 영역 기준 결과입니다. 최종 TOPIK 급수는 듣기·읽기 총점 기준으로 결정됩니다.</dd>
+            </dl>
+          </div>
+
+          <div class="summary-actions">
+            <button id="open-diagnosis-btn" type="button">진단 보고서 보기</button>
+            <button id="download-result-btn" type="button" class="secondary">result.json 다운로드</button>
+            <button id="wrong-review-btn" type="button" class="danger">오답 다시 풀기</button>
+          </div>
+        </section>
+      </main>
+    </section>
+  </div>
+  <script src="./audio-controller.js"></script>
+  <script src="./result-builder.js"></script>
+  <script src="./listening-test.js"></script>
+</body>
+</html>
+
+
