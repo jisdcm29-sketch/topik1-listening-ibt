@@ -1,0 +1,113 @@
+{
+  "id": "answer-key-99-level-test",
+  "exam_id": "level-test-99",
+  "source_round": "99",
+  "level": "TOPIK I",
+  "section": "listening",
+  "exam_type": "level-test",
+  "total_questions": 16,
+  "total_possible_points": 54,
+  "answers": [
+    {
+      "question_number": 1,
+      "original_question_number": 1,
+      "correct_answer": 1,
+      "points": 4
+    },
+    {
+      "question_number": 2,
+      "original_question_number": 4,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 3,
+      "original_question_number": 5,
+      "correct_answer": 4,
+      "points": 4
+    },
+    {
+      "question_number": 4,
+      "original_question_number": 6,
+      "correct_answer": 2,
+      "points": 3
+    },
+    {
+      "question_number": 5,
+      "original_question_number": 7,
+      "correct_answer": 1,
+      "points": 3
+    },
+    {
+      "question_number": 6,
+      "original_question_number": 10,
+      "correct_answer": 3,
+      "points": 4
+    },
+    {
+      "question_number": 7,
+      "original_question_number": 11,
+      "correct_answer": 1,
+      "points": 3
+    },
+    {
+      "question_number": 8,
+      "original_question_number": 14,
+      "correct_answer": 2,
+      "points": 3
+    },
+    {
+      "question_number": 9,
+      "original_question_number": 15,
+      "correct_answer": 2,
+      "points": 4
+    },
+    {
+      "question_number": 10,
+      "original_question_number": 16,
+      "correct_answer": 1,
+      "points": 4
+    },
+    {
+      "question_number": 11,
+      "original_question_number": 17,
+      "correct_answer": 2,
+      "points": 3
+    },
+    {
+      "question_number": 12,
+      "original_question_number": 21,
+      "correct_answer": 1,
+      "points": 3
+    },
+    {
+      "question_number": 13,
+      "original_question_number": 22,
+      "correct_answer": 4,
+      "points": 3
+    },
+    {
+      "question_number": 14,
+      "original_question_number": 24,
+      "correct_answer": 1,
+      "points": 3
+    },
+    {
+      "question_number": 15,
+      "original_question_number": 29,
+      "correct_answer": 3,
+      "points": 3
+    },
+    {
+      "question_number": 16,
+      "original_question_number": 30,
+      "correct_answer": 2,
+      "points": 4
+    }
+  ],
+  "review_status": {
+    "status": "from_answer_key_99_and_level_test_mapping",
+    "needs_human_final_review": true,
+    "note": "레벨테스트 표시 번호 기준 정답표입니다. original_question_number와 혼동하지 마십시오."
+  }
+}
