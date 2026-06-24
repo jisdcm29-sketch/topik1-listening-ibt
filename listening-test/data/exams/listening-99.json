@@ -1,0 +1,2180 @@
+{
+  "id": "listening-99",
+  "title": "99회 TOPIK I 듣기 30문항 통합 검수용",
+  "source_round": "99",
+  "level": "TOPIK I",
+  "section": "listening",
+  "exam_type": "full",
+  "test_scope": "round-99-full-30-review",
+  "total_questions": 30,
+  "total_possible_points": 100,
+  "guide_audio_url": "./audio/99/99_GUIDE.mp3",
+  "source_guide_audio_file": "01 트랙 1.m4a",
+  "audio_base_dir": "./audio/99/",
+  "image_base_dir": "./images/99/",
+  "audio_policy": {
+    "mode": "play_once_to_end",
+    "allow_pause": false,
+    "allow_stop": false,
+    "allow_seek": false,
+    "allow_replay": false,
+    "allow_volume_control": true,
+    "lock_navigation_while_playing": true,
+    "auto_next_on_ended": true
+  },
+  "groups": [
+    {
+      "group_id": "G01",
+      "target_questions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_99_G01",
+      "show_example_on": [
+        1
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 1
+    },
+    {
+      "group_id": "G02",
+      "target_questions": [
+        5,
+        6
+      ],
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_99_G02",
+      "show_example_on": [
+        5
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 5
+    },
+    {
+      "group_id": "G03",
+      "target_questions": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_99_G03",
+      "show_example_on": [
+        7
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 7
+    },
+    {
+      "group_id": "G04",
+      "target_questions": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_99_G04",
+      "show_example_on": [
+        11
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 11
+    },
+    {
+      "group_id": "G05",
+      "target_questions": [
+        15,
+        16
+      ],
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "has_example": false,
+      "layout": "image_grid_2x2"
+    },
+    {
+      "group_id": "G06",
+      "target_questions": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_99_G06",
+      "show_example_on": [
+        17
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 17
+    },
+    {
+      "group_id": "G07",
+      "target_questions": [
+        22,
+        23,
+        24
+      ],
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "has_example": false,
+      "layout": "single"
+    },
+    {
+      "group_id": "G08",
+      "target_questions": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "has_example": false,
+      "layout": "side_by_side_set"
+    }
+  ],
+  "example_blocks": [
+    {
+      "id": "EX_99_G01",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 공책이에요?",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 공책이에요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 공책이 비싸요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 공책을 사요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 공책을 봐요."
+        }
+      ],
+      "example_correct_answer": 1
+    },
+    {
+      "id": "EX_99_G02",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 맛있게 드세요.",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "죄송합니다."
+        },
+        {
+          "choice": 2,
+          "text": "실례합니다."
+        },
+        {
+          "choice": 3,
+          "text": "잘 먹겠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "잘 모르겠습니다."
+        }
+      ],
+      "example_correct_answer": 3
+    },
+    {
+      "id": "EX_99_G03",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 어떻게 오셨어요?",
+        "나: 이거 한국 돈으로 바꿔 주세요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "은행"
+        },
+        {
+          "choice": 2,
+          "text": "시장"
+        },
+        {
+          "choice": 3,
+          "text": "박물관"
+        },
+        {
+          "choice": 4,
+          "text": "정류장"
+        }
+      ],
+      "example_correct_answer": 1
+    },
+    {
+      "id": "EX_99_G04",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 누구예요?",
+        "나: 이 사람은 형이고, 이 사람은 동생이에요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "가족"
+        },
+        {
+          "choice": 2,
+          "text": "생일"
+        },
+        {
+          "choice": 3,
+          "text": "주소"
+        },
+        {
+          "choice": 4,
+          "text": "음식"
+        }
+      ],
+      "example_correct_answer": 1
+    },
+    {
+      "id": "EX_99_G06",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "여자: 민수 씨, 머리 모양 바꿨네요.",
+        "남자: 네. 어제 좀 짧게 잘랐어요.",
+        "여자: 저도 짧게 자르고 싶은데 미용실에 갈 시간이 없네요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 머리를 잘랐습니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 요즘 시간이 많습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 지금 미용실에 있습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 머리 모양을 바꿨습니다."
+        }
+      ],
+      "example_correct_answer": 4
+    }
+  ],
+  "review_status": {
+    "status": "full_30_integrated_after_01_10_11_20_21_30_review",
+    "round": "99",
+    "needs_human_final_review": true,
+    "needs_audio_review": true,
+    "note": "10문항 단위 검수용 JSON을 통합한 99회 30문항 전체 검수용 시험지입니다. 25~26, 27~28, 29~30은 render_sequence로 세트 표시됩니다."
+  },
+  "items": [
+    {
+      "id": "99-L001",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 1,
+      "original_question_number": 1,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/99/99_L001.mp3",
+      "source_audio_file": "02 트랙 2.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 우유를 마셔요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 우유가 아니에요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 우유가 있어요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 우유를 좋아해요."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_99_G01",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "물음에 맞는 대답을 고르십시오."
+    },
+    {
+      "id": "99-L002",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 2,
+      "original_question_number": 2,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/99/99_L002.mp3",
+      "source_audio_file": "03 트랙 3.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 바지가 없어요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 바지가 예뻐요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 바지가 싫어요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 바지가 작아요."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "물음에 맞는 대답을 고르십시오."
+    },
+    {
+      "id": "99-L003",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 3,
+      "original_question_number": 3,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/99/99_L003.mp3",
+      "source_audio_file": "04 트랙 4.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "매일 해요."
+        },
+        {
+          "choice": 2,
+          "text": "아침에 해요."
+        },
+        {
+          "choice": 3,
+          "text": "운동을 해요."
+        },
+        {
+          "choice": 4,
+          "text": "동생하고 해요."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "물음에 맞는 대답을 고르십시오."
+    },
+    {
+      "id": "99-L004",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 4,
+      "original_question_number": 4,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/99/99_L004.mp3",
+      "source_audio_file": "05 트랙 5.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "집에 가요."
+        },
+        {
+          "choice": 2,
+          "text": "혼자 가요."
+        },
+        {
+          "choice": 3,
+          "text": "걸어서 가요."
+        },
+        {
+          "choice": 4,
+          "text": "열 시에 가요."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "물음에 맞는 대답을 고르십시오."
+    },
+    {
+      "id": "99-L005",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 5,
+      "original_question_number": 5,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/99/99_L005.mp3",
+      "source_audio_file": "06 트랙 6.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "아니에요."
+        },
+        {
+          "choice": 2,
+          "text": "괜찮아요."
+        },
+        {
+          "choice": 3,
+          "text": "어서 오세요."
+        },
+        {
+          "choice": 4,
+          "text": "안녕히 계세요."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_99_G02",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "이어지는 말을 고르십시오."
+    },
+    {
+      "id": "99-L006",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 6,
+      "original_question_number": 6,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/99/99_L006.mp3",
+      "source_audio_file": "07 트랙 7.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 그렇습니다."
+        },
+        {
+          "choice": 2,
+          "text": "네, 알겠습니다."
+        },
+        {
+          "choice": 3,
+          "text": "네, 잘 지냈습니다."
+        },
+        {
+          "choice": 4,
+          "text": "네, 처음 뵙겠습니다."
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "이어지는 말을 고르십시오."
+    },
+    {
+      "id": "99-L007",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 7,
+      "original_question_number": 7,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/99/99_L007.mp3",
+      "source_audio_file": "08 트랙 8.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "꽃집"
+        },
+        {
+          "choice": 2,
+          "text": "약국"
+        },
+        {
+          "choice": 3,
+          "text": "학교"
+        },
+        {
+          "choice": 4,
+          "text": "식당"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_99_G03",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "여기는 어디입니까?"
+    },
+    {
+      "id": "99-L008",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 8,
+      "original_question_number": 8,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/99/99_L008.mp3",
+      "source_audio_file": "09 트랙 9.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "지하철"
+        },
+        {
+          "choice": 2,
+          "text": "사진관"
+        },
+        {
+          "choice": 3,
+          "text": "백화점"
+        },
+        {
+          "choice": 4,
+          "text": "도서관"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "여기는 어디입니까?"
+    },
+    {
+      "id": "99-L009",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 9,
+      "original_question_number": 9,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/99/99_L009.mp3",
+      "source_audio_file": "10 트랙 10.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "서점"
+        },
+        {
+          "choice": 2,
+          "text": "호텔"
+        },
+        {
+          "choice": 3,
+          "text": "가게"
+        },
+        {
+          "choice": 4,
+          "text": "공항"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "여기는 어디입니까?"
+    },
+    {
+      "id": "99-L010",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 10,
+      "original_question_number": 10,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/99/99_L010.mp3",
+      "source_audio_file": "11 트랙 11.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "공원"
+        },
+        {
+          "choice": 2,
+          "text": "병원"
+        },
+        {
+          "choice": 3,
+          "text": "미술관"
+        },
+        {
+          "choice": 4,
+          "text": "운동장"
+        }
+      ],
+      "correct_answer": 3,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "여기는 어디입니까?"
+    },
+    {
+      "id": "99-L011",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 11,
+      "original_question_number": 11,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/99/99_L011.mp3",
+      "source_audio_file": "12 트랙 12.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "이름"
+        },
+        {
+          "choice": 2,
+          "text": "직업"
+        },
+        {
+          "choice": 3,
+          "text": "날짜"
+        },
+        {
+          "choice": 4,
+          "text": "요일"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_99_G04",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example"
+    },
+    {
+      "id": "99-L012",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 12,
+      "original_question_number": 12,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/99/99_L012.mp3",
+      "source_audio_file": "13 트랙 13.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "취미"
+        },
+        {
+          "choice": 2,
+          "text": "날짜"
+        },
+        {
+          "choice": 3,
+          "text": "과일"
+        },
+        {
+          "choice": 4,
+          "text": "색깔"
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example"
+    },
+    {
+      "id": "99-L013",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 13,
+      "original_question_number": 13,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/99/99_L013.mp3",
+      "source_audio_file": "14 트랙 14.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "값"
+        },
+        {
+          "choice": 2,
+          "text": "맛"
+        },
+        {
+          "choice": 3,
+          "text": "장소"
+        },
+        {
+          "choice": 4,
+          "text": "음악"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example"
+    },
+    {
+      "id": "99-L014",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 14,
+      "original_question_number": 14,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/99/99_L014.mp3",
+      "source_audio_file": "15 트랙 15.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "계절"
+        },
+        {
+          "choice": 2,
+          "text": "여행"
+        },
+        {
+          "choice": 3,
+          "text": "교통"
+        },
+        {
+          "choice": 4,
+          "text": "약속"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example"
+    },
+    {
+      "id": "99-L015",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 15,
+      "original_question_number": 15,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오. (각 4점)",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/99/99_L015.mp3",
+      "source_audio_file": "16 트랙 16.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/99/99_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/99/99_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/99/99_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/99/99_L015_04.png"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/99/99_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/99/99_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/99/99_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/99/99_L015_04.png"
+        }
+      ]
+    },
+    {
+      "id": "99-L016",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 16,
+      "original_question_number": 16,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오. (각 4점)",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/99/99_L016.mp3",
+      "source_audio_file": "17 트랙 17.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/99/99_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/99/99_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/99/99_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/99/99_L016_04.png"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/99/99_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/99/99_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/99/99_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/99/99_L016_04.png"
+        }
+      ]
+    },
+    {
+      "id": "99-L017",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 17,
+      "original_question_number": 17,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/99/99_L017.mp3",
+      "source_audio_file": "18 트랙 18.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 남자를 만났습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 지금 카페에 있습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 버스를 타지 못했습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 커피를 마시고 있습니다."
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_99_G06",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example"
+    },
+    {
+      "id": "99-L018",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 18,
+      "original_question_number": 18,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/99/99_L018.mp3",
+      "source_audio_file": "19 트랙 19.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 회사에 다니고 있습니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 졸업 선물을 못 샀습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 다음 주에 졸업을 할 겁니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 남자에게 넥타이를 주었습니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example"
+    },
+    {
+      "id": "99-L019",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 19,
+      "original_question_number": 19,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/99/99_L019.mp3",
+      "source_audio_file": "20 트랙 20.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 이 영화를 혼자 봤습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 이 영화의 내용을 압니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 이 영화가 재미없었습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 이 영화를 아직 못 봤습니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example"
+    },
+    {
+      "id": "99-L020",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 20,
+      "original_question_number": 20,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/99/99_L020.mp3",
+      "source_audio_file": "21 트랙 21.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자가 하는 일은 힘듭니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 할머니와 시장에 갔습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 할머니를 돕고 싶어 합니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 매일 할머니를 도와드립니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example"
+    },
+    {
+      "id": "99-L021",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 21,
+      "original_question_number": 21,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/99/99_L021.mp3",
+      "source_audio_file": "22 트랙 22.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 대회에 나가려고 합니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 남자에게 학생증을 주었습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 지난주에 대회 신청을 했습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 여권을 가지고 오지 않았습니다."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example"
+    },
+    {
+      "id": "99-L022",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 22,
+      "original_question_number": 22,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/99/99_L022.mp3",
+      "source_audio_file": "23 트랙 23.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "도서관에서 책을 읽고 싶습니다."
+        },
+        {
+          "choice": 2,
+          "text": "도서관에서 책을 빌리는 것이 편합니다."
+        },
+        {
+          "choice": 3,
+          "text": "도서관에 재미있는 책이 많아서 좋습니다."
+        },
+        {
+          "choice": 4,
+          "text": "도서관에서 책을 오래 빌려주면 좋겠습니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    },
+    {
+      "id": "99-L023",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 23,
+      "original_question_number": 23,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/99/99_L023.mp3",
+      "source_audio_file": "24 트랙 24.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "집은 깨끗해야 합니다."
+        },
+        {
+          "choice": 2,
+          "text": "조용한 집에서 살고 싶습니다."
+        },
+        {
+          "choice": 3,
+          "text": "지금 살고 있는 집이 좋습니다."
+        },
+        {
+          "choice": 4,
+          "text": "집에서 일하는 것이 불편합니다."
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    },
+    {
+      "id": "99-L024",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 24,
+      "original_question_number": 24,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/99/99_L024.mp3",
+      "source_audio_file": "25 트랙 25.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "식당에 빨리 가고 싶습니다."
+        },
+        {
+          "choice": 2,
+          "text": "밥은 함께 먹는 것이 좋습니다."
+        },
+        {
+          "choice": 3,
+          "text": "유명한 식당에 가면 좋겠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "건강에 좋은 음식을 먹어야 합니다."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single"
+    },
+    {
+      "id": "99-L025",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 25,
+      "original_question_number": 25,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "여자가 왜 이 이야기를 하고 있는지 고르십시오.",
+      "audio_url": "./audio/99/99_L025.mp3",
+      "source_audio_file": "26 트랙 26.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "수영장에서 사람을 찾으려고"
+        },
+        {
+          "choice": 2,
+          "text": "수영장의 위치를 가르쳐 주려고"
+        },
+        {
+          "choice": 3,
+          "text": "수영장 이용 규칙을 알려 주려고"
+        },
+        {
+          "choice": 4,
+          "text": "수영장이 문을 연 것을 알리려고"
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_25_26",
+      "audio_group_id": "AUDIO_99_SET_25_26",
+      "audio_group_numbers": [
+        25,
+        26
+      ],
+      "shared_audio_total": 2,
+      "shared_audio_index": 1
+    },
+    {
+      "id": "99-L026",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 26,
+      "original_question_number": 26,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/99/99_L025.mp3",
+      "source_audio_file": "26 트랙 26.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "한 시간 뒤에 휴식 시간이 있습니다."
+        },
+        {
+          "choice": 2,
+          "text": "오후 여덟 시에 수영을 할 수 있습니다."
+        },
+        {
+          "choice": 3,
+          "text": "수영장을 청소하기 위해 휴식을 합니다."
+        },
+        {
+          "choice": 4,
+          "text": "수영장 물 밖에서 음식을 먹을 수 있습니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_25_26",
+      "audio_group_id": "AUDIO_99_SET_25_26",
+      "audio_group_numbers": [
+        25,
+        26
+      ],
+      "shared_audio_total": 2,
+      "shared_audio_index": 2
+    },
+    {
+      "id": "99-L027",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 27,
+      "original_question_number": 27,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "두 사람이 무엇에 대해 이야기를 하고 있는지 고르십시오.",
+      "audio_url": "./audio/99/99_L027.mp3",
+      "source_audio_file": "28 트랙 28.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "어릴 때부터 쓴 라디오"
+        },
+        {
+          "choice": 2,
+          "text": "손목시계를 고치는 이유"
+        },
+        {
+          "choice": 3,
+          "text": "오래된 물건을 고치는 가게"
+        },
+        {
+          "choice": 4,
+          "text": "물건을 오래 사용하는 방법"
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_27_28",
+      "audio_group_id": "AUDIO_99_SET_27_28",
+      "audio_group_numbers": [
+        27,
+        28
+      ],
+      "shared_audio_total": 2,
+      "shared_audio_index": 1
+    },
+    {
+      "id": "99-L028",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 28,
+      "original_question_number": 28,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/99/99_L027.mp3",
+      "source_audio_file": "28 트랙 28.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 가게가 있는 곳을 모릅니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 손목시계를 고치고 싶어 합니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 시계 고치는 방법을 배웠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 남자에게 오래된 라디오를 주었습니다."
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_27_28",
+      "audio_group_id": "AUDIO_99_SET_27_28",
+      "audio_group_numbers": [
+        27,
+        28
+      ],
+      "shared_audio_total": 2,
+      "shared_audio_index": 2
+    },
+    {
+      "id": "99-L029",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 29,
+      "original_question_number": 29,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "남자가 이 일을 하게 된 이유를 고르십시오.",
+      "audio_url": "./audio/99/99_L029.mp3",
+      "source_audio_file": "30 트랙 30.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "우표를 모으고 싶어서"
+        },
+        {
+          "choice": 2,
+          "text": "다양한 경험을 하고 싶어서"
+        },
+        {
+          "choice": 3,
+          "text": "우표 만드는 일을 하고 싶어서"
+        },
+        {
+          "choice": 4,
+          "text": "유명한 디자이너가 되고 싶어서"
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_29_30",
+      "audio_group_id": "AUDIO_99_SET_29_30",
+      "audio_group_numbers": [
+        29,
+        30
+      ],
+      "shared_audio_total": 2,
+      "shared_audio_index": 1
+    },
+    {
+      "id": "99-L030",
+      "source_round": "99",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 30,
+      "original_question_number": 30,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/99/99_L029.mp3",
+      "source_audio_file": "30 트랙 30.m4a",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 얼마 전에 디자이너가 되었습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 한국의 특별한 곳을 찾고 있습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 올해 처음으로 우표를 디자인했습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 유명한 가수의 기념우표를 준비하고 있습니다."
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제99회 TOPIK I 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "side_by_side_set",
+      "set_id": "SET_29_30",
+      "audio_group_id": "AUDIO_99_SET_29_30",
+      "audio_group_numbers": [
+        29,
+        30
+      ],
+      "shared_audio_total": 2,
+      "shared_audio_index": 2
+    }
+  ],
+  "render_sequence": [
+    {
+      "unit_id": "Q001",
+      "unit_type": "single_question",
+      "question_numbers": [
+        1
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L001.mp3"
+    },
+    {
+      "unit_id": "Q002",
+      "unit_type": "single_question",
+      "question_numbers": [
+        2
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L002.mp3"
+    },
+    {
+      "unit_id": "Q003",
+      "unit_type": "single_question",
+      "question_numbers": [
+        3
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L003.mp3"
+    },
+    {
+      "unit_id": "Q004",
+      "unit_type": "single_question",
+      "question_numbers": [
+        4
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L004.mp3"
+    },
+    {
+      "unit_id": "Q005",
+      "unit_type": "single_question",
+      "question_numbers": [
+        5
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L005.mp3"
+    },
+    {
+      "unit_id": "Q006",
+      "unit_type": "single_question",
+      "question_numbers": [
+        6
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L006.mp3"
+    },
+    {
+      "unit_id": "Q007",
+      "unit_type": "single_question",
+      "question_numbers": [
+        7
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L007.mp3"
+    },
+    {
+      "unit_id": "Q008",
+      "unit_type": "single_question",
+      "question_numbers": [
+        8
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L008.mp3"
+    },
+    {
+      "unit_id": "Q009",
+      "unit_type": "single_question",
+      "question_numbers": [
+        9
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L009.mp3"
+    },
+    {
+      "unit_id": "Q010",
+      "unit_type": "single_question",
+      "question_numbers": [
+        10
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L010.mp3"
+    },
+    {
+      "unit_id": "Q011",
+      "unit_type": "single_question",
+      "question_numbers": [
+        11
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L011.mp3"
+    },
+    {
+      "unit_id": "Q012",
+      "unit_type": "single_question",
+      "question_numbers": [
+        12
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L012.mp3"
+    },
+    {
+      "unit_id": "Q013",
+      "unit_type": "single_question",
+      "question_numbers": [
+        13
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L013.mp3"
+    },
+    {
+      "unit_id": "Q014",
+      "unit_type": "single_question",
+      "question_numbers": [
+        14
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L014.mp3"
+    },
+    {
+      "unit_id": "Q015",
+      "unit_type": "single_question",
+      "question_numbers": [
+        15
+      ],
+      "layout": "image_grid_2x2",
+      "audio_url": "./audio/99/99_L015.mp3"
+    },
+    {
+      "unit_id": "Q016",
+      "unit_type": "single_question",
+      "question_numbers": [
+        16
+      ],
+      "layout": "image_grid_2x2",
+      "audio_url": "./audio/99/99_L016.mp3"
+    },
+    {
+      "unit_id": "Q017",
+      "unit_type": "single_question",
+      "question_numbers": [
+        17
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L017.mp3"
+    },
+    {
+      "unit_id": "Q018",
+      "unit_type": "single_question",
+      "question_numbers": [
+        18
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L018.mp3"
+    },
+    {
+      "unit_id": "Q019",
+      "unit_type": "single_question",
+      "question_numbers": [
+        19
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L019.mp3"
+    },
+    {
+      "unit_id": "Q020",
+      "unit_type": "single_question",
+      "question_numbers": [
+        20
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L020.mp3"
+    },
+    {
+      "unit_id": "Q021",
+      "unit_type": "single_question",
+      "question_numbers": [
+        21
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/99/99_L021.mp3"
+    },
+    {
+      "unit_id": "Q022",
+      "unit_type": "single_question",
+      "question_numbers": [
+        22
+      ],
+      "layout": "single",
+      "audio_url": "./audio/99/99_L022.mp3"
+    },
+    {
+      "unit_id": "Q023",
+      "unit_type": "single_question",
+      "question_numbers": [
+        23
+      ],
+      "layout": "single",
+      "audio_url": "./audio/99/99_L023.mp3"
+    },
+    {
+      "unit_id": "Q024",
+      "unit_type": "single_question",
+      "question_numbers": [
+        24
+      ],
+      "layout": "single",
+      "audio_url": "./audio/99/99_L024.mp3"
+    },
+    {
+      "unit_id": "SET_25_26",
+      "unit_type": "question_set",
+      "question_numbers": [
+        25,
+        26
+      ],
+      "layout": "side_by_side",
+      "audio_url": "./audio/99/99_L025.mp3",
+      "audio_group_id": "AUDIO_99_SET_25_26"
+    },
+    {
+      "unit_id": "SET_27_28",
+      "unit_type": "question_set",
+      "question_numbers": [
+        27,
+        28
+      ],
+      "layout": "side_by_side",
+      "audio_url": "./audio/99/99_L027.mp3",
+      "audio_group_id": "AUDIO_99_SET_27_28"
+    },
+    {
+      "unit_id": "SET_29_30",
+      "unit_type": "question_set",
+      "question_numbers": [
+        29,
+        30
+      ],
+      "layout": "side_by_side",
+      "audio_url": "./audio/99/99_L029.mp3",
+      "audio_group_id": "AUDIO_99_SET_29_30"
+    }
+  ]
+}
