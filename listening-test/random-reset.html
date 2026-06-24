@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOPIK I 듣기 랜덤 기록 초기화</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      background: #eef6ff;
+      color: #0f2f5f;
+    }
+    .box {
+      max-width: 720px;
+      margin: 90px auto;
+      background: #fff;
+      border: 1px solid #cfe2ff;
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 12px 35px rgba(0, 73, 160, 0.12);
+      text-align: center;
+    }
+    h1 { margin: 0 0 12px; font-size: 28px; color: #0056b8; }
+    p { line-height: 1.7; font-size: 16px; }
+    .ok {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #0d6efd;
+      color: white;
+      font-weight: 700;
+    }
+    .small { margin-top: 18px; color: #52677f; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main class="box">
+    <h1>랜덤 출제 기록 초기화 중</h1>
+    <p>
+      97회 문항을 랜덤 문제은행에 추가한 뒤, 이전 랜덤 사용 기록과 임시 답안을 정리합니다.<br>
+      잠시 후 시험 선택 화면으로 이동합니다.
+    </p>
+    <div class="ok">초기화 완료</div>
+    <p class="small" id="detail">localStorage 랜덤 출제 기록을 삭제했습니다.</p>
+  </main>
+
+  <script>
+    (function () {
+      const keysToRemove = [
+        "topik1-listening-random-usage-counts",
+        "topik1-listening-random-exam-latest",
+        "topik1-listening-draft-answers",
+        "topik1-listening-wrong-review-draft-answers"
+      ];
+
+      const removed = [];
+      keysToRemove.forEach((key) => {
+        try {
+          localStorage.removeItem(key);
+          removed.push(key);
+        } catch (error) {
+          console.warn("[random-reset] remove failed:", key, error);
+        }
+      });
+
+      try {
+        sessionStorage.setItem("topik1-listening-random-reset-done", new Date().toISOString());
+      } catch (error) {
+        console.warn("[random-reset] session marker failed:", error);
+      }
+
+      const detail = document.getElementById("detail");
+      if (detail) {
+        detail.textContent = "삭제한 기록: " + removed.join(", ");
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      const v = params.get("v") || "97-step07-random-bank";
+      const target = new URL("./index.html", window.location.href);
+      target.searchParams.set("mode", "dev");
+      target.searchParams.set("v", v);
+      target.searchParams.set("randomReset", "1");
+
+      window.setTimeout(() => {
+        window.location.replace(target.toString());
+      }, 900);
+    })();
+  </script>
+</body>
+</html>

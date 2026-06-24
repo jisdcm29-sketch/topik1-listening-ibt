@@ -1,6 +1,7 @@
 // TOPIK I 듣기 PBT형 IBT - listening-test.js
 // 시험 실행 전용. 특정 회차 파일명, 정답, 이미지 파일명을 직접 쓰지 않는다.
 // Step36: 30문항 랜덤 + 레벨테스트 랜덤 16문항 생성 지원. 보기 듣기 동행 유지.
+// Step10 wrong-review: 오답풀이 정답 문항 누적 차감 + 캐시 우회 적용.
 
 const ListeningTestApp = (() => {
   const RANDOM_FULL_EXAM_ID = "topik1-listening-random-full-30";
@@ -9,6 +10,7 @@ const ListeningTestApp = (() => {
   const RANDOM_BANK_URL = "./data/bank/question-bank.json";
   const RANDOM_USAGE_STORAGE_KEY = "topik1-listening-random-usage-counts";
   const RANDOM_EXAM_STORAGE_KEY = "topik1-listening-random-exam-latest";
+  const WRONG_REVIEW_PROGRESS_STORAGE_KEY = "topik1-listening-wrong-review-progress";
 
   const state = {
     manifest: null,
@@ -96,12 +98,12 @@ const ListeningTestApp = (() => {
     });
 
     $("#open-diagnosis-btn")?.addEventListener("click", () => {
-      const version = new URLSearchParams(window.location.search).get("v") || "step36b";
+      const version = new URLSearchParams(window.location.search).get("v") || "step11-wrongreview-actualfix";
       window.location.href = `../listening-diagnosis/index.html?auto=1&v=${encodeURIComponent(version)}`;
     });
 
     $("#wrong-review-btn")?.addEventListener("click", () => {
-      window.location.href = "./index.html?review=wrong&v=step36b";
+      window.location.href = "./index.html?review=wrong&v=step11-wrongreview-actualfix";
     });
 
     $("#dev-prev-btn")?.addEventListener("click", () => moveRenderUnit(-1, { manual: true }));
@@ -410,7 +412,7 @@ const ListeningTestApp = (() => {
 
       if (!wrongQuestions.length) {
         alert("남은 오답 또는 미응답 문항이 없습니다.");
-        window.location.href = "../listening-diagnosis/index.html?auto=1&review=done&v=step36b";
+        window.location.href = "../listening-diagnosis/index.html?auto=1&review=done&v=step11-wrongreview-actualfix";
         return;
       }
 
@@ -450,21 +452,32 @@ const ListeningTestApp = (() => {
   }
 
   function getRemainingWrongQuestionNumbers(originalResult) {
-    const originalWrongQuestions = (originalResult?.items || [])
+    const originalWrongQuestions = uniqueQuestionNumbers((originalResult?.items || [])
       .filter((item) => item.student_answer === null || item.is_correct === false)
-      .map((item) => Number(item.question_number));
+      .map((item) => Number(item.question_number)));
 
-    const reviewResult = ResultBuilder.loadFromLocalStorage(ResultBuilder.WRONG_REVIEW_STORAGE_KEY);
+    const correctedSet = new Set();
 
-    if (!isReviewResultForOriginal(reviewResult, originalResult)) {
-      return originalWrongQuestions;
+    const progress = loadWrongReviewProgressForOriginal(originalResult);
+    if (progress?.corrected_question_numbers?.length) {
+      progress.corrected_question_numbers.forEach((q) => {
+        const n = Number(q);
+        if (Number.isFinite(n)) correctedSet.add(n);
+      });
     }
 
-    // 오답풀이 결과는 직전 오답풀이 대상 문항 전체를 담고 있다.
-    // 그중 다시 틀렸거나 미응답인 문항만 다음 오답풀이 대상으로 남긴다.
-    return (reviewResult.items || [])
-      .filter((item) => item.student_answer === null || item.is_correct === false)
-      .map((item) => Number(item.question_number));
+    const reviewResult = ResultBuilder.loadFromLocalStorage(ResultBuilder.WRONG_REVIEW_STORAGE_KEY);
+    if (isReviewResultForOriginal(reviewResult, originalResult)) {
+      (reviewResult.items || []).forEach((item) => {
+        const q = Number(item.question_number);
+        if (!Number.isFinite(q)) return;
+        if (item.student_answer !== null && item.student_answer !== undefined && item.is_correct === true) {
+          correctedSet.add(q);
+        }
+      });
+    }
+
+    return originalWrongQuestions.filter((q) => !correctedSet.has(Number(q)));
   }
 
   function isReviewResultForOriginal(reviewResult, originalResult) {
@@ -1682,12 +1695,21 @@ const ListeningTestApp = (() => {
     });
 
     if (state.isWrongReviewMode && state.reviewSourceResult) {
+      result.generated_exam_mode = "wrong-review";
+      result.exam_type = "wrong-review";
+      result.generated_exam_label = "TOPIK I 듣기 오답 다시 풀기";
+      result.test_name = "TOPIK I 듣기 오답 다시 풀기";
+      result.test_scope = "오답 및 미응답 문항";
       result.review_source_submitted_at = state.reviewSourceResult.submitted_at || "";
       result.review_source_test_name = state.reviewSourceResult.test_name || "";
       result.review_source_round = state.reviewSourceResult.generated_exam_round || "";
-      result.review_original_wrong_count = countWrongOrUnanswered(state.reviewSourceResult);
-      result.review_remaining_wrong_count = countWrongOrUnanswered(result);
-      result.review_corrected_count = Math.max(0, result.review_original_wrong_count - result.review_remaining_wrong_count);
+
+      const progress = updateWrongReviewProgress(state.reviewSourceResult, result);
+      result.review_original_wrong_count = progress.original_wrong_numbers.length;
+      result.review_remaining_wrong_count = progress.remaining_question_numbers.length;
+      result.review_corrected_count = progress.corrected_question_numbers.length;
+      result.review_corrected_question_numbers = progress.corrected_question_numbers;
+      result.review_remaining_question_numbers = progress.remaining_question_numbers;
     }
 
     state.latestResult = result;
@@ -1711,7 +1733,7 @@ const ListeningTestApp = (() => {
     if (state.isWrongReviewMode) {
       // 오답풀이 결과는 별도 key에 저장하고, 원래 진단 보고서 화면으로 돌아간다.
       // 진단 보고서는 기존 topik1-listening-result-latest를 기준으로 유지한다.
-      window.location.href = "../listening-diagnosis/index.html?auto=1&review=done&v=step36b";
+      window.location.href = "../listening-diagnosis/index.html?auto=1&review=done&v=step11-wrongreview-actualfix";
       return;
     }
 
@@ -1724,6 +1746,10 @@ const ListeningTestApp = (() => {
       ...state.exam,
       title: "TOPIK I 듣기 오답 다시 풀기",
       exam_type: "wrong-review",
+      exam_mode: "wrong-review",
+      generated_exam_mode: "wrong-review",
+      generated_exam_label: "TOPIK I 듣기 오답 다시 풀기",
+      random_generation: null,
       test_scope: "오답 및 미응답 문항",
       total_questions: qSet.size,
       total_possible_points: (state.exam.items || []).filter((item) => qSet.has(Number(item.question_number))).reduce((sum, item) => sum + Number(item.points || 0), 0),
@@ -1862,10 +1888,89 @@ const ListeningTestApp = (() => {
   function clearWrongReviewStorageForNewOriginalResult() {
     try {
       localStorage.removeItem(ResultBuilder.WRONG_REVIEW_STORAGE_KEY);
+      localStorage.removeItem(WRONG_REVIEW_PROGRESS_STORAGE_KEY);
       localStorage.removeItem("topik1-listening-wrong-review-draft-answers");
     } catch (error) {
       console.warn("[clearWrongReviewStorageForNewOriginalResult] failed:", error);
     }
+  }
+
+  function uniqueQuestionNumbers(numbers) {
+    const seen = new Set();
+    return (numbers || [])
+      .map((q) => Number(q))
+      .filter((q) => {
+        if (!Number.isFinite(q) || seen.has(q)) return false;
+        seen.add(q);
+        return true;
+      });
+  }
+
+  function getOriginalWrongQuestionNumbers(originalResult) {
+    return uniqueQuestionNumbers((originalResult?.items || [])
+      .filter((item) => item.student_answer === null || item.is_correct === false)
+      .map((item) => Number(item.question_number)));
+  }
+
+  function loadWrongReviewProgressForOriginal(originalResult) {
+    try {
+      const progress = JSON.parse(localStorage.getItem(WRONG_REVIEW_PROGRESS_STORAGE_KEY) || "null");
+      if (!isWrongReviewProgressForOriginal(progress, originalResult)) return null;
+      return progress;
+    } catch (error) {
+      console.warn("[loadWrongReviewProgressForOriginal] failed:", error);
+      return null;
+    }
+  }
+
+  function isWrongReviewProgressForOriginal(progress, originalResult) {
+    if (!progress || !originalResult) return false;
+    if (!progress.source_submitted_at || !originalResult.submitted_at) return false;
+    return String(progress.source_submitted_at) === String(originalResult.submitted_at);
+  }
+
+  function updateWrongReviewProgress(originalResult, reviewResult) {
+    const originalWrongNumbers = getOriginalWrongQuestionNumbers(originalResult);
+    const existing = loadWrongReviewProgressForOriginal(originalResult);
+    const correctedSet = new Set((existing?.corrected_question_numbers || []).map(Number).filter(Number.isFinite));
+
+    (reviewResult?.items || []).forEach((item) => {
+      const q = Number(item.question_number);
+      if (!Number.isFinite(q)) return;
+      if (item.student_answer !== null && item.student_answer !== undefined && item.is_correct === true) {
+        correctedSet.add(q);
+      }
+    });
+
+    const correctedQuestionNumbers = originalWrongNumbers
+      .filter((q) => correctedSet.has(Number(q)))
+      .sort((a, b) => a - b);
+    const remainingQuestionNumbers = originalWrongNumbers
+      .filter((q) => !correctedSet.has(Number(q)))
+      .sort((a, b) => a - b);
+
+    const progress = {
+      source_submitted_at: originalResult.submitted_at || "",
+      source_test_name: originalResult.test_name || "",
+      source_generated_exam_round: originalResult.generated_exam_round || "",
+      source_generated_exam_label: originalResult.generated_exam_label || "",
+      student_name: originalResult.student_name || "",
+      student_phone: originalResult.student_phone || "",
+      original_wrong_numbers: originalWrongNumbers,
+      corrected_question_numbers: correctedQuestionNumbers,
+      remaining_question_numbers: remainingQuestionNumbers,
+      corrected_count: correctedQuestionNumbers.length,
+      remaining_count: remainingQuestionNumbers.length,
+      updated_at: new Date().toISOString()
+    };
+
+    try {
+      localStorage.setItem(WRONG_REVIEW_PROGRESS_STORAGE_KEY, JSON.stringify(progress));
+    } catch (error) {
+      console.warn("[updateWrongReviewProgress] failed:", error);
+    }
+
+    return progress;
   }
 
   function countWrongOrUnanswered(result) {

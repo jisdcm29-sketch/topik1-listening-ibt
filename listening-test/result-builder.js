@@ -116,7 +116,8 @@ const ResultBuilder = (() => {
       items: resultItems
     };
 
-    const looksRandom = isRandomGeneratedResult({
+    const isWrongReviewOverride = String(override.generated_exam_mode || "").toLowerCase() === "wrong-review";
+    const looksRandom = !isWrongReviewOverride && isRandomGeneratedResult({
       generatedMode,
       generatedRound,
       generatedLabel,
