@@ -1,11 +1,20 @@
 {
   "schema_version": "topik1-listening-question-bank-v1",
   "bank_id": "topik1-listening-question-bank",
-  "version": "step40-merged-91-96-97-99-100-102-random-bank",
+  "version": "step43-source-example-only-83-91-96-97-99-100-102",
   "level": "TOPIK I",
   "section": "listening",
-  "status": "merged_bank_from_91_96_97_99_100_102",
+  "status": "merged_bank_from_83_91_96_97_99_100_102",
   "sources": [
+    {
+      "source_round": "83",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "addon_file": "./question-bank-83-addon-normalized.json",
+      "flat_question_count": 30,
+      "single_question_count": 24,
+      "long_set_count": 3
+    },
     {
       "source_round": "91",
       "source_exam_id": "listening-91",
@@ -101,11 +110,12 @@
     "duplicate_rule": "한 시험지 안에서 같은 bank_id 또는 bank_set_id 중복 선택 금지",
     "long_set_rule": "긴 대화는 반드시 세트 단위로 선택하고, 선택 후 출력 문항 번호를 해당 슬롯에 다시 매김",
     "history_rule": "향후 localStorage 또는 seed 기반 출제 이력을 사용해 같은 학생에게 같은 문항 반복을 최소화",
-    "current_bank_limitation": "96회, 97회, 99회, 100회, 102회 다섯 회차가 포함되어 랜덤 출제 풀이 확장되었습니다. 추가 회차를 병합하면 다양성이 더 커집니다."
+    "current_bank_limitation": "83회, 91회, 96회, 97회, 99회, 100회, 102회 일곱 회차가 포함되어 랜덤 출제 풀이 확장되었습니다. 추가 회차를 병합하면 다양성이 더 커집니다."
   },
   "statistics": {
-    "source_round_count": 6,
+    "source_round_count": 7,
     "source_rounds": [
+      "83",
       "91",
       "96",
       "97",
@@ -113,36 +123,40 @@
       "100",
       "102"
     ],
-    "flat_question_count": 180,
-    "single_question_count": 144,
-    "long_set_count": 18,
-    "long_set_member_question_count": 36,
-    "total_bank_source_points": 600,
+    "flat_question_count": 210,
+    "single_question_count": 168,
+    "long_set_count": 21,
+    "long_set_member_question_count": 42,
+    "total_bank_source_points": 700,
     "standard_exam_total_possible_points": 100,
     "by_type": {
-      "answer_response": 24,
-      "following_response": 12,
-      "place_identification": 24,
-      "topic_identification": 24,
-      "picture_choice": 12,
-      "same_content": 30,
-      "main_thought": 18,
-      "long_listening_set": 18
+      "answer_response": 28,
+      "following_response": 14,
+      "place_identification": 28,
+      "topic_identification": 28,
+      "picture_choice": 14,
+      "same_content": 35,
+      "main_thought": 21,
+      "long_listening_set": 21
     },
     "by_diagnostic_area": {
-      "basic_response": 24,
-      "following_response": 12,
-      "place_identification": 24,
-      "topic_identification": 24,
-      "picture_choice": 12,
-      "same_content": 30,
-      "main_thought": 18,
-      "long_listening_set": 18
+      "basic_response": 28,
+      "following_response": 14,
+      "place_identification": 28,
+      "topic_identification": 28,
+      "picture_choice": 14,
+      "same_content": 35,
+      "main_thought": 21,
+      "long_listening_set": 21
     }
   },
   "index": {
     "by_type": {
       "answer_response": [
+        "L83_Q001",
+        "L83_Q002",
+        "L83_Q003",
+        "L83_Q004",
         "L91_Q001",
         "L91_Q002",
         "L91_Q003",
@@ -169,6 +183,8 @@
         "L102_Q004"
       ],
       "following_response": [
+        "L83_Q005",
+        "L83_Q006",
         "L91_Q005",
         "L91_Q006",
         "L96_Q005",
@@ -183,6 +199,10 @@
         "L102_Q006"
       ],
       "place_identification": [
+        "L83_Q007",
+        "L83_Q008",
+        "L83_Q009",
+        "L83_Q010",
         "L91_Q007",
         "L91_Q008",
         "L91_Q009",
@@ -209,6 +229,10 @@
         "L102_Q010"
       ],
       "topic_identification": [
+        "L83_Q011",
+        "L83_Q012",
+        "L83_Q013",
+        "L83_Q014",
         "L91_Q011",
         "L91_Q012",
         "L91_Q013",
@@ -235,6 +259,8 @@
         "L102_Q014"
       ],
       "picture_choice": [
+        "L83_Q015",
+        "L83_Q016",
         "L91_Q015",
         "L91_Q016",
         "L96_Q015",
@@ -249,6 +275,11 @@
         "L102_Q016"
       ],
       "same_content": [
+        "L83_Q017",
+        "L83_Q018",
+        "L83_Q019",
+        "L83_Q020",
+        "L83_Q021",
         "L91_Q017",
         "L91_Q018",
         "L91_Q019",
@@ -281,6 +312,9 @@
         "L102_Q021"
       ],
       "main_thought": [
+        "L83_Q022",
+        "L83_Q023",
+        "L83_Q024",
         "L91_Q022",
         "L91_Q023",
         "L91_Q024",
@@ -301,6 +335,9 @@
         "L102_Q024"
       ],
       "long_listening_set": [
+        "L83_SET_025_026",
+        "L83_SET_027_028",
+        "L83_SET_029_030",
         "L91_SET_025_026",
         "L91_SET_027_028",
         "L91_SET_029_030",
@@ -323,6 +360,10 @@
     },
     "by_category": {
       "알맞은 대답 고르기": [
+        "L83_Q001",
+        "L83_Q002",
+        "L83_Q003",
+        "L83_Q004",
         "L91_Q001",
         "L91_Q002",
         "L91_Q003",
@@ -349,6 +390,8 @@
         "L102_Q004"
       ],
       "이어지는 말 고르기": [
+        "L83_Q005",
+        "L83_Q006",
         "L91_Q005",
         "L91_Q006",
         "L96_Q005",
@@ -363,6 +406,10 @@
         "L102_Q006"
       ],
       "장소 파악하기": [
+        "L83_Q007",
+        "L83_Q008",
+        "L83_Q009",
+        "L83_Q010",
         "L91_Q007",
         "L91_Q008",
         "L91_Q009",
@@ -389,6 +436,10 @@
         "L102_Q010"
       ],
       "화제 파악하기": [
+        "L83_Q011",
+        "L83_Q012",
+        "L83_Q013",
+        "L83_Q014",
         "L91_Q011",
         "L91_Q012",
         "L91_Q013",
@@ -415,6 +466,8 @@
         "L102_Q014"
       ],
       "알맞은 그림 고르기": [
+        "L83_Q015",
+        "L83_Q016",
         "L91_Q015",
         "L91_Q016",
         "L96_Q015",
@@ -429,6 +482,11 @@
         "L102_Q016"
       ],
       "내용 일치 고르기": [
+        "L83_Q017",
+        "L83_Q018",
+        "L83_Q019",
+        "L83_Q020",
+        "L83_Q021",
         "L91_Q017",
         "L91_Q018",
         "L91_Q019",
@@ -461,6 +519,9 @@
         "L102_Q021"
       ],
       "중심 생각 고르기": [
+        "L83_Q022",
+        "L83_Q023",
+        "L83_Q024",
         "L91_Q022",
         "L91_Q023",
         "L91_Q024",
@@ -481,6 +542,9 @@
         "L102_Q024"
       ],
       "긴 대화 듣고 두 문제 풀기": [
+        "L83_SET_025_026",
+        "L83_SET_027_028",
+        "L83_SET_029_030",
         "L91_SET_025_026",
         "L91_SET_027_028",
         "L91_SET_029_030",
@@ -503,6 +567,10 @@
     },
     "by_diagnostic_area": {
       "basic_response": [
+        "L83_Q001",
+        "L83_Q002",
+        "L83_Q003",
+        "L83_Q004",
         "L91_Q001",
         "L91_Q002",
         "L91_Q003",
@@ -529,6 +597,8 @@
         "L102_Q004"
       ],
       "following_response": [
+        "L83_Q005",
+        "L83_Q006",
         "L91_Q005",
         "L91_Q006",
         "L96_Q005",
@@ -543,6 +613,10 @@
         "L102_Q006"
       ],
       "place_identification": [
+        "L83_Q007",
+        "L83_Q008",
+        "L83_Q009",
+        "L83_Q010",
         "L91_Q007",
         "L91_Q008",
         "L91_Q009",
@@ -569,6 +643,10 @@
         "L102_Q010"
       ],
       "topic_identification": [
+        "L83_Q011",
+        "L83_Q012",
+        "L83_Q013",
+        "L83_Q014",
         "L91_Q011",
         "L91_Q012",
         "L91_Q013",
@@ -595,6 +673,8 @@
         "L102_Q014"
       ],
       "picture_choice": [
+        "L83_Q015",
+        "L83_Q016",
         "L91_Q015",
         "L91_Q016",
         "L96_Q015",
@@ -609,6 +689,11 @@
         "L102_Q016"
       ],
       "same_content": [
+        "L83_Q017",
+        "L83_Q018",
+        "L83_Q019",
+        "L83_Q020",
+        "L83_Q021",
         "L91_Q017",
         "L91_Q018",
         "L91_Q019",
@@ -641,6 +726,9 @@
         "L102_Q021"
       ],
       "main_thought": [
+        "L83_Q022",
+        "L83_Q023",
+        "L83_Q024",
         "L91_Q022",
         "L91_Q023",
         "L91_Q024",
@@ -661,6 +749,9 @@
         "L102_Q024"
       ],
       "long_listening_set": [
+        "L83_SET_025_026",
+        "L83_SET_027_028",
+        "L83_SET_029_030",
         "L91_SET_025_026",
         "L91_SET_027_028",
         "L91_SET_029_030",
@@ -682,6 +773,35 @@
       ]
     },
     "by_source_round": {
+      "83": [
+        "L83_Q001",
+        "L83_Q002",
+        "L83_Q003",
+        "L83_Q004",
+        "L83_Q005",
+        "L83_Q006",
+        "L83_Q007",
+        "L83_Q008",
+        "L83_Q009",
+        "L83_Q010",
+        "L83_Q011",
+        "L83_Q012",
+        "L83_Q013",
+        "L83_Q014",
+        "L83_Q015",
+        "L83_Q016",
+        "L83_Q017",
+        "L83_Q018",
+        "L83_Q019",
+        "L83_Q020",
+        "L83_Q021",
+        "L83_Q022",
+        "L83_Q023",
+        "L83_Q024",
+        "L83_SET_025_026",
+        "L83_SET_027_028",
+        "L83_SET_029_030"
+      ],
       "91": [
         "L91_Q001",
         "L91_Q002",
@@ -859,6 +979,1720 @@
     }
   },
   "single_questions": [
+    {
+      "id": "83-L001",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 1,
+      "original_question_number": 1,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/83/83_L001.mp3",
+      "source_audio_file": "02 트랙 2.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 학생이에요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 학생이 없어요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 학생이 와요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 학생이 많아요."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G01",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "bank_id": "L83_Q001",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 1,
+      "preferred_slots": [
+        1
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G01",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 물을 마셔요?",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "네, 물을 마셔요."
+          },
+          {
+            "choice": 2,
+            "text": "네, 물이 적어요."
+          },
+          {
+            "choice": 3,
+            "text": "아니요, 물이에요."
+          },
+          {
+            "choice": 4,
+            "text": "아니요, 물이 좋아요."
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "83",
+        "source_example_id": "EX_83_G01",
+        "source_question_number": 1,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L002",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 2,
+      "original_question_number": 2,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/83/83_L002.mp3",
+      "source_audio_file": "03 트랙 3.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 책을 싫어해요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 책이 아니에요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 책이 있어요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 책을 안 읽어요."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "bank_id": "L83_Q002",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 2,
+      "preferred_slots": [
+        2
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L003",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 3,
+      "original_question_number": 3,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/83/83_L003.mp3",
+      "source_audio_file": "04 트랙 4.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "지금 해요."
+        },
+        {
+          "choice": 2,
+          "text": "우리가 해요."
+        },
+        {
+          "choice": 3,
+          "text": "카페에서 해요."
+        },
+        {
+          "choice": 4,
+          "text": "동생하고 해요."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "bank_id": "L83_Q003",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 3,
+      "preferred_slots": [
+        3
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L004",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 4,
+      "original_question_number": 4,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/83/83_L004.mp3",
+      "source_audio_file": "05 트랙 5.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "어제 갔어요."
+        },
+        {
+          "choice": 2,
+          "text": "자주 갔어요."
+        },
+        {
+          "choice": 3,
+          "text": "친구가 갔어요."
+        },
+        {
+          "choice": 4,
+          "text": "지하철로 갔어요."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "bank_id": "L83_Q004",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 4,
+      "preferred_slots": [
+        4
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L005",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 5,
+      "original_question_number": 5,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/83/83_L005.mp3",
+      "source_audio_file": "06 트랙 6.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "축하해요."
+        },
+        {
+          "choice": 2,
+          "text": "아니에요."
+        },
+        {
+          "choice": 3,
+          "text": "고마워요."
+        },
+        {
+          "choice": 4,
+          "text": "반가워요."
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G02",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "이어지는 말을 고르십시오.",
+      "bank_id": "L83_Q005",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 5,
+      "preferred_slots": [
+        5
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G02",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 안녕히 계세요.",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "들어오세요."
+          },
+          {
+            "choice": 2,
+            "text": "안녕하세요."
+          },
+          {
+            "choice": 3,
+            "text": "안녕히 가세요."
+          },
+          {
+            "choice": 4,
+            "text": "맛있게 드세요."
+          }
+        ],
+        "example_correct_answer": 3,
+        "source_round": "83",
+        "source_example_id": "EX_83_G02",
+        "source_question_number": 5,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L006",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 6,
+      "original_question_number": 6,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/83/83_L006.mp3",
+      "source_audio_file": "07 트랙 7.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "잘 먹겠습니다."
+        },
+        {
+          "choice": 2,
+          "text": "잘 지냈습니다."
+        },
+        {
+          "choice": 3,
+          "text": "네. 알겠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "네. 그렇습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "이어지는 말을 고르십시오.",
+      "bank_id": "L83_Q006",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 6,
+      "preferred_slots": [
+        6
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L007",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 7,
+      "original_question_number": 7,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/83/83_L007.mp3",
+      "source_audio_file": "08 트랙 8.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "꽃집"
+        },
+        {
+          "choice": 2,
+          "text": "극장"
+        },
+        {
+          "choice": 3,
+          "text": "학교"
+        },
+        {
+          "choice": 4,
+          "text": "시장"
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G03",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "여기는 어디입니까?",
+      "bank_id": "L83_Q007",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 7,
+      "preferred_slots": [
+        7
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G03",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 내일까지 숙제를 꼭 내세요.",
+          "나: 네, 선생님."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "교실"
+          },
+          {
+            "choice": 2,
+            "text": "가게"
+          },
+          {
+            "choice": 3,
+            "text": "호텔"
+          },
+          {
+            "choice": 4,
+            "text": "공원"
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "83",
+        "source_example_id": "EX_83_G03",
+        "source_question_number": 7,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L008",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 8,
+      "original_question_number": 8,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/83/83_L008.mp3",
+      "source_audio_file": "09 트랙 9.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "은행"
+        },
+        {
+          "choice": 2,
+          "text": "식당"
+        },
+        {
+          "choice": 3,
+          "text": "도서관"
+        },
+        {
+          "choice": 4,
+          "text": "문구점"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "여기는 어디입니까?",
+      "bank_id": "L83_Q008",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 8,
+      "preferred_slots": [
+        8
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L009",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 9,
+      "original_question_number": 9,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/83/83_L009.mp3",
+      "source_audio_file": "10 트랙 10.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "백화점"
+        },
+        {
+          "choice": 2,
+          "text": "여행사"
+        },
+        {
+          "choice": 3,
+          "text": "우체국"
+        },
+        {
+          "choice": 4,
+          "text": "박물관"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "여기는 어디입니까?",
+      "bank_id": "L83_Q009",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 9,
+      "preferred_slots": [
+        9
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L010",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 10,
+      "original_question_number": 10,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/83/83_L010.mp3",
+      "source_audio_file": "11 트랙 11.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "서점"
+        },
+        {
+          "choice": 2,
+          "text": "약국"
+        },
+        {
+          "choice": 3,
+          "text": "미용실"
+        },
+        {
+          "choice": 4,
+          "text": "사진관"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "여기는 어디입니까?",
+      "bank_id": "L83_Q010",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 10,
+      "preferred_slots": [
+        10
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L011",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 11,
+      "original_question_number": 11,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/83/83_L011.mp3",
+      "source_audio_file": "12 트랙 12.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "나라"
+        },
+        {
+          "choice": 2,
+          "text": "가족"
+        },
+        {
+          "choice": 3,
+          "text": "이름"
+        },
+        {
+          "choice": 4,
+          "text": "주말"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G04",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "bank_id": "L83_Q011",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 11,
+      "preferred_slots": [
+        11
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G04",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 이 아파트에 살아요?",
+          "나: 네. 5층에 살아요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "집"
+          },
+          {
+            "choice": 2,
+            "text": "옷"
+          },
+          {
+            "choice": 3,
+            "text": "나이"
+          },
+          {
+            "choice": 4,
+            "text": "선물"
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "83",
+        "source_example_id": "EX_83_G04",
+        "source_question_number": 11,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L012",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 12,
+      "original_question_number": 12,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/83/83_L012.mp3",
+      "source_audio_file": "13 트랙 13.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "취미"
+        },
+        {
+          "choice": 2,
+          "text": "날씨"
+        },
+        {
+          "choice": 3,
+          "text": "시간"
+        },
+        {
+          "choice": 4,
+          "text": "음식"
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "bank_id": "L83_Q012",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 12,
+      "preferred_slots": [
+        12
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L013",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 13,
+      "original_question_number": 13,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/83/83_L013.mp3",
+      "source_audio_file": "14 트랙 14.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "직업"
+        },
+        {
+          "choice": 2,
+          "text": "운동"
+        },
+        {
+          "choice": 3,
+          "text": "날짜"
+        },
+        {
+          "choice": 4,
+          "text": "고향"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "bank_id": "L83_Q013",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 13,
+      "preferred_slots": [
+        13
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L014",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 14,
+      "original_question_number": 14,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/83/83_L014.mp3",
+      "source_audio_file": "15 트랙 15.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "값"
+        },
+        {
+          "choice": 2,
+          "text": "맛"
+        },
+        {
+          "choice": 3,
+          "text": "위치"
+        },
+        {
+          "choice": 4,
+          "text": "계절"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "bank_id": "L83_Q014",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 14,
+      "preferred_slots": [
+        14
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L015",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 15,
+      "original_question_number": 15,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오. (각 4점)",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/83/83_L015.mp3",
+      "source_audio_file": "16 트랙 16.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/83/83_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/83/83_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/83/83_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/83/83_L015_04.png"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/83/83_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/83/83_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/83/83_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/83/83_L015_04.png"
+        }
+      ],
+      "bank_id": "L83_Q015",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 15,
+      "preferred_slots": [
+        15
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
+    {
+      "id": "83-L016",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 16,
+      "original_question_number": 16,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오. (각 4점)",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/83/83_L016.mp3",
+      "source_audio_file": "17 트랙 17.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/83/83_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/83/83_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/83/83_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/83/83_L016_04.png"
+        }
+      ],
+      "correct_answer": 4,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/83/83_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/83/83_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/83/83_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/83/83_L016_04.png"
+        }
+      ],
+      "bank_id": "L83_Q016",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 16,
+      "preferred_slots": [
+        16
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
+    {
+      "id": "83-L017",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 17,
+      "original_question_number": 17,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L017.mp3",
+      "source_audio_file": "18 트랙 18.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 주말에 드라마를 봤습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 일요일에 친구를 만났습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 일요일에 집에서 쉬었습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 주말에 이 남자와 수영장에 갔습니다."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G06",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q017",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 17,
+      "preferred_slots": [
+        17
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G06",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "여자: 편지를 써요?",
+          "남자: 네. 형한테 편지를 써요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "여자는 편지를 씁니다."
+          },
+          {
+            "choice": 2,
+            "text": "남자는 형이 있습니다."
+          },
+          {
+            "choice": 3,
+            "text": "남자는 동생에게 편지를 씁니다."
+          },
+          {
+            "choice": 4,
+            "text": "여자는 남자한테 편지를 보냅니다."
+          }
+        ],
+        "example_correct_answer": 2,
+        "source_round": "83",
+        "source_example_id": "EX_83_G06",
+        "source_question_number": 17,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L018",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 18,
+      "original_question_number": 18,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L018.mp3",
+      "source_audio_file": "19 트랙 19.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 요리를 아주 잘합니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 지금 김치찌개를 만듭니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 어머니에게서 요리를 배웁니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 어머니와 요리를 하고 있습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q018",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 18,
+      "preferred_slots": [
+        18
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L019",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 19,
+      "original_question_number": 19,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L019.mp3",
+      "source_audio_file": "20 트랙 20.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 극장에서 남자를 만났습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 이따가 한강공원에 갈 겁니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 오늘 수업이 모두 끝났습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 지금 영화를 보고 싶어 합니다."
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q019",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 19,
+      "preferred_slots": [
+        19
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L020",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 20,
+      "original_question_number": 20,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L020.mp3",
+      "source_audio_file": "21 트랙 21.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 책상을 사고 싶어 합니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 여자에게 책상을 팔 겁니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 인터넷으로 물건을 팔아 봤습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 인터넷 사이트에서 책상을 팔았습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q020",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 20,
+      "preferred_slots": [
+        20
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L021",
+      "question_number": 21,
+      "original_question_number": 21,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L021.mp3",
+      "source_audio_file": "22 트랙 22.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 병원에서 일합니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 오전에 예약을 했습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 남자와 같이 병원에 갑니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 수요일에 병원에 갈 겁니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q021",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 21,
+      "preferred_slots": [
+        21
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L022",
+      "question_number": 22,
+      "original_question_number": 22,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/83/83_L022.mp3",
+      "source_audio_file": "23 트랙 23.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "마이 씨처럼 친구가 많았으면 좋겠습니다."
+        },
+        {
+          "choice": 2,
+          "text": "마이 씨하고 외국어 공부를 하고 싶습니다."
+        },
+        {
+          "choice": 3,
+          "text": "마이 씨에게 한국어를 더 가르쳐 주고 싶습니다."
+        },
+        {
+          "choice": 4,
+          "text": "마이 씨가 말하기 연습을 많이 하면 좋겠습니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "여자의 중심 생각을 고르십시오.",
+      "bank_id": "L83_Q022",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 22,
+      "preferred_slots": [
+        22
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L023",
+      "question_number": 23,
+      "original_question_number": 23,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/83/83_L023.mp3",
+      "source_audio_file": "24 트랙 24.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "새 시계를 구경해 보고 싶습니다."
+        },
+        {
+          "choice": 2,
+          "text": "시계를 오늘 바로 고쳐야 합니다."
+        },
+        {
+          "choice": 3,
+          "text": "시계를 고쳐서 오래 쓰고 싶습니다."
+        },
+        {
+          "choice": 4,
+          "text": "좋은 시계로 바꾸어 주면 좋겠습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "여자의 중심 생각을 고르십시오.",
+      "bank_id": "L83_Q023",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 23,
+      "preferred_slots": [
+        23
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L024",
+      "question_number": 24,
+      "original_question_number": 24,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/83/83_L024.mp3",
+      "source_audio_file": "25 트랙 25.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "가수들의 공연이 많아져서 좋습니다."
+        },
+        {
+          "choice": 2,
+          "text": "춤도 잘 추고 노래도 잘하는 가수가 좋습니다."
+        },
+        {
+          "choice": 3,
+          "text": "K-POP 가수들의 공연에 가 보고 싶습니다."
+        },
+        {
+          "choice": 4,
+          "text": "K-POP 가수들은 춤을 출 때가 특히 멋있습니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "여자의 중심 생각을 고르십시오.",
+      "bank_id": "L83_Q024",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 24,
+      "preferred_slots": [
+        24
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
     {
       "id": "91-L001",
       "source_round": "91",
@@ -10871,6 +12705,564 @@
   ],
   "long_listening_sets": [
     {
+      "bank_set_id": "L83_SET_025_026",
+      "source_round": "83",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "bank_entry_type": "long_listening_set",
+      "set_type": "long_listening_pair",
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "target_original_question_numbers": [
+        25,
+        26
+      ],
+      "target_slots": [
+        25,
+        26
+      ],
+      "set_size": 2,
+      "layout": "side_by_side",
+      "audio_url": "./audio/83/83_L025.mp3",
+      "primary_audio_url": "./audio/83/83_L025.mp3",
+      "source_audio_file": "26 트랙 26.mp3",
+      "audio_group_id": "AUDIO_83_SET_25_26",
+      "audio_group_numbers": [
+        25,
+        26
+      ],
+      "points_total": 7,
+      "correct_answers": [
+        {
+          "question_number": 25,
+          "correct_answer": 3,
+          "points": 3
+        },
+        {
+          "question_number": 26,
+          "correct_answer": 1,
+          "points": 4
+        }
+      ],
+      "items": [
+        {
+          "source_round": "83",
+          "level": "TOPIK I",
+          "section": "listening",
+          "image_url": null,
+          "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "needs_answer_review": false,
+          "text_source": {
+            "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+            "source_pages": "듣기 영역 6~8쪽",
+            "review_status": "student_booklet_visual_review_draft"
+          },
+          "example_id": null,
+          "show_example": false,
+          "example_audio_included": false,
+          "id": "83-L025",
+          "question_number": 25,
+          "original_question_number": 25,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "여자가 왜 이 이야기를 하고 있는지 고르십시오.",
+          "audio_url": "./audio/83/83_L025.mp3",
+          "source_audio_file": "26 트랙 26.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "식당 위치를 설명하려고"
+            },
+            {
+              "choice": 2,
+              "text": "행사 신청 기간을 안내하려고"
+            },
+            {
+              "choice": 3,
+              "text": "회사에서 하는 행사를 알리려고"
+            },
+            {
+              "choice": 4,
+              "text": "회사 직원에게 감사 인사를 하려고"
+            }
+          ],
+          "correct_answer": 3,
+          "points": 3,
+          "layout": "side_by_side",
+          "question_display_text": "여자가 왜 이 이야기를 하고 있는지 고르십시오.",
+          "audio_group_id": "AUDIO_83_SET_25_26",
+          "audio_group_numbers": [
+            25,
+            26
+          ],
+          "set_id": "SET_25_26",
+          "set_type": "long_listening_pair",
+          "audio_url_shared": true,
+          "bank_id": "L83_Q025",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-83",
+          "source_exam_title": "83회 TOPIK I 듣기 30문항",
+          "source_question_number": 25,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+          "random_eligible": true,
+          "shared_audio_total": 2,
+          "shared_audio_index": 1
+        },
+        {
+          "source_round": "83",
+          "level": "TOPIK I",
+          "section": "listening",
+          "image_url": null,
+          "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "needs_answer_review": false,
+          "text_source": {
+            "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+            "source_pages": "듣기 영역 6~8쪽",
+            "review_status": "student_booklet_visual_review_draft"
+          },
+          "example_id": null,
+          "show_example": false,
+          "example_audio_included": false,
+          "id": "83-L026",
+          "question_number": 26,
+          "original_question_number": 26,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "들은 내용과 같은 것을 고르십시오.",
+          "audio_url": "./audio/83/83_L025.mp3",
+          "source_audio_file": "26 트랙 26.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "건강에 좋은 아침 식사가 준비됩니다."
+            },
+            {
+              "choice": 2,
+              "text": "오늘은 무료로 식사를 할 수 있습니다."
+            },
+            {
+              "choice": 3,
+              "text": "행사 기간 동안에 식당 문을 닫습니다."
+            },
+            {
+              "choice": 4,
+              "text": "한 달 전부터 이 행사를 하고 있습니다."
+            }
+          ],
+          "correct_answer": 1,
+          "points": 4,
+          "layout": "side_by_side",
+          "question_display_text": "들은 내용과 같은 것을 고르십시오.",
+          "audio_group_id": "AUDIO_83_SET_25_26",
+          "audio_group_numbers": [
+            25,
+            26
+          ],
+          "set_id": "SET_25_26",
+          "set_type": "long_listening_pair",
+          "audio_url_shared": true,
+          "bank_id": "L83_Q026",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-83",
+          "source_exam_title": "83회 TOPIK I 듣기 30문항",
+          "source_question_number": 26,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+          "random_eligible": true,
+          "shared_audio_total": 2,
+          "shared_audio_index": 2
+        }
+      ],
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화는 반드시 세트 단위로 선택합니다.",
+      "random_eligible": true,
+      "needs_audio_review": true
+    },
+    {
+      "bank_set_id": "L83_SET_027_028",
+      "source_round": "83",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "bank_entry_type": "long_listening_set",
+      "set_type": "long_listening_pair",
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "target_original_question_numbers": [
+        27,
+        28
+      ],
+      "target_slots": [
+        27,
+        28
+      ],
+      "set_size": 2,
+      "layout": "side_by_side",
+      "audio_url": "./audio/83/83_L027.mp3",
+      "primary_audio_url": "./audio/83/83_L027.mp3",
+      "source_audio_file": "28 트랙 28.mp3",
+      "audio_group_id": "AUDIO_83_SET_27_28",
+      "audio_group_numbers": [
+        27,
+        28
+      ],
+      "points_total": 7,
+      "correct_answers": [
+        {
+          "question_number": 27,
+          "correct_answer": 2,
+          "points": 3
+        },
+        {
+          "question_number": 28,
+          "correct_answer": 1,
+          "points": 4
+        }
+      ],
+      "items": [
+        {
+          "source_round": "83",
+          "level": "TOPIK I",
+          "section": "listening",
+          "image_url": null,
+          "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "needs_answer_review": false,
+          "text_source": {
+            "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+            "source_pages": "듣기 영역 6~8쪽",
+            "review_status": "student_booklet_visual_review_draft"
+          },
+          "example_id": null,
+          "show_example": false,
+          "example_audio_included": false,
+          "id": "83-L027",
+          "question_number": 27,
+          "original_question_number": 27,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "두 사람이 무엇에 대해 이야기하고 있는지 고르십시오.",
+          "audio_url": "./audio/83/83_L027.mp3",
+          "source_audio_file": "28 트랙 28.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "자주 사는 꽃"
+            },
+            {
+              "choice": 2,
+              "text": "꽃을 사는 이유"
+            },
+            {
+              "choice": 3,
+              "text": "꽃을 선물할 사람"
+            },
+            {
+              "choice": 4,
+              "text": "특별한 날에 사는 꽃"
+            }
+          ],
+          "correct_answer": 2,
+          "points": 3,
+          "layout": "side_by_side",
+          "question_display_text": "두 사람이 무엇에 대해 이야기하고 있는지 고르십시오.",
+          "audio_group_id": "AUDIO_83_SET_27_28",
+          "audio_group_numbers": [
+            27,
+            28
+          ],
+          "set_id": "SET_27_28",
+          "set_type": "long_listening_pair",
+          "audio_url_shared": true,
+          "bank_id": "L83_Q027",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-83",
+          "source_exam_title": "83회 TOPIK I 듣기 30문항",
+          "source_question_number": 27,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+          "random_eligible": true,
+          "shared_audio_total": 2,
+          "shared_audio_index": 1
+        },
+        {
+          "source_round": "83",
+          "level": "TOPIK I",
+          "section": "listening",
+          "image_url": null,
+          "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "needs_answer_review": false,
+          "text_source": {
+            "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+            "source_pages": "듣기 영역 6~8쪽",
+            "review_status": "student_booklet_visual_review_draft"
+          },
+          "example_id": null,
+          "show_example": false,
+          "example_audio_included": false,
+          "id": "83-L028",
+          "question_number": 28,
+          "original_question_number": 28,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "들은 내용과 같은 것을 고르십시오.",
+          "audio_url": "./audio/83/83_L027.mp3",
+          "source_audio_file": "28 트랙 28.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "남자는 꽃을 자주 사지 않습니다."
+            },
+            {
+              "choice": 2,
+              "text": "여자는 생일 선물로 꽃을 받았습니다."
+            },
+            {
+              "choice": 3,
+              "text": "여자는 꽃을 별로 좋아하지 않습니다."
+            },
+            {
+              "choice": 4,
+              "text": "남자는 여자에게 주려고 꽃을 샀습니다."
+            }
+          ],
+          "correct_answer": 1,
+          "points": 4,
+          "layout": "side_by_side",
+          "question_display_text": "들은 내용과 같은 것을 고르십시오.",
+          "audio_group_id": "AUDIO_83_SET_27_28",
+          "audio_group_numbers": [
+            27,
+            28
+          ],
+          "set_id": "SET_27_28",
+          "set_type": "long_listening_pair",
+          "audio_url_shared": true,
+          "bank_id": "L83_Q028",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-83",
+          "source_exam_title": "83회 TOPIK I 듣기 30문항",
+          "source_question_number": 28,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+          "random_eligible": true,
+          "shared_audio_total": 2,
+          "shared_audio_index": 2
+        }
+      ],
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화는 반드시 세트 단위로 선택합니다.",
+      "random_eligible": true,
+      "needs_audio_review": true
+    },
+    {
+      "bank_set_id": "L83_SET_029_030",
+      "source_round": "83",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "bank_entry_type": "long_listening_set",
+      "set_type": "long_listening_pair",
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "target_original_question_numbers": [
+        29,
+        30
+      ],
+      "target_slots": [
+        29,
+        30
+      ],
+      "set_size": 2,
+      "layout": "side_by_side",
+      "audio_url": "./audio/83/83_L029.mp3",
+      "primary_audio_url": "./audio/83/83_L029.mp3",
+      "source_audio_file": "30 트랙 30.mp3",
+      "audio_group_id": "AUDIO_83_SET_29_30",
+      "audio_group_numbers": [
+        29,
+        30
+      ],
+      "points_total": 7,
+      "correct_answers": [
+        {
+          "question_number": 29,
+          "correct_answer": 4,
+          "points": 3
+        },
+        {
+          "question_number": 30,
+          "correct_answer": 3,
+          "points": 4
+        }
+      ],
+      "items": [
+        {
+          "source_round": "83",
+          "level": "TOPIK I",
+          "section": "listening",
+          "image_url": null,
+          "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "needs_answer_review": false,
+          "text_source": {
+            "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+            "source_pages": "듣기 영역 6~8쪽",
+            "review_status": "student_booklet_visual_review_draft"
+          },
+          "example_id": null,
+          "show_example": false,
+          "example_audio_included": false,
+          "id": "83-L029",
+          "question_number": 29,
+          "original_question_number": 29,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "남자가 이 책을 쓴 이유를 고르십시오.",
+          "audio_url": "./audio/83/83_L029.mp3",
+          "source_audio_file": "30 트랙 30.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "글을 쓰는 재미를 알리고 싶어서"
+            },
+            {
+              "choice": 2,
+              "text": "힘들고 어려운 아이들에게 도움이 되고 싶어서"
+            },
+            {
+              "choice": 3,
+              "text": "경찰이 되는 여러 가지 방법을 알려 주고 싶어서"
+            },
+            {
+              "choice": 4,
+              "text": "경찰이 되어서 경험한 행복한 일을 소개하고 싶어서"
+            }
+          ],
+          "correct_answer": 4,
+          "points": 3,
+          "layout": "side_by_side",
+          "question_display_text": "남자가 이 책을 쓴 이유를 고르십시오.",
+          "audio_group_id": "AUDIO_83_SET_29_30",
+          "audio_group_numbers": [
+            29,
+            30
+          ],
+          "set_id": "SET_29_30",
+          "set_type": "long_listening_pair",
+          "audio_url_shared": true,
+          "bank_id": "L83_Q029",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-83",
+          "source_exam_title": "83회 TOPIK I 듣기 30문항",
+          "source_question_number": 29,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+          "random_eligible": true,
+          "shared_audio_total": 2,
+          "shared_audio_index": 1
+        },
+        {
+          "source_round": "83",
+          "level": "TOPIK I",
+          "section": "listening",
+          "image_url": null,
+          "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+          "student_visible_dialogue": false,
+          "needs_text_review": false,
+          "needs_audio_review": true,
+          "needs_answer_review": false,
+          "text_source": {
+            "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+            "source_pages": "듣기 영역 6~8쪽",
+            "review_status": "student_booklet_visual_review_draft"
+          },
+          "example_id": null,
+          "show_example": false,
+          "example_audio_included": false,
+          "id": "83-L030",
+          "question_number": 30,
+          "original_question_number": 30,
+          "type": "long_listening_set",
+          "category": "긴 대화 듣고 두 문제 풀기",
+          "diagnostic_area": "long_listening_set",
+          "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+          "question": "들은 내용과 같은 것을 고르십시오.",
+          "audio_url": "./audio/83/83_L029.mp3",
+          "source_audio_file": "30 트랙 30.mp3",
+          "options": [
+            {
+              "choice": 1,
+              "text": "남자는 작년에 경찰이 되었습니다."
+            },
+            {
+              "choice": 2,
+              "text": "남자는 8년 동안 책을 쓰고 있습니다."
+            },
+            {
+              "choice": 3,
+              "text": "남자는 아이의 가방을 찾아 준 적이 있습니다."
+            },
+            {
+              "choice": 4,
+              "text": "남자는 아이에게 편지와 상을 줘서 행복했습니다."
+            }
+          ],
+          "correct_answer": 3,
+          "points": 4,
+          "layout": "side_by_side",
+          "question_display_text": "들은 내용과 같은 것을 고르십시오.",
+          "audio_group_id": "AUDIO_83_SET_29_30",
+          "audio_group_numbers": [
+            29,
+            30
+          ],
+          "set_id": "SET_29_30",
+          "set_type": "long_listening_pair",
+          "audio_url_shared": true,
+          "bank_id": "L83_Q030",
+          "bank_entry_type": "set_member_question",
+          "source_exam_id": "listening-83",
+          "source_exam_title": "83회 TOPIK I 듣기 30문항",
+          "source_question_number": 30,
+          "random_selection_unit": "long_listening_set",
+          "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+          "random_eligible": true,
+          "shared_audio_total": 2,
+          "shared_audio_index": 2
+        }
+      ],
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화는 반드시 세트 단위로 선택합니다.",
+      "random_eligible": true,
+      "needs_audio_review": true
+    },
+    {
       "bank_set_id": "L91_SET_025_026",
       "source_round": "91",
       "source_exam_id": "listening-91",
@@ -14094,6 +16486,2134 @@
     }
   ],
   "flat_items_for_validation": [
+    {
+      "id": "83-L001",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 1,
+      "original_question_number": 1,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/83/83_L001.mp3",
+      "source_audio_file": "02 트랙 2.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 학생이에요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 학생이 없어요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 학생이 와요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 학생이 많아요."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G01",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "bank_id": "L83_Q001",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 1,
+      "preferred_slots": [
+        1
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G01",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 물을 마셔요?",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "네, 물을 마셔요."
+          },
+          {
+            "choice": 2,
+            "text": "네, 물이 적어요."
+          },
+          {
+            "choice": 3,
+            "text": "아니요, 물이에요."
+          },
+          {
+            "choice": 4,
+            "text": "아니요, 물이 좋아요."
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "83",
+        "source_example_id": "EX_83_G01",
+        "source_question_number": 1,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L002",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 2,
+      "original_question_number": 2,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/83/83_L002.mp3",
+      "source_audio_file": "03 트랙 3.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 책을 싫어해요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 책이 아니에요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 책이 있어요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 책을 안 읽어요."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "bank_id": "L83_Q002",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 2,
+      "preferred_slots": [
+        2
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L003",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 3,
+      "original_question_number": 3,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/83/83_L003.mp3",
+      "source_audio_file": "04 트랙 4.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "지금 해요."
+        },
+        {
+          "choice": 2,
+          "text": "우리가 해요."
+        },
+        {
+          "choice": 3,
+          "text": "카페에서 해요."
+        },
+        {
+          "choice": 4,
+          "text": "동생하고 해요."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "bank_id": "L83_Q003",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 3,
+      "preferred_slots": [
+        3
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L004",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 4,
+      "original_question_number": 4,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~4] 다음을 듣고 <보기>와 같이 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/83/83_L004.mp3",
+      "source_audio_file": "05 트랙 5.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "어제 갔어요."
+        },
+        {
+          "choice": 2,
+          "text": "자주 갔어요."
+        },
+        {
+          "choice": 3,
+          "text": "친구가 갔어요."
+        },
+        {
+          "choice": 4,
+          "text": "지하철로 갔어요."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "bank_id": "L83_Q004",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 4,
+      "preferred_slots": [
+        4
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L005",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 5,
+      "original_question_number": 5,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/83/83_L005.mp3",
+      "source_audio_file": "06 트랙 6.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "축하해요."
+        },
+        {
+          "choice": 2,
+          "text": "아니에요."
+        },
+        {
+          "choice": 3,
+          "text": "고마워요."
+        },
+        {
+          "choice": 4,
+          "text": "반가워요."
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G02",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "이어지는 말을 고르십시오.",
+      "bank_id": "L83_Q005",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 5,
+      "preferred_slots": [
+        5
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G02",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 안녕히 계세요.",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "들어오세요."
+          },
+          {
+            "choice": 2,
+            "text": "안녕하세요."
+          },
+          {
+            "choice": 3,
+            "text": "안녕히 가세요."
+          },
+          {
+            "choice": 4,
+            "text": "맛있게 드세요."
+          }
+        ],
+        "example_correct_answer": 3,
+        "source_round": "83",
+        "source_example_id": "EX_83_G02",
+        "source_question_number": 5,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L006",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 6,
+      "original_question_number": 6,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[5~6] 다음을 듣고 <보기>와 같이 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/83/83_L006.mp3",
+      "source_audio_file": "07 트랙 7.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "잘 먹겠습니다."
+        },
+        {
+          "choice": 2,
+          "text": "잘 지냈습니다."
+        },
+        {
+          "choice": 3,
+          "text": "네. 알겠습니다."
+        },
+        {
+          "choice": 4,
+          "text": "네. 그렇습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "이어지는 말을 고르십시오.",
+      "bank_id": "L83_Q006",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 6,
+      "preferred_slots": [
+        6
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L007",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 7,
+      "original_question_number": 7,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/83/83_L007.mp3",
+      "source_audio_file": "08 트랙 8.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "꽃집"
+        },
+        {
+          "choice": 2,
+          "text": "극장"
+        },
+        {
+          "choice": 3,
+          "text": "학교"
+        },
+        {
+          "choice": 4,
+          "text": "시장"
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G03",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "여기는 어디입니까?",
+      "bank_id": "L83_Q007",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 7,
+      "preferred_slots": [
+        7
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G03",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 내일까지 숙제를 꼭 내세요.",
+          "나: 네, 선생님."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "교실"
+          },
+          {
+            "choice": 2,
+            "text": "가게"
+          },
+          {
+            "choice": 3,
+            "text": "호텔"
+          },
+          {
+            "choice": 4,
+            "text": "공원"
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "83",
+        "source_example_id": "EX_83_G03",
+        "source_question_number": 7,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L008",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 8,
+      "original_question_number": 8,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/83/83_L008.mp3",
+      "source_audio_file": "09 트랙 9.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "은행"
+        },
+        {
+          "choice": 2,
+          "text": "식당"
+        },
+        {
+          "choice": 3,
+          "text": "도서관"
+        },
+        {
+          "choice": 4,
+          "text": "문구점"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "여기는 어디입니까?",
+      "bank_id": "L83_Q008",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 8,
+      "preferred_slots": [
+        8
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L009",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 9,
+      "original_question_number": 9,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/83/83_L009.mp3",
+      "source_audio_file": "10 트랙 10.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "백화점"
+        },
+        {
+          "choice": 2,
+          "text": "여행사"
+        },
+        {
+          "choice": 3,
+          "text": "우체국"
+        },
+        {
+          "choice": 4,
+          "text": "박물관"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "여기는 어디입니까?",
+      "bank_id": "L83_Q009",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 9,
+      "preferred_slots": [
+        9
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L010",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 10,
+      "original_question_number": 10,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[7~10] 여기는 어디입니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/83/83_L010.mp3",
+      "source_audio_file": "11 트랙 11.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "서점"
+        },
+        {
+          "choice": 2,
+          "text": "약국"
+        },
+        {
+          "choice": 3,
+          "text": "미용실"
+        },
+        {
+          "choice": 4,
+          "text": "사진관"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "여기는 어디입니까?",
+      "bank_id": "L83_Q010",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 10,
+      "preferred_slots": [
+        10
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L011",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 11,
+      "original_question_number": 11,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/83/83_L011.mp3",
+      "source_audio_file": "12 트랙 12.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "나라"
+        },
+        {
+          "choice": 2,
+          "text": "가족"
+        },
+        {
+          "choice": 3,
+          "text": "이름"
+        },
+        {
+          "choice": 4,
+          "text": "주말"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G04",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "bank_id": "L83_Q011",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 11,
+      "preferred_slots": [
+        11
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G04",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 이 아파트에 살아요?",
+          "나: 네. 5층에 살아요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "집"
+          },
+          {
+            "choice": 2,
+            "text": "옷"
+          },
+          {
+            "choice": 3,
+            "text": "나이"
+          },
+          {
+            "choice": 4,
+            "text": "선물"
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "83",
+        "source_example_id": "EX_83_G04",
+        "source_question_number": 11,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L012",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 12,
+      "original_question_number": 12,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/83/83_L012.mp3",
+      "source_audio_file": "13 트랙 13.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "취미"
+        },
+        {
+          "choice": 2,
+          "text": "날씨"
+        },
+        {
+          "choice": 3,
+          "text": "시간"
+        },
+        {
+          "choice": 4,
+          "text": "음식"
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "bank_id": "L83_Q012",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 12,
+      "preferred_slots": [
+        12
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L013",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 13,
+      "original_question_number": 13,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/83/83_L013.mp3",
+      "source_audio_file": "14 트랙 14.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "직업"
+        },
+        {
+          "choice": 2,
+          "text": "운동"
+        },
+        {
+          "choice": 3,
+          "text": "날짜"
+        },
+        {
+          "choice": 4,
+          "text": "고향"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "bank_id": "L83_Q013",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 13,
+      "preferred_slots": [
+        13
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L014",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 14,
+      "original_question_number": 14,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[11~14] 다음은 무엇에 대해 말하고 있습니까? <보기>와 같이 알맞은 것을 고르십시오.",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/83/83_L014.mp3",
+      "source_audio_file": "15 트랙 15.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "값"
+        },
+        {
+          "choice": 2,
+          "text": "맛"
+        },
+        {
+          "choice": 3,
+          "text": "위치"
+        },
+        {
+          "choice": 4,
+          "text": "계절"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "bank_id": "L83_Q014",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 14,
+      "preferred_slots": [
+        14
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L015",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 15,
+      "original_question_number": 15,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오. (각 4점)",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/83/83_L015.mp3",
+      "source_audio_file": "16 트랙 16.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/83/83_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/83/83_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/83/83_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/83/83_L015_04.png"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/83/83_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/83/83_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/83/83_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/83/83_L015_04.png"
+        }
+      ],
+      "bank_id": "L83_Q015",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 15,
+      "preferred_slots": [
+        15
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
+    {
+      "id": "83-L016",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 16,
+      "original_question_number": 16,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[15~16] 다음을 듣고 가장 알맞은 그림을 고르십시오. (각 4점)",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/83/83_L016.mp3",
+      "source_audio_file": "17 트랙 17.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/83/83_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/83/83_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/83/83_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/83/83_L016_04.png"
+        }
+      ],
+      "correct_answer": 4,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/83/83_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/83/83_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/83/83_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/83/83_L016_04.png"
+        }
+      ],
+      "bank_id": "L83_Q016",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 16,
+      "preferred_slots": [
+        16
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
+    {
+      "id": "83-L017",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 17,
+      "original_question_number": 17,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L017.mp3",
+      "source_audio_file": "18 트랙 18.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 주말에 드라마를 봤습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 일요일에 친구를 만났습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 일요일에 집에서 쉬었습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 주말에 이 남자와 수영장에 갔습니다."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": "EX_83_G06",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q017",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 17,
+      "preferred_slots": [
+        17
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "example_block": {
+        "id": "EX_83_G06",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "여자: 편지를 써요?",
+          "남자: 네. 형한테 편지를 써요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "여자는 편지를 씁니다."
+          },
+          {
+            "choice": 2,
+            "text": "남자는 형이 있습니다."
+          },
+          {
+            "choice": 3,
+            "text": "남자는 동생에게 편지를 씁니다."
+          },
+          {
+            "choice": 4,
+            "text": "여자는 남자한테 편지를 보냅니다."
+          }
+        ],
+        "example_correct_answer": 2,
+        "source_round": "83",
+        "source_example_id": "EX_83_G06",
+        "source_question_number": 17,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "랜덤 출력 위치가 해당 유형의 첫 문항이면 <보기>를 함께 표시한다. 원문항 보기 블록을 우선 사용한다."
+    },
+    {
+      "id": "83-L018",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 18,
+      "original_question_number": 18,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L018.mp3",
+      "source_audio_file": "19 트랙 19.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 요리를 아주 잘합니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 지금 김치찌개를 만듭니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 어머니에게서 요리를 배웁니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 어머니와 요리를 하고 있습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q018",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 18,
+      "preferred_slots": [
+        18
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L019",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 19,
+      "original_question_number": 19,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L019.mp3",
+      "source_audio_file": "20 트랙 20.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 극장에서 남자를 만났습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 이따가 한강공원에 갈 겁니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 오늘 수업이 모두 끝났습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 지금 영화를 보고 싶어 합니다."
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q019",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 19,
+      "preferred_slots": [
+        19
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "id": "83-L020",
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 20,
+      "original_question_number": 20,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오. (각 3점)",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L020.mp3",
+      "source_audio_file": "21 트랙 21.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 책상을 사고 싶어 합니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 여자에게 책상을 팔 겁니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 인터넷으로 물건을 팔아 봤습니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 인터넷 사이트에서 책상을 팔았습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q020",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 20,
+      "preferred_slots": [
+        20
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L021",
+      "question_number": 21,
+      "original_question_number": 21,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[17~21] 다음을 듣고 <보기>와 같이 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L021.mp3",
+      "source_audio_file": "22 트랙 22.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 병원에서 일합니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 오전에 예약을 했습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 남자와 같이 병원에 갑니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 수요일에 병원에 갈 겁니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "bank_id": "L83_Q021",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 21,
+      "preferred_slots": [
+        21
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true,
+      "random_example_pairing_required": false
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L022",
+      "question_number": 22,
+      "original_question_number": 22,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/83/83_L022.mp3",
+      "source_audio_file": "23 트랙 23.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "마이 씨처럼 친구가 많았으면 좋겠습니다."
+        },
+        {
+          "choice": 2,
+          "text": "마이 씨하고 외국어 공부를 하고 싶습니다."
+        },
+        {
+          "choice": 3,
+          "text": "마이 씨에게 한국어를 더 가르쳐 주고 싶습니다."
+        },
+        {
+          "choice": 4,
+          "text": "마이 씨가 말하기 연습을 많이 하면 좋겠습니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "여자의 중심 생각을 고르십시오.",
+      "bank_id": "L83_Q022",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 22,
+      "preferred_slots": [
+        22
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L023",
+      "question_number": 23,
+      "original_question_number": 23,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/83/83_L023.mp3",
+      "source_audio_file": "24 트랙 24.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "새 시계를 구경해 보고 싶습니다."
+        },
+        {
+          "choice": 2,
+          "text": "시계를 오늘 바로 고쳐야 합니다."
+        },
+        {
+          "choice": 3,
+          "text": "시계를 고쳐서 오래 쓰고 싶습니다."
+        },
+        {
+          "choice": 4,
+          "text": "좋은 시계로 바꾸어 주면 좋겠습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "여자의 중심 생각을 고르십시오.",
+      "bank_id": "L83_Q023",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 23,
+      "preferred_slots": [
+        23
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L024",
+      "question_number": 24,
+      "original_question_number": 24,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[22~24] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/83/83_L024.mp3",
+      "source_audio_file": "25 트랙 25.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "가수들의 공연이 많아져서 좋습니다."
+        },
+        {
+          "choice": 2,
+          "text": "춤도 잘 추고 노래도 잘하는 가수가 좋습니다."
+        },
+        {
+          "choice": 3,
+          "text": "K-POP 가수들의 공연에 가 보고 싶습니다."
+        },
+        {
+          "choice": 4,
+          "text": "K-POP 가수들은 춤을 출 때가 특히 멋있습니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "여자의 중심 생각을 고르십시오.",
+      "bank_id": "L83_Q024",
+      "bank_entry_type": "single_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 24,
+      "preferred_slots": [
+        24
+      ],
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "random_eligible": true
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L025",
+      "question_number": 25,
+      "original_question_number": 25,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "여자가 왜 이 이야기를 하고 있는지 고르십시오.",
+      "audio_url": "./audio/83/83_L025.mp3",
+      "source_audio_file": "26 트랙 26.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "식당 위치를 설명하려고"
+        },
+        {
+          "choice": 2,
+          "text": "행사 신청 기간을 안내하려고"
+        },
+        {
+          "choice": 3,
+          "text": "회사에서 하는 행사를 알리려고"
+        },
+        {
+          "choice": 4,
+          "text": "회사 직원에게 감사 인사를 하려고"
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "layout": "side_by_side",
+      "question_display_text": "여자가 왜 이 이야기를 하고 있는지 고르십시오.",
+      "audio_group_id": "AUDIO_83_SET_25_26",
+      "audio_group_numbers": [
+        25,
+        26
+      ],
+      "set_id": "SET_25_26",
+      "set_type": "long_listening_pair",
+      "audio_url_shared": true,
+      "bank_id": "L83_Q025",
+      "bank_entry_type": "set_member_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 25,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+      "random_eligible": true,
+      "shared_audio_total": 2,
+      "shared_audio_index": 1
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L026",
+      "question_number": 26,
+      "original_question_number": 26,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L025.mp3",
+      "source_audio_file": "26 트랙 26.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "건강에 좋은 아침 식사가 준비됩니다."
+        },
+        {
+          "choice": 2,
+          "text": "오늘은 무료로 식사를 할 수 있습니다."
+        },
+        {
+          "choice": 3,
+          "text": "행사 기간 동안에 식당 문을 닫습니다."
+        },
+        {
+          "choice": 4,
+          "text": "한 달 전부터 이 행사를 하고 있습니다."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "layout": "side_by_side",
+      "question_display_text": "들은 내용과 같은 것을 고르십시오.",
+      "audio_group_id": "AUDIO_83_SET_25_26",
+      "audio_group_numbers": [
+        25,
+        26
+      ],
+      "set_id": "SET_25_26",
+      "set_type": "long_listening_pair",
+      "audio_url_shared": true,
+      "bank_id": "L83_Q026",
+      "bank_entry_type": "set_member_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 26,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+      "random_eligible": true,
+      "shared_audio_total": 2,
+      "shared_audio_index": 2
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L027",
+      "question_number": 27,
+      "original_question_number": 27,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "두 사람이 무엇에 대해 이야기하고 있는지 고르십시오.",
+      "audio_url": "./audio/83/83_L027.mp3",
+      "source_audio_file": "28 트랙 28.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "자주 사는 꽃"
+        },
+        {
+          "choice": 2,
+          "text": "꽃을 사는 이유"
+        },
+        {
+          "choice": 3,
+          "text": "꽃을 선물할 사람"
+        },
+        {
+          "choice": 4,
+          "text": "특별한 날에 사는 꽃"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "layout": "side_by_side",
+      "question_display_text": "두 사람이 무엇에 대해 이야기하고 있는지 고르십시오.",
+      "audio_group_id": "AUDIO_83_SET_27_28",
+      "audio_group_numbers": [
+        27,
+        28
+      ],
+      "set_id": "SET_27_28",
+      "set_type": "long_listening_pair",
+      "audio_url_shared": true,
+      "bank_id": "L83_Q027",
+      "bank_entry_type": "set_member_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 27,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+      "random_eligible": true,
+      "shared_audio_total": 2,
+      "shared_audio_index": 1
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L028",
+      "question_number": 28,
+      "original_question_number": 28,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L027.mp3",
+      "source_audio_file": "28 트랙 28.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 꽃을 자주 사지 않습니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 생일 선물로 꽃을 받았습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 꽃을 별로 좋아하지 않습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 여자에게 주려고 꽃을 샀습니다."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "layout": "side_by_side",
+      "question_display_text": "들은 내용과 같은 것을 고르십시오.",
+      "audio_group_id": "AUDIO_83_SET_27_28",
+      "audio_group_numbers": [
+        27,
+        28
+      ],
+      "set_id": "SET_27_28",
+      "set_type": "long_listening_pair",
+      "audio_url_shared": true,
+      "bank_id": "L83_Q028",
+      "bank_entry_type": "set_member_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 28,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+      "random_eligible": true,
+      "shared_audio_total": 2,
+      "shared_audio_index": 2
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L029",
+      "question_number": 29,
+      "original_question_number": 29,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "남자가 이 책을 쓴 이유를 고르십시오.",
+      "audio_url": "./audio/83/83_L029.mp3",
+      "source_audio_file": "30 트랙 30.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "글을 쓰는 재미를 알리고 싶어서"
+        },
+        {
+          "choice": 2,
+          "text": "힘들고 어려운 아이들에게 도움이 되고 싶어서"
+        },
+        {
+          "choice": 3,
+          "text": "경찰이 되는 여러 가지 방법을 알려 주고 싶어서"
+        },
+        {
+          "choice": 4,
+          "text": "경찰이 되어서 경험한 행복한 일을 소개하고 싶어서"
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "layout": "side_by_side",
+      "question_display_text": "남자가 이 책을 쓴 이유를 고르십시오.",
+      "audio_group_id": "AUDIO_83_SET_29_30",
+      "audio_group_numbers": [
+        29,
+        30
+      ],
+      "set_id": "SET_29_30",
+      "set_type": "long_listening_pair",
+      "audio_url_shared": true,
+      "bank_id": "L83_Q029",
+      "bank_entry_type": "set_member_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 29,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+      "random_eligible": true,
+      "shared_audio_total": 2,
+      "shared_audio_index": 1
+    },
+    {
+      "source_round": "83",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제83회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "student_booklet_visual_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "83-L030",
+      "question_number": 30,
+      "original_question_number": 30,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[25~30] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/83/83_L029.mp3",
+      "source_audio_file": "30 트랙 30.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 작년에 경찰이 되었습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 8년 동안 책을 쓰고 있습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 아이의 가방을 찾아 준 적이 있습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 아이에게 편지와 상을 줘서 행복했습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 4,
+      "layout": "side_by_side",
+      "question_display_text": "들은 내용과 같은 것을 고르십시오.",
+      "audio_group_id": "AUDIO_83_SET_29_30",
+      "audio_group_numbers": [
+        29,
+        30
+      ],
+      "set_id": "SET_29_30",
+      "set_type": "long_listening_pair",
+      "audio_url_shared": true,
+      "bank_id": "L83_Q030",
+      "bank_entry_type": "set_member_question",
+      "source_exam_id": "listening-83",
+      "source_exam_title": "83회 TOPIK I 듣기 30문항",
+      "source_question_number": 30,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 구성 문항입니다. 세트 단위 선택 시 함께 사용합니다.",
+      "random_eligible": true,
+      "shared_audio_total": 2,
+      "shared_audio_index": 2
+    },
     {
       "id": "91-L001",
       "source_round": "91",
@@ -22509,9 +27029,52 @@
       "show_example": true,
       "example_audio_included": true,
       "layout": "single",
-      "correct_answer": 3,
+      "bank_id": "L100_Q001",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q001"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 1,
+      "preferred_slots": [
+        1
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_100_G01",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 공책이에요?",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "네, 공책이에요."
+          },
+          {
+            "choice": 2,
+            "text": "아니요, 공책을 사요."
+          },
+          {
+            "choice": 3,
+            "text": "네, 공책이 작아요."
+          },
+          {
+            "choice": 4,
+            "text": "아니요, 공책에 써요."
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "100",
+        "source_example_id": "EX_100_G01",
+        "source_question_number": 1,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "100-L002",
@@ -22559,9 +27122,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 2,
+      "bank_id": "L100_Q002",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q002"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 2,
+      "preferred_slots": [
+        2
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L003",
@@ -22609,9 +27181,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 3,
+      "bank_id": "L100_Q003",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q003"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 3,
+      "preferred_slots": [
+        3
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L004",
@@ -22659,9 +27240,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 2,
+      "bank_id": "L100_Q004",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q004"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 4,
+      "preferred_slots": [
+        4
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L005",
@@ -22709,9 +27299,52 @@
       "show_example": true,
       "example_audio_included": true,
       "layout": "single",
-      "correct_answer": 4,
+      "bank_id": "L100_Q005",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q005"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 5,
+      "preferred_slots": [
+        5
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_100_G02",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 맛있게 드세요.",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "좋겠습니다."
+          },
+          {
+            "choice": 2,
+            "text": "다녀왔습니다."
+          },
+          {
+            "choice": 3,
+            "text": "잘 먹겠습니다."
+          },
+          {
+            "choice": 4,
+            "text": "잘 모르겠습니다."
+          }
+        ],
+        "example_correct_answer": 3,
+        "source_round": "100",
+        "source_example_id": "EX_100_G02",
+        "source_question_number": 5,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "100-L006",
@@ -22759,9 +27392,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 4,
+      "bank_id": "L100_Q006",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q006"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 6,
+      "preferred_slots": [
+        6
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L007",
@@ -22809,9 +27451,52 @@
       "show_example": true,
       "example_audio_included": true,
       "layout": "single",
-      "correct_answer": 1,
+      "bank_id": "L100_Q007",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q007"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 7,
+      "preferred_slots": [
+        7
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_100_G03",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 이 옷 입어 봐도 돼요?",
+          "나: 네, 손님. 저쪽에서 입어 보세요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "지하철"
+          },
+          {
+            "choice": 2,
+            "text": "백화점"
+          },
+          {
+            "choice": 3,
+            "text": "미술관"
+          },
+          {
+            "choice": 4,
+            "text": "사진관"
+          }
+        ],
+        "example_correct_answer": 2,
+        "source_round": "100",
+        "source_example_id": "EX_100_G03",
+        "source_question_number": 7,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "100-L008",
@@ -22859,9 +27544,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 3,
+      "bank_id": "L100_Q008",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q008"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 8,
+      "preferred_slots": [
+        8
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L009",
@@ -22909,9 +27603,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 2,
+      "bank_id": "L100_Q009",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q009"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 9,
+      "preferred_slots": [
+        9
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L010",
@@ -22959,9 +27662,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 1,
+      "bank_id": "L100_Q010",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q010"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 10,
+      "preferred_slots": [
+        10
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L011",
@@ -23009,9 +27721,52 @@
       "layout": "single",
       "example_id": "EX_100_G04",
       "example_audio_included": true,
-      "correct_answer": 4,
+      "bank_id": "L100_Q011",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q011"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 11,
+      "preferred_slots": [
+        11
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_100_G04",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 누구예요?",
+          "나: 이 사람은 형이고, 이 사람은 동생이에요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "가족"
+          },
+          {
+            "choice": 2,
+            "text": "친구"
+          },
+          {
+            "choice": 3,
+            "text": "선생님"
+          },
+          {
+            "choice": 4,
+            "text": "부모님"
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "100",
+        "source_example_id": "EX_100_G04",
+        "source_question_number": 11,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "100-L012",
@@ -23059,9 +27814,18 @@
       "layout": "single",
       "example_id": "EX_100_G04",
       "example_audio_included": false,
-      "correct_answer": 1,
+      "bank_id": "L100_Q012",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q012"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 12,
+      "preferred_slots": [
+        12
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L013",
@@ -23109,9 +27873,18 @@
       "layout": "single",
       "example_id": "EX_100_G04",
       "example_audio_included": false,
-      "correct_answer": 3,
+      "bank_id": "L100_Q013",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q013"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 13,
+      "preferred_slots": [
+        13
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L014",
@@ -23159,9 +27932,18 @@
       "layout": "single",
       "example_id": "EX_100_G04",
       "example_audio_included": false,
-      "correct_answer": 4,
+      "bank_id": "L100_Q014",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q014"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 14,
+      "preferred_slots": [
+        14
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L015",
@@ -23229,9 +28011,18 @@
           "image_url": "./images/100/100_L015_04.png"
         }
       ],
-      "correct_answer": 4,
+      "bank_id": "L100_Q015",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q015"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 15,
+      "preferred_slots": [
+        15
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L016",
@@ -23299,9 +28090,18 @@
           "image_url": "./images/100/100_L016_04.png"
         }
       ],
-      "correct_answer": 3,
+      "bank_id": "L100_Q016",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q016"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 16,
+      "preferred_slots": [
+        16
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L017",
@@ -23349,9 +28149,53 @@
       "layout": "single",
       "example_id": "EX_100_G06",
       "example_audio_included": true,
-      "correct_answer": 1,
+      "bank_id": "L100_Q017",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q017"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 17,
+      "preferred_slots": [
+        17
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_100_G06",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "남자: 수미 씨는 취미가 뭐예요?",
+          "여자: 저는 여행하는 것을 좋아해요. 그리고 컴퓨터 게임도 자주 해요.",
+          "남자: 저도 게임을 좋아해요. 그런데 요즘은 바빠서 못 했어요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "여자는 여행을 좋아합니다."
+          },
+          {
+            "choice": 2,
+            "text": "남자는 게임을 안 좋아합니다."
+          },
+          {
+            "choice": 3,
+            "text": "여자는 게임을 하지 않습니다."
+          },
+          {
+            "choice": 4,
+            "text": "남자는 요즘 게임을 자주 합니다."
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "100",
+        "source_example_id": "EX_100_G06",
+        "source_question_number": 17,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "100-L018",
@@ -23399,9 +28243,18 @@
       "layout": "single",
       "example_id": "EX_100_G06",
       "example_audio_included": false,
-      "correct_answer": 4,
+      "bank_id": "L100_Q018",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q018"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 18,
+      "preferred_slots": [
+        18
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L019",
@@ -23449,9 +28302,18 @@
       "layout": "single",
       "example_id": "EX_100_G06",
       "example_audio_included": false,
-      "correct_answer": 2,
+      "bank_id": "L100_Q019",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q019"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 19,
+      "preferred_slots": [
+        19
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L020",
@@ -23499,9 +28361,18 @@
       "layout": "single",
       "example_id": "EX_100_G06",
       "example_audio_included": false,
-      "correct_answer": 3,
+      "bank_id": "L100_Q020",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q020"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 20,
+      "preferred_slots": [
+        20
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L021",
@@ -23549,9 +28420,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 4,
+      "bank_id": "L100_Q021",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q021"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 21,
+      "preferred_slots": [
+        21
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L022",
@@ -23599,9 +28479,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 2,
+      "bank_id": "L100_Q022",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q022"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 22,
+      "preferred_slots": [
+        22
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L023",
@@ -23649,9 +28538,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 1,
+      "bank_id": "L100_Q023",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q023"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 23,
+      "preferred_slots": [
+        23
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L024",
@@ -23699,9 +28597,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 2,
+      "bank_id": "L100_Q024",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q024"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 24,
+      "preferred_slots": [
+        24
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "100-L025",
@@ -23757,9 +28664,15 @@
       ],
       "shared_audio_total": 2,
       "shared_audio_index": 1,
-      "correct_answer": 3,
+      "bank_id": "L100_Q025",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q025"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 25,
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "100-L026",
@@ -23815,9 +28728,15 @@
       ],
       "shared_audio_total": 2,
       "shared_audio_index": 2,
-      "correct_answer": 4,
+      "bank_id": "L100_Q026",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q026"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 26,
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "100-L027",
@@ -23873,9 +28792,15 @@
       ],
       "shared_audio_total": 2,
       "shared_audio_index": 1,
-      "correct_answer": 1,
+      "bank_id": "L100_Q027",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q027"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 27,
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "100-L028",
@@ -23931,9 +28856,15 @@
       ],
       "shared_audio_total": 2,
       "shared_audio_index": 2,
-      "correct_answer": 3,
+      "bank_id": "L100_Q028",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q028"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 28,
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "100-L029",
@@ -23989,9 +28920,15 @@
       ],
       "shared_audio_total": 2,
       "shared_audio_index": 1,
-      "correct_answer": 3,
+      "bank_id": "L100_Q029",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q029"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 29,
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "100-L030",
@@ -24047,9 +28984,15 @@
       ],
       "shared_audio_total": 2,
       "shared_audio_index": 2,
-      "correct_answer": 3,
+      "bank_id": "L100_Q030",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-100",
-      "bank_id": "L100_Q030"
+      "source_exam_title": "100회 TOPIK I 듣기 30문항",
+      "source_question_number": 30,
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "102-L001",
@@ -24097,9 +29040,52 @@
       "show_example": true,
       "example_audio_included": true,
       "layout": "single",
-      "correct_answer": 1,
+      "bank_id": "L102_Q001",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q001"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 1,
+      "preferred_slots": [
+        1
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_G01",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 학생이에요?",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "네, 학생이에요."
+          },
+          {
+            "choice": 2,
+            "text": "네, 학생이 없어요."
+          },
+          {
+            "choice": 3,
+            "text": "아니요, 학생이 와요."
+          },
+          {
+            "choice": 4,
+            "text": "아니요, 학생이 좋아요."
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "102",
+        "source_example_id": "EX_G01",
+        "source_question_number": 1,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "102-L002",
@@ -24147,9 +29133,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 3,
+      "bank_id": "L102_Q002",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q002"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 2,
+      "preferred_slots": [
+        2
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L003",
@@ -24197,9 +29192,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 2,
+      "bank_id": "L102_Q003",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q003"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 3,
+      "preferred_slots": [
+        3
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L004",
@@ -24247,9 +29251,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 3,
+      "bank_id": "L102_Q004",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q004"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 4,
+      "preferred_slots": [
+        4
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L005",
@@ -24297,9 +29310,52 @@
       "show_example": true,
       "example_audio_included": true,
       "layout": "single",
-      "correct_answer": 4,
+      "bank_id": "L102_Q005",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q005"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 5,
+      "preferred_slots": [
+        5
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_G02",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 안녕히 계세요.",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "들어오세요."
+          },
+          {
+            "choice": 2,
+            "text": "안녕하세요."
+          },
+          {
+            "choice": 3,
+            "text": "안녕히 가세요."
+          },
+          {
+            "choice": 4,
+            "text": "맛있게 드세요."
+          }
+        ],
+        "example_correct_answer": 3,
+        "source_round": "102",
+        "source_example_id": "EX_G02",
+        "source_question_number": 5,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "102-L006",
@@ -24347,9 +29403,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 2,
+      "bank_id": "L102_Q006",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q006"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 6,
+      "preferred_slots": [
+        6
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L007",
@@ -24397,9 +29462,52 @@
       "show_example": true,
       "example_audio_included": true,
       "layout": "single",
-      "correct_answer": 3,
+      "bank_id": "L102_Q007",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q007"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 7,
+      "preferred_slots": [
+        7
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_G03",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 내일까지 숙제를 꼭 내세요.",
+          "나: 네, 선생님."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "공항"
+          },
+          {
+            "choice": 2,
+            "text": "공원"
+          },
+          {
+            "choice": 3,
+            "text": "교실"
+          },
+          {
+            "choice": 4,
+            "text": "호텔"
+          }
+        ],
+        "example_correct_answer": 3,
+        "source_round": "102",
+        "source_example_id": "EX_G03",
+        "source_question_number": 7,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "102-L008",
@@ -24447,9 +29555,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 3,
+      "bank_id": "L102_Q008",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q008"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 8,
+      "preferred_slots": [
+        8
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L009",
@@ -24497,9 +29614,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 2,
+      "bank_id": "L102_Q009",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q009"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 9,
+      "preferred_slots": [
+        9
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L010",
@@ -24547,9 +29673,18 @@
       "show_example": false,
       "example_audio_included": false,
       "layout": "single",
-      "correct_answer": 4,
+      "bank_id": "L102_Q010",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q010"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 10,
+      "preferred_slots": [
+        10
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L011",
@@ -24597,9 +29732,52 @@
         "source_page": 3,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 2,
+      "bank_id": "L102_Q011",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q011"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 11,
+      "preferred_slots": [
+        11
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_G04",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 몇 살이에요?",
+          "나: 스무 살이에요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "주소"
+          },
+          {
+            "choice": 2,
+            "text": "나이"
+          },
+          {
+            "choice": 3,
+            "text": "달력"
+          },
+          {
+            "choice": 4,
+            "text": "번호"
+          }
+        ],
+        "example_correct_answer": 2,
+        "source_round": "102",
+        "source_example_id": "EX_G04",
+        "source_question_number": 11,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "102-L012",
@@ -24647,9 +29825,18 @@
         "source_page": 3,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 1,
+      "bank_id": "L102_Q012",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q012"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 12,
+      "preferred_slots": [
+        12
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L013",
@@ -24697,9 +29884,18 @@
         "source_page": 3,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 4,
+      "bank_id": "L102_Q013",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q013"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 13,
+      "preferred_slots": [
+        13
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L014",
@@ -24747,9 +29943,18 @@
         "source_page": 3,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 2,
+      "bank_id": "L102_Q014",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q014"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 14,
+      "preferred_slots": [
+        14
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L015",
@@ -24817,9 +30022,18 @@
         "source_page": 4,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 2,
+      "bank_id": "L102_Q015",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q015"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 15,
+      "preferred_slots": [
+        15
+      ],
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L016",
@@ -24887,9 +30101,18 @@
         "source_page": 4,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 1,
+      "bank_id": "L102_Q016",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q016"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 16,
+      "preferred_slots": [
+        16
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L017",
@@ -24937,9 +30160,53 @@
         "source_page": 5,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 3,
+      "bank_id": "L102_Q017",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q017"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 17,
+      "preferred_slots": [
+        17
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능",
+      "example_block": {
+        "id": "EX_G06",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "남자: 수미 씨는 취미가 뭐예요?",
+          "여자: 저는 여행하는 것을 좋아해요. 그리고 컴퓨터 게임도 자주 해요.",
+          "남자: 저도 게임을 좋아해요. 그런데 요즘은 바빠서 못 했어요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "여자는 여행을 좋아합니다."
+          },
+          {
+            "choice": 2,
+            "text": "남자는 게임을 안 좋아합니다."
+          },
+          {
+            "choice": 3,
+            "text": "여자는 게임을 하지 않습니다."
+          },
+          {
+            "choice": 4,
+            "text": "남자는 요즘 게임을 자주 합니다."
+          }
+        ],
+        "example_correct_answer": 1,
+        "source_round": "102",
+        "source_example_id": "EX_G06",
+        "source_question_number": 17,
+        "random_example_pairing": true
+      },
+      "random_example_pairing_required": true,
+      "random_example_pairing_note": "이 문항의 오디오에는 <보기>가 포함되어 있으므로 랜덤 출제 시 보기 블록을 문항과 함께 표시해야 합니다."
     },
     {
       "id": "102-L018",
@@ -24987,9 +30254,18 @@
         "source_page": 5,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 4,
+      "bank_id": "L102_Q018",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q018"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 18,
+      "preferred_slots": [
+        18
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L019",
@@ -25037,9 +30313,18 @@
         "source_page": 5,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 3,
+      "bank_id": "L102_Q019",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q019"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 19,
+      "preferred_slots": [
+        19
+      ],
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L020",
@@ -25087,9 +30372,18 @@
         "source_page": 5,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 4,
+      "bank_id": "L102_Q020",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q020"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 20,
+      "preferred_slots": [
+        20
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L021",
@@ -25137,9 +30431,18 @@
         "source_page": 6,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 4,
+      "bank_id": "L102_Q021",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q021"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 21,
+      "preferred_slots": [
+        21
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L022",
@@ -25185,9 +30488,18 @@
         "source_page": 6,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 1,
+      "bank_id": "L102_Q022",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q022"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 22,
+      "preferred_slots": [
+        22
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L023",
@@ -25233,9 +30545,18 @@
         "source_page": 6,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 4,
+      "bank_id": "L102_Q023",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q023"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 23,
+      "preferred_slots": [
+        23
+      ],
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L024",
@@ -25281,9 +30602,18 @@
         "source_page": 6,
         "review_status": "student_booklet_visual_review"
       },
-      "correct_answer": 1,
+      "bank_id": "L102_Q024",
+      "bank_entry_type": "single_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q024"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 24,
+      "preferred_slots": [
+        24
+      ],
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "question",
+      "random_notes": "단일 문항 단위로 선택 가능"
     },
     {
       "id": "102-L025",
@@ -25337,9 +30667,15 @@
       },
       "shared_audio_total": 2,
       "shared_audio_index": 1,
-      "correct_answer": 1,
+      "bank_id": "L102_Q025",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q025"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 25,
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "102-L026",
@@ -25393,9 +30729,15 @@
       },
       "shared_audio_total": 2,
       "shared_audio_index": 2,
-      "correct_answer": 3,
+      "bank_id": "L102_Q026",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q026"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 26,
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "102-L027",
@@ -25449,9 +30791,15 @@
       },
       "shared_audio_total": 2,
       "shared_audio_index": 1,
-      "correct_answer": 3,
+      "bank_id": "L102_Q027",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q027"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 27,
+      "correct_answer": 3,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "102-L028",
@@ -25505,9 +30853,15 @@
       },
       "shared_audio_total": 2,
       "shared_audio_index": 2,
-      "correct_answer": 4,
+      "bank_id": "L102_Q028",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q028"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 28,
+      "correct_answer": 4,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "102-L029",
@@ -25561,9 +30915,15 @@
       },
       "shared_audio_total": 2,
       "shared_audio_index": 1,
-      "correct_answer": 2,
+      "bank_id": "L102_Q029",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q029"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 29,
+      "correct_answer": 2,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     },
     {
       "id": "102-L030",
@@ -25617,9 +30977,15 @@
       },
       "shared_audio_total": 2,
       "shared_audio_index": 2,
-      "correct_answer": 1,
+      "bank_id": "L102_Q030",
+      "bank_entry_type": "set_member_question",
       "source_exam_id": "listening-102",
-      "bank_id": "L102_Q030"
+      "source_exam_title": "102회 TOPIK I 듣기 30문항",
+      "source_question_number": 30,
+      "correct_answer": 1,
+      "random_eligible": true,
+      "random_selection_unit": "long_listening_set",
+      "random_notes": "긴 대화 세트 안의 구성 문항이며, 단독 선택 금지"
     }
   ],
   "notes": [
@@ -25629,16 +30995,169 @@
     "긴 대화 25~30번은 반드시 세트 단위로 선택합니다.",
     "Step38: 97회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함.",
     "Step39: 96회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함.",
-    "Step40: 91회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함."
+    "Step40: 91회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함.",
+    "Step41: 83회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함.",
+    "Step42: 83회 랜덤 오답풀이에서 출력 1번 등 <보기> 표시 대상 문항이 보기 블록 없이 표시되는 문제를 수정함.",
+    "Step43: 랜덤 시험과 오답 다시 풀기에서 <보기> 표시는 출력 번호가 아니라 선택된 원문항 기준으로만 처리하도록 수정함. 예: 83회 원문항 9번이 랜덤 7번에 배치되어도 <보기>를 표시하지 않음."
   ],
   "example_pairing_policy": {
-    "version": "step33-source-example-pairing",
-    "rule": "example_audio_included 또는 random_example_pairing_required가 true인 source 문항은 랜덤 출제 위치와 관계없이 원문항의 <보기> 블록을 함께 표시한다.",
+    "version": "step43-source-example-only",
+    "rule": "랜덤 시험에서 <보기>는 출력 번호가 아니라 선택된 원문항의 show_example/example_id/source_example_block 기준으로만 표시한다. 보기 없는 원문항이 랜덤 1, 5, 7, 11, 17번 자리에 배치되어도 <보기>를 강제 표시하지 않는다.",
     "output_slot_does_not_force_example": true,
     "source_item_controls_example": true,
-    "embedded_example_block_count": 10
+    "output_slot_forces_example": false,
+    "fallback_example_block_disabled": true,
+    "example_carrying_source_numbers": [
+      1,
+      5,
+      7,
+      11,
+      17
+    ]
   },
   "example_blocks_by_source_round": {
+    "83": [
+      {
+        "id": "EX_83_G01",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 물을 마셔요?",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "네, 물을 마셔요."
+          },
+          {
+            "choice": 2,
+            "text": "네, 물이 적어요."
+          },
+          {
+            "choice": 3,
+            "text": "아니요, 물이에요."
+          },
+          {
+            "choice": 4,
+            "text": "아니요, 물이 좋아요."
+          }
+        ],
+        "example_correct_answer": 1
+      },
+      {
+        "id": "EX_83_G02",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 안녕히 계세요.",
+          "나: __________________"
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "들어오세요."
+          },
+          {
+            "choice": 2,
+            "text": "안녕하세요."
+          },
+          {
+            "choice": 3,
+            "text": "안녕히 가세요."
+          },
+          {
+            "choice": 4,
+            "text": "맛있게 드세요."
+          }
+        ],
+        "example_correct_answer": 3
+      },
+      {
+        "id": "EX_83_G03",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 내일까지 숙제를 꼭 내세요.",
+          "나: 네, 선생님."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "교실"
+          },
+          {
+            "choice": 2,
+            "text": "가게"
+          },
+          {
+            "choice": 3,
+            "text": "호텔"
+          },
+          {
+            "choice": 4,
+            "text": "공원"
+          }
+        ],
+        "example_correct_answer": 1
+      },
+      {
+        "id": "EX_83_G04",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "가: 이 아파트에 살아요?",
+          "나: 네. 5층에 살아요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "집"
+          },
+          {
+            "choice": 2,
+            "text": "옷"
+          },
+          {
+            "choice": 3,
+            "text": "나이"
+          },
+          {
+            "choice": 4,
+            "text": "선물"
+          }
+        ],
+        "example_correct_answer": 1
+      },
+      {
+        "id": "EX_83_G06",
+        "label": "<보기>",
+        "scored": false,
+        "dialogue": [
+          "여자: 편지를 써요?",
+          "남자: 네. 형한테 편지를 써요."
+        ],
+        "options": [
+          {
+            "choice": 1,
+            "text": "여자는 편지를 씁니다."
+          },
+          {
+            "choice": 2,
+            "text": "남자는 형이 있습니다."
+          },
+          {
+            "choice": 3,
+            "text": "남자는 동생에게 편지를 씁니다."
+          },
+          {
+            "choice": 4,
+            "text": "여자는 남자한테 편지를 보냅니다."
+          }
+        ],
+        "example_correct_answer": 2
+      }
+    ],
     "91": [
       {
         "id": "EX_91_G01",

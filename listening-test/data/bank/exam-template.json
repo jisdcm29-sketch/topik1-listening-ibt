@@ -634,17 +634,19 @@
   },
   "notes": [
     "이 파일은 랜덤 출제를 위한 템플릿이며, 고정시험 실행에는 직접 사용하지 않는다.",
-    "현재 question-bank.json은 91회, 96회, 97회, 99회, 100회, 102회 여섯 회차를 포함한다.",
+    "현재 question-bank.json은 83회, 91회, 96회, 97회, 99회, 100회, 102회 일곱 회차를 포함한다.",
     "랜덤 출제는 TOPIK I 듣기 1~30번 슬롯 구조를 고정하고, 각 슬롯에 맞는 유형 풀에서 선택한다.",
     "긴 대화는 반드시 세트 단위로 선택하고 표시 번호만 25~30에 맞게 다시 매긴다.",
-    "default_example_blocks는 랜덤 시험지의 유형 시작 문항에 표시할 <보기> 데이터이다.",
+    "default_example_blocks는 구버전 호환 및 원문항 example_id 매칭용 데이터이며, 출력 번호만으로 <보기>를 강제 표시하지 않는다.",
     "Step33: 랜덤 시험지에서 보기 듣기 파일이 있는 source 문항은 원문항의 보기 블록과 함께 이동하도록 수정함.",
     "Step37: 99회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함.",
     "Step38: 97회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함.",
     "Step39: 96회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함.",
-    "Step40: 91회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함."
+    "Step40: 91회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함.",
+    "Step41: 83회 문항을 question-bank.json에 병합하여 랜덤 실전시험과 랜덤 레벨테스트 후보 풀에 포함함.",
+    "Step43: 랜덤 시험의 <보기>는 출력 슬롯 시작 번호가 아니라 선택된 원문항의 show_example/source_example_block 기준으로 표시한다."
   ],
-  "version": "step40-random-bank-91-96-97-99-100-102",
+  "version": "step43-source-example-only-83-91-96-97-99-100-102",
   "default_example_blocks": [
     {
       "id": "EX_RANDOM_ANSWER_RESPONSE",
