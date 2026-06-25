@@ -2,6 +2,7 @@
 // 시험 실행 전용. 특정 회차 파일명, 정답, 이미지 파일명을 직접 쓰지 않는다.
 // Step36: 30문항 랜덤 + 레벨테스트 랜덤 16문항 생성 지원. 보기 듣기 동행 유지.
 // Step10 wrong-review: 오답풀이 정답 문항 누적 차감 + 캐시 우회 적용.
+// Step43: 랜덤 <보기> 표시는 출력 번호가 아니라 원문항 show_example/source_example_block 기준으로만 처리.
 
 const ListeningTestApp = (() => {
   const RANDOM_FULL_EXAM_ID = "topik1-listening-random-full-30";
@@ -608,8 +609,27 @@ const ListeningTestApp = (() => {
         throw new Error("stored random exam payload not found");
       }
 
+      const [template, bank] = await Promise.all([
+        loadJson(RANDOM_TEMPLATE_URL).catch((error) => {
+          console.warn("[wrong-review] random template load failed:", error);
+          return null;
+        }),
+        loadJson(RANDOM_BANK_URL).catch((error) => {
+          console.warn("[wrong-review] random bank load failed:", error);
+          return null;
+        })
+      ]);
+
+      normalizeRandomExamExamples(stored.exam, template, bank);
+
       state.exam = stored.exam;
       state.answerKey = stored.answerKey;
+      saveStoredRandomExamPayload({
+        generated_exam_round: stored.generated_exam_round || stored.exam?.generated_exam_round || "",
+        exam: stored.exam,
+        answerKey: stored.answerKey
+      });
+
       const storedMeta = getRandomExamMetaForExam(stored.exam);
       state.selectedExamMeta = {
         ...storedMeta,
@@ -804,11 +824,16 @@ const ListeningTestApp = (() => {
     const answers = [];
     const renderSequence = [];
 
+    const profileTemplate = {
+      ...template,
+      group_templates: profile.group_templates || template.group_templates || []
+    };
+
     const sortedSlots = [...profile.slot_templates].sort((a, b) => Number(a.output_question_number) - Number(b.output_question_number));
 
     sortedSlots.forEach((slot) => {
       const selected = selectSingleQuestionForSlot(slot, bank, usageCounts, context);
-      const item = makeRandomSingleOutputItem(selected, slot, template, examId);
+      const item = makeRandomSingleOutputItem(selected, slot, profileTemplate, examId);
       outputItems.push(item);
       answers.push(makeAnswerKeyItem(item, selected));
       renderSequence.push({
@@ -841,7 +866,7 @@ const ListeningTestApp = (() => {
     updateRandomUsageCounts(context.usageIds);
 
     const sourceRounds = [...new Set(outputItems.map((item) => String(item.source_round || "")).filter(Boolean))].sort();
-    const exampleBlocks = getRandomExampleBlocks(template, outputItems);
+    const exampleBlocks = getRandomExampleBlocks(profileTemplate, outputItems);
 
     const exam = {
       id: examId,
@@ -1052,7 +1077,13 @@ const ListeningTestApp = (() => {
   function makeRandomSingleOutputItem(sourceItem, slot, template, examId) {
     const outputQuestionNumber = Number(slot.output_question_number);
     const item = deepClone(sourceItem);
+    const slotType = slot.slot_type || sourceItem.type || "";
     const sourceExampleBlock = getSourceExampleBlock(sourceItem, template);
+
+    // Step43:
+    // 랜덤 시험의 <보기>는 출력 번호(예: 랜덤 7번)가 아니라
+    // 선택된 원문항 자체가 <보기>를 가진 경우에만 함께 표시한다.
+    // 예: 83회 원문항 9번이 랜덤 7번 자리에 와도 83회 원문항 9번은 <보기>가 없으므로 표시하지 않는다.
     const showExample = hasSourceExampleAudio(sourceItem) && !!sourceExampleBlock;
     const exampleId = showExample ? sourceExampleBlock.id : null;
 
@@ -1068,7 +1099,7 @@ const ListeningTestApp = (() => {
     item.instruction = slot.instruction || sourceItem.instruction || "";
     item.category = slot.category || sourceItem.category || "";
     item.diagnostic_area = slot.diagnostic_area || sourceItem.diagnostic_area || "";
-    item.type = slot.slot_type || sourceItem.type || "";
+    item.type = slotType || sourceItem.type || "";
     item.layout = slot.layout || sourceItem.layout || "single";
     item.points = Number(slot.points || sourceItem.points || 0);
     item.correct_answer = Number(sourceItem.correct_answer);
@@ -1166,7 +1197,12 @@ const ListeningTestApp = (() => {
   }
 
   function shouldShowExampleForOutputSlot(template, outputQuestionNumber, slotType) {
-    return (template.group_templates || []).some((group) =>
+    const groups = template?.group_templates || template?.groups || [];
+    const hasExampleBlock = (template?.default_example_blocks || []).some((block) => block.slot_type === slotType);
+
+    if (!hasExampleBlock) return false;
+
+    return groups.some((group) =>
       group.slot_type === slotType &&
       Array.isArray(group.range) &&
       Number(group.range[0]) === Number(outputQuestionNumber)
@@ -1176,6 +1212,67 @@ const ListeningTestApp = (() => {
   function getExampleIdForSlotType(template, slotType) {
     const example = (template.default_example_blocks || []).find((block) => block.slot_type === slotType);
     return example?.id || null;
+  }
+
+  function getDefaultExampleBlockForSlotType(template, slotType, sourceItem = {}) {
+    const example = (template?.default_example_blocks || []).find((block) => block.slot_type === slotType);
+    if (!example) return null;
+
+    const copy = deepClone(example);
+    copy.source_round = sourceItem.source_round || "";
+    copy.source_example_id = example.id;
+    copy.source_question_number = sourceItem.source_question_number || sourceItem.original_question_number || sourceItem.question_number || "";
+    copy.random_example_pairing = true;
+    copy.random_example_fallback = true;
+    return copy;
+  }
+
+  function normalizeRandomExamExamples(exam, template, bank) {
+    if (!exam || !template) return exam;
+
+    const effectiveTemplate = {
+      ...template,
+      group_templates: exam.groups || template.group_templates || []
+    };
+
+    const bankSingleById = new Map();
+    (bank?.single_questions || []).forEach((question) => {
+      if (question?.bank_id) bankSingleById.set(String(question.bank_id), question);
+    });
+
+    const blocksById = new Map();
+
+    (exam.items || []).forEach((item) => {
+      const bankItem = item.source_bank_id ? bankSingleById.get(String(item.source_bank_id)) : null;
+
+      // Step43:
+      // 저장된 랜덤 시험/오답풀이를 다시 열 때도 출력 번호 기준으로 <보기>를 복원하지 않는다.
+      // 반드시 원천 bank 문항이 show_example/example_id/source_example_block을 가진 경우에만 표시한다.
+      const sourceBlock = bankItem ? getSourceExampleBlock(bankItem, effectiveTemplate) : getSourceExampleBlock(item, effectiveTemplate);
+      const sourceAllowsExample = bankItem
+        ? hasSourceExampleAudio(bankItem)
+        : hasSourceExampleAudio(item) && !!(item.source_example_block || item.example_block) && !item.random_example_block?.random_example_fallback;
+
+      if (!sourceAllowsExample || !sourceBlock?.id) {
+        item.show_example = false;
+        item.example_id = null;
+        item.example_audio_included = false;
+        item.random_example_pairing_required = false;
+        delete item.random_example_block;
+        return;
+      }
+
+      const copy = deepClone(sourceBlock);
+      item.show_example = true;
+      item.example_id = copy.id;
+      item.example_audio_included = true;
+      item.random_example_pairing_required = true;
+      item.random_example_block = copy;
+      blocksById.set(String(copy.id), copy);
+    });
+
+    exam.example_blocks = Array.from(blocksById.values());
+    return exam;
   }
 
   function getRandomExampleBlocks(template, outputItems = []) {
@@ -1568,7 +1665,10 @@ const ListeningTestApp = (() => {
   function renderExampleIfNeeded(item) {
     if (!item?.show_example || !item.example_id) return "";
 
-    const ex = (state.exam.example_blocks || []).find((block) => block.id === item.example_id);
+    const ex = (state.exam.example_blocks || []).find((block) => block.id === item.example_id) ||
+      item.random_example_block ||
+      item.example_block ||
+      item.source_example_block;
     if (!ex) return "";
 
     const correctAnswer = Number(ex.example_correct_answer);
