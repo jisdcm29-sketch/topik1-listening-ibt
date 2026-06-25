@@ -11,6 +11,7 @@ const ListeningTestApp = (() => {
   const RANDOM_USAGE_STORAGE_KEY = "topik1-listening-random-usage-counts";
   const RANDOM_EXAM_STORAGE_KEY = "topik1-listening-random-exam-latest";
   const WRONG_REVIEW_PROGRESS_STORAGE_KEY = "topik1-listening-wrong-review-progress";
+  const AUTH_STATUS_STORAGE_KEY = "topik1-listening-auth-ok";
 
   const state = {
     manifest: null,
@@ -48,6 +49,7 @@ const ListeningTestApp = (() => {
     if (devPanel && state.isDevMode) devPanel.hidden = false;
 
     bindEvents();
+    restoreAuthState();
     loadManifest();
   }
 
@@ -61,6 +63,8 @@ const ListeningTestApp = (() => {
       }
 
       state.authOk = true;
+      saveAuthState();
+      setAuthUi(true);
 
       const label = $("#selected-exam-label");
       if (label && state.selectedExamMeta) {
@@ -109,6 +113,59 @@ const ListeningTestApp = (() => {
     $("#dev-prev-btn")?.addEventListener("click", () => moveRenderUnit(-1, { manual: true }));
     $("#dev-next-btn")?.addEventListener("click", () => moveRenderUnit(1, { manual: true }));
     $("#dev-rerender-btn")?.addEventListener("click", () => renderCurrentUnit({ autoPlay: false }));
+  }
+
+
+  function saveAuthState() {
+    try {
+      sessionStorage.setItem(AUTH_STATUS_STORAGE_KEY, "1");
+    } catch (error) {
+      console.warn("[saveAuthState]", error);
+    }
+  }
+
+  function restoreAuthState() {
+    let stored = false;
+    try {
+      stored = sessionStorage.getItem(AUTH_STATUS_STORAGE_KEY) === "1";
+    } catch (error) {
+      stored = false;
+    }
+
+    if (stored) {
+      state.authOk = true;
+      setAuthUi(true);
+      updateStartButton();
+    } else {
+      setAuthUi(false);
+    }
+  }
+
+  function setAuthUi(authenticated) {
+    const input = $("#auth-code");
+    const btn = $("#auth-check-btn");
+    const status = $("#auth-status");
+
+    if (input) {
+      input.disabled = !!authenticated;
+      if (authenticated) {
+        input.value = "";
+        input.placeholder = "인증 완료";
+      } else {
+        input.placeholder = "인증 비밀번호 입력";
+      }
+    }
+
+    if (btn) {
+      btn.textContent = authenticated ? "인증 완료" : "인증 확인";
+      btn.disabled = !!authenticated;
+      btn.classList.toggle("active", !!authenticated);
+    }
+
+    if (status) {
+      status.textContent = authenticated ? "인증 완료: 이름과 전화번호를 입력한 뒤 시험을 시작하세요." : "인증 전입니다.";
+      status.classList.toggle("ok", !!authenticated);
+    }
   }
 
   async function loadManifest() {
