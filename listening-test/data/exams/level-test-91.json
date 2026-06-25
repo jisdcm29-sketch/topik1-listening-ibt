@@ -1,0 +1,1383 @@
+{
+  "id": "level-test-91",
+  "title": "91회 레벨테스트 16문항",
+  "source_round": "91",
+  "level": "TOPIK I",
+  "section": "listening",
+  "exam_type": "level-test",
+  "test_scope": "round-91-level-test-16",
+  "total_questions": 16,
+  "total_possible_points": 54,
+  "time_limit_minutes": 20,
+  "guide_audio_url": "./audio/91/91_GUIDE.mp3",
+  "source_guide_audio_file": "01 트랙 1.mp3",
+  "audio_base_dir": "./audio/91",
+  "image_base_dir": "./images/91",
+  "selection_policy": {
+    "not_fixed_cut": true,
+    "description": "TOPIK I 듣기 8개 대표 유형을 모두 포함하도록 30문항 원본에서 16문항을 선별한 레벨테스트입니다.",
+    "source_exam_id": "listening-91-full",
+    "selected_original_question_numbers": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      14,
+      15,
+      16,
+      17,
+      21,
+      22,
+      24,
+      29,
+      30
+    ],
+    "long_listening_set_required": true,
+    "long_set_source_original_question_numbers": [
+      29,
+      30
+    ]
+  },
+  "audio_policy": {
+    "mode": "play_once_to_end",
+    "allow_pause": false,
+    "allow_stop": false,
+    "allow_seek": false,
+    "allow_replay": false,
+    "allow_volume_control": true,
+    "lock_navigation_while_playing": true,
+    "auto_next_on_ended": true
+  },
+  "groups": [
+    {
+      "group_id": "LT_G01",
+      "target_questions": [
+        1,
+        2
+      ],
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~2] 다음을 듣고 물음에 맞는 대답을 고르십시오.",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_91_G01",
+      "show_example_on": [
+        1
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 1
+    },
+    {
+      "group_id": "LT_G02",
+      "target_questions": [
+        3,
+        4
+      ],
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[3~4] 다음을 듣고 이어지는 말을 고르십시오.",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_91_G02",
+      "show_example_on": [
+        3
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 3
+    },
+    {
+      "group_id": "LT_G03",
+      "target_questions": [
+        5,
+        6
+      ],
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[5~6] 여기는 어디입니까?",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_91_G03",
+      "show_example_on": [
+        5
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 5
+    },
+    {
+      "group_id": "LT_G04",
+      "target_questions": [
+        7,
+        8
+      ],
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[7~8] 다음은 무엇에 대해 말하고 있습니까?",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_91_G04",
+      "show_example_on": [
+        7
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 7
+    },
+    {
+      "group_id": "LT_G05",
+      "target_questions": [
+        9,
+        10
+      ],
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[9~10] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "has_example": false,
+      "layout": "image_grid_2x2"
+    },
+    {
+      "group_id": "LT_G06",
+      "target_questions": [
+        11,
+        12
+      ],
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[11~12] 다음을 듣고 대화 내용과 같은 것을 고르십시오.",
+      "has_example": true,
+      "layout": "single_with_example",
+      "example_id": "EX_91_G06",
+      "show_example_on": [
+        11
+      ],
+      "example_display_mode": "expanded_first_then_collapsible",
+      "example_audio_included_question_number": 11
+    },
+    {
+      "group_id": "LT_G07",
+      "target_questions": [
+        13,
+        14
+      ],
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[13~14] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "has_example": false,
+      "layout": "single"
+    },
+    {
+      "group_id": "LT_G08",
+      "target_questions": [
+        15,
+        16
+      ],
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[15~16] 다음을 듣고 물음에 답하십시오.",
+      "has_example": false,
+      "layout": "side_by_side_set",
+      "set_id": "LT_SET_15_16_FROM_ORIGINAL_29_30",
+      "audio_group_id": "AUDIO_91_LEVEL_SET_15_16"
+    }
+  ],
+  "example_blocks": [
+    {
+      "id": "EX_91_G01",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 공책이 있어요?",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 공책이 있어요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 공책을 사요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 공책에 써요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 공책이 작아요."
+        }
+      ],
+      "example_correct_answer": 1
+    },
+    {
+      "id": "EX_91_G02",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 안녕히 계세요.",
+        "나: __________________"
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "축하합니다."
+        },
+        {
+          "choice": 2,
+          "text": "모르겠습니다."
+        },
+        {
+          "choice": 3,
+          "text": "안녕히 가세요."
+        },
+        {
+          "choice": 4,
+          "text": "처음 뵙겠습니다."
+        }
+      ],
+      "example_correct_answer": 3
+    },
+    {
+      "id": "EX_91_G03",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 내일까지 숙제를 꼭 내세요.",
+        "나: 네, 선생님."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "교실"
+        },
+        {
+          "choice": 2,
+          "text": "공항"
+        },
+        {
+          "choice": 3,
+          "text": "시장"
+        },
+        {
+          "choice": 4,
+          "text": "호텔"
+        }
+      ],
+      "example_correct_answer": 1
+    },
+    {
+      "id": "EX_91_G04",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "가: 누구예요?",
+        "나: 이 사람은 형이고, 이 사람은 동생이에요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "가족"
+        },
+        {
+          "choice": 2,
+          "text": "친구"
+        },
+        {
+          "choice": 3,
+          "text": "부모님"
+        },
+        {
+          "choice": 4,
+          "text": "선생님"
+        }
+      ],
+      "example_correct_answer": 1
+    },
+    {
+      "id": "EX_91_G06",
+      "label": "<보기>",
+      "scored": false,
+      "dialogue": [
+        "남자: 요즘 한국어를 공부해요?",
+        "여자: 네. 한국 친구한테서 한국어를 배워요."
+      ],
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 학생입니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 학교에 다닙니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자는 한국어를 가르칩니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 한국어를 공부합니다."
+        }
+      ],
+      "example_correct_answer": 4
+    }
+  ],
+  "review_status": "created_from_91_full30_after_local_review",
+  "items": [
+    {
+      "id": "91-LT001",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 1,
+      "original_question_number": 1,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~2] 다음을 듣고 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/91/91_L001.mp3",
+      "source_audio_file": "02 트랙 2.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 학생이에요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 학생이 없어요."
+        },
+        {
+          "choice": 3,
+          "text": "아니요, 학생이 와요."
+        },
+        {
+          "choice": 4,
+          "text": "아니요, 학생이 좋아요."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G01",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "level_test_display_number": 1,
+      "level_test_source_original_question_number": 1
+    },
+    {
+      "id": "91-LT002",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 2,
+      "original_question_number": 4,
+      "type": "answer_response",
+      "category": "알맞은 대답 고르기",
+      "diagnostic_area": "basic_response",
+      "instruction": "[1~2] 다음을 듣고 물음에 맞는 대답을 고르십시오.",
+      "question": "물음에 맞는 대답을 고르십시오.",
+      "audio_url": "./audio/91/91_L004.mp3",
+      "source_audio_file": "05 트랙 5.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "내일 가요."
+        },
+        {
+          "choice": 2,
+          "text": "공원에 가요."
+        },
+        {
+          "choice": 3,
+          "text": "동생이 가요."
+        },
+        {
+          "choice": 4,
+          "text": "지하철로 가요."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G01",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "물음에 맞는 대답을 고르십시오.",
+      "level_test_display_number": 2,
+      "level_test_source_original_question_number": 4
+    },
+    {
+      "id": "91-LT003",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 3,
+      "original_question_number": 5,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[3~4] 다음을 듣고 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/91/91_L005.mp3",
+      "source_audio_file": "06 트랙 6.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "고맙습니다."
+        },
+        {
+          "choice": 2,
+          "text": "반갑습니다."
+        },
+        {
+          "choice": 3,
+          "text": "실례합니다."
+        },
+        {
+          "choice": 4,
+          "text": "환영합니다."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G02",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "이어지는 말을 고르십시오.",
+      "level_test_display_number": 3,
+      "level_test_source_original_question_number": 5
+    },
+    {
+      "id": "91-LT004",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 4,
+      "original_question_number": 6,
+      "type": "following_response",
+      "category": "이어지는 말 고르기",
+      "diagnostic_area": "following_response",
+      "instruction": "[3~4] 다음을 듣고 이어지는 말을 고르십시오.",
+      "question": "이어지는 말을 고르십시오.",
+      "audio_url": "./audio/91/91_L006.mp3",
+      "source_audio_file": "07 트랙 7.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "네, 어서 오세요."
+        },
+        {
+          "choice": 2,
+          "text": "네, 잘 다녀오세요."
+        },
+        {
+          "choice": 3,
+          "text": "네, 안녕히 주무세요."
+        },
+        {
+          "choice": 4,
+          "text": "네, 잠깐만 기다리세요."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G02",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "이어지는 말을 고르십시오.",
+      "level_test_display_number": 4,
+      "level_test_source_original_question_number": 6
+    },
+    {
+      "id": "91-LT005",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 5,
+      "original_question_number": 7,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[5~6] 여기는 어디입니까?",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/91/91_L007.mp3",
+      "source_audio_file": "08 트랙 8.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "극장"
+        },
+        {
+          "choice": 2,
+          "text": "병원"
+        },
+        {
+          "choice": 3,
+          "text": "은행"
+        },
+        {
+          "choice": 4,
+          "text": "식당"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G03",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "여기는 어디입니까?",
+      "level_test_display_number": 5,
+      "level_test_source_original_question_number": 7
+    },
+    {
+      "id": "91-LT006",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 6,
+      "original_question_number": 10,
+      "type": "place_identification",
+      "category": "장소 파악하기",
+      "diagnostic_area": "place_identification",
+      "instruction": "[5~6] 여기는 어디입니까?",
+      "question": "여기는 어디입니까?",
+      "audio_url": "./audio/91/91_L010.mp3",
+      "source_audio_file": "11 트랙 11.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "가구점"
+        },
+        {
+          "choice": 2,
+          "text": "여행사"
+        },
+        {
+          "choice": 3,
+          "text": "신발 가게"
+        },
+        {
+          "choice": 4,
+          "text": "안경 가게"
+        }
+      ],
+      "correct_answer": 3,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 1~3쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G03",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "여기는 어디입니까?",
+      "level_test_display_number": 6,
+      "level_test_source_original_question_number": 10
+    },
+    {
+      "id": "91-LT007",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 7,
+      "original_question_number": 11,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[7~8] 다음은 무엇에 대해 말하고 있습니까?",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/91/91_L011.mp3",
+      "source_audio_file": "12 트랙 12.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "값"
+        },
+        {
+          "choice": 2,
+          "text": "맛"
+        },
+        {
+          "choice": 3,
+          "text": "주말"
+        },
+        {
+          "choice": 4,
+          "text": "시간"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G04",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "level_test_display_number": 7,
+      "level_test_source_original_question_number": 11
+    },
+    {
+      "id": "91-LT008",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 8,
+      "original_question_number": 14,
+      "type": "topic_identification",
+      "category": "화제 파악하기",
+      "diagnostic_area": "topic_identification",
+      "instruction": "[7~8] 다음은 무엇에 대해 말하고 있습니까?",
+      "question": "무엇에 대해 말하고 있습니까?",
+      "audio_url": "./audio/91/91_L014.mp3",
+      "source_audio_file": "15 트랙 15.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "고향"
+        },
+        {
+          "choice": 2,
+          "text": "여행"
+        },
+        {
+          "choice": 3,
+          "text": "취미"
+        },
+        {
+          "choice": 4,
+          "text": "휴일"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G04",
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "single_with_example",
+      "question_display_text": "무엇에 대해 말하고 있습니까?",
+      "level_test_display_number": 8,
+      "level_test_source_original_question_number": 14
+    },
+    {
+      "id": "91-LT009",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 9,
+      "original_question_number": 15,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[9~10] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/91/91_L015.mp3",
+      "source_audio_file": "16 트랙 16.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/91/91_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/91/91_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/91/91_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/91/91_L015_04.png"
+        }
+      ],
+      "correct_answer": 1,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/91/91_L015_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/91/91_L015_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/91/91_L015_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/91/91_L015_04.png"
+        }
+      ],
+      "level_test_display_number": 9,
+      "level_test_source_original_question_number": 15
+    },
+    {
+      "id": "91-LT010",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 10,
+      "original_question_number": 16,
+      "type": "picture_choice",
+      "category": "알맞은 그림 고르기",
+      "diagnostic_area": "picture_choice",
+      "instruction": "[9~10] 다음을 듣고 가장 알맞은 그림을 고르십시오.",
+      "question": "가장 알맞은 그림을 고르십시오.",
+      "audio_url": "./audio/91/91_L016.mp3",
+      "source_audio_file": "17 트랙 17.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "",
+          "image_url": "./images/91/91_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "text": "",
+          "image_url": "./images/91/91_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "text": "",
+          "image_url": "./images/91/91_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "text": "",
+          "image_url": "./images/91/91_L016_04.png"
+        }
+      ],
+      "correct_answer": 2,
+      "points": 4,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "layout": "image_grid_2x2",
+      "image_choices": [
+        {
+          "choice": 1,
+          "image_url": "./images/91/91_L016_01.png"
+        },
+        {
+          "choice": 2,
+          "image_url": "./images/91/91_L016_02.png"
+        },
+        {
+          "choice": 3,
+          "image_url": "./images/91/91_L016_03.png"
+        },
+        {
+          "choice": 4,
+          "image_url": "./images/91/91_L016_04.png"
+        }
+      ],
+      "level_test_display_number": 10,
+      "level_test_source_original_question_number": 16
+    },
+    {
+      "id": "91-LT011",
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "question_number": 11,
+      "original_question_number": 17,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[11~12] 다음을 듣고 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/91/91_L017.mp3",
+      "source_audio_file": "18 트랙 18.mp3",
+      "image_url": null,
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 방학에 공부를 했습니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 여행을 가지 못했습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 방학에 남자를 자주 만났습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자는 아르바이트를 한 적이 없습니다."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 3~5쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G06",
+      "show_example": true,
+      "example_audio_included": true,
+      "layout": "single_with_example",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "level_test_display_number": 11,
+      "level_test_source_original_question_number": 17
+    },
+    {
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": "EX_91_G06",
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "91-LT012",
+      "question_number": 12,
+      "original_question_number": 21,
+      "type": "same_content",
+      "category": "내용 일치 고르기",
+      "diagnostic_area": "same_content",
+      "instruction": "[11~12] 다음을 듣고 대화 내용과 같은 것을 고르십시오.",
+      "question": "대화 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/91/91_L021.mp3",
+      "source_audio_file": "22 트랙 22.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "남자는 새 휴대 전화를 받았습니다."
+        },
+        {
+          "choice": 2,
+          "text": "남자는 휴대 전화를 찾으러 왔습니다."
+        },
+        {
+          "choice": 3,
+          "text": "남자의 휴대 전화는 고칠 수 없습니다."
+        },
+        {
+          "choice": 4,
+          "text": "남자의 휴대 전화는 소리가 들리지 않습니다."
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "layout": "single_with_example",
+      "question_display_text": "대화 내용과 같은 것을 고르십시오.",
+      "level_test_display_number": 12,
+      "level_test_source_original_question_number": 21
+    },
+    {
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "91-LT013",
+      "question_number": 13,
+      "original_question_number": 22,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[13~14] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/91/91_L022.mp3",
+      "source_audio_file": "23 트랙 23.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "이번 시험을 잘 보고 싶습니다."
+        },
+        {
+          "choice": 2,
+          "text": "친구와 같이 공부하고 싶습니다."
+        },
+        {
+          "choice": 3,
+          "text": "아침 일찍 일어나는 것이 좋습니다."
+        },
+        {
+          "choice": 4,
+          "text": "피곤할 때 더 많이 자는 것이 좋습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "여자의 중심 생각을 고르십시오.",
+      "level_test_display_number": 13,
+      "level_test_source_original_question_number": 22
+    },
+    {
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "91-LT014",
+      "question_number": 14,
+      "original_question_number": 24,
+      "type": "main_thought",
+      "category": "중심 생각 고르기",
+      "diagnostic_area": "main_thought",
+      "instruction": "[13~14] 다음을 듣고 여자의 중심 생각을 고르십시오.",
+      "question": "여자의 중심 생각을 고르십시오.",
+      "audio_url": "./audio/91/91_L024.mp3",
+      "source_audio_file": "25 트랙 25.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "수첩을 찾으러 가고 싶습니다."
+        },
+        {
+          "choice": 2,
+          "text": "수업 시간에 늦으면 안 됩니다."
+        },
+        {
+          "choice": 3,
+          "text": "수첩을 새로 사는 것이 좋습니다."
+        },
+        {
+          "choice": 4,
+          "text": "중요한 일은 천천히 해야 합니다."
+        }
+      ],
+      "correct_answer": 1,
+      "points": 3,
+      "layout": "single",
+      "question_display_text": "여자의 중심 생각을 고르십시오.",
+      "level_test_display_number": 14,
+      "level_test_source_original_question_number": 24
+    },
+    {
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "91-LT015",
+      "question_number": 15,
+      "original_question_number": 29,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[15~16] 다음을 듣고 물음에 답하십시오.",
+      "question": "여자가 수영을 배우게 된 이유를 고르십시오.",
+      "audio_url": "./audio/91/91_L029.mp3",
+      "source_audio_file": "30 트랙 30.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "수영을 가르치고 싶어서"
+        },
+        {
+          "choice": 2,
+          "text": "수영이 건강에 도움이 돼서"
+        },
+        {
+          "choice": 3,
+          "text": "아버지가 유명한 수영 선수라서"
+        },
+        {
+          "choice": 4,
+          "text": "어렸을 때 본 선수처럼 되고 싶어서"
+        }
+      ],
+      "correct_answer": 4,
+      "points": 3,
+      "layout": "side_by_side_set",
+      "audio_group_id": "AUDIO_91_LEVEL_SET_15_16",
+      "audio_group_numbers": [
+        15,
+        16
+      ],
+      "set_id": "LT_SET_15_16_FROM_ORIGINAL_29_30",
+      "set_type": "long_listening_pair",
+      "audio_url_shared": true,
+      "level_test_display_number": 15,
+      "level_test_source_original_question_number": 29
+    },
+    {
+      "source_round": "91",
+      "level": "TOPIK I",
+      "section": "listening",
+      "image_url": null,
+      "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
+      "student_visible_dialogue": false,
+      "needs_text_review": false,
+      "needs_audio_review": true,
+      "needs_answer_review": false,
+      "text_source": {
+        "source_file": "제91회 TOPIK I B형 듣기·읽기 문제지 PDF",
+        "source_pages": "듣기 영역 6~8쪽",
+        "review_status": "level_test_selected_from_full30_human_review_draft"
+      },
+      "example_id": null,
+      "show_example": false,
+      "example_audio_included": false,
+      "id": "91-LT016",
+      "question_number": 16,
+      "original_question_number": 30,
+      "type": "long_listening_set",
+      "category": "긴 대화 듣고 두 문제 풀기",
+      "diagnostic_area": "long_listening_set",
+      "instruction": "[15~16] 다음을 듣고 물음에 답하십시오.",
+      "question": "들은 내용과 같은 것을 고르십시오.",
+      "audio_url": "./audio/91/91_L029.mp3",
+      "source_audio_file": "30 트랙 30.mp3",
+      "options": [
+        {
+          "choice": 1,
+          "text": "여자는 작년에 수영 대회에 나갔습니다."
+        },
+        {
+          "choice": 2,
+          "text": "여자는 중학생 때 수영을 시작했습니다."
+        },
+        {
+          "choice": 3,
+          "text": "여자는 다음 달 수영 대회에 참가할 겁니다."
+        },
+        {
+          "choice": 4,
+          "text": "여자는 수영 대회에서 상을 못 받았습니다."
+        }
+      ],
+      "correct_answer": 3,
+      "points": 4,
+      "layout": "side_by_side_set",
+      "audio_group_id": "AUDIO_91_LEVEL_SET_15_16",
+      "audio_group_numbers": [
+        15,
+        16
+      ],
+      "set_id": "LT_SET_15_16_FROM_ORIGINAL_29_30",
+      "set_type": "long_listening_pair",
+      "audio_url_shared": true,
+      "level_test_display_number": 16,
+      "level_test_source_original_question_number": 30
+    }
+  ],
+  "render_sequence": [
+    {
+      "unit_id": "LT_Q001",
+      "unit_type": "single_question",
+      "question_numbers": [
+        1
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L001.mp3"
+    },
+    {
+      "unit_id": "LT_Q002",
+      "unit_type": "single_question",
+      "question_numbers": [
+        2
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L004.mp3"
+    },
+    {
+      "unit_id": "LT_Q003",
+      "unit_type": "single_question",
+      "question_numbers": [
+        3
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L005.mp3"
+    },
+    {
+      "unit_id": "LT_Q004",
+      "unit_type": "single_question",
+      "question_numbers": [
+        4
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L006.mp3"
+    },
+    {
+      "unit_id": "LT_Q005",
+      "unit_type": "single_question",
+      "question_numbers": [
+        5
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L007.mp3"
+    },
+    {
+      "unit_id": "LT_Q006",
+      "unit_type": "single_question",
+      "question_numbers": [
+        6
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L010.mp3"
+    },
+    {
+      "unit_id": "LT_Q007",
+      "unit_type": "single_question",
+      "question_numbers": [
+        7
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L011.mp3"
+    },
+    {
+      "unit_id": "LT_Q008",
+      "unit_type": "single_question",
+      "question_numbers": [
+        8
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L014.mp3"
+    },
+    {
+      "unit_id": "LT_Q009",
+      "unit_type": "single_question",
+      "question_numbers": [
+        9
+      ],
+      "layout": "image_grid_2x2",
+      "audio_url": "./audio/91/91_L015.mp3"
+    },
+    {
+      "unit_id": "LT_Q010",
+      "unit_type": "single_question",
+      "question_numbers": [
+        10
+      ],
+      "layout": "image_grid_2x2",
+      "audio_url": "./audio/91/91_L016.mp3"
+    },
+    {
+      "unit_id": "LT_Q011",
+      "unit_type": "single_question",
+      "question_numbers": [
+        11
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L017.mp3"
+    },
+    {
+      "unit_id": "LT_Q012",
+      "unit_type": "single_question",
+      "question_numbers": [
+        12
+      ],
+      "layout": "single_with_example",
+      "audio_url": "./audio/91/91_L021.mp3"
+    },
+    {
+      "unit_id": "LT_Q013",
+      "unit_type": "single_question",
+      "question_numbers": [
+        13
+      ],
+      "layout": "single",
+      "audio_url": "./audio/91/91_L022.mp3"
+    },
+    {
+      "unit_id": "LT_Q014",
+      "unit_type": "single_question",
+      "question_numbers": [
+        14
+      ],
+      "layout": "single",
+      "audio_url": "./audio/91/91_L024.mp3"
+    },
+    {
+      "unit_id": "LT_SET_15_16",
+      "unit_type": "question_set",
+      "set_id": "LT_SET_15_16_FROM_ORIGINAL_29_30",
+      "question_numbers": [
+        15,
+        16
+      ],
+      "layout": "side_by_side_set",
+      "audio_url": "./audio/91/91_L029.mp3",
+      "audio_group_id": "AUDIO_91_LEVEL_SET_15_16"
+    }
+  ],
+  "generated_exam_label": "91회 레벨테스트 16문항",
+  "description": "91회 TOPIK I 듣기 8개 대표 유형 레벨테스트 16문항입니다."
+}
