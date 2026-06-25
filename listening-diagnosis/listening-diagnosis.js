@@ -7,14 +7,10 @@
 // Step35f: Step35e의 interpretLevel 누락 런타임 오류를 복구하고, 압축 레이아웃을 안전하게 재적용한다.
 // Step35g: PDF 최종 다듬기 - 제목 중복 축소, 학습 처방 위치 조정, 오답 카드 추가 압축.
 // Step36b: 랜덤 레벨테스트 PDF에서 표/그래프/강점·약점 섹션이 어색하게 분리되는 문제를 보정한다.
-// Step13: 오답풀이 정답 처리 문항을 복습 요약/우선순위/핵심 구간에 일관 반영한다.
-// Step14: 진단 보고서는 최초 제출 결과만 기준으로 생성하고, 오답풀이 결과를 보고서 분석에 반영하지 않는다.
-// Step15: 진단 보고서 본문은 원시험 기준으로 유지하되, 오답 다시 풀기 버튼의 남은 문항 수만 오답풀이 진행 상태를 반영한다.
 
 const ListeningDiagnosis = (() => {
   const RESULT_STORAGE_KEY = "topik1-listening-result-latest";
   const WRONG_REVIEW_STORAGE_KEY = "topik1-listening-wrong-review-latest";
-  const WRONG_REVIEW_PROGRESS_STORAGE_KEY = "topik1-listening-wrong-review-progress";
 
   const GROUPS = [
     { name: "1~4번 알맞은 대답", range: [1, 4], focus: "기초 응답 표현과 질문-대답 연결", prescription: "짧은 질문을 듣고 핵심 명사와 의문 표현을 먼저 잡는 연습이 필요합니다." },
@@ -451,7 +447,7 @@ const ListeningDiagnosis = (() => {
         alert("남은 오답 또는 미응답 문항이 없습니다.");
         return;
       }
-      window.location.href = "../listening-test/index.html?review=wrong&v=step15-wrongreview-button-count";
+      window.location.href = "../listening-test/index.html?review=wrong&v=step21c";
     });
 
     const result = loadResult();
@@ -490,13 +486,9 @@ const ListeningDiagnosis = (() => {
     const level = isLevelTestResult(result)
       ? getTopik1ExpectedGradeFrom100(diagnosisScore)
       : interpretLevel(diagnosisScore);
-
-    // 진단 보고서는 최초 제출 결과만 기준으로 생성한다.
-    // 오답풀이 결과는 진단 점수, 약점 분석, 핵심 구간, 학습 처방, 오답 목록에 반영하지 않는다.
-    const analysisResult = result;
-    const groupRows = buildGroupRows(analysisResult);
-    const typeRows = buildTypeRows(analysisResult);
-    const areaRows = buildAreaRows(analysisResult);
+    const groupRows = buildGroupRows(result);
+    const typeRows = buildTypeRows(result);
+    const areaRows = buildAreaRows(result);
     const strongAreas = getStrongAreas(typeRows, areaRows);
     const weakAreas = getWeakAreas(typeRows, areaRows);
     const wrongItems = (result.items || []).filter((item) => item.student_answer === null || item.is_correct === false);
@@ -629,7 +621,7 @@ const ListeningDiagnosis = (() => {
     if (remaining > 0) {
       btn.textContent = `오답 다시 풀기 (${remaining}문항 남음)`;
       btn.disabled = false;
-      btn.title = `오답풀이 진행 상태 기준으로 ${remaining}문항을 다시 풀 수 있습니다. 진단 보고서 본문은 최초 제출 결과 기준으로 유지됩니다.`;
+      btn.title = `현재 진단 보고서 결과 기준으로 ${remaining}문항을 다시 풀 수 있습니다.`;
     } else {
       btn.textContent = "오답 다시 풀기 (남은 오답 0문항)";
       btn.disabled = true;
@@ -637,90 +629,20 @@ const ListeningDiagnosis = (() => {
     }
   }
 
-  function buildWrongReviewAdjustedAnalysisResult(originalResult) {
-    // Step14:
-    // 진단 보고서는 최초 제출 결과만 기준으로 유지한다.
-    // 오답풀이에서 맞힌 문항은 오답풀이 진행 화면에서만 사용하고,
-    // 이 보고서의 점수·약점 분석·오답 목록에는 반영하지 않는다.
-    return originalResult;
-  }
-
-  function getOriginalWrongQuestionNumberSet(originalResult) {
-    return new Set((originalResult?.items || [])
-      .filter((item) => item.student_answer === null || item.is_correct === false)
-      .map((item) => Number(item.question_number))
-      .filter(Number.isFinite));
-  }
-
-  function getRemainingWrongQuestionNumberSet(originalResult) {
-    // Step14:
-    // 진단 보고서 기준의 남은 문항은 최초 제출 당시의 오답/미응답 문항이다.
-    // 오답풀이 누적 진행률은 여기서 반영하지 않는다.
-    return getOriginalWrongQuestionNumberSet(originalResult);
-  }
-
-  function getCorrectedQuestionNumberSet(originalResult) {
-    // Step14: 진단 보고서에는 오답풀이 정답 처리 문항을 반영하지 않는다.
-    return new Set();
-  }
-
   function getRemainingWrongCount(originalResult) {
-    // Step15:
-    // 진단 보고서 본문은 최초 제출 결과 그대로 유지한다.
-    // 단, 상단의 "오답 다시 풀기" 버튼에 표시되는 남은 문항 수는
-    // 오답풀이 진행 상태를 반영해야 한다.
     if (!originalResult) return 0;
 
-    const originalWrongSet = getOriginalWrongQuestionNumberSet(originalResult);
-    const progress = loadWrongReviewProgressForOriginal(originalResult);
-
-    if (progress && Array.isArray(progress.remaining_question_numbers)) {
-      const remaining = uniqueFiniteNumbers(progress.remaining_question_numbers)
-        .filter((q) => originalWrongSet.has(q));
-      return remaining.length;
-    }
-
     const reviewResult = loadWrongReviewResult();
-    if (isReviewResultForOriginal(reviewResult, originalResult)) {
-      return (reviewResult.items || [])
-        .filter((item) => item.student_answer === null || item.student_answer === undefined || item.is_correct === false)
-        .map((item) => Number(item.question_number))
-        .filter((q) => Number.isFinite(q) && originalWrongSet.has(q)).length;
+    const originalWrongCount = countWrongOrUnanswered(originalResult);
+
+    // 오답풀이를 아직 한 번도 하지 않았으면 원래 결과의 오답/미응답 수를 표시한다.
+    if (!isReviewResultForOriginal(reviewResult, originalResult)) {
+      return originalWrongCount;
     }
 
-    return originalWrongSet.size;
-  }
-
-  function uniqueFiniteNumbers(values) {
-    return Array.from(new Set((values || [])
-      .map((value) => Number(value))
-      .filter(Number.isFinite)
-    )).sort((a, b) => a - b);
-  }
-
-  function getRemainingWrongItems(originalResult) {
-    return (originalResult?.items || [])
-      .filter((item) => item.student_answer === null || item.is_correct === false);
-  }
-
-
-  function loadWrongReviewProgressForOriginal(originalResult) {
-    try {
-      const raw = localStorage.getItem(WRONG_REVIEW_PROGRESS_STORAGE_KEY);
-      if (!raw) return null;
-      const progress = JSON.parse(raw);
-      if (!isWrongReviewProgressForOriginal(progress, originalResult)) return null;
-      return progress;
-    } catch (error) {
-      console.warn("[loadWrongReviewProgressForOriginal] failed:", error);
-      return null;
-    }
-  }
-
-  function isWrongReviewProgressForOriginal(progress, originalResult) {
-    if (!progress || !originalResult) return false;
-    if (!progress.source_submitted_at || !originalResult.submitted_at) return false;
-    return String(progress.source_submitted_at) === String(originalResult.submitted_at);
+    // 오답풀이 결과는 직전 오답풀이 대상 문항 전체를 담고 있다.
+    // 그중 다시 틀렸거나 미응답인 문항만 버튼의 남은 문항 수로 표시한다.
+    return countWrongOrUnanswered(reviewResult);
   }
 
   function isReviewResultForOriginal(reviewResult, originalResult) {

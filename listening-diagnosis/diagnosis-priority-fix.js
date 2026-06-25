@@ -1,14 +1,11 @@
 // TOPIK I 듣기 진단 보고서 우선 복습 구간 보정 패치
 // Step13: 학습 처방의 "우선 복습 구간"이 실제 약점 1~3순위와 일치하도록 보정한다.
-// Step14: 우선 복습 구간 보정도 최초 제출 결과만 기준으로 적용한다.
 // 기존 listening-diagnosis.js는 건드리지 않고, 렌더링 후 DOM 텍스트만 안전하게 교정한다.
 
 (function () {
   "use strict";
 
   const RESULT_STORAGE_KEY = "topik1-listening-result-latest";
-  const WRONG_REVIEW_STORAGE_KEY = "topik1-listening-wrong-review-latest";
-  const WRONG_REVIEW_PROGRESS_STORAGE_KEY = "topik1-listening-wrong-review-progress";
 
   const TYPE_META = [
     {
@@ -69,63 +66,6 @@
       console.warn("[diagnosis-priority-fix] result load failed:", error);
       return null;
     }
-  }
-
-  function loadJson(key) {
-    try {
-      const raw = localStorage.getItem(key);
-      return raw ? JSON.parse(raw) : null;
-    } catch {
-      return null;
-    }
-  }
-
-  function isProgressForOriginal(progress, originalResult) {
-    if (!progress || !originalResult) return false;
-    if (!progress.source_submitted_at || !originalResult.submitted_at) return false;
-    return String(progress.source_submitted_at) === String(originalResult.submitted_at);
-  }
-
-  function isReviewForOriginal(reviewResult, originalResult) {
-    if (!reviewResult || !originalResult) return false;
-    if (String(reviewResult.generated_exam_mode || "") !== "wrong-review") return false;
-    if (!reviewResult.review_source_submitted_at || !originalResult.submitted_at) return false;
-    return String(reviewResult.review_source_submitted_at) === String(originalResult.submitted_at);
-  }
-
-  function getCorrectedQuestionNumberSet(originalResult) {
-    const originalWrongSet = new Set((originalResult?.items || [])
-      .filter((item) => item.student_answer === null || item.is_correct === false)
-      .map((item) => Number(item.question_number))
-      .filter(Number.isFinite));
-
-    if (!originalWrongSet.size) return new Set();
-
-    const progress = loadJson(WRONG_REVIEW_PROGRESS_STORAGE_KEY);
-    if (isProgressForOriginal(progress, originalResult)) {
-      const corrected = new Set((progress.corrected_question_numbers || [])
-        .map(Number)
-        .filter((q) => Number.isFinite(q) && originalWrongSet.has(q)));
-      if (corrected.size) return corrected;
-
-      const remaining = new Set((progress.remaining_question_numbers || [])
-        .map(Number)
-        .filter((q) => Number.isFinite(q) && originalWrongSet.has(q)));
-      return new Set([...originalWrongSet].filter((q) => !remaining.has(q)));
-    }
-
-    const reviewResult = loadJson(WRONG_REVIEW_STORAGE_KEY);
-    if (!isReviewForOriginal(reviewResult, originalResult)) return new Set();
-
-    return new Set((reviewResult.items || [])
-      .filter((item) => item.student_answer !== null && item.student_answer !== undefined && item.is_correct === true)
-      .map((item) => Number(item.question_number))
-      .filter((q) => Number.isFinite(q) && originalWrongSet.has(q)));
-  }
-
-  function buildWrongReviewAdjustedAnalysisResult(originalResult) {
-    // Step14: 진단 보정은 최초 제출 결과만 기준으로 적용한다.
-    return originalResult;
   }
 
   function isLevelTestResult(result) {
