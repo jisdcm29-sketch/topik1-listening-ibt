@@ -7,6 +7,34 @@
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./style-step17g-patch.css" />
   <link rel="stylesheet" href="./style-step38c-practice-print-link.css?v=step38c" />
+  <style id="exam-list-collapse-style">
+    .exam-list-toggle-btn {
+      width: 100%;
+      min-height: 58px;
+      margin: 10px 0 12px;
+      border: 3px solid #4f79df;
+      border-radius: 14px;
+      background: #eaf2ff;
+      color: #12376b;
+      font-size: 24px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .exam-list-toggle-btn:hover {
+      background: #dceaff;
+    }
+    .exam-list-toggle-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+      background: #f3f6fb;
+    }
+    .exam-list.collapsed {
+      display: none;
+    }
+    .exam-list.expanded {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <div id="app" class="app">
@@ -40,7 +68,8 @@
           </div>
           <div class="select-group">
             <h3>세부 시험지 선택</h3>
-            <div id="exam-list" class="exam-list">
+            <button id="exam-list-toggle-btn" type="button" class="exam-list-toggle-btn" aria-expanded="false">시험지 선택</button>
+            <div id="exam-list" class="exam-list collapsed">
               <button type="button" class="exam-select-btn" disabled>시험 목록을 불러오는 중입니다.</button>
             </div>
             <p id="selected-exam-label" class="selected-exam-label">시험지를 선택하세요.</p>

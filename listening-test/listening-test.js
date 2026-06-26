@@ -3,6 +3,7 @@
 // Step36: 30문항 랜덤 + 레벨테스트 랜덤 16문항 생성 지원. 보기 듣기 동행 유지.
 // Step10 wrong-review: 오답풀이 정답 문항 누적 차감 + 캐시 우회 적용.
 // Step43: 랜덤 <보기> 표시는 출력 번호가 아니라 원문항 show_example/source_example_block 기준으로만 처리.
+// Step44: 첫 화면 시험지 목록 접기/펼치기 방식 적용.
 
 const ListeningTestApp = (() => {
   const RANDOM_FULL_EXAM_ID = "topik1-listening-random-full-30";
@@ -20,6 +21,7 @@ const ListeningTestApp = (() => {
     selectedExamMeta: null,
     selectedTestType: "full",
     selectedExamMode: "fixed",
+    examListExpanded: false,
     exam: null,
     answerKey: null,
     renderIndex: 0,
@@ -93,6 +95,8 @@ const ListeningTestApp = (() => {
         renderFilteredExamList();
       });
     });
+
+    $("#exam-list-toggle-btn")?.addEventListener("click", toggleExamList);
 
     $("#start-test-btn")?.addEventListener("click", startSelectedExam);
     $("#submit-test-btn")?.addEventListener("click", () => submitTest({ manual: true, reason: state.isWrongReviewMode ? "wrong_review_manual" : "manual" }));
@@ -362,6 +366,40 @@ const ListeningTestApp = (() => {
     return "manifest에 표시 가능한 30문항 실전시험이 없습니다.";
   }
 
+  function toggleExamList() {
+    setExamListExpanded(!state.examListExpanded);
+  }
+
+  function setExamListExpanded(expanded) {
+    state.examListExpanded = !!expanded;
+
+    const list = $("#exam-list");
+    const btn = $("#exam-list-toggle-btn");
+
+    const hasSelectableItems = !!list?.querySelector?.("[data-exam-id]");
+
+    if (list) {
+      list.classList.toggle("collapsed", !state.examListExpanded);
+      list.classList.toggle("expanded", state.examListExpanded);
+    }
+
+    if (btn) {
+      btn.disabled = !hasSelectableItems;
+      btn.setAttribute("aria-expanded", state.examListExpanded ? "true" : "false");
+
+      const selected = state.selectedExamMeta;
+      const shortLabel = selected ? (selected.short_label || selected.display_label || selected.label || "선택됨") : "";
+
+      if (!hasSelectableItems) {
+        btn.textContent = "시험지 선택 불가";
+      } else if (state.examListExpanded) {
+        btn.textContent = "시험지 선택 닫기";
+      } else {
+        btn.textContent = shortLabel ? `시험지 선택 (${shortLabel})` : "시험지 선택";
+      }
+    }
+  }
+
   function renderExamList(exams) {
     const list = $("#exam-list");
 
@@ -369,6 +407,7 @@ const ListeningTestApp = (() => {
 
     if (!exams.length) {
       list.innerHTML = `<button type="button" class="exam-select-btn" disabled>${escapeHtml(buildNoExamMessage())}</button>`;
+      setExamListExpanded(false);
       return;
     }
 
@@ -381,6 +420,8 @@ const ListeningTestApp = (() => {
     list.querySelectorAll("[data-exam-id]").forEach((btn) => {
       btn.addEventListener("click", () => selectExam(btn.dataset.examId));
     });
+
+    setExamListExpanded(false);
   }
 
   function selectExam(examId) {
@@ -400,6 +441,7 @@ const ListeningTestApp = (() => {
       label.textContent = `${exam.label} 선택됨${state.authOk ? " / 인증 완료" : ""}`;
     }
 
+    setExamListExpanded(false);
     updateStartButton();
   }
 
