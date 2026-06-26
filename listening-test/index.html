@@ -35,6 +35,177 @@
       display: block;
     }
   </style>
+
+  <style id="login-first-screen-compact-style">
+    /* 첫 화면 높이 조정: 회차 목록 접기 상태에서 시작 버튼까지 한 화면에 들어오도록 보정 */
+    @media (min-width: 900px) {
+      .login-header {
+        padding: 18px 16px !important;
+      }
+      .login-header h1 {
+        margin: 0 !important;
+        font-size: 30px !important;
+        line-height: 1.15 !important;
+        letter-spacing: 0.2px !important;
+      }
+      .login-main {
+        max-width: 560px !important;
+        padding: 14px 0 18px !important;
+      }
+      .login-main h2 {
+        margin: 6px 0 2px !important;
+        font-size: 25px !important;
+        line-height: 1.2 !important;
+      }
+      .login-guide {
+        margin: 0 0 10px !important;
+        font-size: 14px !important;
+        line-height: 1.35 !important;
+      }
+      .auth-row {
+        margin: 0 0 10px !important;
+      }
+      .auth-row label {
+        margin-bottom: 6px !important;
+        font-size: 14px !important;
+        line-height: 1.25 !important;
+      }
+      .auth-input-row {
+        gap: 8px !important;
+      }
+      #auth-code {
+        height: 40px !important;
+        min-height: 40px !important;
+        padding: 8px 14px !important;
+        font-size: 14px !important;
+      }
+      #auth-check-btn {
+        height: 40px !important;
+        min-height: 40px !important;
+        padding: 0 26px !important;
+        font-size: 15px !important;
+      }
+      .auth-status {
+        margin: 8px 0 0 !important;
+        font-size: 14px !important;
+        line-height: 1.3 !important;
+      }
+      .select-panel {
+        margin: 8px 0 10px !important;
+        padding: 14px 18px 12px !important;
+        border-radius: 12px !important;
+      }
+      .select-group {
+        margin: 0 0 10px !important;
+        padding: 0 0 10px !important;
+      }
+      .select-group:last-child {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .select-group h3 {
+        margin: 0 0 8px !important;
+        font-size: 15px !important;
+        line-height: 1.25 !important;
+      }
+      .button-grid.two {
+        gap: 8px !important;
+      }
+      .choice-btn {
+        min-height: 40px !important;
+        padding: 7px 10px !important;
+        border-radius: 10px !important;
+        font-size: 16px !important;
+        line-height: 1.25 !important;
+      }
+      .exam-list-toggle-btn {
+        min-height: 44px !important;
+        margin: 6px 0 8px !important;
+        border-radius: 12px !important;
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+      }
+      .exam-select-btn {
+        min-height: 42px !important;
+        margin: 6px 0 !important;
+        padding: 8px 10px !important;
+        border-radius: 10px !important;
+        font-size: 18px !important;
+        line-height: 1.2 !important;
+      }
+      .selected-exam-label {
+        margin: 4px 0 0 !important;
+        font-size: 14px !important;
+        line-height: 1.25 !important;
+      }
+      .practice-print-link-panel {
+        margin: 8px 0 10px !important;
+        padding: 10px 14px !important;
+        border-radius: 10px !important;
+      }
+      .practice-print-link-panel h3 {
+        margin: 0 0 7px !important;
+        font-size: 15px !important;
+        line-height: 1.25 !important;
+      }
+      .practice-print-link-btn {
+        min-height: 36px !important;
+        padding: 7px 10px !important;
+        border-radius: 8px !important;
+        font-size: 14px !important;
+        line-height: 1.25 !important;
+      }
+      .student-panel {
+        margin-top: 8px !important;
+        gap: 8px !important;
+      }
+      .student-panel label {
+        margin: 0 !important;
+        font-size: 14px !important;
+        line-height: 1.25 !important;
+      }
+      .student-panel input {
+        height: 40px !important;
+        min-height: 40px !important;
+        padding: 8px 14px !important;
+        font-size: 14px !important;
+        border-radius: 8px !important;
+      }
+      .start-btn {
+        min-height: 46px !important;
+        margin-top: 8px !important;
+        padding: 10px 12px !important;
+        border-radius: 10px !important;
+        font-size: 19px !important;
+        line-height: 1.2 !important;
+      }
+    }
+
+    @media (max-width: 899px) {
+      .login-header {
+        padding: 16px 12px !important;
+      }
+      .login-header h1 {
+        font-size: 26px !important;
+      }
+      .login-main {
+        padding: 12px 14px 18px !important;
+      }
+      .exam-list-toggle-btn {
+        min-height: 48px !important;
+        font-size: 20px !important;
+      }
+      .choice-btn {
+        min-height: 42px !important;
+        font-size: 15px !important;
+      }
+      .start-btn {
+        min-height: 46px !important;
+        font-size: 18px !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <div id="app" class="app">
