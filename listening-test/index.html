@@ -261,6 +261,18 @@
     }
   </style>
 
+
+  <style id="phone-digit-input-fix-style">
+    #student-phone {
+      ime-mode: disabled !important;
+      direction: ltr !important;
+      font-variant-numeric: tabular-nums !important;
+    }
+    #student-phone::placeholder {
+      color: #7c8da5 !important;
+    }
+  </style>
+
 </head>
 <body>
   <div id="app" class="app">
@@ -309,7 +321,7 @@
           <label for="student-name">응시자 이름</label>
           <input id="student-name" type="text" placeholder="예: 홍길동" autocomplete="name" enterkeyhint="next" tabindex="10" />
           <label for="student-phone">전화번호</label>
-          <input id="student-phone" type="text" inputmode="numeric" autocomplete="tel" placeholder="예: 01012345678" enterkeyhint="done" tabindex="11" />
+          <input id="student-phone" type="text" inputmode="tel" autocomplete="tel" pattern="[0-9]*" placeholder="예: 01012345678" enterkeyhint="done" tabindex="11" aria-label="전화번호 숫자 입력" />
           <button id="start-test-btn" type="button" class="start-btn" disabled>시험 시작</button>
         </section>
       </main>
@@ -386,9 +398,9 @@
       </main>
     </section>
   </div>
-  <script src="./audio-controller.js?v=step14-phone-input-fix"></script>
-  <script src="./result-builder.js?v=step14-phone-input-fix"></script>
-  <script src="./listening-test.js?v=step14-phone-input-fix"></script>
+  <script src="./audio-controller.js?v=step16-phone-digit-fix"></script>
+  <script src="./result-builder.js?v=step16-phone-digit-fix"></script>
+  <script src="./listening-test.js?v=step16-phone-digit-fix"></script>
 </body>
 </html>
 

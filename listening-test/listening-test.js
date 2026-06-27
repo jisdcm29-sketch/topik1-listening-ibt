@@ -6,6 +6,7 @@
 // Step44: 첫 화면 시험지 목록 접기/펼치기 방식 적용.
 // Step45: 인증 완료/재인증, 이름/전화번호 입력, 시험 시작 버튼 활성화 로직 복구.
 // Step46: 이름 입력 후 전화번호 입력칸 포커스/입력 불가 현상 방지.
+// Step47: 전화번호 입력칸 숫자 키 입력 수동 보정 및 비숫자 자동 정리.
 
 const ListeningTestApp = (() => {
   const RANDOM_FULL_EXAM_ID = "topik1-listening-random-full-30";
@@ -137,6 +138,20 @@ const ListeningTestApp = (() => {
     const nameInput = $("#student-name");
     const phoneInput = $("#student-phone");
 
+    if (phoneInput) {
+      phoneInput.setAttribute("type", "text");
+      phoneInput.setAttribute("inputmode", "tel");
+      phoneInput.setAttribute("autocomplete", "tel");
+      phoneInput.setAttribute("pattern", "[0-9]*");
+      phoneInput.addEventListener("keydown", handlePhoneKeyDown, true);
+      phoneInput.addEventListener("beforeinput", handlePhoneBeforeInput, true);
+      phoneInput.addEventListener("paste", handlePhonePaste, true);
+      phoneInput.addEventListener("input", () => {
+        sanitizePhoneInput();
+        updateStartButton();
+      });
+    }
+
     ["#student-name", "#student-phone"].forEach((selector) => {
       const input = $(selector);
       if (!input) return;
@@ -208,6 +223,150 @@ const ListeningTestApp = (() => {
     input.style.opacity = "1";
     input.style.backgroundColor = "#fff";
   }
+
+  function normalizePhoneDigits(value) {
+    const digitMap = {
+      "０": "0", "１": "1", "２": "2", "３": "3", "４": "4",
+      "５": "5", "６": "6", "７": "7", "８": "8", "９": "9",
+      "〇": "0", "零": "0", "一": "1", "二": "2", "三": "3",
+      "四": "4", "五": "5", "六": "6", "七": "7", "八": "8", "九": "9"
+    };
+
+    return String(value || "")
+      .replace(/[０-９〇零一二三四五六七八九]/g, (ch) => digitMap[ch] || "")
+      .replace(/[^\d]/g, "");
+  }
+
+  function sanitizePhoneInput() {
+    const input = $("#student-phone");
+    if (!input) return;
+
+    forceEditableStudentInput(input);
+
+    const before = input.value || "";
+    const after = normalizePhoneDigits(before);
+
+    if (before !== after) {
+      const cursor = Number(input.selectionStart ?? after.length);
+      const removedBeforeCursor = before.slice(0, cursor).length - normalizePhoneDigits(before.slice(0, cursor)).length;
+      input.value = after;
+      const nextCursor = Math.max(0, Math.min(after.length, cursor - removedBeforeCursor));
+      try {
+        input.setSelectionRange(nextCursor, nextCursor);
+      } catch {
+        // 일부 브라우저/입력 모드에서는 selectionRange가 실패할 수 있다.
+      }
+    }
+  }
+
+  function setPhoneValueWithCursor(nextValue, cursorPosition) {
+    const input = $("#student-phone");
+    if (!input) return;
+
+    forceEditableStudentInput(input);
+    input.value = normalizePhoneDigits(nextValue);
+
+    const cursor = Math.max(0, Math.min(input.value.length, Number(cursorPosition ?? input.value.length)));
+    try {
+      input.setSelectionRange(cursor, cursor);
+    } catch {
+      // 무시
+    }
+
+    input.dispatchEvent(new Event("input", { bubbles: true }));
+    updateStartButton();
+  }
+
+  function insertPhoneDigits(digits) {
+    const input = $("#student-phone");
+    if (!input) return;
+
+    forceEditableStudentInput(input);
+
+    const cleanDigits = normalizePhoneDigits(digits);
+    if (!cleanDigits) return;
+
+    const start = Number(input.selectionStart ?? input.value.length);
+    const end = Number(input.selectionEnd ?? input.value.length);
+    const before = input.value.slice(0, start);
+    const after = input.value.slice(end);
+    const nextValue = before + cleanDigits + after;
+    setPhoneValueWithCursor(nextValue, start + cleanDigits.length);
+  }
+
+  function handlePhoneKeyDown(event) {
+    const input = $("#student-phone");
+    if (!input || event.target !== input) return;
+
+    forceEditableStudentInput(input);
+
+    if (event.ctrlKey || event.metaKey || event.altKey) return;
+
+    const allowedControlKeys = new Set([
+      "Backspace", "Delete", "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown",
+      "Home", "End", "Tab", "Enter", "Escape"
+    ]);
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+      sanitizePhoneInput();
+      updateStartButton();
+      const startBtn = $("#start-test-btn");
+      if (startBtn && !startBtn.disabled) startBtn.focus();
+      return;
+    }
+
+    if (allowedControlKeys.has(event.key)) return;
+
+    const digitFromKey = /^\d$/.test(event.key) ? event.key : "";
+    const digitFromCode = /^Numpad\d$/.test(event.code || "") ? String(event.code).replace("Numpad", "") : "";
+    const digit = digitFromKey || digitFromCode;
+
+    if (digit) {
+      event.preventDefault();
+      event.stopPropagation();
+      insertPhoneDigits(digit);
+      return;
+    }
+
+    if (event.key && event.key.length === 1) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }
+
+  function handlePhoneBeforeInput(event) {
+    const input = $("#student-phone");
+    if (!input || event.target !== input) return;
+
+    forceEditableStudentInput(input);
+
+    if (event.inputType && event.inputType.startsWith("delete")) return;
+
+    const data = event.data ?? "";
+    if (!data) return;
+
+    const digits = normalizePhoneDigits(data);
+    event.preventDefault();
+
+    if (digits) {
+      insertPhoneDigits(digits);
+    }
+  }
+
+  function handlePhonePaste(event) {
+    const input = $("#student-phone");
+    if (!input || event.target !== input) return;
+
+    const text = event.clipboardData?.getData("text") || "";
+    const digits = normalizePhoneDigits(text);
+
+    event.preventDefault();
+    if (digits) {
+      insertPhoneDigits(digits);
+    }
+  }
+
 
   function focusAuthInput() {
     const input = $("#auth-code");
@@ -593,8 +752,10 @@ const ListeningTestApp = (() => {
 
     if (!btn) return;
 
+    sanitizePhoneInput();
+
     const nameValue = $("#student-name")?.value?.trim() || "";
-    const phoneValue = $("#student-phone")?.value?.trim() || "";
+    const phoneValue = normalizePhoneDigits($("#student-phone")?.value || "");
     const hasExam = !!state.selectedExamMeta;
     const hasName = nameValue.length > 0;
     const hasPhone = phoneValue.length > 0;
@@ -630,8 +791,10 @@ const ListeningTestApp = (() => {
       return;
     }
 
+    sanitizePhoneInput();
+
     const nameValue = $("#student-name")?.value?.trim() || "";
-    const phoneValue = $("#student-phone")?.value?.trim() || "";
+    const phoneValue = normalizePhoneDigits($("#student-phone")?.value || "");
 
     if (!nameValue || !phoneValue) {
       alert("응시자 이름과 전화번호를 입력하세요.");
