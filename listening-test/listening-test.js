@@ -4,6 +4,7 @@
 // Step10 wrong-review: 오답풀이 정답 문항 누적 차감 + 캐시 우회 적용.
 // Step43: 랜덤 <보기> 표시는 출력 번호가 아니라 원문항 show_example/source_example_block 기준으로만 처리.
 // Step44: 첫 화면 시험지 목록 접기/펼치기 방식 적용.
+// Step45: 인증 완료/재인증, 이름/전화번호 입력, 시험 시작 버튼 활성화 로직 복구.
 
 const ListeningTestApp = (() => {
   const RANDOM_FULL_EXAM_ID = "topik1-listening-random-full-30";
@@ -53,32 +54,43 @@ const ListeningTestApp = (() => {
 
     bindEvents();
     restoreAuthState();
+    enableStudentInputs();
+    updateStartButton();
+
+    window.addEventListener("pageshow", () => {
+      enableStudentInputs();
+      updateStartButton();
+    });
+
     loadManifest();
   }
 
   function bindEvents() {
     $("#auth-check-btn")?.addEventListener("click", () => {
+      if (state.authOk) {
+        resetAuthState();
+        focusAuthInput();
+        return;
+      }
+
       const code = $("#auth-code")?.value?.trim();
 
       if (!code) {
         alert("인증 비밀번호를 입력하세요.");
+        focusAuthInput();
         return;
       }
 
       state.authOk = true;
       saveAuthState();
       setAuthUi(true);
-
-      const label = $("#selected-exam-label");
-      if (label && state.selectedExamMeta) {
-        label.textContent = `${state.selectedExamMeta.label} 선택됨 / 인증 완료`;
-      }
-
+      refreshSelectedExamLabel();
+      enableStudentInputs();
       updateStartButton();
+      focusStudentNameIfEmpty();
     });
 
-    $("#student-name")?.addEventListener("input", updateStartButton);
-    $("#student-phone")?.addEventListener("input", updateStartButton);
+    bindStudentInputEvents();
 
     document.querySelectorAll("[data-test-type]").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -120,6 +132,75 @@ const ListeningTestApp = (() => {
     $("#dev-rerender-btn")?.addEventListener("click", () => renderCurrentUnit({ autoPlay: false }));
   }
 
+  function bindStudentInputEvents() {
+    ["#student-name", "#student-phone"].forEach((selector) => {
+      const input = $(selector);
+      if (!input) return;
+
+      ["input", "change", "keyup", "blur"].forEach((eventName) => {
+        input.addEventListener(eventName, updateStartButton);
+      });
+
+      input.addEventListener("paste", () => {
+        window.setTimeout(updateStartButton, 0);
+      });
+    });
+  }
+
+  function enableStudentInputs() {
+    ["#student-name", "#student-phone"].forEach((selector) => {
+      const input = $(selector);
+      if (!input) return;
+      input.disabled = false;
+      input.readOnly = false;
+      input.removeAttribute("disabled");
+      input.removeAttribute("readonly");
+    });
+  }
+
+  function focusAuthInput() {
+    const input = $("#auth-code");
+    if (input) {
+      input.focus();
+      input.select?.();
+    }
+  }
+
+  function focusStudentNameIfEmpty() {
+    const nameInput = $("#student-name");
+    if (nameInput && !nameInput.value.trim()) {
+      nameInput.focus();
+    }
+  }
+
+  function refreshSelectedExamLabel() {
+    const label = $("#selected-exam-label");
+    if (!label) return;
+
+    if (state.selectedExamMeta) {
+      label.textContent = `${state.selectedExamMeta.label} 선택됨${state.authOk ? " / 인증 완료" : ""}`;
+    } else {
+      label.textContent = buildNoExamMessage();
+    }
+  }
+
+  function clearAuthState() {
+    try {
+      sessionStorage.removeItem(AUTH_STATUS_STORAGE_KEY);
+    } catch (error) {
+      console.warn("[clearAuthState]", error);
+    }
+  }
+
+  function resetAuthState() {
+    state.authOk = false;
+    clearAuthState();
+    setAuthUi(false);
+    refreshSelectedExamLabel();
+    updateStartButton();
+  }
+
+
 
   function saveAuthState() {
     try {
@@ -152,25 +233,37 @@ const ListeningTestApp = (() => {
     const status = $("#auth-status");
 
     if (input) {
-      input.disabled = !!authenticated;
+      input.disabled = false;
+      input.readOnly = !!authenticated;
+      input.classList.toggle("auth-ok", !!authenticated);
+
       if (authenticated) {
         input.value = "";
-        input.placeholder = "인증 완료";
+        input.placeholder = "인증 완료됨";
+        input.setAttribute("aria-label", "인증 완료됨. 다시 인증하려면 인증 다시 하기 버튼을 누르세요.");
       } else {
+        input.value = "";
         input.placeholder = "인증 비밀번호 입력";
+        input.removeAttribute("aria-label");
       }
     }
 
     if (btn) {
-      btn.textContent = authenticated ? "인증 완료" : "인증 확인";
-      btn.disabled = !!authenticated;
+      btn.disabled = false;
+      btn.textContent = authenticated ? "인증 다시 하기" : "인증 확인";
       btn.classList.toggle("active", !!authenticated);
+      btn.classList.toggle("auth-reset-mode", !!authenticated);
+      btn.setAttribute("aria-pressed", authenticated ? "true" : "false");
     }
 
     if (status) {
-      status.textContent = authenticated ? "인증 완료: 이름과 전화번호를 입력한 뒤 시험을 시작하세요." : "인증 전입니다.";
+      status.textContent = authenticated
+        ? "인증 완료: 이름과 전화번호를 입력한 뒤 시험을 시작하세요."
+        : "인증 전입니다.";
       status.classList.toggle("ok", !!authenticated);
     }
+
+    enableStudentInputs();
   }
 
   async function loadManifest() {
@@ -435,31 +528,64 @@ const ListeningTestApp = (() => {
       btn.classList.toggle("active", btn.dataset.examId === examId);
     });
 
-    const label = $("#selected-exam-label");
-
-    if (label) {
-      label.textContent = `${exam.label} 선택됨${state.authOk ? " / 인증 완료" : ""}`;
-    }
+    refreshSelectedExamLabel();
 
     setExamListExpanded(false);
     updateStartButton();
   }
 
   function updateStartButton() {
+    enableStudentInputs();
+
     const btn = $("#start-test-btn");
 
     if (!btn) return;
 
+    const nameValue = $("#student-name")?.value?.trim() || "";
+    const phoneValue = $("#student-phone")?.value?.trim() || "";
     const hasExam = !!state.selectedExamMeta;
-    const hasName = !!$("#student-name")?.value?.trim();
-    const hasPhone = !!$("#student-phone")?.value?.trim();
+    const hasName = nameValue.length > 0;
+    const hasPhone = phoneValue.length > 0;
+    const ready = hasExam && hasName && hasPhone && state.authOk;
 
-    btn.disabled = !(hasExam && hasName && hasPhone && state.authOk);
+    btn.disabled = !ready;
+    btn.setAttribute("aria-disabled", ready ? "false" : "true");
+
+    if (ready) {
+      btn.title = "시험을 시작할 수 있습니다.";
+    } else if (!state.authOk) {
+      btn.title = "인증을 먼저 완료하세요.";
+    } else if (!hasExam) {
+      btn.title = "시험지를 선택하세요.";
+    } else if (!hasName || !hasPhone) {
+      btn.title = "응시자 이름과 전화번호를 입력하세요.";
+    }
   }
 
   async function startSelectedExam() {
+    enableStudentInputs();
+
+    if (!state.authOk) {
+      alert("인증을 먼저 완료하세요.");
+      focusAuthInput();
+      updateStartButton();
+      return;
+    }
+
     if (!state.selectedExamMeta) {
       alert("시험지를 선택하세요.");
+      updateStartButton();
+      return;
+    }
+
+    const nameValue = $("#student-name")?.value?.trim() || "";
+    const phoneValue = $("#student-phone")?.value?.trim() || "";
+
+    if (!nameValue || !phoneValue) {
+      alert("응시자 이름과 전화번호를 입력하세요.");
+      if (!nameValue) $("#student-name")?.focus();
+      else $("#student-phone")?.focus();
+      updateStartButton();
       return;
     }
 
@@ -474,8 +600,8 @@ const ListeningTestApp = (() => {
       state.activeRenderSequence = null;
       state.activeQuestionNumbers = null;
       state.student = {
-        name: $("#student-name")?.value?.trim() || "",
-        phone: $("#student-phone")?.value?.trim() || "",
+        name: nameValue,
+        phone: phoneValue,
         started_at: new Date().toISOString()
       };
 
