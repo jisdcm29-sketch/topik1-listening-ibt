@@ -225,6 +225,42 @@
     }
   </style>
 
+
+  <style id="student-input-focus-fix-style">
+    /* Step46: 이름 입력 후 전화번호 입력칸이 클릭/입력되지 않는 현상 방지 */
+    .student-panel {
+      position: relative !important;
+      z-index: 30 !important;
+      pointer-events: auto !important;
+    }
+    .student-panel label,
+    .student-panel input,
+    .student-panel button {
+      pointer-events: auto !important;
+    }
+    #student-name,
+    #student-phone {
+      display: block !important;
+      width: 100% !important;
+      position: relative !important;
+      z-index: 31 !important;
+      background: #fff !important;
+      color: #0f172a !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      user-select: text !important;
+      -webkit-user-select: text !important;
+      caret-color: #0f172a !important;
+      touch-action: manipulation !important;
+    }
+    #student-name:focus,
+    #student-phone:focus {
+      outline: 3px solid rgba(37, 99, 235, 0.35) !important;
+      border-color: #2563eb !important;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.10) !important;
+    }
+  </style>
+
 </head>
 <body>
   <div id="app" class="app">
@@ -271,9 +307,9 @@
         </section>
 <section class="student-panel">
           <label for="student-name">응시자 이름</label>
-          <input id="student-name" type="text" placeholder="예: 홍길동" />
+          <input id="student-name" type="text" placeholder="예: 홍길동" autocomplete="name" enterkeyhint="next" tabindex="10" />
           <label for="student-phone">전화번호</label>
-          <input id="student-phone" type="tel" placeholder="예: 01012345678" />
+          <input id="student-phone" type="text" inputmode="numeric" autocomplete="tel" placeholder="예: 01012345678" enterkeyhint="done" tabindex="11" />
           <button id="start-test-btn" type="button" class="start-btn" disabled>시험 시작</button>
         </section>
       </main>
@@ -350,9 +386,9 @@
       </main>
     </section>
   </div>
-  <script src="./audio-controller.js?v=step13-auth-input-fix"></script>
-  <script src="./result-builder.js?v=step13-auth-input-fix"></script>
-  <script src="./listening-test.js?v=step13-auth-input-fix"></script>
+  <script src="./audio-controller.js?v=step14-phone-input-fix"></script>
+  <script src="./result-builder.js?v=step14-phone-input-fix"></script>
+  <script src="./listening-test.js?v=step14-phone-input-fix"></script>
 </body>
 </html>
 

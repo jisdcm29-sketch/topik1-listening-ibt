@@ -5,6 +5,7 @@
 // Step43: 랜덤 <보기> 표시는 출력 번호가 아니라 원문항 show_example/source_example_block 기준으로만 처리.
 // Step44: 첫 화면 시험지 목록 접기/펼치기 방식 적용.
 // Step45: 인증 완료/재인증, 이름/전화번호 입력, 시험 시작 버튼 활성화 로직 복구.
+// Step46: 이름 입력 후 전화번호 입력칸 포커스/입력 불가 현상 방지.
 
 const ListeningTestApp = (() => {
   const RANDOM_FULL_EXAM_ID = "topik1-listening-random-full-30";
@@ -133,29 +134,79 @@ const ListeningTestApp = (() => {
   }
 
   function bindStudentInputEvents() {
+    const nameInput = $("#student-name");
+    const phoneInput = $("#student-phone");
+
     ["#student-name", "#student-phone"].forEach((selector) => {
       const input = $(selector);
       if (!input) return;
 
-      ["input", "change", "keyup", "blur"].forEach((eventName) => {
-        input.addEventListener(eventName, updateStartButton);
+      forceEditableStudentInput(input);
+
+      ["input", "change", "keyup", "blur", "compositionend"].forEach((eventName) => {
+        input.addEventListener(eventName, () => {
+          forceEditableStudentInput(input);
+          updateStartButton();
+        });
+      });
+
+      ["pointerdown", "mousedown", "click", "focus", "touchstart"].forEach((eventName) => {
+        input.addEventListener(eventName, () => {
+          forceEditableStudentInput(input);
+        }, true);
       });
 
       input.addEventListener("paste", () => {
+        forceEditableStudentInput(input);
         window.setTimeout(updateStartButton, 0);
       });
     });
+
+    if (nameInput && phoneInput) {
+      nameInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          forceEditableStudentInput(phoneInput);
+          phoneInput.focus();
+          phoneInput.select?.();
+        }
+      });
+    }
+
+    if (phoneInput) {
+      phoneInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          updateStartButton();
+          const startBtn = $("#start-test-btn");
+          if (startBtn && !startBtn.disabled) startBtn.focus();
+        }
+      });
+    }
+
+    window.setTimeout(enableStudentInputs, 0);
   }
 
   function enableStudentInputs() {
     ["#student-name", "#student-phone"].forEach((selector) => {
       const input = $(selector);
       if (!input) return;
-      input.disabled = false;
-      input.readOnly = false;
-      input.removeAttribute("disabled");
-      input.removeAttribute("readonly");
+      forceEditableStudentInput(input);
     });
+  }
+
+  function forceEditableStudentInput(input) {
+    if (!input) return;
+    input.disabled = false;
+    input.readOnly = false;
+    input.removeAttribute("disabled");
+    input.removeAttribute("readonly");
+    input.setAttribute("aria-disabled", "false");
+    input.style.pointerEvents = "auto";
+    input.style.userSelect = "text";
+    input.style.webkitUserSelect = "text";
+    input.style.opacity = "1";
+    input.style.backgroundColor = "#fff";
   }
 
   function focusAuthInput() {
@@ -264,6 +315,7 @@ const ListeningTestApp = (() => {
     }
 
     enableStudentInputs();
+    window.setTimeout(enableStudentInputs, 0);
   }
 
   async function loadManifest() {
