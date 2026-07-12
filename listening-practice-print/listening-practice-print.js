@@ -636,15 +636,28 @@
   }
 
   function questionCardClass(item) {
-    const category = String(item.category || item.type || "");
+    const type = String(item.type || "");
+    const category = String(item.category || "");
+    const diagnosticArea = String(item.diagnostic_area || "");
+    const combined = `${type} ${category} ${diagnosticArea}`;
     const classes = [];
 
-    if (category.includes("그림") || category.includes("picture")) {
+    if (combined.includes("그림") || combined.includes("picture_choice") || combined.includes("picture")) {
       classes.push("picture-question-card");
     }
 
-    if (category.includes("긴 대화") || category.includes("long_listening")) {
+    if (combined.includes("긴 대화") || combined.includes("long_listening")) {
       classes.push("long-listening-card");
+    }
+
+    if (
+      combined.includes("answer_response") ||
+      combined.includes("following_response") ||
+      combined.includes("basic_response") ||
+      combined.includes("알맞은 대답") ||
+      combined.includes("이어지는 말")
+    ) {
+      classes.push("short-response-card");
     }
 
     return classes.join(" ");
