@@ -11,6 +11,7 @@
 const ListeningDiagnosis = (() => {
   const RESULT_STORAGE_KEY = "topik1-listening-result-latest";
   const WRONG_REVIEW_STORAGE_KEY = "topik1-listening-wrong-review-latest";
+  const WRONG_REVIEW_PROGRESS_STORAGE_KEY = "topik1-listening-wrong-review-progress";
 
   const GROUPS = [
     { name: "1~4번 알맞은 대답", range: [1, 4], focus: "기초 응답 표현과 질문-대답 연결", prescription: "짧은 질문을 듣고 핵심 명사와 의문 표현을 먼저 잡는 연습이 필요합니다." },
@@ -447,7 +448,7 @@ const ListeningDiagnosis = (() => {
         alert("남은 오답 또는 미응답 문항이 없습니다.");
         return;
       }
-      window.location.href = "../listening-test/index.html?review=wrong&v=step21c";
+      window.location.href = "../listening-test/index.html?review=wrong&v=step21f-wrong-review-progress-count";
     });
 
     const result = loadResult();
@@ -632,17 +633,86 @@ const ListeningDiagnosis = (() => {
   function getRemainingWrongCount(originalResult) {
     if (!originalResult) return 0;
 
-    const reviewResult = loadWrongReviewResult();
     const originalWrongCount = countWrongOrUnanswered(originalResult);
+    const progress = loadWrongReviewProgressForOriginal(originalResult);
 
-    // 오답풀이를 아직 한 번도 하지 않았으면 원래 결과의 오답/미응답 수를 표시한다.
+    // Step21f:
+    // 오답풀이를 정상 제출하거나 중간에 "진단으로 돌아가기"를 누르면
+    // listening-test.js가 topik1-listening-wrong-review-progress에 누적 차감 정보를 저장한다.
+    // 진단 보고서의 버튼 문구도 이 progress를 최우선으로 반영해야 실제 오답풀이 진입 문항 수와 일치한다.
+    if (progress) {
+      const remainingFromList = Array.isArray(progress.remaining_question_numbers)
+        ? uniqueQuestionNumbers(progress.remaining_question_numbers).length
+        : null;
+      const remainingFromCount = Number(progress.remaining_count);
+
+      if (remainingFromList !== null) {
+        return clampRemainingCount(remainingFromList, originalWrongCount);
+      }
+
+      if (Number.isFinite(remainingFromCount)) {
+        return clampRemainingCount(remainingFromCount, originalWrongCount);
+      }
+
+      const correctedSet = new Set(uniqueQuestionNumbers(progress.corrected_question_numbers || []));
+      const remainingByCorrected = getOriginalWrongQuestionNumbers(originalResult)
+        .filter((q) => !correctedSet.has(Number(q))).length;
+      return clampRemainingCount(remainingByCorrected, originalWrongCount);
+    }
+
+    const reviewResult = loadWrongReviewResult();
+
+    // 오답풀이 progress가 아직 없고, 연결된 오답풀이 결과도 없으면 원래 결과의 오답/미응답 수를 표시한다.
     if (!isReviewResultForOriginal(reviewResult, originalResult)) {
       return originalWrongCount;
     }
 
-    // 오답풀이 결과는 직전 오답풀이 대상 문항 전체를 담고 있다.
-    // 그중 다시 틀렸거나 미응답인 문항만 버튼의 남은 문항 수로 표시한다.
-    return countWrongOrUnanswered(reviewResult);
+    // 이전 방식 fallback:
+    // 오답풀이 결과가 현재 원시험과 연결되어 있으면 그 결과의 남은 오답/미응답 수를 표시한다.
+    return clampRemainingCount(countWrongOrUnanswered(reviewResult), originalWrongCount);
+  }
+
+  function clampRemainingCount(value, originalWrongCount) {
+    const n = Number(value);
+    const max = Math.max(0, Number(originalWrongCount || 0));
+    if (!Number.isFinite(n)) return max;
+    return Math.max(0, Math.min(max, Math.round(n)));
+  }
+
+  function loadWrongReviewProgressForOriginal(originalResult) {
+    try {
+      const raw = localStorage.getItem(WRONG_REVIEW_PROGRESS_STORAGE_KEY);
+      if (!raw) return null;
+      const progress = JSON.parse(raw);
+      return isWrongReviewProgressForOriginal(progress, originalResult) ? progress : null;
+    } catch (error) {
+      console.warn("[loadWrongReviewProgressForOriginal] failed:", error);
+      return null;
+    }
+  }
+
+  function isWrongReviewProgressForOriginal(progress, originalResult) {
+    if (!progress || !originalResult) return false;
+    if (!progress.source_submitted_at || !originalResult.submitted_at) return false;
+    return String(progress.source_submitted_at) === String(originalResult.submitted_at);
+  }
+
+  function getOriginalWrongQuestionNumbers(originalResult) {
+    return uniqueQuestionNumbers((originalResult?.items || [])
+      .filter((item) => item.student_answer === null || item.is_correct === false)
+      .map((item) => Number(item.question_number)));
+  }
+
+  function uniqueQuestionNumbers(numbers) {
+    const seen = new Set();
+    return (numbers || [])
+      .map((q) => Number(q))
+      .filter((q) => {
+        if (!Number.isFinite(q) || seen.has(q)) return false;
+        seen.add(q);
+        return true;
+      })
+      .sort((a, b) => a - b);
   }
 
   function isReviewResultForOriginal(reviewResult, originalResult) {
