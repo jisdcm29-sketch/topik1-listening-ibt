@@ -203,6 +203,29 @@
     }
   </style>
 
+
+
+  <style id="auth-button-nowrap-fix-style">
+    /* Step21g: 인증 완료 후 '인증 다시 하기' 버튼 한 줄 표시 보정 */
+    .auth-input-row {
+      grid-template-columns: minmax(0, 1fr) 150px !important;
+      align-items: stretch !important;
+    }
+    #auth-check-btn {
+      width: 150px !important;
+      min-width: 150px !important;
+      max-width: 150px !important;
+      padding: 0 12px !important;
+      white-space: nowrap !important;
+      line-height: 1 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+    }
+  </style>
+
   <style id="student-input-focus-fix-style">
     .student-panel {
       position: relative !important;
