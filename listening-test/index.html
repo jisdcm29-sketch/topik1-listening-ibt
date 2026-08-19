@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./style-step17g-patch.css" />
   <link rel="stylesheet" href="./style-step38c-practice-print-link.css?v=step38c" />
+  <link rel="stylesheet" href="./style-step18-topik2-bottom-layout.css?v=step21e-wrong-review-progress" />
+  <link rel="stylesheet" href="./style-step21c-wrong-review-exit.css?v=step21e-wrong-review-progress" />
   <style id="exam-list-collapse-style">
     .exam-list-toggle-btn {
       width: 100%;
@@ -20,28 +22,19 @@
       font-weight: 800;
       cursor: pointer;
     }
-    .exam-list-toggle-btn:hover {
-      background: #dceaff;
-    }
+    .exam-list-toggle-btn:hover { background: #dceaff; }
     .exam-list-toggle-btn:disabled {
       cursor: not-allowed;
       opacity: 0.55;
       background: #f3f6fb;
     }
-    .exam-list.collapsed {
-      display: none;
-    }
-    .exam-list.expanded {
-      display: block;
-    }
+    .exam-list.collapsed { display: none; }
+    .exam-list.expanded { display: block; }
   </style>
 
   <style id="login-first-screen-compact-style">
-    /* 첫 화면 높이 조정: 회차 목록 접기 상태에서 시작 버튼까지 한 화면에 들어오도록 보정 */
     @media (min-width: 900px) {
-      .login-header {
-        padding: 18px 16px !important;
-      }
+      .login-header { padding: 18px 16px !important; }
       .login-header h1 {
         margin: 0 !important;
         font-size: 30px !important;
@@ -62,17 +55,13 @@
         font-size: 14px !important;
         line-height: 1.35 !important;
       }
-      .auth-row {
-        margin: 0 0 10px !important;
-      }
+      .auth-row { margin: 0 0 10px !important; }
       .auth-row label {
         margin-bottom: 6px !important;
         font-size: 14px !important;
         line-height: 1.25 !important;
       }
-      .auth-input-row {
-        gap: 8px !important;
-      }
+      .auth-input-row { gap: 8px !important; }
       #auth-code {
         height: 40px !important;
         min-height: 40px !important;
@@ -108,9 +97,7 @@
         font-size: 15px !important;
         line-height: 1.25 !important;
       }
-      .button-grid.two {
-        gap: 8px !important;
-      }
+      .button-grid.two { gap: 8px !important; }
       .choice-btn {
         min-height: 40px !important;
         padding: 7px 10px !important;
@@ -155,10 +142,7 @@
         font-size: 14px !important;
         line-height: 1.25 !important;
       }
-      .student-panel {
-        margin-top: 8px !important;
-        gap: 8px !important;
-      }
+      .student-panel { margin-top: 8px !important; gap: 8px !important; }
       .student-panel label {
         margin: 0 !important;
         font-size: 14px !important;
@@ -182,15 +166,9 @@
     }
 
     @media (max-width: 899px) {
-      .login-header {
-        padding: 16px 12px !important;
-      }
-      .login-header h1 {
-        font-size: 26px !important;
-      }
-      .login-main {
-        padding: 12px 14px 18px !important;
-      }
+      .login-header { padding: 16px 12px !important; }
+      .login-header h1 { font-size: 26px !important; }
+      .login-main { padding: 12px 14px 18px !important; }
       .exam-list-toggle-btn {
         min-height: 48px !important;
         font-size: 20px !important;
@@ -225,9 +203,7 @@
     }
   </style>
 
-
   <style id="student-input-focus-fix-style">
-    /* Step46: 이름 입력 후 전화번호 입력칸이 클릭/입력되지 않는 현상 방지 */
     .student-panel {
       position: relative !important;
       z-index: 30 !important;
@@ -261,18 +237,14 @@
     }
   </style>
 
-
   <style id="phone-digit-input-fix-style">
     #student-phone {
       ime-mode: disabled !important;
       direction: ltr !important;
       font-variant-numeric: tabular-nums !important;
     }
-    #student-phone::placeholder {
-      color: #7c8da5 !important;
-    }
+    #student-phone::placeholder { color: #7c8da5 !important; }
   </style>
-
 </head>
 <body>
   <div id="app" class="app">
@@ -317,7 +289,7 @@
           <h3>교사용 문제지 출력</h3>
           <a class="practice-print-link-btn" href="../listening-practice-print/index.html?v=step38c">듣기 교사용 문제지 출력 열기</a>
         </section>
-<section class="student-panel">
+        <section class="student-panel">
           <label for="student-name">응시자 이름</label>
           <input id="student-name" type="text" placeholder="예: 홍길동" autocomplete="name" enterkeyhint="next" tabindex="10" />
           <label for="student-phone">전화번호</label>
@@ -346,23 +318,22 @@
           </div>
           <div class="question-progress-badge"><span id="current-question-label">0</span><span>/</span><span id="total-question-label">0</span></div>
           <section id="question-content" class="question-content" aria-label="문제 표시 영역"><div class="empty-question">시험을 시작하면 이곳에 문제가 표시됩니다.</div></section>
-          <div id="dev-nav-panel" class="dev-nav-panel" hidden>
-            <button id="dev-prev-btn" type="button">이전 문항</button>
-            <button id="dev-next-btn" type="button">다음 문항</button>
-            <button id="dev-rerender-btn" type="button">현재 문항 다시 표시</button>
-          </div>
         </section>
       </main>
       <footer class="fixed-audio-bar" aria-label="오디오 재생 영역">
         <audio id="exam-audio" preload="metadata"></audio>
-        <div class="audio-inner">
-          <button id="audio-start-btn" type="button" class="audio-start-btn">자동 재생 대기</button>
-          <div class="audio-time"><span id="audio-current-time">0:00</span><span>/</span><span id="audio-duration">0:00</span></div>
-          <div class="audio-progress" aria-hidden="true"><div id="audio-progress-fill" class="audio-progress-fill"></div></div>
-          <div class="audio-volume"><span class="volume-label">볼륨</span><input id="audio-volume-slider" type="range" min="0" max="1" step="0.01" value="1" /></div>
+        <div class="bottom-layout">
+          <button id="dev-prev-btn" class="nav-btn" type="button">이전 문항</button>
+          <div class="audio-inner">
+            <button id="audio-start-btn" type="button" class="audio-start-btn">자동 재생 대기</button>
+            <div class="audio-time"><span id="audio-current-time">0:00</span><span>/</span><span id="audio-duration">0:00</span></div>
+            <div class="audio-progress" aria-hidden="true"><div id="audio-progress-fill" class="audio-progress-fill"></div></div>
+            <div class="audio-volume"><span class="volume-label">볼륨</span><input id="audio-volume-slider" type="range" min="0" max="1" step="0.01" value="1" /></div>
+          </div>
+          <button id="dev-next-btn" class="nav-btn" type="button">다음 문항</button>
+          <button id="submit-test-btn" type="button" class="bottom-submit" aria-hidden="true" disabled>제출</button>
         </div>
       </footer>
-      <button id="submit-test-btn" type="button" class="submit-floating">제출</button>
     </section>
 
     <section id="result-screen" class="screen result-screen" hidden>
@@ -398,10 +369,10 @@
       </main>
     </section>
   </div>
-  <script src="./audio-controller.js?v=step16-phone-digit-fix"></script>
+  <script src="./audio-controller.js?v=step18-bottom-layout"></script>
   <script src="./result-builder.js?v=step16-phone-digit-fix"></script>
-  <script src="./listening-test.js?v=step16-phone-digit-fix"></script>
+  <script src="./listening-test.js?v=step21e-wrong-review-progress"></script>
+  <script src="./step18-bottom-layout.js?v=step21e-wrong-review-progress"></script>
+  <script src="./step21c-wrong-review-exit.js?v=step21e-wrong-review-progress"></script>
 </body>
 </html>
-
-

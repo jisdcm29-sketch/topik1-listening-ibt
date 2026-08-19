@@ -1,0 +1,346 @@
+/* Step18: TOPIK II 듣기형 하단 레이아웃 적용
+   - 이전/다음/제출을 하단 오디오 바 안으로 이동
+   - 제출 버튼은 마지막 화면에서만 표시
+   - 기존 submit-floating 스타일은 무력화
+*/
+
+.test-screen {
+  padding-bottom: 86px !important;
+}
+
+.test-main {
+  min-height: calc(100vh - var(--header-height) - var(--audio-bar-height)) !important;
+  padding: 16px 18px 14px !important;
+}
+
+.question-stage {
+  min-height: calc(100vh - var(--header-height) - var(--audio-bar-height) - 34px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding-bottom: 18px !important;
+}
+
+.question-content {
+  flex: 1 1 auto !important;
+  min-height: 430px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+.question-content > .question-one-column,
+.question-content > .question-two-column {
+  flex: 1 1 auto !important;
+}
+
+.fixed-audio-bar {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 50 !important;
+  height: 86px !important;
+  min-height: 86px !important;
+  display: grid !important;
+  grid-template-columns: 1fr min(1360px, calc(100% - 54px)) 1fr !important;
+  align-items: center !important;
+  justify-content: initial !important;
+  padding: 10px 0 !important;
+  border-top: 1px solid #b8d6f5 !important;
+  background: #d8ecff !important;
+}
+
+.bottom-layout {
+  grid-column: 2 !important;
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 128px minmax(420px, 1fr) 128px 98px !important;
+  gap: 12px !important;
+  align-items: center !important;
+}
+
+.fixed-audio-bar .audio-inner {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 54px !important;
+  display: grid !important;
+  grid-template-columns: 128px 100px 1fr 170px !important;
+  gap: 18px !important;
+  align-items: center !important;
+  padding: 0 20px !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08) !important;
+}
+
+.nav-btn {
+  min-height: 48px !important;
+  height: 48px !important;
+  border: 1px solid #9db9e4 !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+  color: #00366d !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+}
+
+.nav-btn:disabled {
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+}
+
+.bottom-submit {
+  width: 98px !important;
+  height: 48px !important;
+  border: 0 !important;
+  border-radius: 13px !important;
+  background: #ef5d73 !important;
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(239, 93, 115, 0.24) !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.bottom-submit.visible {
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.bottom-submit:disabled {
+  background: #9aa8b8 !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+
+.submit-floating {
+  display: none !important;
+}
+
+.dev-nav-panel {
+  display: none !important;
+}
+
+@media (max-width: 1100px) {
+  .fixed-audio-bar {
+    grid-template-columns: 1fr !important;
+    padding: 10px 14px !important;
+  }
+
+  .bottom-layout {
+    grid-column: 1 !important;
+    grid-template-columns: 112px minmax(260px, 1fr) 112px 92px !important;
+    gap: 10px !important;
+  }
+
+  .fixed-audio-bar .audio-inner {
+    grid-template-columns: 116px 90px 1fr 140px !important;
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .test-screen {
+    padding-bottom: 230px !important;
+  }
+
+  .fixed-audio-bar {
+    height: auto !important;
+    min-height: 210px !important;
+    padding: 10px !important;
+  }
+
+  .bottom-layout {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .fixed-audio-bar .audio-inner {
+    height: auto !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    padding: 10px 14px !important;
+    border-radius: 18px !important;
+  }
+
+  .nav-btn,
+  .bottom-submit {
+    width: 100% !important;
+  }
+
+  .question-stage {
+    min-height: auto !important;
+  }
+}
+
+/* Step19: 문항 카드 글자 확대 및 박스 활용 보정
+   기준:
+   - 현재 TOPIK I 기본 카드 글씨가 h3 21px / option 18px로 작게 보임
+   - TOPIK II 듣기형 화면 기준에 맞춰 1단 문항은 크게, 2단/세트 문항은 안정적으로 확대
+   - 15~16번 그림 문항은 기존 이미지 레이아웃을 유지하도록 별도 보정
+*/
+
+/* 공통: 문제 영역 안의 렌더링 단위가 축소되지 않고 박스 폭을 활용하도록 보정 */
+.question-content > .question-one-column {
+  width: min(990px, 100%) !important;
+  max-width: 990px !important;
+  align-self: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.question-content > .question-two-column {
+  width: 100% !important;
+  max-width: 100% !important;
+  align-self: stretch !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+/* 1단 텍스트 문항: 2번처럼 <보기>가 없는 단일 문항 */
+.question-one-column:not(:has(.image-choice-grid)) .question-card {
+  width: 100% !important;
+  min-height: 380px !important;
+  padding: 32px 38px !important;
+}
+
+.question-one-column:not(:has(.image-choice-grid)) .question-card h3 {
+  margin-bottom: 20px !important;
+  font-size: 28px !important;
+  line-height: 1.38 !important;
+  letter-spacing: -0.4px !important;
+}
+
+.question-one-column:not(:has(.image-choice-grid)) .option-list {
+  gap: 16px !important;
+  margin-top: 20px !important;
+}
+
+.question-one-column:not(:has(.image-choice-grid)) .option-btn {
+  grid-template-columns: 46px 1fr !important;
+  gap: 14px !important;
+  min-height: 56px !important;
+  font-size: 23px !important;
+  line-height: 1.48 !important;
+  padding: 4px 6px !important;
+}
+
+.question-one-column:not(:has(.image-choice-grid)) .option-number {
+  width: 38px !important;
+  height: 38px !important;
+  font-size: 20px !important;
+}
+
+/* 2단 구조: <보기>+실제 문항, 25~30번 긴 대화 세트 */
+.question-two-column .question-card,
+.question-two-column .example-card {
+  min-height: 405px !important;
+  padding: 28px 30px !important;
+}
+
+.question-two-column .question-card h3,
+.question-two-column .example-card h3 {
+  margin-bottom: 18px !important;
+  font-size: 25px !important;
+  line-height: 1.38 !important;
+  letter-spacing: -0.35px !important;
+}
+
+.question-two-column .dialogue-box {
+  margin-bottom: 18px !important;
+  padding: 16px 18px !important;
+  font-size: 20.5px !important;
+  line-height: 1.65 !important;
+}
+
+.question-two-column .option-list {
+  gap: 15px !important;
+  margin-top: 18px !important;
+}
+
+.question-two-column .option-btn {
+  grid-template-columns: 43px 1fr !important;
+  gap: 13px !important;
+  min-height: 52px !important;
+  font-size: 21.5px !important;
+  line-height: 1.48 !important;
+  padding: 3px 5px !important;
+}
+
+.question-two-column .option-number {
+  width: 36px !important;
+  height: 36px !important;
+  font-size: 19px !important;
+}
+
+/* 그림 문항은 글씨만 약간 키우고 이미지 크기 규칙은 기존 Step17g를 유지 */
+.question-one-column:has(.image-choice-grid) {
+  width: min(880px, 100%) !important;
+  max-width: 880px !important;
+}
+
+.question-card:has(.image-choice-grid) h3 {
+  font-size: 25px !important;
+  line-height: 1.36 !important;
+}
+
+.question-card:has(.image-choice-grid) {
+  padding: 20px 24px !important;
+}
+
+/* 높이가 낮은 화면에서는 줄바꿈/넘침을 막기 위해 소폭 축소 */
+@media (max-height: 760px) and (min-width: 781px) {
+  .question-one-column:not(:has(.image-choice-grid)) .question-card h3 {
+    font-size: 26px !important;
+  }
+
+  .question-one-column:not(:has(.image-choice-grid)) .option-btn {
+    font-size: 21.5px !important;
+    min-height: 50px !important;
+  }
+
+  .question-two-column .question-card h3,
+  .question-two-column .example-card h3 {
+    font-size: 23.5px !important;
+  }
+
+  .question-two-column .option-btn {
+    font-size: 20px !important;
+    min-height: 48px !important;
+  }
+
+  .question-two-column .question-card,
+  .question-two-column .example-card {
+    min-height: 360px !important;
+    padding: 24px 26px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .question-content > .question-one-column,
+  .question-content > .question-two-column {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .question-content > .question-two-column {
+    grid-template-columns: 1fr !important;
+  }
+
+  .question-one-column:not(:has(.image-choice-grid)) .question-card h3,
+  .question-two-column .question-card h3,
+  .question-two-column .example-card h3 {
+    font-size: 23px !important;
+  }
+
+  .question-one-column:not(:has(.image-choice-grid)) .option-btn,
+  .question-two-column .option-btn {
+    font-size: 19px !important;
+  }
+}

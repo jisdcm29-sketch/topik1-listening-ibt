@@ -22,6 +22,34 @@ const AudioController = (() => {
     return `${m}:${String(s).padStart(2, "0")}`;
   }
 
+
+  function getVisibleQuestionMaxNumber() {
+    const label = document.querySelector("#current-question-label")?.textContent || "";
+    const nums = String(label)
+      .match(/\d+/g)
+      ?.map((value) => Number(value))
+      .filter((value) => Number.isFinite(value)) || [];
+
+    return nums.length ? Math.max(...nums) : 0;
+  }
+
+  function getVisibleTotalQuestionNumber() {
+    const label = document.querySelector("#total-question-label")?.textContent || "";
+    const match = String(label).match(/\d+/);
+    const total = match ? Number(match[0]) : 0;
+    return Number.isFinite(total) ? total : 0;
+  }
+
+  function shouldSuppressEndedCallbackOnFinalScreen() {
+    const testScreen = document.querySelector("#test-screen");
+    if (!testScreen || testScreen.hidden) return false;
+
+    const currentMax = getVisibleQuestionMaxNumber();
+    const total = getVisibleTotalQuestionNumber();
+
+    return total > 0 && currentMax >= total;
+  }
+
   function init(selectors = {}) {
     audioEl = document.querySelector(selectors.audio || "#exam-audio");
     startBtn = document.querySelector(selectors.startBtn || "#audio-start-btn");
@@ -78,6 +106,10 @@ const AudioController = (() => {
       }
 
       if (typeof callbacks.onEnded === "function") {
+        if (shouldSuppressEndedCallbackOnFinalScreen()) {
+          // Step18: 마지막 화면에서는 자동 제출하지 않고 학생이 제출 버튼을 누르게 한다.
+          return;
+        }
         callbacks.onEnded({ url: currentUrl, duration });
       }
     });

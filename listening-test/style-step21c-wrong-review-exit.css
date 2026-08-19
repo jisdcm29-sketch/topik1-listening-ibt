@@ -1,0 +1,71 @@
+/* Step21d: 오답 다시 풀기 중간 종료 버튼
+   - review=wrong / mode=wrong / 오답 다시 풀기 화면에서만 표시
+   - 답안을 제출하지 않고 기존 진단 보고서로 돌아간다.
+*/
+
+.bottom-layout.wrong-review-active {
+  grid-template-columns: 128px minmax(360px, 1fr) 128px 166px 98px !important;
+}
+
+.wrong-review-exit-btn {
+  min-height: 48px !important;
+  height: 48px !important;
+  border: 2px solid #ef5d73 !important;
+  border-radius: 13px !important;
+  background: #ffffff !important;
+  color: #b42337 !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(180, 35, 55, 0.12) !important;
+}
+
+.wrong-review-exit-btn:hover,
+.wrong-review-exit-btn:focus {
+  background: #fff5f6 !important;
+  outline: 3px solid rgba(239, 93, 115, 0.18) !important;
+  outline-offset: 2px !important;
+}
+
+.wrong-review-exit-btn[hidden] {
+  display: none !important;
+}
+
+body:not(.wrong-review-active) .wrong-review-exit-btn {
+  display: none !important;
+}
+
+@media (max-width: 1100px) {
+  .bottom-layout.wrong-review-active {
+    grid-template-columns: 112px minmax(230px, 1fr) 112px 148px 92px !important;
+    gap: 8px !important;
+  }
+
+  .wrong-review-exit-btn {
+    font-size: 14px !important;
+    padding: 0 10px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .bottom-layout.wrong-review-active {
+    grid-template-columns: 1fr !important;
+  }
+
+  .wrong-review-exit-btn {
+    width: 100% !important;
+  }
+}
+
+
+/* Step21d 안전 보정: 버튼이 표시될 때 하단 바 안에서만 공간을 차지한다. */
+.wrong-review-exit-btn:not([hidden]) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body.wrong-review-active .wrong-review-exit-btn:not([hidden]) {
+  display: inline-flex !important;
+}

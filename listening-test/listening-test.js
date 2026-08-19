@@ -7,6 +7,7 @@
 // Step45: 인증 완료/재인증, 이름/전화번호 입력, 시험 시작 버튼 활성화 로직 복구.
 // Step46: 이름 입력 후 전화번호 입력칸 포커스/입력 불가 현상 방지.
 // Step47: 전화번호 입력칸 숫자 키 입력 수동 보정 및 비숫자 자동 정리.
+// Step48: 오답풀이 중간 종료 시 현재까지 맞힌 문항을 오답 목록에서 차감.
 
 const ListeningTestApp = (() => {
   const RANDOM_FULL_EXAM_ID = "topik1-listening-random-full-30";
@@ -132,6 +133,11 @@ const ListeningTestApp = (() => {
     $("#dev-prev-btn")?.addEventListener("click", () => moveRenderUnit(-1, { manual: true }));
     $("#dev-next-btn")?.addEventListener("click", () => moveRenderUnit(1, { manual: true }));
     $("#dev-rerender-btn")?.addEventListener("click", () => renderCurrentUnit({ autoPlay: false }));
+
+    // Step48:
+    // 하단 "진단으로 돌아가기" 버튼은 외부 보조 스크립트에서 표시하지만,
+    // 현재까지 맞힌 오답 문항 차감은 state/answerKey를 가진 시험 실행 로직 안에서 처리한다.
+    window.addEventListener("topik1:wrongReviewExitToDiagnosis", handleWrongReviewExitToDiagnosis);
   }
 
   function bindStudentInputEvents() {
@@ -2186,6 +2192,117 @@ const ListeningTestApp = (() => {
 
     state.renderIndex = next;
     renderCurrentUnit({ autoPlay: true });
+  }
+
+  function getCurrentUrlVersion(defaultVersion = "step21e-wrong-review-progress") {
+    try {
+      return new URLSearchParams(window.location.search).get("v") || defaultVersion;
+    } catch {
+      return defaultVersion;
+    }
+  }
+
+  function buildWrongReviewDiagnosisUrl(fallbackUrl = "") {
+    if (fallbackUrl) return fallbackUrl;
+
+    const version = encodeURIComponent(getCurrentUrlVersion());
+    return `../listening-diagnosis/index.html?auto=1&review=cancel&progress=saved&v=${version}`;
+  }
+
+  function buildWrongReviewProgressResultFromCurrentAnswers() {
+    if (!state.isWrongReviewMode || !state.reviewSourceResult) return null;
+    if (!state.exam || !state.answerKey) return null;
+
+    const effectiveExam = buildReviewExamForResult();
+
+    const result = ResultBuilder.buildResult({
+      exam: effectiveExam,
+      answerKey: state.answerKey,
+      answers: state.answers,
+      student: state.student,
+      examMeta: state.selectedExamMeta,
+      override: {
+        test_name: "TOPIK I 듣기 오답 다시 풀기",
+        test_scope: "오답 및 미응답 문항",
+        generated_exam_mode: "wrong-review",
+        generated_exam_label: "TOPIK I 듣기 오답 다시 풀기",
+        time_limit_minutes: Math.max(5, Math.ceil((effectiveExam.items || []).length * 1.5)),
+        total_questions: (effectiveExam.items || []).length
+      }
+    });
+
+    result.generated_exam_mode = "wrong-review";
+    result.exam_type = "wrong-review";
+    result.generated_exam_label = "TOPIK I 듣기 오답 다시 풀기";
+    result.test_name = "TOPIK I 듣기 오답 다시 풀기";
+    result.test_scope = "오답 및 미응답 문항";
+    result.review_source_submitted_at = state.reviewSourceResult.submitted_at || "";
+    result.review_source_test_name = state.reviewSourceResult.test_name || "";
+    result.review_source_round = state.reviewSourceResult.generated_exam_round || "";
+    result.review_exit_mode = "partial-progress-only";
+
+    return result;
+  }
+
+  function saveWrongReviewProgressFromCurrentAnswers() {
+    const result = buildWrongReviewProgressResultFromCurrentAnswers();
+    if (!result || !state.reviewSourceResult) return null;
+
+    const progress = updateWrongReviewProgress(state.reviewSourceResult, result);
+
+    result.review_original_wrong_count = progress.original_wrong_numbers.length;
+    result.review_remaining_wrong_count = progress.remaining_question_numbers.length;
+    result.review_corrected_count = progress.corrected_question_numbers.length;
+    result.review_corrected_question_numbers = progress.corrected_question_numbers;
+    result.review_remaining_question_numbers = progress.remaining_question_numbers;
+
+    state.latestResult = result;
+
+    try {
+      localStorage.removeItem("topik1-listening-wrong-review-draft-answers");
+    } catch (error) {
+      console.warn("[saveWrongReviewProgressFromCurrentAnswers] draft clear failed:", error);
+    }
+
+    return { result, progress };
+  }
+
+  function handleWrongReviewExitToDiagnosis(event) {
+    const detail = event?.detail || {};
+    const diagnosisUrl = buildWrongReviewDiagnosisUrl(detail.diagnosisUrl || "");
+
+    // 보조 스크립트의 fallback 이동을 막기 위한 플래그.
+    window.__TOPIK1_WRONG_REVIEW_EXIT_HANDLED__ = true;
+
+    if (!state.isWrongReviewMode) {
+      window.location.href = diagnosisUrl;
+      return;
+    }
+
+    try {
+      saveWrongReviewProgressFromCurrentAnswers();
+    } catch (error) {
+      console.error("[handleWrongReviewExitToDiagnosis]", error);
+      alert("오답풀이 진행 상황을 저장하는 중 오류가 발생했습니다. Console을 확인하세요.");
+      return;
+    }
+
+    state.submitted = true;
+
+    if (state.examTimer?.intervalId) {
+      clearInterval(state.examTimer.intervalId);
+      state.examTimer.intervalId = null;
+    }
+
+    try {
+      if (typeof AudioController.stopForSubmit === "function") {
+        AudioController.stopForSubmit();
+      }
+    } catch (error) {
+      console.warn("[handleWrongReviewExitToDiagnosis] audio stop skipped:", error);
+    }
+
+    window.location.href = diagnosisUrl;
   }
 
   function submitTest(options = {}) {
