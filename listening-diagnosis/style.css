@@ -1255,3 +1255,23 @@ body {
     line-height: 1.15 !important;
   }
 }
+
+/* Step21h: 진단 보고서 상단 새 시험 보기 버튼 */
+.diagnosis-actions {
+  flex-wrap: wrap;
+}
+
+.diagnosis-actions button.secondary {
+  background: #ffffff;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  box-shadow: 0 4px 10px rgba(22, 119, 232, 0.12);
+}
+
+.diagnosis-actions button.secondary:hover {
+  background: #eaf4ff;
+}
+
+.diagnosis-actions button {
+  white-space: nowrap;
+}

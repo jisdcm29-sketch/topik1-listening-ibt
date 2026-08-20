@@ -7,6 +7,7 @@
 // Step35f: Step35e의 interpretLevel 누락 런타임 오류를 복구하고, 압축 레이아웃을 안전하게 재적용한다.
 // Step35g: PDF 최종 다듬기 - 제목 중복 축소, 학습 처방 위치 조정, 오답 카드 추가 압축.
 // Step36b: 랜덤 레벨테스트 PDF에서 표/그래프/강점·약점 섹션이 어색하게 분리되는 문제를 보정한다.
+// Step21h: 진단 보고서 상단에 새 시험 보기 버튼 추가.
 
 const ListeningDiagnosis = (() => {
   const RESULT_STORAGE_KEY = "topik1-listening-result-latest";
@@ -441,6 +442,11 @@ const ListeningDiagnosis = (() => {
 
   function init() {
     document.getElementById("print-report-btn")?.addEventListener("click", () => window.print());
+
+    document.getElementById("new-test-btn")?.addEventListener("click", () => {
+      window.location.href = "../listening-test/index.html?v=step21h-diagnosis-new-test-button";
+    });
+
     document.getElementById("wrong-review-btn")?.addEventListener("click", () => {
       const result = loadResult();
       const remaining = getRemainingWrongCount(result);
