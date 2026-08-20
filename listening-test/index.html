@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TOPIK I 듣기 PBT형 IBT</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css?v=step22d-question-practice-audio-sync" />
   <link rel="stylesheet" href="./style-step17g-patch.css" />
   <link rel="stylesheet" href="./style-step38c-practice-print-link.css?v=step38c" />
-  <link rel="stylesheet" href="./style-step18-topik2-bottom-layout.css?v=step21e-wrong-review-progress" />
-  <link rel="stylesheet" href="./style-step21c-wrong-review-exit.css?v=step21e-wrong-review-progress" />
+  <link rel="stylesheet" href="./style-step18-topik2-bottom-layout.css?v=step22d-question-practice-audio-sync" />
+  <link rel="stylesheet" href="./style-step21c-wrong-review-exit.css?v=step22d-question-practice-audio-sync" />
   <style id="exam-list-collapse-style">
     .exam-list-toggle-btn {
       width: 100%;
@@ -307,6 +307,35 @@
             </div>
             <p id="selected-exam-label" class="selected-exam-label">시험지를 선택하세요.</p>
           </div>
+          <div class="select-group question-practice-select-group">
+            <h3>문항 선택 연습</h3>
+            <button id="question-practice-toggle-btn" type="button" class="question-practice-toggle-btn" aria-expanded="false">문항 선택 연습 열기</button>
+            <div id="question-practice-panel" class="question-practice-panel collapsed" aria-label="문항 선택 연습 설정">
+              <div class="question-practice-round-box" aria-label="연습 회차 선택">
+                <div class="question-practice-round-title">
+                  <strong>연습 회차 선택</strong>
+                  <span>여러 회차를 함께 선택할 수 있습니다.</span>
+                </div>
+                <div id="question-practice-round-list" class="question-practice-round-list">
+                  <button type="button" class="question-practice-round-btn" disabled>회차 목록을 불러오는 중입니다.</button>
+                </div>
+              </div>
+              <div class="question-practice-quick-grid" aria-label="대표 유형 선택">
+                <button type="button" class="question-practice-range-btn" data-question-practice-range="1-4">1~4 알맞은 대답</button>
+                <button type="button" class="question-practice-range-btn" data-question-practice-range="5-6">5~6 이어지는 말</button>
+                <button type="button" class="question-practice-range-btn" data-question-practice-range="7-10">7~10 장소</button>
+                <button type="button" class="question-practice-range-btn" data-question-practice-range="11-14">11~14 화제</button>
+                <button type="button" class="question-practice-range-btn" data-question-practice-range="15-16">15~16 그림</button>
+                <button type="button" class="question-practice-range-btn" data-question-practice-range="17-21">17~21 내용 일치</button>
+                <button type="button" class="question-practice-range-btn" data-question-practice-range="22-24">22~24 중심 생각</button>
+                <button type="button" class="question-practice-range-btn" data-question-practice-range="25-30">25~30 긴 대화</button>
+              </div>
+              <div class="question-practice-actions one">
+                <button id="question-practice-clear-btn" type="button" class="secondary">전체 시험으로 보기</button>
+              </div>
+              <p id="question-practice-status" class="question-practice-status">유형을 선택하지 않으면 전체 시험으로 진행합니다.</p>
+            </div>
+          </div>
         </section>
         <section id="practice-print-link-panel" class="practice-print-link-panel" aria-label="교사용 문제지 출력">
           <h3>교사용 문제지 출력</h3>
@@ -394,8 +423,8 @@
   </div>
   <script src="./audio-controller.js?v=step18-bottom-layout"></script>
   <script src="./result-builder.js?v=step16-phone-digit-fix"></script>
-  <script src="./listening-test.js?v=step21e-wrong-review-progress"></script>
-  <script src="./step18-bottom-layout.js?v=step21e-wrong-review-progress"></script>
-  <script src="./step21c-wrong-review-exit.js?v=step21e-wrong-review-progress"></script>
+  <script src="./listening-test.js?v=step22d-question-practice-audio-sync"></script>
+  <script src="./step18-bottom-layout.js?v=step22d-question-practice-audio-sync"></script>
+  <script src="./step21c-wrong-review-exit.js?v=step22d-question-practice-audio-sync"></script>
 </body>
 </html>
