@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TOPIK I 듣기 PBT형 IBT</title>
-  <link rel="stylesheet" href="./style.css?v=step22d-question-practice-audio-sync" />
+  <link rel="stylesheet" href="./style.css?v=step22e-question-practice-audio-pause" />
   <link rel="stylesheet" href="./style-step17g-patch.css" />
   <link rel="stylesheet" href="./style-step38c-practice-print-link.css?v=step38c" />
-  <link rel="stylesheet" href="./style-step18-topik2-bottom-layout.css?v=step22d-question-practice-audio-sync" />
-  <link rel="stylesheet" href="./style-step21c-wrong-review-exit.css?v=step22d-question-practice-audio-sync" />
+  <link rel="stylesheet" href="./style-step18-topik2-bottom-layout.css?v=step22e-question-practice-audio-pause" />
+  <link rel="stylesheet" href="./style-step21c-wrong-review-exit.css?v=step22e-question-practice-audio-pause" />
   <style id="exam-list-collapse-style">
     .exam-list-toggle-btn {
       width: 100%;
@@ -226,6 +226,18 @@
     }
   </style>
 
+  <style id="question-practice-audio-pause-style">
+    /* Step22e: 문항 선택 연습에서만 오디오 버튼을 일시정지/계속 듣기 토글로 사용 */
+    #audio-start-btn.pause-enabled {
+      cursor: pointer !important;
+    }
+    #audio-start-btn.paused {
+      background: #ffffff !important;
+      color: #1d4ed8 !important;
+      border: 2px solid #4f79df !important;
+    }
+  </style>
+
   <style id="student-input-focus-fix-style">
     .student-panel {
       position: relative !important;
@@ -421,10 +433,10 @@
       </main>
     </section>
   </div>
-  <script src="./audio-controller.js?v=step18-bottom-layout"></script>
+  <script src="./audio-controller.js?v=step22e-question-practice-audio-pause"></script>
   <script src="./result-builder.js?v=step16-phone-digit-fix"></script>
-  <script src="./listening-test.js?v=step22d-question-practice-audio-sync"></script>
-  <script src="./step18-bottom-layout.js?v=step22d-question-practice-audio-sync"></script>
-  <script src="./step21c-wrong-review-exit.js?v=step22d-question-practice-audio-sync"></script>
+  <script src="./listening-test.js?v=step22e-question-practice-audio-pause"></script>
+  <script src="./step18-bottom-layout.js?v=step22e-question-practice-audio-pause"></script>
+  <script src="./step21c-wrong-review-exit.js?v=step22e-question-practice-audio-pause"></script>
 </body>
 </html>

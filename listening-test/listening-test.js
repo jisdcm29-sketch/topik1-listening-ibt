@@ -10,6 +10,7 @@
 // Step48: 오답풀이 중간 종료 시 현재까지 맞힌 문항을 오답 목록에서 차감.
 // Step22c: 문항 선택 연습에서 여러 회차의 동일 유형을 함께 출제.
 // Step49: 문항 선택 연습을 유형 버튼 전용으로 단순화하고 선택 회차의 해당 유형 전체를 출제.
+// Step22e: 문항 선택 연습 모드에서만 오디오 일시정지/계속 듣기 허용.
 
 const ListeningTestApp = (() => {
   const RANDOM_FULL_EXAM_ID = "topik1-listening-random-full-30";
@@ -2690,6 +2691,7 @@ const ListeningTestApp = (() => {
     AudioController.load(audioUrl, {
       autoPlay: options.autoPlay !== false,
       autoPlayDelayMs: 250,
+      allowPause: state.isQuestionPracticeMode === true,
       onLoadedMetadata: ({ duration }) => {
         buildPhaseSchedule(unit, item, duration);
         updateTimerDisplay(0, duration);
