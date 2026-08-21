@@ -1,5 +1,5 @@
 {
-  "version": "83-step05-leveltest16",
+  "version": "83-step05-leveltest16-display-labels-step22g",
   "default_exam_id": "listening-83-full",
   "exams": [
     {
@@ -9,14 +9,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "83회",
-      "label": "83회",
+      "short_label": "실전 A",
+      "label": "실전 A",
       "file": "./data/exams/listening-83.json",
       "answer_key_file": "./data/answer-keys/answer-key-83.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "83회",
-      "full_label": "83회 TOPIK I 듣기 30문항"
+      "display_label": "실전 A",
+      "full_label": "실전 A TOPIK I 듣기 30문항"
     },
     {
       "id": "level-test-83",
@@ -25,14 +25,14 @@
       "section": "listening",
       "exam_type": "level-test",
       "exam_mode": "fixed",
-      "short_label": "83회",
-      "label": "83회",
+      "short_label": "레벨 A",
+      "label": "레벨 A",
       "file": "./data/exams/level-test-83.json",
       "answer_key_file": "./data/answer-keys/answer-key-83-level-test.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "83회",
-      "full_label": "83회 레벨테스트 16문항"
+      "display_label": "레벨 A",
+      "full_label": "레벨 A 16문항"
     },
     {
       "id": "listening-83-21-30",
@@ -41,14 +41,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "83회 21~30",
-      "label": "83회 TOPIK I 듣기 21~30번 검수용",
+      "short_label": "검수 A 21~30",
+      "label": "검수 A 21~30",
       "file": "./data/exams/listening-83-21-30.json",
       "answer_key_file": "./data/answer-keys/answer-key-83-21-30.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "83회 21~30",
-      "full_label": "83회 TOPIK I 듣기 21~30번 검수용"
+      "display_label": "검수 A 21~30",
+      "full_label": "검수 A TOPIK I 듣기 21~30번"
     },
     {
       "id": "listening-83-11-20",
@@ -57,14 +57,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "83회 11~20",
-      "label": "83회 TOPIK I 듣기 11~20번 검수용",
+      "short_label": "검수 A 11~20",
+      "label": "검수 A 11~20",
       "file": "./data/exams/listening-83-11-20.json",
       "answer_key_file": "./data/answer-keys/answer-key-83-11-20.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "83회 11~20",
-      "full_label": "83회 TOPIK I 듣기 11~20번 검수용"
+      "display_label": "검수 A 11~20",
+      "full_label": "검수 A TOPIK I 듣기 11~20번"
     },
     {
       "id": "listening-83-01-10",
@@ -73,14 +73,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "83회 1~10",
-      "label": "83회 TOPIK I 듣기 1~10번 검수용",
+      "short_label": "검수 A 1~10",
+      "label": "검수 A 1~10",
       "file": "./data/exams/listening-83-01-10.json",
       "answer_key_file": "./data/answer-keys/answer-key-83-01-10.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "83회 1~10",
-      "full_label": "83회 TOPIK I 듣기 1~10번 검수용"
+      "display_label": "검수 A 1~10",
+      "full_label": "검수 A TOPIK I 듣기 1~10번"
     },
     {
       "id": "listening-91-full",
@@ -89,14 +89,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "91회",
-      "label": "91회",
+      "short_label": "실전 B",
+      "label": "실전 B",
       "file": "./data/exams/listening-91.json",
       "answer_key_file": "./data/answer-keys/answer-key-91.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "91회",
-      "full_label": "91회 TOPIK I 듣기 30문항"
+      "display_label": "실전 B",
+      "full_label": "실전 B TOPIK I 듣기 30문항"
     },
     {
       "id": "level-test-91",
@@ -105,14 +105,14 @@
       "section": "listening",
       "exam_type": "level-test",
       "exam_mode": "fixed",
-      "short_label": "91회",
-      "label": "91회",
+      "short_label": "레벨 B",
+      "label": "레벨 B",
       "file": "./data/exams/level-test-91.json",
       "answer_key_file": "./data/answer-keys/answer-key-91-level-test.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "91회",
-      "full_label": "91회 레벨테스트 16문항"
+      "display_label": "레벨 B",
+      "full_label": "레벨 B 16문항"
     },
     {
       "id": "listening-91-21-30",
@@ -121,14 +121,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "91회 21~30",
-      "label": "91회 TOPIK I 듣기 21~30번 검수용",
+      "short_label": "검수 B 21~30",
+      "label": "검수 B 21~30",
       "file": "./data/exams/listening-91-21-30.json",
       "answer_key_file": "./data/answer-keys/answer-key-91-21-30.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "91회 21~30",
-      "full_label": "91회 TOPIK I 듣기 21~30번 검수용"
+      "display_label": "검수 B 21~30",
+      "full_label": "검수 B TOPIK I 듣기 21~30번"
     },
     {
       "id": "listening-91-11-20",
@@ -137,14 +137,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "91회 11~20",
-      "label": "91회 TOPIK I 듣기 11~20번 검수용",
+      "short_label": "검수 B 11~20",
+      "label": "검수 B 11~20",
       "file": "./data/exams/listening-91-11-20.json",
       "answer_key_file": "./data/answer-keys/answer-key-91-11-20.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "91회 11~20",
-      "full_label": "91회 TOPIK I 듣기 11~20번 검수용"
+      "display_label": "검수 B 11~20",
+      "full_label": "검수 B TOPIK I 듣기 11~20번"
     },
     {
       "id": "listening-91-01-10",
@@ -153,14 +153,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "91회 1~10",
-      "label": "91회 TOPIK I 듣기 1~10번 검수용",
+      "short_label": "검수 B 1~10",
+      "label": "검수 B 1~10",
       "file": "./data/exams/listening-91-01-10.json",
       "answer_key_file": "./data/answer-keys/answer-key-91-01-10.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "91회 1~10",
-      "full_label": "91회 TOPIK I 듣기 1~10번 검수용"
+      "display_label": "검수 B 1~10",
+      "full_label": "검수 B TOPIK I 듣기 1~10번"
     },
     {
       "id": "listening-96-full",
@@ -169,14 +169,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "96회",
-      "label": "96회",
+      "short_label": "실전 C",
+      "label": "실전 C",
       "file": "./data/exams/listening-96.json",
       "answer_key_file": "./data/answer-keys/answer-key-96.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "96회",
-      "full_label": "96회 TOPIK I 듣기 30문항"
+      "display_label": "실전 C",
+      "full_label": "실전 C TOPIK I 듣기 30문항"
     },
     {
       "id": "level-test-96",
@@ -185,14 +185,14 @@
       "section": "listening",
       "exam_type": "level-test",
       "exam_mode": "fixed",
-      "short_label": "96회",
-      "label": "96회",
+      "short_label": "레벨 C",
+      "label": "레벨 C",
       "file": "./data/exams/level-test-96.json",
       "answer_key_file": "./data/answer-keys/answer-key-96-level-test.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "96회",
-      "full_label": "96회 레벨테스트 16문항"
+      "display_label": "레벨 C",
+      "full_label": "레벨 C 16문항"
     },
     {
       "id": "listening-96-21-30",
@@ -201,14 +201,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "96회 21~30",
-      "label": "96회 TOPIK I 듣기 21~30번 검수용",
+      "short_label": "검수 C 21~30",
+      "label": "검수 C 21~30",
       "file": "./data/exams/listening-96-21-30.json",
       "answer_key_file": "./data/answer-keys/answer-key-96-21-30.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "96회 21~30",
-      "full_label": "96회 TOPIK I 듣기 21~30번 검수용",
+      "display_label": "검수 C 21~30",
+      "full_label": "검수 C TOPIK I 듣기 21~30번",
       "hidden_reason": "96회 30문항 통합 및 레벨테스트 검수 완료 후 목록에서 숨김"
     },
     {
@@ -218,14 +218,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "96회 11~20",
-      "label": "96회 TOPIK I 듣기 11~20번 검수용",
+      "short_label": "검수 C 11~20",
+      "label": "검수 C 11~20",
       "file": "./data/exams/listening-96-11-20.json",
       "answer_key_file": "./data/answer-keys/answer-key-96-11-20.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "96회 11~20",
-      "full_label": "96회 TOPIK I 듣기 11~20번 검수용",
+      "display_label": "검수 C 11~20",
+      "full_label": "검수 C TOPIK I 듣기 11~20번",
       "hidden_reason": "96회 30문항 통합 및 레벨테스트 검수 완료 후 목록에서 숨김"
     },
     {
@@ -235,14 +235,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "96회 1~10",
-      "label": "96회 TOPIK I 듣기 1~10번 검수용",
+      "short_label": "검수 C 1~10",
+      "label": "검수 C 1~10",
       "file": "./data/exams/listening-96-01-10.json",
       "answer_key_file": "./data/answer-keys/answer-key-96-01-10.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "96회 1~10",
-      "full_label": "96회 TOPIK I 듣기 1~10번 검수용",
+      "display_label": "검수 C 1~10",
+      "full_label": "검수 C TOPIK I 듣기 1~10번",
       "hidden_reason": "96회 30문항 통합 및 레벨테스트 검수 완료 후 목록에서 숨김"
     },
     {
@@ -252,14 +252,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "97회",
-      "label": "97회",
+      "short_label": "실전 D",
+      "label": "실전 D",
       "file": "./data/exams/listening-97.json",
       "answer_key_file": "./data/answer-keys/answer-key-97.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "97회",
-      "full_label": "97회 TOPIK I 듣기 30문항"
+      "display_label": "실전 D",
+      "full_label": "실전 D TOPIK I 듣기 30문항"
     },
     {
       "id": "listening-97-21-30",
@@ -268,14 +268,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "97회 21~30",
-      "label": "97회 TOPIK I 듣기 21~30번 검수용",
+      "short_label": "검수 D 21~30",
+      "label": "검수 D 21~30",
       "file": "./data/exams/listening-97-21-30.json",
       "answer_key_file": "./data/answer-keys/answer-key-97-21-30.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "97회 21~30",
-      "full_label": "97회 TOPIK I 듣기 21~30번 검수용",
+      "display_label": "검수 D 21~30",
+      "full_label": "검수 D TOPIK I 듣기 21~30번",
       "hidden_reason": "97회 30문항 통합 검수 완료 후 목록에서 숨김"
     },
     {
@@ -285,14 +285,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "97회 11~20",
-      "label": "97회 TOPIK I 듣기 11~20번 검수용",
+      "short_label": "검수 D 11~20",
+      "label": "검수 D 11~20",
       "file": "./data/exams/listening-97-11-20.json",
       "answer_key_file": "./data/answer-keys/answer-key-97-11-20.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "97회 11~20",
-      "full_label": "97회 TOPIK I 듣기 11~20번 검수용",
+      "display_label": "검수 D 11~20",
+      "full_label": "검수 D TOPIK I 듣기 11~20번",
       "hidden_reason": "97회 30문항 통합 검수 완료 후 목록에서 숨김"
     },
     {
@@ -302,14 +302,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "97회 1~10",
-      "label": "97회 TOPIK I 듣기 1~10번 검수용",
+      "short_label": "검수 D 1~10",
+      "label": "검수 D 1~10",
       "file": "./data/exams/listening-97-01-10.json",
       "answer_key_file": "./data/answer-keys/answer-key-97-01-10.json",
       "enabled": false,
       "student_visible": false,
-      "display_label": "97회 1~10",
-      "full_label": "97회 TOPIK I 듣기 1~10번 검수용",
+      "display_label": "검수 D 1~10",
+      "full_label": "검수 D TOPIK I 듣기 1~10번",
       "hidden_reason": "97회 30문항 통합 검수 완료 후 목록에서 숨김"
     },
     {
@@ -319,14 +319,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "99회",
-      "label": "99회",
+      "short_label": "실전 E",
+      "label": "실전 E",
       "file": "./data/exams/listening-99.json",
       "answer_key_file": "./data/answer-keys/answer-key-99.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "99회",
-      "full_label": "99회 TOPIK I 듣기 30문항"
+      "display_label": "실전 E",
+      "full_label": "실전 E TOPIK I 듣기 30문항"
     },
     {
       "id": "listening-102-full",
@@ -335,14 +335,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "102회",
-      "label": "102회",
+      "short_label": "실전 F",
+      "label": "실전 F",
       "file": "./data/exams/listening-102.json",
       "answer_key_file": "./data/answer-keys/answer-key-102.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "102회",
-      "full_label": "102회 TOPIK I 듣기 30문항"
+      "display_label": "실전 F",
+      "full_label": "실전 F TOPIK I 듣기 30문항"
     },
     {
       "id": "listening-100-full",
@@ -351,14 +351,14 @@
       "section": "listening",
       "exam_type": "full",
       "exam_mode": "fixed",
-      "short_label": "100회",
-      "label": "100회",
+      "short_label": "실전 G",
+      "label": "실전 G",
       "file": "./data/exams/listening-100.json",
       "answer_key_file": "./data/answer-keys/answer-key-100.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "100회",
-      "full_label": "100회 TOPIK I 듣기 30문항"
+      "display_label": "실전 G",
+      "full_label": "실전 G TOPIK I 듣기 30문항"
     },
     {
       "id": "level-test-97",
@@ -367,14 +367,14 @@
       "section": "listening",
       "exam_type": "level-test",
       "exam_mode": "fixed",
-      "short_label": "97회",
-      "label": "97회",
+      "short_label": "레벨 D",
+      "label": "레벨 D",
       "file": "./data/exams/level-test-97.json",
       "answer_key_file": "./data/answer-keys/answer-key-97-level-test.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "97회",
-      "full_label": "97회 레벨테스트 16문항"
+      "display_label": "레벨 D",
+      "full_label": "레벨 D 16문항"
     },
     {
       "id": "level-test-99",
@@ -383,14 +383,14 @@
       "section": "listening",
       "exam_type": "level-test",
       "exam_mode": "fixed",
-      "short_label": "99회",
-      "label": "99회",
+      "short_label": "레벨 E",
+      "label": "레벨 E",
       "file": "./data/exams/level-test-99.json",
       "answer_key_file": "./data/answer-keys/answer-key-99-level-test.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "99회",
-      "full_label": "99회 레벨테스트 16문항"
+      "display_label": "레벨 E",
+      "full_label": "레벨 E 16문항"
     },
     {
       "id": "level-test-102",
@@ -399,14 +399,14 @@
       "section": "listening",
       "exam_type": "level-test",
       "exam_mode": "fixed",
-      "short_label": "102회",
-      "label": "102회",
+      "short_label": "레벨 F",
+      "label": "레벨 F",
       "file": "./data/exams/level-test-102.json",
       "answer_key_file": "./data/answer-keys/answer-key-102-level-test.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "102회",
-      "full_label": "102회 레벨테스트 16문항"
+      "display_label": "레벨 F",
+      "full_label": "레벨 F 16문항"
     },
     {
       "id": "level-test-100",
@@ -415,14 +415,14 @@
       "section": "listening",
       "exam_type": "level-test",
       "exam_mode": "fixed",
-      "short_label": "100회",
-      "label": "100회",
+      "short_label": "레벨 G",
+      "label": "레벨 G",
       "file": "./data/exams/level-test-100.json",
       "answer_key_file": "./data/answer-keys/answer-key-100-level-test.json",
       "enabled": true,
       "student_visible": true,
-      "display_label": "100회",
-      "full_label": "100회 레벨테스트 16문항"
+      "display_label": "레벨 G",
+      "full_label": "레벨 G 16문항"
     }
   ]
 }
