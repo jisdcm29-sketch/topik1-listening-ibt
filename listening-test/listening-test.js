@@ -11,6 +11,7 @@
 // Step22c: 문항 선택 연습에서 여러 회차의 동일 유형을 함께 출제.
 // Step49: 문항 선택 연습을 유형 버튼 전용으로 단순화하고 선택 회차의 해당 유형 전체를 출제.
 // Step22e: 문항 선택 연습 모드에서만 오디오 일시정지/계속 듣기 허용.
+// Step22f: 문항 선택 연습 화면에서 원문항 출처 배지 표시.
 
 const ListeningTestApp = (() => {
   const RANDOM_FULL_EXAM_ID = "topik1-listening-random-full-30";
@@ -2882,6 +2883,22 @@ const ListeningTestApp = (() => {
     bindOptionEvents(content);
   }
 
+  function getQuestionPracticeSourceLabel(item) {
+    if (!item || state.isQuestionPracticeMode !== true) return "";
+
+    const directLabel = String(item.question_practice_source_label || "").trim();
+    if (directLabel) return directLabel;
+
+    const sourceRound = String(item.source_round || "").trim();
+    const sourceQuestionNumber = Number(item.source_question_number || item.original_question_number || 0);
+
+    if (sourceRound && Number.isFinite(sourceQuestionNumber) && sourceQuestionNumber > 0) {
+      return `${sourceRound}회 ${sourceQuestionNumber}번`;
+    }
+
+    return "";
+  }
+
   function renderQuestionCard(item) {
     if (!item) return `<article class="question-card"><h3>문항 데이터 없음</h3></article>`;
 
@@ -2914,9 +2931,14 @@ const ListeningTestApp = (() => {
       `
       : "";
 
+    const sourceLabel = getQuestionPracticeSourceLabel(item);
+    const sourceBadge = state.isQuestionPracticeMode && sourceLabel
+      ? `<span class="question-source-badge" aria-label="원문항 출처">${escapeHtml(sourceLabel)}</span>`
+      : "";
+
     return `
       <article class="question-card student-question-card" data-student-dialogue-visible="false">
-        <h3>${item.question_number}. ${escapeHtml(item.question || "문항 데이터 준비 중입니다.")}</h3>
+        <h3>${item.question_number}. ${escapeHtml(item.question || "문항 데이터 준비 중입니다.")}${sourceBadge}</h3>
         ${reviewHint}
         ${imageChoices}
         ${textOptions}

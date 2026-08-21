@@ -352,4 +352,28 @@ button:disabled{cursor:not-allowed;opacity:.55}
   }
 }
 
+/* Step22f: 문항 선택 연습 화면에서 원문항 출처를 질문 뒤에 작게 표시 */
+.question-source-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 3px 8px;
+  border: 1px solid #b8d4f6;
+  border-radius: 999px;
+  background: #eef5ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
+}
 
+@media (max-width: 780px) {
+  .question-source-badge {
+    margin-left: 6px;
+    padding: 2px 6px;
+    font-size: 11px;
+  }
+}
