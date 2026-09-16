@@ -1,0 +1,51 @@
+/* Step24G: 세부 시험지 선택 목록 잘림 방지
+   - 첫 화면 디자인/기능은 유지한다.
+   - 데스크톱에서 시험지 목록을 버튼 위쪽으로 펼쳐 화면 아래에서 잘리지 않게 한다.
+   - 모바일/좁은 화면의 기존 스크롤 레이아웃은 건드리지 않는다. */
+
+@media (min-width: 981px) {
+  /* 목록이 카드/그리드 경계에 가려지지 않도록 한다. */
+  #login-screen .login-main,
+  #login-screen .select-panel,
+  #login-screen .select-panel > .select-group:nth-of-type(3) {
+    overflow: visible !important;
+  }
+
+  #login-screen .select-panel > .select-group:nth-of-type(3) {
+    z-index: 220 !important;
+  }
+
+  /* 세부 시험지 목록은 아래로 내리지 않고 위쪽으로 펼친다. */
+  #login-screen .exam-list.expanded {
+    top: auto !important;
+    bottom: 74px !important;
+    left: 12px !important;
+    right: 12px !important;
+    z-index: 500 !important;
+    max-height: 242px !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+    padding: 10px !important;
+    border: 1px solid #c7b8f4 !important;
+    border-radius: 14px !important;
+    background: rgba(255,255,255,.995) !important;
+    box-shadow: 0 18px 44px rgba(50, 35, 100, .22) !important;
+  }
+
+  #login-screen .exam-list.expanded .exam-select-btn {
+    min-height: 43px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-weight: 850 !important;
+  }
+}
+
+/* 낮은 데스크톱 화면에서는 목록 높이를 조금 더 줄여 상단 카드와 겹침을 최소화한다. */
+@media (min-width: 981px) and (max-height: 760px) {
+  #login-screen .exam-list.expanded {
+    bottom: 70px !important;
+    max-height: 210px !important;
+  }
+}

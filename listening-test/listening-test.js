@@ -1,4 +1,4 @@
-// TOPIK I 듣기 PBT형 IBT - listening-test.js
+﻿// TOPIK I 듣기 PBT형 IBT - listening-test.js
 // 시험 실행 전용. 특정 회차 파일명, 정답, 이미지 파일명을 직접 쓰지 않는다.
 // Step36: 30문항 랜덤 + 레벨테스트 랜덤 16문항 생성 지원. 보기 듣기 동행 유지.
 // Step10 wrong-review: 오답풀이 정답 문항 누적 차감 + 캐시 우회 적용.
@@ -1568,7 +1568,14 @@ const ListeningTestApp = (() => {
         started_at: new Date().toISOString()
       };
 
-      const timeMinutes = Number(state.exam.time_limit_minutes || (state.selectedTestType === "level-test" ? 20 : 40));
+      // Step24H timer control core: 臾명빆 ?좏깮 ?곗뒿?먯꽌留??섏뾽???쒓컙 ?ㅼ젙???곸슜?쒕떎.
+      const defaultTimeMinutes = Number(state.exam.time_limit_minutes || (state.selectedTestType === "level-test" ? 20 : 40));
+      const practiceTimerConfig = state.isQuestionPracticeMode
+        ? getQuestionPracticeTimerStartConfig(defaultTimeMinutes)
+        : { mode: "auto", minutes: defaultTimeMinutes, unlimited: false };
+      const timeMinutes = practiceTimerConfig.unlimited
+        ? defaultTimeMinutes
+        : Number(practiceTimerConfig.minutes || defaultTimeMinutes);
 
       prepareTestScreen({
         title: state.isQuestionPracticeMode
@@ -1585,7 +1592,7 @@ const ListeningTestApp = (() => {
         timeMinutes
       });
 
-      startOverallExamTimer(timeMinutes);
+      startOverallExamTimer(timeMinutes, { unlimited: state.isQuestionPracticeMode && practiceTimerConfig.unlimited });
       renderCurrentUnit({ autoPlay: true });
     } catch (error) {
       console.error("[startSelectedExam]", error);
@@ -2787,29 +2794,179 @@ const ListeningTestApp = (() => {
     }
   }
 
-  function startOverallExamTimer(minutes = 40) {
+  // Step24H timer control core
+  function getQuestionPracticeTimerStartConfig(defaultMinutes) {
+    const fallback = {
+      mode: "auto",
+      minutes: Math.max(1, Number(defaultMinutes || 40)),
+      unlimited: false
+    };
+
+    if (state.isQuestionPracticeMode !== true) return fallback;
+
+    try {
+      const config = window.TOPIK1PracticeTimer?.getStartConfig?.();
+      if (!config || typeof config !== "object") return fallback;
+
+      if (config.unlimited === true || String(config.mode || "") === "unlimited") {
+        return { mode: "unlimited", minutes: fallback.minutes, unlimited: true };
+      }
+
+      const requestedMinutes = Number(config.minutes);
+      if (Number.isFinite(requestedMinutes) && requestedMinutes > 0) {
+        return {
+          mode: String(config.mode || requestedMinutes),
+          minutes: Math.max(1, requestedMinutes),
+          unlimited: false
+        };
+      }
+    } catch (error) {
+      console.warn("[Step24H] practice timer start config read failed:", error);
+    }
+
+    return fallback;
+  }
+
+  function getExamTimerSnapshot() {
+    const timer = state.examTimer;
+    if (!timer) {
+      return {
+        active: false,
+        isQuestionPractice: state.isQuestionPracticeMode === true,
+        unlimited: false,
+        paused: false,
+        remainingSeconds: 0,
+        totalSeconds: 0
+      };
+    }
+
+    return {
+      active: !timer.isFinished && !state.submitted,
+      isQuestionPractice: state.isQuestionPracticeMode === true,
+      unlimited: timer.unlimited === true,
+      paused: timer.paused === true,
+      remainingSeconds: timer.unlimited ? null : Math.max(0, Number(timer.remainingSeconds || 0)),
+      totalSeconds: timer.unlimited ? null : Math.max(0, Number(timer.totalSeconds || 0))
+    };
+  }
+
+  function emitExamTimerChange(reason = "update") {
+    try {
+      window.dispatchEvent(new CustomEvent("topik1:examTimerChange", {
+        detail: { ...getExamTimerSnapshot(), reason }
+      }));
+    } catch {
+      // 援ы삎 釉뚮씪?곗??먯꽌???대깽???뚮┝留??앸왂?쒕떎.
+    }
+  }
+
+  function startOverallExamTimer(minutes = 40, options = {}) {
     const totalSeconds = Math.max(1, Math.round(Number(minutes || 40) * 60));
+    const unlimited = options.unlimited === true && state.isQuestionPracticeMode === true;
 
     if (state.examTimer?.intervalId) clearInterval(state.examTimer.intervalId);
 
-    state.examTimer = { totalSeconds, startedAtMs: Date.now(), intervalId: null, isFinished: false };
+    if (unlimited) {
+      state.examTimer = {
+        totalSeconds: null,
+        remainingSeconds: null,
+        lastTickAtMs: Date.now(),
+        intervalId: null,
+        isFinished: false,
+        paused: false,
+        unlimited: true
+      };
+      const remain = $("#remain-time");
+      if (remain) remain.textContent = "?쒗븳 ?놁쓬";
+      emitExamTimerChange("start-unlimited");
+      return;
+    }
+
+    state.examTimer = {
+      totalSeconds,
+      remainingSeconds: totalSeconds,
+      lastTickAtMs: Date.now(),
+      intervalId: null,
+      isFinished: false,
+      paused: false,
+      unlimited: false
+    };
     setRemainingTime(totalSeconds);
 
     state.examTimer.intervalId = window.setInterval(() => {
-      if (!state.examTimer || state.examTimer.isFinished || state.submitted) return;
+      const timer = state.examTimer;
+      if (!timer || timer.isFinished || state.submitted || timer.unlimited) return;
+      if (timer.paused) return;
 
-      const elapsedSeconds = Math.floor((Date.now() - state.examTimer.startedAtMs) / 1000);
-      const remainingSeconds = Math.max(0, state.examTimer.totalSeconds - elapsedSeconds);
+      const now = Date.now();
+      const lastTick = Number(timer.lastTickAtMs || now);
+      const elapsedSeconds = Math.max(0, (now - lastTick) / 1000);
+      timer.lastTickAtMs = now;
+      timer.remainingSeconds = Math.max(0, Number(timer.remainingSeconds || 0) - elapsedSeconds);
 
-      setRemainingTime(remainingSeconds);
+      setRemainingTime(timer.remainingSeconds);
 
-      if (remainingSeconds <= 0) {
-        state.examTimer.isFinished = true;
-        clearInterval(state.examTimer.intervalId);
-        state.examTimer.intervalId = null;
+      if (timer.remainingSeconds <= 0) {
+        timer.isFinished = true;
+        clearInterval(timer.intervalId);
+        timer.intervalId = null;
+        emitExamTimerChange("time-up");
         submitTest({ manual: false, reason: state.isWrongReviewMode ? "wrong_review_time_up" : "time_up" });
       }
     }, 250);
+
+    emitExamTimerChange("start");
+  }
+
+  function pausePracticeExamTimer() {
+    const timer = state.examTimer;
+    if (state.isQuestionPracticeMode !== true || !timer || timer.unlimited || timer.isFinished || state.submitted) return false;
+    if (timer.paused) return true;
+
+    const now = Date.now();
+    const lastTick = Number(timer.lastTickAtMs || now);
+    const elapsedSeconds = Math.max(0, (now - lastTick) / 1000);
+    timer.remainingSeconds = Math.max(0, Number(timer.remainingSeconds || 0) - elapsedSeconds);
+    timer.lastTickAtMs = now;
+    timer.paused = true;
+    setRemainingTime(timer.remainingSeconds);
+    emitExamTimerChange("pause");
+    return true;
+  }
+
+  function resumePracticeExamTimer() {
+    const timer = state.examTimer;
+    if (state.isQuestionPracticeMode !== true || !timer || timer.unlimited || timer.isFinished || state.submitted) return false;
+    if (!timer.paused) return true;
+
+    timer.lastTickAtMs = Date.now();
+    timer.paused = false;
+    emitExamTimerChange("resume");
+    return true;
+  }
+
+  function addPracticeExamTime(seconds = 600) {
+    const timer = state.examTimer;
+    if (state.isQuestionPracticeMode !== true || !timer || timer.unlimited || timer.isFinished || state.submitted) {
+      return getExamTimerSnapshot();
+    }
+
+    const extraSeconds = Math.max(0, Math.round(Number(seconds || 0)));
+    if (!extraSeconds) return getExamTimerSnapshot();
+
+    if (!timer.paused) {
+      const now = Date.now();
+      const lastTick = Number(timer.lastTickAtMs || now);
+      const elapsedSeconds = Math.max(0, (now - lastTick) / 1000);
+      timer.remainingSeconds = Math.max(0, Number(timer.remainingSeconds || 0) - elapsedSeconds);
+      timer.lastTickAtMs = now;
+    }
+
+    timer.remainingSeconds = Number(timer.remainingSeconds || 0) + extraSeconds;
+    timer.totalSeconds = Number(timer.totalSeconds || 0) + extraSeconds;
+    setRemainingTime(timer.remainingSeconds);
+    emitExamTimerChange("add-time");
+    return getExamTimerSnapshot();
   }
 
   function setRemainingTime(seconds) {
@@ -3456,7 +3613,14 @@ const ListeningTestApp = (() => {
       .replaceAll("'", "&#039;");
   }
 
-  return { init };
+  return {
+    init,
+    getExamTimerSnapshot,
+    pausePracticeExamTimer,
+    resumePracticeExamTimer,
+    addPracticeExamTime
+  };
 })();
 
 document.addEventListener("DOMContentLoaded", ListeningTestApp.init);
+

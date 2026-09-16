@@ -1,0 +1,167 @@
+/* Step24H: 문항 선택 연습 전용 전체 시간 제어 */
+
+/* 첫 화면 - 문항 연습 시간 선택 */
+#login-screen .question-practice-panel,
+#login-screen .question-practice-panel.collapsed,
+#login-screen .question-practice-panel.expanded {
+  grid-template-rows: auto auto auto auto auto auto !important;
+}
+
+#login-screen .step24h-practice-time-start {
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  gap: 9px;
+  align-items: center;
+  padding: 7px 9px;
+  border: 1px solid #f1c77a;
+  border-radius: 11px;
+  background: linear-gradient(180deg, #fffdf5 0%, #fff8e7 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.85);
+}
+
+#login-screen .step24h-time-title {
+  color: #805214;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#login-screen .step24h-time-mode-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+#login-screen .step24h-time-mode-buttons button {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 7px;
+  border: 1px solid #e3b85f;
+  border-radius: 8px;
+  background: #fff;
+  color: #78501a;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+#login-screen .step24h-time-mode-buttons button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(173, 112, 24, .12);
+}
+
+#login-screen .step24h-time-mode-buttons button.active {
+  border-color: #e59b18;
+  background: linear-gradient(180deg, #ffbd43 0%, #f3a71e 100%);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(207, 132, 10, .20);
+}
+
+#login-screen .step24h-time-note {
+  color: #9a6d2e;
+  font-size: 11px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+/* 시험 화면 상단 - 문항 연습일 때만 */
+#test-screen .remain-time-box.step24h-practice-live {
+  min-width: 330px;
+  width: auto;
+  display: grid !important;
+  grid-template-columns: auto auto minmax(142px, auto);
+  gap: 8px;
+  align-items: center;
+  padding: 7px 9px !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  box-shadow: 0 4px 14px rgba(20, 74, 135, .12);
+}
+
+#test-screen .remain-time-box.step24h-practice-live > span {
+  font-size: 12px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+#test-screen .remain-time-box.step24h-practice-live > strong {
+  min-width: 78px;
+  font-size: 17px;
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#test-screen .step24h-live-time-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#test-screen .step24h-live-time-actions button {
+  min-height: 32px;
+  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8eb9eb;
+  border-radius: 8px;
+  background: #f7fbff;
+  color: #1766ba;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#test-screen .step24h-live-time-actions button:hover {
+  background: #eaf4ff;
+}
+
+#test-screen .remain-time-box.step24h-timer-paused {
+  border-color: #e6a51f !important;
+  background: #fff8e7 !important;
+  box-shadow: 0 4px 14px rgba(201, 137, 19, .14);
+}
+
+#test-screen #step24h-timer-pause-btn.active {
+  border-color: #d18a00;
+  background: #f0a91f;
+  color: #fff;
+}
+
+#test-screen .remain-time-box.step24h-timer-unlimited {
+  min-width: 235px;
+  grid-template-columns: auto auto;
+  border-color: #61b991 !important;
+  background: #effcf6 !important;
+}
+
+#test-screen .remain-time-box.step24h-timer-unlimited > strong {
+  min-width: 92px;
+  color: #087a4a;
+}
+
+@media (max-width: 1180px) {
+  #login-screen .step24h-practice-time-start {
+    grid-template-columns: 66px minmax(0, 1fr);
+  }
+  #login-screen .step24h-time-note { display: none; }
+
+  #test-screen .remain-time-box.step24h-practice-live {
+    min-width: 275px;
+    grid-template-columns: auto auto;
+  }
+  #test-screen .step24h-live-time-actions {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+}
