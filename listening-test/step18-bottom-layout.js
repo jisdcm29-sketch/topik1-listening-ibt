@@ -803,7 +803,9 @@
   function initStep23dBottomLayout() {
     ensurePracticeSeekStyle();
     bindSafetyHandlers();
-    bindPracticeSeek();
+    // Step24K: 문항 선택 연습 seek는 단일 컨트롤러가 담당한다.
+    // 기존 Step23D의 이중 seek 바인딩은 실행하지 않는다.
+    // bindPracticeSeek();
     updateBottomControls();
 
     const watchTargets = [

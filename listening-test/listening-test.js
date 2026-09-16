@@ -2877,7 +2877,7 @@ const ListeningTestApp = (() => {
         unlimited: true
       };
       const remain = $("#remain-time");
-      if (remain) remain.textContent = "?쒗븳 ?놁쓬";
+      if (remain) remain.textContent = "제한 없음";
       emitExamTimerChange("start-unlimited");
       return;
     }

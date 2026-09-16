@@ -196,8 +196,7 @@
       const progress = el?.closest?.(".audio-progress.practice-seek-enabled");
       if (!progress) return;
 
-      const wasPlaying = !audio.paused && !audio.ended;
-      beginSoftTransition("seek", wasPlaying);
+      beginSoftTransition("seek", false);
     }, true);
 
     // 키보드 탐색(Home/End/좌우 화살표)도 동일하게 처리한다.
@@ -207,8 +206,7 @@
       if (!el?.closest?.(".audio-progress.practice-seek-enabled")) return;
       if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
 
-      const wasPlaying = !audio.paused && !audio.ended;
-      beginSoftTransition("seek", wasPlaying);
+      beginSoftTransition("seek", false);
     }, true);
 
     // 문항 연습의 일시정지/계속 듣기 자체에서도 짧은 전환음을 억제한다.
