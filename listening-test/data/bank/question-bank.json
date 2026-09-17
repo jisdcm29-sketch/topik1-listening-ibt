@@ -3992,7 +3992,7 @@
           "text": "남자는 김준 씨와 사진을 찍지 못했습니다."
         }
       ],
-      "correct_answer": 3,
+      "correct_answer": 2,
       "points": 3,
       "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
       "student_visible_dialogue": false,
@@ -19913,7 +19913,7 @@
           "text": "남자는 김준 씨와 사진을 찍지 못했습니다."
         }
       ],
-      "correct_answer": 3,
+      "correct_answer": 2,
       "points": 3,
       "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
       "student_visible_dialogue": false,
