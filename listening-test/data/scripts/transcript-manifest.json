@@ -1,9 +1,10 @@
 {
-  "version": "step26e-add-round102-pdf",
+  "version": "step26f-add-round97-verified",
   "rounds": {
     "83": "./data/scripts/transcript-83.json",
     "91": "./data/scripts/transcript-91.json",
     "96": "./data/scripts/transcript-96.json",
+    "97": "./data/scripts/transcript-97.json",
     "102": "./data/scripts/transcript-102.json"
   }
 }
