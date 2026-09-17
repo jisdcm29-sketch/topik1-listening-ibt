@@ -1,1 +1,7 @@
-
+{
+  "version": "step25d-mn-translation-manifest",
+  "language": "mn",
+  "rounds": {
+    "91": "./data/scripts/translations/translation-mn-91.json"
+  }
+}
