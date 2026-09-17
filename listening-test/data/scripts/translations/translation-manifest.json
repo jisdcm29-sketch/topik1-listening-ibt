@@ -1,11 +1,12 @@
 {
-  "version": "step26g-add-round100-verified-mn",
+  "version": "step26h-add-round99-verified-mn",
   "language": "mn",
   "rounds": {
     "83": "./data/scripts/translations/translation-mn-83.json",
     "91": "./data/scripts/translations/translation-mn-91.json",
     "96": "./data/scripts/translations/translation-mn-96.json",
     "97": "./data/scripts/translations/translation-mn-97.json",
+    "99": "./data/scripts/translations/translation-mn-99.json",
     "100": "./data/scripts/translations/translation-mn-100.json",
     "102": "./data/scripts/translations/translation-mn-102.json"
   }
