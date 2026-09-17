@@ -1,8 +1,9 @@
 {
-  "version": "step26a-add-round83-mn",
+  "version": "step26b-add-round96-mn",
   "language": "mn",
   "rounds": {
     "83": "./data/scripts/translations/translation-mn-83.json",
-    "91": "./data/scripts/translations/translation-mn-91.json"
+    "91": "./data/scripts/translations/translation-mn-91.json",
+    "96": "./data/scripts/translations/translation-mn-96.json"
   }
 }
