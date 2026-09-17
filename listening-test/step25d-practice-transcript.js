@@ -117,7 +117,7 @@
       }
 
       const hasTranscript = !!manifest?.rounds?.[round];
-      button.textContent = hasTranscript ? `${round}회 · 대본` : `${round}회`;
+      button.textContent = button.dataset.originalPracticeLabel || String(button.textContent || "").trim();
       button.title = hasTranscript ? `${round}회 듣기 연습 · 대본 탑재` : `${round}회 듣기 연습`;
       button.setAttribute("aria-label", button.title);
     });
