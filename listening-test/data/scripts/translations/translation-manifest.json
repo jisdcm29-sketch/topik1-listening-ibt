@@ -1,7 +1,8 @@
 {
-  "version": "step25d-mn-translation-manifest",
+  "version": "step26a-add-round83-mn",
   "language": "mn",
   "rounds": {
+    "83": "./data/scripts/translations/translation-mn-83.json",
     "91": "./data/scripts/translations/translation-mn-91.json"
   }
 }
