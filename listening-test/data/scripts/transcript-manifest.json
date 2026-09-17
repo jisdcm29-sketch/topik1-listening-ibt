@@ -1,6 +1,7 @@
 {
-  "version": "step25a-practice-transcript-manifest",
+  "version": "step26a-add-round83",
   "rounds": {
+    "83": "./data/scripts/transcript-83.json",
     "91": "./data/scripts/transcript-91.json"
   }
 }
