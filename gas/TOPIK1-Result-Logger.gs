@@ -3,7 +3,7 @@
  * Server-side Google Apps Script only.
  */
 
-const RESULT_LOGGER_VERSION = 'step27a-20260918';
+const RESULT_LOGGER_VERSION = 'step29-choice-mn-20261007';
 const DEVELOPER_PHONE = '12345678';
 
 const SHEET_STUDENTS = 'Students';
@@ -97,8 +97,13 @@ function doGet(e) {
       ok: true,
       service: 'TOPIK1_RESULT_LOGGER',
       version: RESULT_LOGGER_VERSION,
-      ready: !!PropertiesService.getScriptProperties().getProperty('RESULT_SPREADSHEET_ID')
+      ready: !!PropertiesService.getScriptProperties().getProperty('RESULT_SPREADSHEET_ID'),
+      choice_mn_translation: true
     });
+  }
+
+  if (action === 'translate_options') {
+    return translateOptionsResponse_(e);
   }
 
   return jsonOutput_({
@@ -106,6 +111,104 @@ function doGet(e) {
     error: 'unsupported_action',
     version: RESULT_LOGGER_VERSION
   });
+}
+
+function translateOptionsResponse_(e) {
+  const params = (e && e.parameter) || {};
+  const callback = String(params.callback || '').trim();
+  const developerPhone = normalizePhone_(params.phone || '');
+
+  if (developerPhone !== DEVELOPER_PHONE) {
+    return scriptOrJsonOutput_(callback, {
+      ok: false,
+      error: 'developer_only',
+      version: RESULT_LOGGER_VERSION
+    });
+  }
+
+  let texts = [];
+  try {
+    texts = JSON.parse(String(params.texts || '[]'));
+  } catch (err) {
+    return scriptOrJsonOutput_(callback, {
+      ok: false,
+      error: 'invalid_texts',
+      version: RESULT_LOGGER_VERSION
+    });
+  }
+
+  if (!Array.isArray(texts)) texts = [];
+  texts = texts
+    .slice(0, 12)
+    .map(function(value) { return String(value || '').trim().slice(0, 500); })
+    .filter(function(value) { return !!value; });
+
+  if (!texts.length) {
+    return scriptOrJsonOutput_(callback, {
+      ok: true,
+      translations: [],
+      version: RESULT_LOGGER_VERSION
+    });
+  }
+
+  const cache = CacheService.getScriptCache();
+  const translations = texts.map(function(text) {
+    const key = 'ko-mn:' + digestKey_(text);
+    let translated = '';
+
+    try {
+      translated = cache.get(key) || '';
+    } catch (err) {}
+
+    if (!translated) {
+      try {
+        translated = LanguageApp.translate(text, 'ko', 'mn');
+        if (translated) {
+          try { cache.put(key, translated, 21600); } catch (err) {}
+        }
+      } catch (err) {
+        translated = '';
+      }
+    }
+
+    return {
+      ko: text,
+      mn: String(translated || '').trim()
+    };
+  });
+
+  return scriptOrJsonOutput_(callback, {
+    ok: true,
+    source_language: 'ko',
+    target_language: 'mn',
+    translations: translations,
+    version: RESULT_LOGGER_VERSION
+  });
+}
+
+function digestKey_(text) {
+  const digest = Utilities.computeDigest(
+    Utilities.DigestAlgorithm.SHA_256,
+    String(text || ''),
+    Utilities.Charset.UTF_8
+  );
+
+  return digest.map(function(b) {
+    const n = b < 0 ? b + 256 : b;
+    return ('0' + n.toString(16)).slice(-2);
+  }).join('').slice(0, 32);
+}
+
+function scriptOrJsonOutput_(callback, obj) {
+  const safeCallback = /^[A-Za-z_$][A-Za-z0-9_$\.]{0,120}$/.test(callback)
+    ? callback
+    : '';
+
+  if (!safeCallback) return jsonOutput_(obj);
+
+  return ContentService
+    .createTextOutput(safeCallback + '(' + JSON.stringify(obj) + ');')
+    .setMimeType(ContentService.MimeType.JAVASCRIPT);
 }
 
 function doPost(e) {
