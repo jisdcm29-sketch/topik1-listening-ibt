@@ -1270,7 +1270,7 @@ const ListeningTestApp = (() => {
         source_question_number: original,
         source_round: sourceItem.source_round || sourceRound,
         example_id: exampleId,
-        question_practice_source_label: `${sourceRoundLabel} ${original}번`
+        question_practice_source_label: `원문항 ${original}번`
       };
 
       outputItemsByOriginalQuestion.set(original, mappedItem);
@@ -3050,7 +3050,7 @@ const ListeningTestApp = (() => {
     const sourceQuestionNumber = Number(item.source_question_number || item.original_question_number || 0);
 
     if (sourceRound && Number.isFinite(sourceQuestionNumber) && sourceQuestionNumber > 0) {
-      return `${sourceRound}회 ${sourceQuestionNumber}번`;
+      return `원문항 ${sourceQuestionNumber}번`;
     }
 
     return "";
@@ -3093,8 +3093,16 @@ const ListeningTestApp = (() => {
       ? `<span class="question-source-badge" aria-label="원문항 출처">${escapeHtml(sourceLabel)}</span>`
       : "";
 
+    const internalSourceRound = state.isQuestionPracticeMode ? String(item.source_round || "").trim() : "";
+    const internalSourceQuestion = state.isQuestionPracticeMode
+      ? Number(item.source_question_number || item.original_question_number || 0)
+      : 0;
+    const sourceDataAttrs = internalSourceRound && Number.isFinite(internalSourceQuestion) && internalSourceQuestion > 0
+      ? ` data-source-round="${escapeHtml(internalSourceRound)}" data-source-question="${internalSourceQuestion}"`
+      : "";
+
     return `
-      <article class="question-card student-question-card" data-student-dialogue-visible="false">
+      <article class="question-card student-question-card" data-student-dialogue-visible="false"${sourceDataAttrs}>
         <h3>${item.question_number}. ${escapeHtml(item.question || "문항 데이터 준비 중입니다.")}${sourceBadge}</h3>
         ${reviewHint}
         ${imageChoices}

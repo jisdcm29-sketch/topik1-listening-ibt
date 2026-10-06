@@ -11,7 +11,9 @@
 (function () {
   "use strict";
 
-  const VERSION = "step25d-mn-translation";
+  const VERSION = "step28-teacher-transcript-source-data";
+  const TEACHER_PHONE = "12345678";
+  const ACTIVE_PHONE_KEY = "topik1-listening-active-phone-step27e";
   const MANIFEST_URL = `./data/scripts/transcript-manifest.json?v=${VERSION}`;
   const TRANSLATION_MANIFEST_URL = `./data/scripts/translations/translation-manifest.json?v=${VERSION}`;
   const BAR_ID = "practice-transcript-bar";
@@ -48,16 +50,65 @@
       .replace(/'/g, "&#039;");
   }
 
+  function normalizePhone(value) {
+    return String(value || "").replace(/\D/g, "");
+  }
+
+  function currentPhone() {
+    const inputPhone = normalizePhone($("#student-phone")?.value || "");
+    if (inputPhone) return inputPhone;
+
+    try {
+      const saved = normalizePhone(sessionStorage.getItem(ACTIVE_PHONE_KEY) || "");
+      if (saved) return saved;
+    } catch {}
+
+    try {
+      const latest = JSON.parse(localStorage.getItem("topik1-listening-result-latest") || "null");
+      const storedPhone = normalizePhone(latest?.student_phone || "");
+      if (storedPhone) return storedPhone;
+    } catch {}
+
+    return "";
+  }
+
+  function hasTeacherTranscriptAccess() {
+    try {
+      if (typeof window.TOPIK1RoleGate?.isTeacher === "function") {
+        return window.TOPIK1RoleGate.isTeacher() === true;
+      }
+    } catch {}
+    return currentPhone() === TEACHER_PHONE;
+  }
+
   function isPracticeScreenActive() {
     const screen = $("#test-screen");
     const title = String($("#test-header-title")?.textContent || "").trim();
-    return !!screen && !screen.hidden && title.includes("선택 문항 연습");
+    return !!screen && !screen.hidden &&
+      (title.includes("선택 문항 연습") || title.includes("문항 선택 연습"));
   }
 
   function parseCurrentSource() {
     const content = $("#question-content");
     if (!content) return null;
 
+    // Step28: 공개 화면에서 회차 번호를 숨겨도 대본 연결은 내부 data-* 값으로 유지한다.
+    // 이 값은 listening-test.js가 문항 카드에만 넣으며 화면 텍스트로 표시하지 않는다.
+    const card = content.querySelector(".question-card[data-source-round][data-source-question]");
+    if (card) {
+      const round = String(card.dataset.sourceRound || "").trim();
+      const startQuestion = Number(card.dataset.sourceQuestion || 0);
+      if (round && Number.isFinite(startQuestion) && startQuestion > 0) {
+        return {
+          round,
+          question: startQuestion,
+          endQuestion: startQuestion,
+          key: `${round}:${startQuestion}-${startQuestion}`
+        };
+      }
+    }
+
+    // 이전 버전 호환: 기존 화면에 회차 배지가 남아 있는 경우에만 텍스트에서 읽는다.
     const text = String(content.innerText || content.textContent || "");
     const re = /(\d{2,4})\s*회\s*(\d{1,2})(?:\s*[~\-–]\s*(\d{1,2}))?\s*번/g;
     const match = re.exec(text);
@@ -185,19 +236,20 @@
       #${BAR_ID}[hidden], #${OVERLAY_ID}[hidden], #${QUESTION_DETAILS_ID}[hidden], #${ANSWER_DETAILS_ID}[hidden], #${TRANSLATION_TOGGLE_ID}[hidden], #${OVERLAY_ID} .pt-mn[hidden] { display: none !important; }
 
       #${BAR_ID} {
-        width: min(100%, 1160px);
-        margin: 8px auto 10px;
-        padding: 8px 12px;
-        display: flex;
+        width: auto;
+        margin: 0 0 0 8px;
+        padding: 0;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
+        flex: 0 0 auto;
       }
 
       #${BUTTON_ID} {
-        min-width: 220px;
-        min-height: 44px;
-        padding: 9px 20px;
+        min-width: 190px;
+        min-height: 46px;
+        padding: 8px 16px;
         border: 2px solid #1d73e8;
         border-radius: 12px;
         background: #ffffff;
@@ -507,8 +559,8 @@
       }
 
       @media (max-width: 720px) {
-        #${BAR_ID} { margin: 6px auto 8px; padding: 6px 10px; }
-        #${BUTTON_ID} { width: 100%; min-height: 42px; font-size: 15px; }
+        #${BAR_ID} { margin: 6px 0 0; padding: 0; width: 100%; justify-content: center; }
+        #${BUTTON_ID} { width: auto; min-width: 180px; min-height: 42px; font-size: 15px; }
         #${OVERLAY_ID} .pt-head { padding: 14px; gap: 10px; }
         #${OVERLAY_ID} .pt-close { min-width: 76px; min-height: 42px; padding: 7px 10px; font-size: 15px; }
         #${OVERLAY_ID} .pt-body { padding: 8px 8px 10px; }
@@ -529,14 +581,16 @@
     let bar = $(`#${BAR_ID}`);
     if (bar) return bar;
 
-    const content = $("#question-content");
-    if (!content) return null;
+    const solvingBox = $("#phase-solving");
+    const phaseRow = solvingBox?.parentElement || $(".phase-timer-row");
+    if (!phaseRow) return null;
 
     bar = document.createElement("div");
     bar.id = BAR_ID;
     bar.hidden = true;
     bar.innerHTML = `<button id="${BUTTON_ID}" type="button">듣기 대본 보기</button>`;
-    content.insertAdjacentElement("beforebegin", bar);
+    if (solvingBox) solvingBox.insertAdjacentElement("afterend", bar);
+    else phaseRow.appendChild(bar);
     $(`#${BUTTON_ID}`)?.addEventListener("click", openCurrentTranscript);
     return bar;
   }
@@ -782,7 +836,7 @@
       pendingTranslationButton.hidden = true;
       pendingTranslationButton.disabled = true;
     }
-    title.textContent = `${source.round}회 TOPIK I 듣기 대본`;
+    title.textContent = `TOPIK I 듣기 대본`;
     body.innerHTML = `<div class="pt-loading">대본을 불러오는 중입니다.</div>`;
     answerDetails.innerHTML = `<div class="pt-answer-title">정답 확인</div><div class="pt-answer-row">불러오는 중입니다.</div>`;
     $("#practice-transcript-close-btn")?.focus();
@@ -800,7 +854,7 @@
       if (!entry) throw new Error(`${source.round}회 ${source.question}번 대본을 찾지 못했습니다.`);
 
       const qLabel = formatQuestionLabel(entry.questions);
-      title.textContent = `${source.round}회 TOPIK I 듣기 대본 · ${qLabel}`;
+      title.textContent = `TOPIK I 듣기 대본 · ${qLabel}`;
 
       const translationEntry = translation?.entries?.[entryId] || null;
       const translationLines = Array.isArray(translationEntry?.lines) ? translationEntry.lines : [];
@@ -823,8 +877,6 @@
       body.innerHTML = `
         <article class="pt-sheet pt-density-${density}">
           <div class="pt-meta">
-            <span>${escapeHtml(source.round)}회</span>
-            <span>·</span>
             <span>${escapeHtml(qLabel)}</span>
             ${entry.track ? `<span>·</span><span>${escapeHtml(entry.track)}</span>` : ""}
           </div>
@@ -872,7 +924,7 @@
     const bar = ensureBar();
     if (!bar) return;
 
-    if (!isPracticeScreenActive()) {
+    if (!isPracticeScreenActive() || !hasTeacherTranscriptAccess()) {
       bar.hidden = true;
       currentSourceKey = "";
       closeOverlay();
@@ -902,7 +954,7 @@
       const button = $(`#${BUTTON_ID}`);
       if (button) {
         button.disabled = false;
-        button.textContent = `듣기 대본 보기 · ${source.round}회 ${source.question}번`;
+        button.textContent = `듣기 대본 보기 · 원문항 ${source.question}번`;
         button.title = "문항 선택 연습 전용 대본입니다. 기존 시험 기능과 독립적으로 표시됩니다.";
       }
     } catch (error) {
@@ -950,6 +1002,18 @@
     if (testScreen) {
       const screenObserver = new MutationObserver(queueSync);
       screenObserver.observe(testScreen, { attributes: true, attributeFilter: ["hidden"] });
+    }
+
+    // Step28: 12345678 개발자/교사 모드 전환 직후에도 대본 버튼 상태를 즉시 다시 계산한다.
+    const phoneInput = $("#student-phone");
+    if (phoneInput) {
+      phoneInput.addEventListener("input", queueSync);
+      phoneInput.addEventListener("change", queueSync);
+    }
+
+    if (document.body) {
+      const roleObserver = new MutationObserver(queueSync);
+      roleObserver.observe(document.body, { attributes: true, attributeFilter: ["class"] });
     }
 
     document.addEventListener("keydown", (event) => {
