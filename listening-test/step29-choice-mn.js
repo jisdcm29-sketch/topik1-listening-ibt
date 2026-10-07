@@ -8,7 +8,7 @@
 (() => {
   "use strict";
 
-  const VERSION = "step29e-inline-choice-mn-20261007";
+  const VERSION = "step29f-transcript-font-match-20261007";
   const DEVELOPER_PHONE = "12345678";
   const ENDPOINT = window.TOPIK1ResultLogger?.endpoint ||
     "https://script.google.com/macros/s/AKfycbwhl9RJdfqwSPjoQp2_ysrIzT3V5XojfPoXHdvLCdgdL1FymhW6u-BgyHMZIg3SbrRg/exec";
@@ -83,23 +83,33 @@
         line-height: 1.5;
         font-weight: 700;
       }
+      /* Step29F: 선택지 한국어/몽골어 글자 스타일을 듣기 대본과 동일하게 맞춘다. */
       #${QUESTION_DETAILS_ID} .pt-option > div {
         min-width: 0;
+        color: #0f172a;
+        font-size: clamp(21px, 1.55vw, 27px);
+        line-height: 1.38;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        word-break: keep-all;
+        overflow-wrap: anywhere;
       }
       #${QUESTION_DETAILS_ID} .${OPTION_MN_CLASS} {
         margin: 5px 0 0;
-        color: #087054;
-        font-size: 17px;
-        line-height: 1.45;
-        font-weight: 700;
+        color: #475569;
+        font-size: clamp(16px, 1.18vw, 20px);
+        line-height: 1.42;
+        font-weight: 650;
+        letter-spacing: normal;
+        word-break: normal;
+        overflow-wrap: anywhere;
       }
       body.step27e-student-mode #${BUTTON_ID},
       body.step27e-student-mode .${QUESTION_MN_CLASS},
       body.step27e-student-mode .${OPTION_MN_CLASS} { display: none !important; }
       @media (max-width: 720px) {
         #${BUTTON_ID} { min-width: 128px; min-height: 40px; font-size: 15px; }
-        #${QUESTION_DETAILS_ID} .${QUESTION_MN_CLASS},
-        #${QUESTION_DETAILS_ID} .${OPTION_MN_CLASS} { font-size: 15px; }
+        #${QUESTION_DETAILS_ID} .${QUESTION_MN_CLASS} { font-size: 15px; }
       }
     `;
     document.head.appendChild(style);
