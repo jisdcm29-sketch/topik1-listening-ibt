@@ -1571,7 +1571,7 @@
           "text": "여자는 축구를 보기 전에 저녁을 먹을 겁니다."
         }
       ],
-      "correct_answer": 3,
+      "correct_answer": 2,
       "points": 3,
       "description": "학생용 실제 문항에는 듣기 대본을 표시하지 않음.",
       "student_visible_dialogue": false,
