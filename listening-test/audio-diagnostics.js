@@ -67,7 +67,14 @@
         item.attempts += 1;
         item.nextAt = Date.now() + [60000, 300000, 900000][Math.min(2,item.attempts-1)];
       }
-      saveQueue(q);
+      // Merge attempt counters into the latest queue so a new issue arriving
+      // while fetch is in progress cannot be lost by a stale snapshot write.
+      const current = readQueue();
+      const attemptsById = new Map(q.map(x => [x.issue?.event_id, x]));
+      saveQueue(current.map(x => {
+        const updated = attemptsById.get(x.issue?.event_id);
+        return updated ? { ...x, attempts: updated.attempts, nextAt: updated.nextAt } : x;
+      }));
     } finally { sending = false; }
   }
   window.addEventListener("online", scheduleFlush);
