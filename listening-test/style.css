@@ -120,6 +120,15 @@ button:disabled{cursor:not-allowed;opacity:.55}
 .image-choice-btn.selected{border-color:var(--topik-blue);box-shadow:0 0 0 3px rgba(20,118,232,.14)}
 .image-choice-btn img{width:100%;height:auto;display:block}
 
+/* Paired listening wrong-review: completed sibling stays visible but is noninteractive. */
+.wrong-review-status{margin:0 0 12px;padding:8px 10px;border-radius:7px;font-size:15px;font-weight:800}
+.wrong-review-status-done{color:#475569;background:#f1f5f9}
+.wrong-review-status-target{color:#1755aa;background:#eaf2ff}
+.wrong-review-done-card{background:#f8fafc}
+.wrong-review-done-card .option-btn:disabled,
+.wrong-review-done-card .image-choice-btn:disabled{opacity:.55;cursor:not-allowed}
+
+
 /* 개발/검수 전용 */
 .dev-nav-panel{display:flex;justify-content:center;gap:8px;margin-top:12px}
 .dev-nav-panel button{min-width:110px;height:36px;border:1px solid #aab9ca;border-radius:8px;background:#fff;color:#31465e;font-weight:900}
