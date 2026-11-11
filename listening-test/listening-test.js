@@ -1616,14 +1616,22 @@ const ListeningTestApp = (() => {
         return;
       }
 
-      const meta = findExamMetaForResult(latest) || state.selectedExamMeta;
-      if (!meta) throw new Error("exam meta not found");
+      const isMultiRoundPractice = isQuestionPracticeReviewResult(latest);
+      const meta = isMultiRoundPractice
+        ? null
+        : findExamMetaForResult(latest);
+      if (!isMultiRoundPractice && !meta) throw new Error("original exam meta not found");
 
-      state.selectedExamMeta = meta;
       state.isWrongReviewMode = true;
       state.isQuestionPracticeMode = false;
       state.reviewSourceResult = latest;
-      await loadExamAndAnswerKey(meta);
+      if (isMultiRoundPractice) {
+        await restoreQuestionPracticeForWrongReview(latest);
+      } else {
+        state.selectedExamMeta = meta;
+        await loadExamAndAnswerKey(meta);
+        assertWrongReviewItemsMatch(latest, state.exam);
+      }
 
       state.renderIndex = 0;
       state.answers = {};
@@ -1650,6 +1658,153 @@ const ListeningTestApp = (() => {
       console.error("[startWrongReviewFromLatest]", error);
       alert("오답풀이를 시작하지 못했습니다. localStorage 결과와 시험 파일을 확인하세요.");
     }
+  }
+
+  // Restore the actual multi-round practice paper from the submitted source items.
+  // Output numbers (1..21) are NOT the original TOPIK question numbers (22..24).
+  function isQuestionPracticeReviewResult(result) {
+    return String(result?.generated_exam_mode || "") === "question-practice" ||
+      String(result?.test_scope || "").startsWith("여러 회차 동일 유형 연습:");
+  }
+
+  function stableReviewOptions(options) {
+    return JSON.stringify((options || []).map((o) => ({
+      choice: Number(o.choice),
+      text: String(o.text || "")
+    })));
+  }
+
+  function assertWrongReviewItemsMatch(result, exam) {
+    const actual = new Map((exam?.items || []).map((item) => [Number(item.question_number), item]));
+    for (const saved of (result?.items || [])) {
+      const candidate = actual.get(Number(saved.question_number));
+      if (!candidate ||
+          String(candidate.audio_url || "") !== String(saved.audio_url || "") ||
+          String(candidate.image_url || "") !== String(saved.image_url || "") ||
+          String(candidate.question || "") !== String(saved.question || "") ||
+          stableReviewOptions(candidate.options) !== stableReviewOptions(saved.options)) {
+        throw new Error("wrong-review source mismatch at displayed question " + saved.question_number);
+      }
+    }
+  }
+
+  async function restoreQuestionPracticeForWrongReview(result) {
+    const savedItems = Array.isArray(result?.items) ? result.items : [];
+    if (!savedItems.length) throw new Error("question practice result has no items");
+    const rounds = [...new Set(savedItems.map(i => String(i.source_round || "")))];
+    if (rounds.some(r => !/^\d{2,4}$/.test(r))) throw new Error("missing source round in practice result");
+
+    const bundles = await Promise.all(rounds.map(async (round) => {
+      const meta = (state.manifest?.exams || []).find(e =>
+        String(e.source_round || "") === round && e.enabled === true &&
+        e.exam_type === "full" && e.student_visible === true && e.file);
+      if (!meta) throw new Error("source exam unavailable for round " + round);
+      return {
+        round,
+        exam: await loadJson(meta.file)
+      };
+    }));
+    const byRound = new Map(bundles.map(b => [b.round, b.exam]));
+    const outputNumber = new Map();
+    const outputItems = [];
+    const exampleBlocks = [];
+    const exampleSeen = new Set();
+
+    for (const saved of savedItems) {
+      const round = String(saved.source_round || "");
+      const original = Number(saved.source_question_number ?? saved.original_question_number);
+      const output = Number(saved.question_number);
+      const srcExam = byRound.get(round);
+      const srcItem = (srcExam?.items || []).find(item => Number(item.question_number) === original);
+      if (!srcItem || !Number.isInteger(output) || output < 1 ||
+          !Number.isInteger(original) || original < 1) {
+        throw new Error("source question missing for practice output " + output);
+      }
+      const key = round + ":" + original;
+      if (outputNumber.has(key)) throw new Error("duplicate source question " + key);
+      outputNumber.set(key, output);
+      const copy = {
+        ...srcItem,
+        id: saved.id || round + "-Q" + original + "-QP" + output,
+        question_number: output,
+        output_question_number: output,
+        source_round: round,
+        source_question_number: original,
+        original_question_number: original,
+        question_practice_source_label: "원문항 " + original + "번"
+      };
+      if (copy.example_id) {
+        const rawId = String(copy.example_id);
+        const renamedId = "REVIEW-" + round + "-" + rawId;
+        copy.example_id = renamedId;
+        const block = (srcExam.example_blocks || []).find(b => String(b.id) === rawId);
+        if (!block) throw new Error("source example missing " + key);
+        if (!exampleSeen.has(renamedId)) {
+          exampleBlocks.push({ ...block, id: renamedId });
+          exampleSeen.add(renamedId);
+        }
+      }
+      outputItems.push(copy);
+    }
+
+    const units = [];
+    const usedUnits = new Set();
+    for (const saved of savedItems) {
+      const round = String(saved.source_round);
+      const original = Number(saved.source_question_number ?? saved.original_question_number);
+      const srcExam = byRound.get(round);
+      const unit = (srcExam.render_sequence || []).find(u =>
+        (u.question_numbers || []).some(q => Number(q) === original));
+      if (!unit) throw new Error("source render unit missing for " + round + ":" + original);
+      const uniqueId = round + ":" + unit.unit_id;
+      if (usedUnits.has(uniqueId)) continue;
+      usedUnits.add(uniqueId);
+      const mapped = (unit.question_numbers || []).map(q => outputNumber.get(round + ":" + Number(q)));
+      // Never silently replace a shared two-question audio set with a different single.
+      if (mapped.some(q => !Number.isInteger(q))) {
+        throw new Error("incomplete paired source audio unit " + uniqueId);
+      }
+      units.push({
+        ...unit,
+        unit_id: "REVIEW-" + round + "-" + unit.unit_id,
+        question_numbers: mapped
+      });
+    }
+    const answerKey = {
+      exam_id: "question-practice-review-" + String(result.submitted_at || ""),
+      answers: savedItems.map(i => ({
+        question_number: Number(i.question_number),
+        correct_answer: i.correct_answer,
+        points: i.points
+      }))
+    };
+    const reconstructed = {
+      ...bundles[0].exam,
+      id: answerKey.exam_id,
+      title: result.test_name || "TOPIK I 듣기 유형별 문항 선택 연습",
+      exam_type: "question-practice",
+      generated_exam_mode: "question-practice",
+      generated_exam_round: result.generated_exam_round || rounds.join("-"),
+      generated_exam_label: result.generated_exam_label || "",
+      source_round: rounds.join(","),
+      test_scope: result.test_scope || "",
+      total_questions: outputItems.length,
+      total_possible_points: outputItems.reduce((v, i) => v + Number(i.points || 0), 0),
+      example_blocks: exampleBlocks,
+      render_sequence: units,
+      items: outputItems,
+      groups: []
+    };
+    assertWrongReviewItemsMatch(result, reconstructed);
+    state.exam = reconstructed;
+    state.answerKey = answerKey;
+    state.selectedExamMeta = {
+      id: reconstructed.id,
+      label: reconstructed.title,
+      source_round: reconstructed.source_round,
+      exam_type: "question-practice",
+      generated_exam_mode: "question-practice"
+    };
   }
 
   function getRemainingWrongQuestionNumbers(originalResult) {
