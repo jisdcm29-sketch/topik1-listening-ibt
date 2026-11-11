@@ -2788,6 +2788,28 @@ const ListeningTestApp = (() => {
     return start === end ? String(start) : `${start}-${end}`;
   }
 
+  // Wrong-review progress counts only questions that the student must retry.
+  // A paired audio unit may contain one completed (locked) question or two retry targets.
+  function getWrongReviewQuestionProgressLabel(seq, currentIndex) {
+    const retrySet = new Set((state.activeQuestionNumbers || []).map(Number));
+    const countRetryQuestions = (unit) => new Set(
+      (unit?.question_numbers || []).map(Number).filter((q) => retrySet.has(q))
+    ).size;
+
+    let firstPosition = 1;
+    for (let i = 0; i < currentIndex; i += 1) {
+      firstPosition += countRetryQuestions(seq[i]);
+    }
+
+    const currentCount = countRetryQuestions(seq[currentIndex]);
+    if (!currentCount) {
+      console.warn("[wrong-review] current audio unit has no retry question", currentIndex);
+      return "-";
+    }
+    const lastPosition = firstPosition + currentCount - 1;
+    return currentCount === 1 ? String(firstPosition) : `${firstPosition}~${lastPosition}`;
+  }
+
   function renderCurrentUnit(options = {}) {
     if (state.submitted) return;
 
@@ -2817,7 +2839,7 @@ const ListeningTestApp = (() => {
       state.isQuestionPracticeMode
         ? getQuestionPracticeProgressLabel(seq, state.renderIndex)
         : state.isWrongReviewMode
-          ? `${state.renderIndex + 1}`
+          ? getWrongReviewQuestionProgressLabel(seq, state.renderIndex)
           : questionNumbers.length > 1
             ? `${questionNumbers[0]}-${questionNumbers[questionNumbers.length - 1]}`
             : String(firstQuestion);
