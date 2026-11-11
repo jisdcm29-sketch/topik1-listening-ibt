@@ -63,7 +63,7 @@ const ListeningDiagnosis = (() => {
 
   function publicExamLabel(value) {
     return String(value ?? "")
-      .replace(/\b(83|91|96|97|99|102|100)\s*회\b/g, (_, round) => publicRoundLabel(round))
+      .replace(/\b(83|91|96|97|99|102|100)\s*회/g, (_, round) => publicRoundLabel(round))
       .replace(/(^|[,\s-])(83|91|96|97|99|102|100)(?=$|[,\s-])/g,
         (_, prefix, round) => prefix + publicRoundLabel(round));
   }
