@@ -21,6 +21,51 @@
   let lastReportedAt = 0;
   let badge = null;
   const telemetryEndpoint = String(window.TOPIK_AUDIO_DIAGNOSTICS_ENDPOINT || "");
+
+  const receiverConfigured = /^https:\\/\\/script\\.google\\.com\\/macros\\/s\\/[^/]+\\/exec$/.test(telemetryEndpoint);
+  const QUEUE_KEY = "topik1-listening-audio-report-queue-v1";
+  let sending = false;
+  function readQueue() {
+    try {
+      const q = JSON.parse(localStorage.getItem(QUEUE_KEY) || "[]");
+      return Array.isArray(q) ? q.slice(-60) : [];
+    } catch { return []; }
+  }
+  function saveQueue(queue) {
+    try { localStorage.setItem(QUEUE_KEY, JSON.stringify(queue.slice(-60))); }
+    catch (error) { console.warn("[TOPIKAudioDiagnostics] queue save failed", error); }
+  }
+  function scheduleFlush() { window.setTimeout(flushReports, 200); }
+  async function flushReports() {
+    if (!receiverConfigured || sending || navigator.onLine === false) return;
+    sending = true;
+    try {
+      const q = readQueue();
+      for (const item of q) {
+        if (item.attempts >= 3 || item.nextAt > Date.now()) continue;
+        const params = new URLSearchParams();
+        params.set("payload", JSON.stringify({action:"log_audio_issue", issue:item.issue}));
+        try {
+          // Opaque no-cors response is NOT an acknowledgement; retry at most
+          // three times, with the receiver deduplicating by event_id.
+          await fetch(telemetryEndpoint, {
+            method:"POST", mode:"no-cors", keepalive:true, cache:"no-store",
+            headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},
+            body:params.toString()
+          });
+        } catch (error) {
+          console.warn("[TOPIKAudioDiagnostics] transport failed", error);
+        }
+        item.attempts += 1;
+        item.nextAt = Date.now() + [60000, 300000, 900000][Math.min(2,item.attempts-1)];
+      }
+      saveQueue(q);
+    } finally { sending = false; }
+  }
+  window.addEventListener("online", scheduleFlush);
+  window.setInterval(flushReports, 60000);
+  window.setTimeout(scheduleFlush, 2500);
+
   const save = (rows) => {
     try { localStorage.setItem(KEY, JSON.stringify(rows.slice(-MAX))); }
     catch (error) { console.warn("[TOPIKAudioDiagnostics] local save failed", error); }
@@ -91,18 +136,15 @@
     save([...rows(), entry]);
     console.warn("[TOPIKAudioDiagnostics] saved issue", entry);
     showButton();
-    // Dedicated receiver only. Never transmit to the existing result-scoring endpoint.
-    // No student name, phone number, responses, or authentication tokens are collected.
-    if (/^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(telemetryEndpoint)) {
-      try {
-        const data = new URLSearchParams();
-        data.set("payload", JSON.stringify({ action: "log_audio_issue", issue: entry }));
-        fetch(telemetryEndpoint, {
-          method: "POST", mode: "no-cors", keepalive: true,
-          headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-          body: data.toString()
-        }).catch((error) => console.warn("[TOPIKAudioDiagnostics] report send failed", error));
-      } catch (error) { console.warn("[TOPIKAudioDiagnostics] report disabled", error); }
+    // Dedicated receiver only; enqueue for asynchronous, bounded retries.
+    // Never send to the existing student result endpoint.
+    if (receiverConfigured) {
+      const queue = readQueue();
+      if (!queue.some(item => item.issue?.event_id === entry.event_id)) {
+        queue.push({ issue: entry, attempts: 0, nextAt: Date.now() });
+        saveQueue(queue.slice(-60));
+      }
+      scheduleFlush();
     }
   }
   function reset() {
@@ -145,7 +187,7 @@
   }, 2000);
   window.TOPIKAudioDiagnostics = Object.freeze({
     download: exportLog, recent: () => rows(), pendingCount: () => rows().length,
-    transportEnabled: /^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(telemetryEndpoint),
+    transportEnabled: receiverConfigured, queuedForTransport: () => readQueue().filter(x => x.attempts < 3).length,
     version: "20261111-diagnostic-staging"
   });
 })();
