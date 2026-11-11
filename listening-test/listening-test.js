@@ -3190,7 +3190,14 @@ const ListeningTestApp = (() => {
     const content = $("#question-content");
     if (!content) return;
 
-    const cards = (unit.question_numbers || []).map((q) => renderQuestionCard(getItem(q))).join("");
+    // Paired audio plays in full, but only unanswered/wrong questions are interactive.
+    const reviewTargets = new Set((state.activeQuestionNumbers || []).map(Number));
+    const cards = (unit.question_numbers || []).map((q) =>
+      renderQuestionCard(getItem(q), {
+        reviewLocked: state.isWrongReviewMode && !reviewTargets.has(Number(q)),
+        reviewTarget: state.isWrongReviewMode && reviewTargets.has(Number(q))
+      })
+    ).join("");
     content.innerHTML = `<div class="question-two-column">${cards}</div>`;
     bindOptionEvents(content);
   }
@@ -3211,18 +3218,23 @@ const ListeningTestApp = (() => {
     return "";
   }
 
-  function renderQuestionCard(item) {
+  function renderQuestionCard(item, { reviewLocked = false, reviewTarget = false } = {}) {
     if (!item) return `<article class="question-card"><h3>문항 데이터 없음</h3></article>`;
 
     // 오답풀이 화면에서는 이전 답/정답 힌트를 표시하지 않는다.
     // 보기 유형 문항은 일반 시험 화면처럼 <보기>를 함께 표시한다.
-    const reviewHint = "";
+    const reviewHint = reviewLocked
+      ? '<p class="wrong-review-status wrong-review-status-done">정답 완료 · 다시 답할 필요가 없습니다.</p>'
+      : reviewTarget
+        ? '<p class="wrong-review-status wrong-review-status-target">오답 다시 풀기 대상</p>'
+        : "";
+    const disabledChoices = reviewLocked ? ' disabled aria-disabled="true"' : "";
 
     const imageChoices = item.image_choices?.length
       ? `
         <div class="image-choice-grid">
           ${item.image_choices.map((img) => `
-            <button type="button" class="image-choice-btn" data-question-number="${item.question_number}" data-choice="${img.choice}">
+            <button type="button" class="image-choice-btn" data-question-number="${item.question_number}" data-choice="${img.choice}"${disabledChoices}>
               <img src="${img.image_url}" alt="${item.question_number}번 선택지 ${img.choice}" />
             </button>
           `).join("")}
@@ -3234,7 +3246,7 @@ const ListeningTestApp = (() => {
       ? `
         <div class="option-list">
           ${(item.options || []).map((opt) => `
-            <button type="button" class="option-btn" data-question-number="${item.question_number}" data-choice="${opt.choice}">
+            <button type="button" class="option-btn" data-question-number="${item.question_number}" data-choice="${opt.choice}"${disabledChoices}>
               <span class="option-number">${opt.choice}</span>
               <span>${escapeHtml(opt.text || "")}</span>
             </button>
@@ -3257,7 +3269,7 @@ const ListeningTestApp = (() => {
       : "";
 
     return `
-      <article class="question-card student-question-card" data-student-dialogue-visible="false"${sourceDataAttrs}>
+      <article class="question-card student-question-card${reviewLocked ? " wrong-review-done-card" : ""}" data-student-dialogue-visible="false"${sourceDataAttrs}>
         <h3>${item.question_number}. ${escapeHtml(item.question || "문항 데이터 준비 중입니다.")}${sourceBadge}</h3>
         ${reviewHint}
         ${imageChoices}
@@ -3274,6 +3286,12 @@ const ListeningTestApp = (() => {
     root.querySelectorAll("[data-question-number][data-choice]").forEach((btn) => {
       const q = Number(btn.dataset.questionNumber);
       const choice = Number(btn.dataset.choice);
+
+      // Ignore completed questions displayed beside an active wrong-review target.
+      if (btn.disabled || (state.isWrongReviewMode &&
+          !(state.activeQuestionNumbers || []).some((number) => Number(number) === q))) {
+        return;
+      }
 
       if (state.answers[q] === choice) btn.classList.add("selected");
 
