@@ -3586,6 +3586,18 @@ const ListeningTestApp = (() => {
     return `${result.earned_points} / ${result.total_possible_points || 100}`;
   }
 
+  // Display-only mapping; do not modify stored source round identifiers.
+  function publicRoundLabelForSummary(value) {
+    const names = {
+      "83": "실전 A", "91": "실전 B", "96": "실전 C",
+      "97": "실전 D", "99": "실전 E", "102": "실전 F", "100": "실전 G"
+    };
+    return String(value ?? "")
+      .replace(/\b(83|91|96|97|99|102|100)\s*회/g, (_, round) => names[round])
+      .replace(/(^|[,\s-])(83|91|96|97|99|102|100)(?=$|[,\s-])/g,
+        (_, prefix, round) => prefix + names[round]);
+  }
+
   function renderResultSummary(result, reason) {
     $("#test-screen").hidden = true;
     $("#login-screen").hidden = true;
@@ -3610,9 +3622,9 @@ const ListeningTestApp = (() => {
       if (isLevelTestResult(result)) {
         const score100 = getScore100(result);
         const gradeInfo = getTopik1ExpectedGradeFrom100(score100);
-        mode.textContent = `${result.generated_exam_label || result.test_name || "-"} / 100점 환산 ${score100}점 / ${gradeInfo.grade}`;
+        mode.textContent = `${publicRoundLabelForSummary(result.generated_exam_label || result.test_name || "-")} / 100점 환산 ${score100}점 / ${gradeInfo.grade}`;
       } else {
-        mode.textContent = result.generated_exam_label || result.test_name || "-";
+        mode.textContent = publicRoundLabelForSummary(result.generated_exam_label || result.test_name || "-");
       }
     }
 
