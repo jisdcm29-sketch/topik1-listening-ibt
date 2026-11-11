@@ -22,7 +22,15 @@
   let badge = null;
   const telemetryEndpoint = String(window.TOPIK_AUDIO_DIAGNOSTICS_ENDPOINT || "");
 
-  const receiverConfigured = /^https:\\/\\/script\\.google\\.com\\/macros\\/s\\/[^/]+\\/exec$/.test(telemetryEndpoint);
+  const receiverConfigured = (() => {
+    try {
+      const u = new URL(telemetryEndpoint);
+      const p = u.pathname.split("/");
+      return u.protocol === "https:" && u.hostname === "script.google.com" &&
+        p.length === 5 && p[1] === "macros" && p[2] === "s" &&
+        /^[A-Za-z0-9_-]+$/.test(p[3]) && p[4] === "exec" && !u.search;
+    } catch { return false; }
+  })();
   const QUEUE_KEY = "topik1-listening-audio-report-queue-v1";
   let sending = false;
   function readQueue() {
