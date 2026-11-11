@@ -51,6 +51,23 @@ const ListeningDiagnosis = (() => {
     return DIAGNOSTIC_LABELS[value] || value || "기타";
   }
 
+  // UI aliases only: original source_round/result data remains unchanged.
+  const PUBLIC_ROUND_NAMES = Object.freeze({
+    "83": "실전 A", "91": "실전 B", "96": "실전 C",
+    "97": "실전 D", "99": "실전 E", "102": "실전 F", "100": "실전 G"
+  });
+
+  function publicRoundLabel(round) {
+    return PUBLIC_ROUND_NAMES[String(round || "").trim()] || "실전";
+  }
+
+  function publicExamLabel(value) {
+    return String(value ?? "")
+      .replace(/\b(83|91|96|97|99|102|100)\s*회/g, (_, round) => publicRoundLabel(round))
+      .replace(/(^|[,\s-])(83|91|96|97|99|102|100)(?=$|[,\s-])/g,
+        (_, prefix, round) => prefix + publicRoundLabel(round));
+  }
+
   function formatPhone(value) {
     const text = String(value || "").trim();
     return text || "-";
@@ -108,7 +125,7 @@ const ListeningDiagnosis = (() => {
   function buildRandomExamNotice(result) {
     if (!isRandomResult(result)) return "";
 
-    const rounds = getRandomSourceRounds(result).map((round) => `${round}회`).join(", ") || "문제은행";
+    const rounds = getRandomSourceRounds(result).map(publicRoundLabel).join(", ") || "문제은행";
     return `
       <section class="notice-box randomtest-notice">
         <h3>랜덤 출제 안내</h3>
@@ -120,7 +137,7 @@ const ListeningDiagnosis = (() => {
   function buildRandomExamInfoRows(result) {
     if (!isRandomResult(result)) return "";
 
-    const rounds = getRandomSourceRounds(result).map((round) => `${round}회`).join(", ") || "-";
+    const rounds = getRandomSourceRounds(result).map(publicRoundLabel).join(", ") || "-";
     const seed = result?.random_generation?.seed || result?.generated_exam_round || "-";
 
     return `
@@ -288,7 +305,7 @@ const ListeningDiagnosis = (() => {
       ? buildAnalysisTable(summaryRows, ["원천 회차", "문항 수", "정답 수", "점수", "정답률"])
       : `<p class="empty-message">랜덤 시험으로 판정되었지만, 이 저장 결과에는 원천 회차 정보가 충분히 남아 있지 않습니다. 새 랜덤 시험을 한 번 더 제출하면 출처가 자동 저장됩니다.</p>`;
 
-    const rounds = getRandomSourceRounds(result).map((round) => `${round}회`).join(", ") || "문제은행";
+    const rounds = getRandomSourceRounds(result).map(publicRoundLabel).join(", ") || "문제은행";
     const totalUsed = rows.reduce((sum, row) => sum + Number(row.total || 0), 0) || result.total_questions || 30;
 
     return `
@@ -319,13 +336,13 @@ const ListeningDiagnosis = (() => {
       const used = items
         .map((item) => {
           const original = item.original_question_number || item.source_question_number || "-";
-          return `${item.question_number}번←${round}회 ${original}번`;
+          return `${item.question_number}번←${publicRoundLabel(round)} ${original}번`;
         })
         .join(", ");
 
       return {
         cells: [
-          `${round}회`,
+          publicRoundLabel(round),
           `${items.length}문항`,
           `${stat.correct} / ${items.length}`,
           `${stat.earned} / ${stat.total}`,
@@ -336,7 +353,7 @@ const ListeningDiagnosis = (() => {
         total: items.length,
         correct: stat.correct,
         score: `${stat.earned} / ${stat.total}`,
-        name: `${round}회`,
+        name: publicRoundLabel(round),
         problemCount: stat.problemQuestions.length
       };
     });
@@ -352,7 +369,7 @@ const ListeningDiagnosis = (() => {
       extractQuestionNumberFromBankId(item?.source_bank_id || item?.random_source_bank_id || "") ||
       extractQuestionNumberFromSourcePath(sourcePath);
     if (!roundValue || !originalValue) return "";
-    const round = `${roundValue}회`;
+    const round = publicRoundLabel(roundValue);
     const original = `${originalValue}번`;
     return `출처: ${round} 원문항 ${original}`;
   }
@@ -503,7 +520,7 @@ const ListeningDiagnosis = (() => {
     root.innerHTML = `
       <section class="report-card${isLevelTestResult(result) ? " level-test-report" : ""}${isRandomResult(result) ? " random-report" : ""}">
         <h1>${escapeHtml(getReportTitle(result))}</h1>
-        <p class="subtitle">${escapeHtml(result.test_name || "TOPIK I 듣기 PBT형 IBT 시뮬레이션")}</p>
+        <p class="subtitle">${escapeHtml(publicExamLabel(result.test_name || "TOPIK I 듣기 PBT형 IBT 시뮬레이션"))}</p>
         <div class="blue-line"></div>
 
         <div class="summary-grid">
@@ -535,12 +552,12 @@ const ListeningDiagnosis = (() => {
         <section class="section-block">
           <h2>시험 정보</h2>
           <table class="info-table">
-            <tr><th>시험명</th><td>${escapeHtml(result.test_name || "-")}</td></tr>
+            <tr><th>시험명</th><td>${escapeHtml(publicExamLabel(result.test_name || "-"))}</td></tr>
             <tr><th>응시자</th><td>${escapeHtml(result.student_name || "-")}</td></tr>
             <tr><th>전화번호</th><td>${escapeHtml(formatPhone(result.student_phone))}</td></tr>
-            <tr><th>시험 범위</th><td>${escapeHtml(result.test_scope || "-")}</td></tr>
-            <tr><th>출제 방식</th><td>${escapeHtml(result.generated_exam_label || "-")}</td></tr>
-            <tr><th>출제 회차</th><td>${escapeHtml(result.generated_exam_round || "-")}</td></tr>
+            <tr><th>시험 범위</th><td>${escapeHtml(publicExamLabel(result.test_scope || "-"))}</td></tr>
+            <tr><th>출제 방식</th><td>${escapeHtml(publicExamLabel(result.generated_exam_label || "-"))}</td></tr>
+            <tr><th>선택 실전</th><td>${escapeHtml(publicExamLabel(result.generated_exam_round || "-"))}</td></tr>
             ${buildRandomExamInfoRows(result)}
             <tr><th>응시 시간</th><td>${formatDateTime(result.started_at)} ~ ${formatDateTime(result.submitted_at)}</td></tr>
             <tr><th>문항 수</th><td>${result.total_questions}문항</td></tr>
