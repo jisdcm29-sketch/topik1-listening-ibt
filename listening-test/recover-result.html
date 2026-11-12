@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOPIK I 듣기 · 누락 결과 원본 보관</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 18px; background: #f4f7fb; color: #19334b; font-family: system-ui, sans-serif; }
+    main { max-width: 740px; margin: 18px auto; padding: 22px; border: 1px solid #d5e0ec; border-radius: 14px; background: #fff; }
+    h1 { font-size: 23px; margin: 0 0 15px; color: #164e87; }
+    p, li { font-size: 16px; line-height: 1.65; }
+    .record { padding: 15px; border: 1px solid #cbd8e5; background: #f5f9ff; border-radius: 9px; white-space: pre-line; overflow-wrap: anywhere; }
+    button { display: block; width: 100%; margin: 16px 0 0; padding: 14px; border: 0; border-radius: 8px; background: #125aa6; color: white; font-size: 17px; font-weight: 700; }
+    button:disabled { background: #8899aa; }
+    .warning { color: #765100; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>TOPIK I 듣기 · 누락 결과 원본 보관</h1>
+  <p>시험을 치렀던 <strong>같은 태블릿, 같은 Chrome 브라우저</strong>에서 사용하세요. 이 페이지는 저장된 결과를 읽기만 하며 시험 기록을 삭제·변경·전송하지 않습니다.</p>
+  <section id="record" class="record" role="status" aria-live="polite">기기에 보관된 결과를 확인하는 중입니다.</section>
+  <button type="button" id="export" disabled>원본 결과 JSON 다운로드</button>
+  <p class="warning">화면의 이름·시험 시각·점수가 찾는 응시자의 결과와 일치할 때만 다운로드하세요. 결과를 찾지 못하면 Chrome 인터넷 사용 기록을 삭제하거나 새로운 시험을 시작하지 마세요.</p>
+</main>
+<script>
+(() => {
+  "use strict";
+  const display = document.getElementById("record");
+  const button = document.getElementById("export");
+  let result;
+  try {
+    result = JSON.parse(localStorage.getItem("topik1-listening-result-latest") || "null");
+  } catch (error) {
+    display.textContent = "브라우저에 저장된 결과를 읽지 못했습니다. 다른 조작을 하지 말고 교사에게 알려주세요.";
+    return;
+  }
+  if (!result || typeof result !== "object" || !Array.isArray(result.items)) {
+    display.textContent = "이 Chrome 브라우저에 마지막 시험 결과가 없습니다. 시험을 다시 시작하거나 브라우저 데이터를 삭제하지 마세요.";
+    return;
+  }
+  const phone = String(result.student_phone || "").replace(/\D/g, "");
+  const suffix = phone ? phone.slice(-4) : "없음";
+  const score = String(result.earned_points ?? "-") + " / " + String(result.total_possible_points ?? "-");
+  const summary = [
+    "응시자: " + String(result.student_name || "확인 불가"),
+    "전화번호 끝 4자리: " + suffix,
+    "시험: " + String(result.test_name || "확인 불가"),
+    "제출 시각: " + String(result.submitted_at || "확인 불가"),
+    "정답: " + String(result.correct_count ?? "-") + " / " + String(result.total_questions ?? "-"),
+    "점수: " + score,
+    "문항별 원본 데이터: " + result.items.length + "개"
+  ];
+  display.textContent = summary.join("\n");
+  button.disabled = false;
+  button.addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify(result, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    const day = String(result.submitted_at || "undated").slice(0, 10).replace(/[^0-9-]/g, "");
+    link.href = url;
+    link.download = "topik1-listening-original-" + (day || "undated") + ".json";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  });
+})();
+</script>
+</body>
+</html>
