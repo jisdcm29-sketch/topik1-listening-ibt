@@ -9,6 +9,7 @@ const DEVELOPER_PHONE = '12345678';
 const SHEET_STUDENTS = 'Students';
 const SHEET_ALL_RESULTS = 'All_Results';
 const SHEET_ATTEMPT_INDEX = 'Attempt_Index';
+const SHEET_RECEIPTS = 'Receipt_Confirmations';
 
 const RESULT_HEADERS = [
   'recorded_at',
@@ -57,6 +58,8 @@ const INDEX_HEADERS = [
   'all_results_row'
 ];
 
+const RECEIPT_HEADERS = ['receipt_token', 'attempt_id', 'confirmed_at'];
+
 function setupResultWorkbook() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   if (!ss) {
@@ -102,6 +105,10 @@ function doGet(e) {
     });
   }
 
+  if (action === 'receipt_status') {
+    return receiptStatusResponse_(e);
+  }
+
   if (action === 'translate_options') {
     return translateOptionsResponse_(e);
   }
@@ -111,6 +118,44 @@ function doGet(e) {
     error: 'unsupported_action',
     version: RESULT_LOGGER_VERSION
   });
+}
+
+// Public receipt lookup returns ONLY a boolean. A 160-bit random token is used
+// instead of a phone number or a student name in the GET URL.
+function isValidReceiptToken_(token) {
+  return /^R-[0-9a-f]{40}$/.test(String(token || ''));
+}
+
+function receiptStatusResponse_(e) {
+  const params = (e && e.parameter) || {};
+  const callback = String(params.callback || '').trim();
+  const token = String(params.receipt_token || '').trim();
+  if (!isValidReceiptToken_(token)) {
+    return scriptOrJsonOutput_(callback, { ok: false, stored: false, error: 'invalid_receipt_token' });
+  }
+
+  try {
+    const ss = getWorkbook_();
+    const receipts = ss.getSheetByName(SHEET_RECEIPTS);
+    const stored = !!(receipts && findExactInColumn_(receipts, 1, token));
+    return scriptOrJsonOutput_(callback, {
+      ok: true, stored: stored, receipt_token: token, version: RESULT_LOGGER_VERSION
+    });
+  } catch (error) {
+    return scriptOrJsonOutput_(callback, {
+      ok: false, stored: false, error: 'receipt_lookup_failed', version: RESULT_LOGGER_VERSION
+    });
+  }
+}
+
+function recordReceiptToken_(ss, token, attemptId) {
+  if (!token) return;
+  const receipts = ensureSheet_(ss, SHEET_RECEIPTS, RECEIPT_HEADERS);
+  if (!findExactInColumn_(receipts, 1, token)) {
+    receipts.appendRow([token, attemptId, new Date()]);
+    SpreadsheetApp.flush();
+  }
+  try { receipts.hideSheet(); } catch (error) {}
 }
 
 function translateOptionsResponse_(e) {
@@ -238,6 +283,10 @@ function logResult_(payload) {
 
   const phone = normalizePhone_(result.student_phone || payload.student_phone || '');
   const name = String(result.student_name || payload.student_name || '').trim();
+  const receiptToken = String(payload.receipt_token || '').trim();
+  if (receiptToken && !isValidReceiptToken_(receiptToken)) {
+    return { ok: false, error: 'invalid_receipt_token', version: RESULT_LOGGER_VERSION };
+  }
 
   if (!phone) {
     return { ok: false, error: 'missing_phone', version: RESULT_LOGGER_VERSION };
@@ -269,6 +318,8 @@ function logResult_(payload) {
     ).trim();
 
     if (isDuplicateAttempt_(index, allResults, attemptId)) {
+      // A retry may use a new token for an attempt already stored by the old client.
+      recordReceiptToken_(ss, receiptToken, attemptId);
       return {
         ok: true,
         duplicate: true,
@@ -302,6 +353,9 @@ function logResult_(payload) {
       recordedAt,
       allRow
     ]);
+
+    // Only acknowledge a receipt after the original record and index are written.
+    recordReceiptToken_(ss, receiptToken, attemptId);
 
     return {
       ok: true,

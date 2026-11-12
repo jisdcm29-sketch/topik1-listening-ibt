@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TOPIK I 듣기 결과 복구</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #f3f7fb; color: #173450; font-family: system-ui, sans-serif; }
+    main { max-width: 750px; margin: 0 auto; background: white; padding: 26px; border: 1px solid #c9d9e7; border-radius: 16px; }
+    h1 { margin: 0 0 16px; color: #1355a2; }
+    p { line-height: 1.6; }
+    .summary-card { background: #f7faff; border-radius: 8px; padding: 14px; }
+    button { padding: 12px 18px; border: 0; border-radius: 8px; color: white; background: #1656a7; font-size: 16px; margin: 8px 8px 8px 0; cursor: pointer; }
+    #details { white-space: pre-line; overflow-wrap: anywhere; }
+    .notice { color: #815a00; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>TOPIK I 듣기 결과 복구</h1>
+  <p>이 페이지는 <strong>현재 태블릿의 브라우저에 저장된 마지막 시험 결과</strong>만 확인합니다. 새로운 시험을 시작하지 않으며 기존 결과를 변경하지 않습니다.</p>
+  <section id="result-screen"><div class="summary-card">
+    <p id="details">저장된 시험 결과를 확인하는 중입니다.</p>
+    <div class="summary-info-box"></div>
+  </div></section>
+  <button type="button" id="export">원본 결과 JSON 다운로드</button>
+  <button type="button" id="retry">Google Sheets 저장 다시 확인</button>
+  <p class="notice">저장 완료 안내가 나타나더라도 교사용 응시기록 시트의 해당 행을 함께 확인하세요. 이 화면에 결과가 없다면 브라우저 데이터를 삭제하거나 다른 시험을 진행하지 마세요.</p>
+</main>
+<script src="./result-builder.js?v=step16-phone-digit-fix"></script>
+<script src="./result-logger-client.js?v=step27c-receipt-v2-20261112"></script>
+<script>
+(() => {
+  const key = "topik1-listening-result-latest";
+  const details = document.getElementById("details");
+  const exportButton = document.getElementById("export");
+  const retryButton = document.getElementById("retry");
+  let result = null;
+  try { result = JSON.parse(localStorage.getItem(key) || "null"); }
+  catch (error) { console.warn("Result recovery read failed", error); }
+  if (!result || !Array.isArray(result.items)) {
+    details.textContent = "이 브라우저에서 마지막 시험 결과를 찾지 못했습니다. 다른 기기 또는 다른 브라우저에서 응시했을 수 있습니다.";
+    exportButton.disabled = true;
+    retryButton.disabled = true;
+    return;
+  }
+  const bits = [
+    "응시자: " + String(result.student_name || "-"),
+    "시험: " + String(result.test_name || "-"),
+    "제출 시각: " + String(result.submitted_at || "-"),
+    "정답 수: " + String(result.correct_count ?? "-") + " / " + String(result.total_questions ?? "-"),
+    "점수: " + String(result.earned_points ?? "-") + " / " + String(result.total_possible_points ?? "-")
+  ];
+  details.textContent = bits.join("\n");
+  exportButton.addEventListener("click", () => {
+    const bytes = new Blob([JSON.stringify(result, null, 2)], {type: "application/json"});
+    const url = URL.createObjectURL(bytes);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "topik1-listening-recovered-result.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1500);
+  });
+  retryButton.addEventListener("click", () => {
+    details.textContent = bits.join("\n") + "\n시트 저장 여부를 다시 확인하는 중입니다.";
+    window.TOPIK1ResultLogger?.flush?.();
+  });
+})();
+</script>
+</body>
+</html>
