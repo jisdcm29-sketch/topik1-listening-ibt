@@ -957,7 +957,7 @@
       "preferred_slots": [
         15
       ],
-      "correct_answer": 4,
+      "correct_answer": 1,
       "random_eligible": true,
       "random_selection_unit": "question",
       "random_notes": "단일 문항 단위로 선택 가능"
@@ -1036,7 +1036,7 @@
       "preferred_slots": [
         16
       ],
-      "correct_answer": 3,
+      "correct_answer": 2,
       "random_eligible": true,
       "random_selection_unit": "question",
       "random_notes": "단일 문항 단위로 선택 가능"
@@ -2811,7 +2811,7 @@
           "image_url": "./images/100/100_L015_04.png"
         }
       ],
-      "correct_answer": 4,
+      "correct_answer": 1,
       "source_exam_id": "listening-100",
       "bank_id": "L100_Q015"
     },
@@ -2881,7 +2881,7 @@
           "image_url": "./images/100/100_L016_04.png"
         }
       ],
-      "correct_answer": 3,
+      "correct_answer": 2,
       "source_exam_id": "listening-100",
       "bank_id": "L100_Q016"
     },
